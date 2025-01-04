@@ -1,1 +1,0 @@
-The original data is in the file fwdcalibApril112019. However, to run the Calibration notebook you only need the ExcelPandas file, which is a modified version adapted to work with the pandas library of python.

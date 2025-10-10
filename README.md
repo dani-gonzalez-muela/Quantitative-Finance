@@ -1,1 +1,4 @@
-# QuantitativeFinance
+# Quantitative Finance Projects
+
+## Overview
+This repository contains quantitative finance projects covering option pricing, stochastic modeling, and company valuation. Projects combine theory and practical Python implementations to explore market dynamics, pricing strategies, and investment analysis.

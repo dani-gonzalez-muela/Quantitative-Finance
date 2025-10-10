@@ -1,8 +1,7 @@
 # Stochastic Modelling and Numerical Methods in Finance: SABR and Heston
 
 ## Project Focus
-This research project centers on option pricing in financial mathematics, specifically studying two stochastic volatility models—**SABR** and **Heston**—and applying advanced numerical techniques to price vanilla options efficiently and accurately.
-
+The thesis centers on option pricing in financial mathematics, specifically studying two stochastic volatility models (**SABR** and **Heston**) and applying advanced numerical techniques to price vanilla options efficiently and accurately. The project was carried out jointly between **Pompeu Fabra University** and **CaixaBank**, combining academic research with practical financial applications.
 ---
 
 ## Key Components

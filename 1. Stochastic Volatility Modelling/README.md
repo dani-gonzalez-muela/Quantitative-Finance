@@ -5,6 +5,8 @@
 ## Project Focus
 The thesis centers on option pricing in financial mathematics, specifically studying two stochastic volatility models (**SABR** and **Heston**) and applying advanced numerical techniques to price vanilla options efficiently and accurately. The project was carried out jointly between **Pompeu Fabra University** and **CaixaBank**, combining academic research with practical financial applications.
 
+---
+
 ## Key Components
 
 ### 1. Background and Motivation
@@ -35,3 +37,5 @@ The thesis centers on option pricing in financial mathematics, specifically stud
 - Combining advanced variance reduction techniques is key to practical and efficient stochastic volatility model pricing.  
 - Stochastic volatility models better reflect market realities and offer practical tools for traders and risk managers.  
 - Future work could focus on improving computational efficiency, applying to local volatility or exotic options, and extending calibration methods.
+
+---

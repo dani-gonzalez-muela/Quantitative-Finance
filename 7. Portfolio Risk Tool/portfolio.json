@@ -1,0 +1,5 @@
+{
+    "csv": "sample_returns.csv",
+    "weights": [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+    "risk_free_rate": 0.02
+}

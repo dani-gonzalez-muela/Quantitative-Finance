@@ -1,0 +1,4 @@
+# file: C:\Users\danie\Desktop\portfolio-risk-tool\portfolio_risk\pipeline.py
+# hypothesis_version: 6.141.1
+
+[0.0, 'adjusted', 'asset_names', 'config', 'date', 'dropped', 'error', 'filled', 'message', 'metrics', 'renormalize', 'risk_free_rate', 'status', 'success', 'warnings', 'weights']

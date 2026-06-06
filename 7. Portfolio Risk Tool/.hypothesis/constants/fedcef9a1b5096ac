@@ -1,0 +1,4 @@
+# file: C:\Users\danie\Desktop\portfolio-risk-tool\portfolio_risk\models.py
+# hypothesis_version: 6.141.1
+
+[0.0, 'annualized_return', 'asset_volatilities', 'correlation_matrix', 'max_drawdown', 'portfolio_variance', 'sharpe_ratio', 'sortino_ratio', 'win_rate']

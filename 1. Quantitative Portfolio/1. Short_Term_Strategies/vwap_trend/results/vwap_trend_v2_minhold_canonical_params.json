@@ -1,0 +1,107 @@
+{
+  "us_equity_broad": {
+    "vwap_threshold": 0.001,
+    "exit_time": "15:55:00",
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -2.930801677496848,
+      "perm_p": 0.601
+    },
+    "n_tickers": 7,
+    "k_significant": 0,
+    "median_sharpe": 0.22811504158512724
+  },
+  "us_factor": {
+    "vwap_threshold": 0.001,
+    "exit_time": "15:55:00",
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -4.496630378173728,
+      "perm_p": 0.912
+    },
+    "n_tickers": 8,
+    "k_significant": 0,
+    "median_sharpe": -0.2296373433907758
+  },
+  "us_sectors": {
+    "vwap_threshold": 0.001,
+    "exit_time": "15:55:00",
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -16.937921438641975,
+      "perm_p": 1.0
+    },
+    "n_tickers": 11,
+    "k_significant": 0,
+    "median_sharpe": -1.555968099127486
+  },
+  "bonds_us": {
+    "vwap_threshold": 0.002,
+    "exit_time": "15:55:00",
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -4.189367282980317,
+      "perm_p": 0.718
+    },
+    "n_tickers": 5,
+    "k_significant": 0,
+    "median_sharpe": 0.12951874858755658
+  },
+  "commodities": {
+    "vwap_threshold": 0.002,
+    "exit_time": "15:30:00",
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -9.834096799011423,
+      "perm_p": 1.0
+    },
+    "n_tickers": 4,
+    "k_significant": 0,
+    "median_sharpe": -0.6732375470875971
+  },
+  "em_regional": {
+    "vwap_threshold": 0.002,
+    "exit_time": "15:55:00",
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -8.314186395604569,
+      "perm_p": 1.0
+    },
+    "n_tickers": 4,
+    "k_significant": 0,
+    "median_sharpe": -0.32334809481339627
+  },
+  "intl_liquid": {
+    "vwap_threshold": 0.002,
+    "exit_time": "15:55:00",
+    "binom_p": 0.2262190625,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 0.3493897269992666,
+      "boot5": -3.5363873600016063,
+      "perm_p": 0.423
+    },
+    "n_tickers": 5,
+    "k_significant": 1,
+    "median_sharpe": 0.0470456174105396
+  }
+}

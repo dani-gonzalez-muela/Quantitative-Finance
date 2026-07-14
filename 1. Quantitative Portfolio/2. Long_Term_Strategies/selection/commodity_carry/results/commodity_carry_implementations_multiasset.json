@@ -1,0 +1,49 @@
+{
+  "strategy": "commodity_carry",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.5,
+    "short_win": 2,
+    "long_win": 12,
+    "freq": "ME"
+  },
+  "sleeves": {
+    "commodities": {
+      "simple_85": {
+        "sharpe": 0.5543,
+        "cagr": 9.7,
+        "max_dd": -32.33,
+        "n_trades": 415,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.5606,
+        "cagr": 11.2,
+        "max_dd": -37.26,
+        "n_trades": 415,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 1,
+      "sleeves": [
+        "commodities"
+      ],
+      "sharpe": 0.5543,
+      "cagr": 9.7,
+      "max_dd": -32.33
+    },
+    "simple_100": {
+      "n_sleeves": 1,
+      "sleeves": [
+        "commodities"
+      ],
+      "sharpe": 0.5606,
+      "cagr": 11.2,
+      "max_dd": -37.26
+    }
+  }
+}

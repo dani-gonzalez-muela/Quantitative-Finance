@@ -1,0 +1,146 @@
+{
+  "window_start": "2016-08-01",
+  "window_end": "2019-12-31",
+  "n_overlap_days": 1247,
+  "most_correlated_pairs": [
+    {
+      "a": "us_shareholder_yield",
+      "b": "reit_dividend_carry",
+      "corr": 1.0
+    },
+    {
+      "a": "us_cross_sectional_momentum",
+      "b": "us_earnings_momentum",
+      "corr": 0.9922
+    },
+    {
+      "a": "short_interest_contrarian",
+      "b": "insider_buying",
+      "corr": 0.9806
+    },
+    {
+      "a": "us_return_seasonality",
+      "b": "insider_buying",
+      "corr": 0.9797
+    },
+    {
+      "a": "low_volatility",
+      "b": "insider_buying",
+      "corr": 0.9719
+    },
+    {
+      "a": "regime_factor_rotation",
+      "b": "overnight_premium",
+      "corr": 0.9668
+    },
+    {
+      "a": "us_return_seasonality",
+      "b": "short_interest_contrarian",
+      "corr": 0.9665
+    },
+    {
+      "a": "low_volatility",
+      "b": "us_return_seasonality",
+      "corr": 0.9564
+    },
+    {
+      "a": "low_volatility",
+      "b": "short_interest_contrarian",
+      "corr": 0.9493
+    },
+    {
+      "a": "quality_profitability",
+      "b": "sentiment_timing",
+      "corr": 0.9447
+    }
+  ],
+  "least_correlated_pairs": [
+    {
+      "a": "us_shareholder_yield",
+      "b": "bond_duration_carry",
+      "corr": -0.5179
+    },
+    {
+      "a": "bond_duration_carry",
+      "b": "reit_dividend_carry",
+      "corr": -0.5178
+    },
+    {
+      "a": "us_shareholder_yield",
+      "b": "yield_curve_duration",
+      "corr": -0.4531
+    },
+    {
+      "a": "yield_curve_duration",
+      "b": "reit_dividend_carry",
+      "corr": -0.4525
+    },
+    {
+      "a": "short_interest_contrarian",
+      "b": "bond_duration_carry",
+      "corr": -0.3397
+    },
+    {
+      "a": "us_cross_sectional_momentum",
+      "b": "qmj_long_short",
+      "corr": -0.3297
+    },
+    {
+      "a": "us_return_seasonality",
+      "b": "bond_duration_carry",
+      "corr": -0.32
+    },
+    {
+      "a": "low_volatility",
+      "b": "bond_duration_carry",
+      "corr": -0.317
+    },
+    {
+      "a": "pead_earnings_drift",
+      "b": "bond_duration_carry",
+      "corr": -0.3018
+    },
+    {
+      "a": "insider_buying",
+      "b": "bond_duration_carry",
+      "corr": -0.2949
+    }
+  ],
+  "avg_abs_corr": {
+    "vol_overlay": 0.0651,
+    "commodity_carry": 0.0924,
+    "commodity_trend": 0.1089,
+    "qmj_long_short": 0.1147,
+    "bab_long_short": 0.1235,
+    "vix_etn_dual": 0.1423,
+    "vix_mean_reversion": 0.1454,
+    "cross_asset_carry": 0.1566,
+    "credit_carry": 0.1636,
+    "bond_trend": 0.1675,
+    "turn_of_month": 0.1814,
+    "yield_curve_duration": 0.1934,
+    "donchian_channel": 0.1995,
+    "bond_duration_carry": 0.2101,
+    "ibs_mean_reversion": 0.2173,
+    "bollinger_band": 0.2412,
+    "country_cape_rotation": 0.2432,
+    "quantitative_momentum": 0.2504,
+    "gtaa": 0.257,
+    "industry_trend": 0.2588,
+    "sector_momentum": 0.268,
+    "regime_factor_rotation": 0.2787,
+    "overnight_premium": 0.282,
+    "em_dm_carry": 0.3046,
+    "us_cross_sectional_momentum": 0.3322,
+    "us_earnings_momentum": 0.3451,
+    "quality_profitability": 0.3481,
+    "sentiment_timing": 0.3501,
+    "pead_earnings_drift": 0.3633,
+    "low_volatility": 0.3706,
+    "us_return_seasonality": 0.3721,
+    "reit_dividend_carry": 0.3759,
+    "us_shareholder_yield": 0.376,
+    "insider_buying": 0.3793,
+    "short_interest_contrarian": 0.3803
+  }
+}

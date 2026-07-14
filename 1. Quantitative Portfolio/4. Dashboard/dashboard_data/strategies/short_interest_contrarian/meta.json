@@ -1,0 +1,23 @@
+{
+  "label": "Short Interest Contrarian",
+  "sleeve": "long_term",
+  "type": "Factor (contrarian)",
+  "timeframe": "monthly",
+  "universe": "US equities (~1,800)",
+  "signal": "Long the least-shorted quintile.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.684,
+    "cagr_pct": 10.74,
+    "maxdd_pct": -50.54,
+    "months": 229
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Long the LEAST-shorted quintile (log short-interest cross-sectional rank, ~1,800 stocks/quintile, Compustat). Return leg proxied as FF Mkt+0.3\u00d7SMB (least-shorted tilts small). Monthly, 5bps/side.",
+  "reference": "Boehmer, Jones & Zhang (2008) and the short-interest anomaly literature"
+}

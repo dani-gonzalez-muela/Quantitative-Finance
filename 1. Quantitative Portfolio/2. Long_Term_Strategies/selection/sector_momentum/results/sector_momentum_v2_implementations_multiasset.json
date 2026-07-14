@@ -1,0 +1,46 @@
+{
+  "strategy": "sector_momentum_v2",
+  "period": "2016-01-01 to 2026-04-01",
+  "tc_bps_one_way": 5,
+  "starting_capital": 100000,
+  "allocation": 0.85,
+  "n_passing_baskets": 2,
+  "sleeve_capital": 50000.0,
+  "baskets": {
+    "us_sectors": {
+      "canonical_params": {
+        "top_pct": 0.25,
+        "freq": "6ME",
+        "mom_window": 3
+      },
+      "n_trades": 48,
+      "sleeve_capital": 50000.0,
+      "allocation": 0.85,
+      "stats": {
+        "sharpe": 0.8642,
+        "cagr_pct": 13.2,
+        "max_dd_pct": -25.33
+      }
+    },
+    "us_factor": {
+      "canonical_params": {
+        "top_pct": 0.25,
+        "freq": "6ME",
+        "mom_window": 3
+      },
+      "n_trades": 32,
+      "sleeve_capital": 50000.0,
+      "allocation": 0.85,
+      "stats": {
+        "sharpe": 0.6528,
+        "cagr_pct": 9.93,
+        "max_dd_pct": -28.66
+      }
+    }
+  },
+  "combined_stats": {
+    "sharpe": 0.7769,
+    "cagr_pct": 11.65,
+    "max_dd_pct": -26.9
+  }
+}

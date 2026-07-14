@@ -1,0 +1,13 @@
+basket,steep_thresh,flat_thresh,n_instruments,median_sharpe,mean_sharpe,pass_count,binomial_pvalue,binomial_significant
+bonds_us,0.25,0.0,7,-0.1701,0.2126,2,0.044381,True
+bonds_us,0.25,-0.25,7,-0.1701,0.1659,2,0.044381,True
+bonds_us,0.25,-0.5,7,-0.1701,0.1142,1,0.301663,False
+bonds_us,0.5,0.0,7,-0.1954,0.219,2,0.044381,True
+bonds_us,0.5,-0.25,7,-0.1954,0.1723,2,0.044381,True
+bonds_us,0.5,-0.5,7,-0.1954,0.1206,1,0.301663,False
+bonds_us,0.75,0.0,7,-0.0807,0.2737,2,0.044381,True
+bonds_us,0.75,-0.25,7,-0.0807,0.227,2,0.044381,True
+bonds_us,0.75,-0.5,7,-0.0807,0.1753,1,0.301663,False
+bonds_us,1.0,0.0,7,-0.1403,0.2704,2,0.044381,True
+bonds_us,1.0,-0.25,7,-0.1403,0.2237,2,0.044381,True
+bonds_us,1.0,-0.5,7,-0.1403,0.172,1,0.301663,False

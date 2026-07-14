@@ -1,0 +1,66 @@
+{
+  "strategy": "yield_curve_duration",
+  "period": "2016-01-01 -> 2026-04-01",
+  "tc_bps_one_way": 5,
+  "signal": "T10Y2Y lagged 1m; hold when regime=='short' (T10Y2Y < 0%)",
+  "passing_instruments": [
+    "SHY",
+    "BIL"
+  ],
+  "sleeves": {
+    "SHY": {
+      "simple_85": {
+        "sharpe": 1.3183,
+        "cagr": 1.48,
+        "max_dd": -1.2,
+        "n_trades": 45,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 1.319,
+        "cagr": 1.74,
+        "max_dd": -1.42,
+        "n_trades": 45,
+        "allocation": 1.0
+      }
+    },
+    "BIL": {
+      "simple_85": {
+        "sharpe": 6.5847,
+        "cagr": 1.21,
+        "max_dd": -0.1,
+        "n_trades": 45,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 6.585,
+        "cagr": 1.42,
+        "max_dd": -0.11,
+        "n_trades": 45,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 2,
+      "instruments": [
+        "SHY",
+        "BIL"
+      ],
+      "sharpe": 2.2947,
+      "cagr": 1.34,
+      "max_dd": -0.46
+    },
+    "simple_100": {
+      "n_sleeves": 2,
+      "instruments": [
+        "SHY",
+        "BIL"
+      ],
+      "sharpe": 2.2918,
+      "cagr": 1.58,
+      "max_dd": -0.54
+    }
+  }
+}

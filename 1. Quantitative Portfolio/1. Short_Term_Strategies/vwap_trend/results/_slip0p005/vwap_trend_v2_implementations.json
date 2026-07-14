@@ -1,0 +1,43 @@
+{
+  "starting_capital": 100000,
+  "n_passing_baskets": 0,
+  "n_rescued_tickers": 2,
+  "n_total_instruments": 2,
+  "portfolio": {
+    "simple": {
+      "sharpe": -0.1532,
+      "cagr": -0.0162,
+      "max_dd": -0.4137,
+      "n_instruments": 2
+    },
+    "asset_vol": {
+      "sharpe": 0.2789,
+      "cagr": 0.0311,
+      "max_dd": -0.4665,
+      "n_instruments": 2
+    },
+    "vol_target": {
+      "sharpe": -0.0631,
+      "cagr": -0.0137,
+      "max_dd": -0.5076,
+      "n_instruments": 2
+    }
+  },
+  "selected_variant": "asset_vol",
+  "selection_criterion": "highest portfolio Sharpe",
+  "instruments": {
+    "baskets": {},
+    "rescued": {
+      "MTUM": {
+        "simple": 0.484,
+        "asset_vol": 0.6766,
+        "vol_target": 0.472
+      },
+      "EWW": {
+        "simple": -0.9503,
+        "asset_vol": -0.6598,
+        "vol_target": -1.0767
+      }
+    }
+  }
+}

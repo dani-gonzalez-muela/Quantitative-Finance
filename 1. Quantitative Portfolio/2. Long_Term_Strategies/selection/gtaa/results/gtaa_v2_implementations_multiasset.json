@@ -1,0 +1,76 @@
+{
+  "strategy": "gtaa_v2",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "starting_capital": 100000,
+  "allocation": 0.85,
+  "n_passing_baskets": 4,
+  "sleeve_capital": 25000.0,
+  "baskets": {
+    "us_sectors": {
+      "canonical_params": {
+        "sma_window": 300,
+        "freq": "6ME",
+        "top_pct": 0.25
+      },
+      "n_trades": 45,
+      "sleeve_capital": 25000.0,
+      "allocation": 0.85,
+      "stats": {
+        "sharpe": 0.8129,
+        "cagr_pct": 13.32,
+        "max_dd_pct": -27.37
+      }
+    },
+    "bonds_us": {
+      "canonical_params": {
+        "sma_window": 300,
+        "freq": "6ME",
+        "top_pct": 0.25
+      },
+      "n_trades": 30,
+      "sleeve_capital": 25000.0,
+      "allocation": 0.85,
+      "stats": {
+        "sharpe": 0.7057,
+        "cagr_pct": 4.12,
+        "max_dd_pct": -14.06
+      }
+    },
+    "commodities": {
+      "canonical_params": {
+        "sma_window": 300,
+        "freq": "6ME",
+        "top_pct": 0.25
+      },
+      "n_trades": 31,
+      "sleeve_capital": 25000.0,
+      "allocation": 0.85,
+      "stats": {
+        "sharpe": 0.4991,
+        "cagr_pct": 9.74,
+        "max_dd_pct": -48.06
+      }
+    },
+    "real_assets": {
+      "canonical_params": {
+        "sma_window": 300,
+        "freq": "6ME",
+        "top_pct": 0.25
+      },
+      "n_trades": 15,
+      "sleeve_capital": 25000.0,
+      "allocation": 0.85,
+      "stats": {
+        "sharpe": 0.7916,
+        "cagr_pct": 13.81,
+        "max_dd_pct": -36.37
+      }
+    }
+  },
+  "combined_stats": {
+    "sharpe": 0.8164,
+    "cagr_pct": 9.72,
+    "max_dd_pct": -20.96
+  }
+}

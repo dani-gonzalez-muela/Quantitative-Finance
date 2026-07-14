@@ -1,0 +1,95 @@
+{
+  "strategy": "Commodity Trend v2 (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "n_boot": 500,
+  "n_combos": 120,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "freq": "6ME",
+    "mom_window": 3
+  },
+  "canonical_median_sharpe": 0.6776,
+  "binomial_pvalue": 0.0975,
+  "binomial_significant": false,
+  "verdict": "NO EVIDENCE OF EFFECT",
+  "baskets": {
+    "commodities": {
+      "instruments": [
+        "GLD",
+        "SLV",
+        "DBC",
+        "USO",
+        "UNG",
+        "GDX",
+        "PDBC"
+      ],
+      "n_instruments": 7,
+      "canonical_params": {
+        "top_pct": 0.25,
+        "freq": "6ME",
+        "mom_window": 3
+      },
+      "canonical_median_sharpe": 0.6776,
+      "canonical_basket_sharpe": 0.2104,
+      "pass_count_at_canon": 1,
+      "n_baskets_tested": 2,
+      "binomial_pvalue": 0.0975,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE OF EFFECT",
+      "basket_details": {
+        "commodities": {
+          "t_p": 0.2803,
+          "boot_p5": -0.4103,
+          "perm_p": 0.284,
+          "sharpe": 0.2104,
+          "gates": 0
+        },
+        "real_assets": {
+          "t_p": 0.0034,
+          "boot_p5": 0.5723,
+          "perm_p": 0.002,
+          "sharpe": 1.1448,
+          "gates": 3
+        }
+      }
+    },
+    "real_assets": {
+      "instruments": [
+        "VNQ",
+        "VNQI",
+        "AMLP",
+        "XLRE"
+      ],
+      "n_instruments": 4,
+      "canonical_params": {
+        "top_pct": 0.25,
+        "freq": "6ME",
+        "mom_window": 3
+      },
+      "canonical_median_sharpe": 0.6776,
+      "canonical_basket_sharpe": 1.1448,
+      "pass_count_at_canon": 1,
+      "n_baskets_tested": 2,
+      "binomial_pvalue": 0.0975,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE OF EFFECT",
+      "basket_details": {
+        "commodities": {
+          "t_p": 0.2803,
+          "boot_p5": -0.4103,
+          "perm_p": 0.284,
+          "sharpe": 0.2104,
+          "gates": 0
+        },
+        "real_assets": {
+          "t_p": 0.0034,
+          "boot_p5": 0.5723,
+          "perm_p": 0.002,
+          "sharpe": 1.1448,
+          "gates": 3
+        }
+      }
+    }
+  }
+}

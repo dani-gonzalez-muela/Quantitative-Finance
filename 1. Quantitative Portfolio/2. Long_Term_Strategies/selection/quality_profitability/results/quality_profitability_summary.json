@@ -1,0 +1,34 @@
+{
+  "strategy": "Quality / Profitability (RMW)",
+  "instruments": [
+    "FF_MktRF",
+    "FF_RMW"
+  ],
+  "portfolio": "long_term",
+  "period": "1963-08-31 -> 2026-02-28",
+  "params": {
+    "factor": "FF5 RMW (Robust Minus Weak profitability)",
+    "signal": "long Mkt+half_RMW when 12m cumulative RMW signal positive; else long market only",
+    "note": "Compustat fundamentals not in WRDS snapshot. FF5 RMW from ff_factors_monthly.csv (Fama-French Research Data). Period: 1963-2026."
+  },
+  "trades": 751,
+  "stats": {
+    "cagr": 9.18,
+    "total_return": 24052.36,
+    "sharpe_daily": 0.7206,
+    "max_dd": -43.47,
+    "years": 62.5
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.9008,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.8776,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

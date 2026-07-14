@@ -1,0 +1,108 @@
+{
+  "strategy": "Industry Trend (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "universes": {
+    "us_sectors": {
+      "n_tickers": 11,
+      "tickers": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "best_sharpe": 1.3513
+    },
+    "us_factor": {
+      "n_tickers": 7,
+      "tickers": [
+        "IWF",
+        "IWD",
+        "IWM",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY"
+      ],
+      "best_sharpe": 1.1652
+    },
+    "em_country": {
+      "n_tickers": 11,
+      "tickers": [
+        "EEM",
+        "INDA",
+        "EWZ",
+        "EWJ",
+        "EWG",
+        "EWU",
+        "EWA",
+        "EWC",
+        "EWP",
+        "EWI",
+        "EWL"
+      ],
+      "best_sharpe": 0.3979
+    }
+  },
+  "grid_search": {
+    "top_pcts": [
+      0.1,
+      0.15,
+      0.25,
+      0.33,
+      0.5,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "mom_windows": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "combos_per_universe": 120,
+    "total_runs": 360
+  },
+  "best_params": {
+    "top_pct": 0.25,
+    "top_n_primary": 3,
+    "mom_window": 12,
+    "freq": "6ME",
+    "median_sharpe": 1.1652,
+    "min_sharpe": 0.3979,
+    "n_positive": 3,
+    "stability": 0.7173,
+    "per_universe_sharpe": {
+      "us_sectors": 1.3513,
+      "us_factor": 1.1652,
+      "em_country": 0.3979
+    }
+  },
+  "v2_canonical_comparison": {
+    "params": {
+      "top_pct": 0.33,
+      "mom_window": 6,
+      "freq": "ME"
+    },
+    "median_sharpe": 0.6893,
+    "min_sharpe": 0.4238,
+    "per_universe_sharpe": {
+      "us_sectors": 0.8534,
+      "us_factor": 0.6893,
+      "em_country": 0.4238
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "label": "Commodity Trend",
+  "sleeve": "long_term",
+  "type": "Trend (time-series momentum)",
+  "timeframe": "monthly",
+  "universe": "commodity ETFs",
+  "signal": "Long each commodity when its 12-month return is positive, else flat.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.38,
+    "cagr_pct": 5.63,
+    "maxdd_pct": -58.33,
+    "months": 284
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "12-month time-series momentum on commodities: long when 12m return > 0, else flat. Equal weight. v1 universe was only gold+oil (proxy data); v2 multiasset extends to the ETF universe incl. a real-assets sleeve (REITs+MLPs).",
+  "reference": "Moskowitz, Ooi & Pedersen (2012), 'Time Series Momentum' \u2014 commodity leg"
+}

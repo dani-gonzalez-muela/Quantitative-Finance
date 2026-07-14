@@ -1,0 +1,6 @@
+{
+  "strategy": "bond_duration_carry_v2",
+  "n_passing_baskets": 0,
+  "baskets": {},
+  "combined_stats": {}
+}

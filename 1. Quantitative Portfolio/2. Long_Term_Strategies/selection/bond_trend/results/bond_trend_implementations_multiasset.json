@@ -1,0 +1,66 @@
+{
+  "strategy": "bond_trend",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "mom_window": 3,
+    "freq": "2ME"
+  },
+  "sleeves": {
+    "bonds_us": {
+      "simple_85": {
+        "sharpe": 0.5773,
+        "cagr": 3.4,
+        "max_dd": -14.08,
+        "n_trades": 108,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.5783,
+        "cagr": 3.98,
+        "max_dd": -16.37,
+        "n_trades": 108,
+        "allocation": 1.0
+      }
+    },
+    "bonds_intl": {
+      "simple_85": {
+        "sharpe": 0.6573,
+        "cagr": 3.49,
+        "max_dd": -16.59,
+        "n_trades": 55,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.6557,
+        "cagr": 4.08,
+        "max_dd": -19.29,
+        "n_trades": 55,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 2,
+      "sleeves": [
+        "bonds_us",
+        "bonds_intl"
+      ],
+      "sharpe": 0.7027,
+      "cagr": 3.44,
+      "max_dd": -12.09
+    },
+    "simple_100": {
+      "n_sleeves": 2,
+      "sleeves": [
+        "bonds_us",
+        "bonds_intl"
+      ],
+      "sharpe": 0.7014,
+      "cagr": 4.03,
+      "max_dd": -14.09
+    }
+  }
+}

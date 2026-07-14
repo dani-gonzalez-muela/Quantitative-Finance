@@ -1,0 +1,23 @@
+{
+  "label": "VWAP Trend",
+  "sleeve": "short_term",
+  "type": "Trend (VWAP anchor)",
+  "timeframe": "5-min bars",
+  "universe": "MTUM, EWW (rescued)",
+  "signal": "Direction of dislocation from session VWAP; VWAP-order fees.",
+  "in_portfolio": false,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "rescued",
+    "selection": "fail"
+  },
+  "stats": {
+    "sharpe": 1.583,
+    "cagr_pct": 33.72,
+    "maxdd_pct": -25.45,
+    "months": 125
+  },
+  "gates_passed": "3/3",
+  "description": "VWAP-cross on 5-minute intraday bars. Enters long at 09:30 if close > VWAP*(1+threshold), short if close < VWAP*(1-threshold). Flips position whenever price crosses VWAP, but flips are suppressed for a minimum hold window (debounces whipsaws). Exits at a fixed time-of-day close.",
+  "reference": "VWAP trend-following (paper: vwap_trend/Volume-Weighted-Average-Price.pdf); execution variant proprietary"
+}

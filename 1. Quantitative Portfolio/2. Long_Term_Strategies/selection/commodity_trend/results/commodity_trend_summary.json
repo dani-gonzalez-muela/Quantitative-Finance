@@ -1,0 +1,39 @@
+{
+  "strategy": "Commodity Trend",
+  "instruments": [
+    "gold",
+    "oil"
+  ],
+  "portfolio": "long_term",
+  "period": "2001-09-21 -> 2025-05-12",
+  "params": {
+    "mom_window_months": 12,
+    "signal": "12m_return > 0 long; else flat",
+    "sizing": "equal_weight",
+    "instruments": [
+      "gold",
+      "oil"
+    ],
+    "data_note": "Futures-price proxies from commodities_daily.csv (vol_overlay). DBC/GSG ETF download blocked."
+  },
+  "trades": 35,
+  "stats": {
+    "cagr": 5.62,
+    "total_return": 264.0,
+    "sharpe_daily": 0.3488,
+    "max_dd": -67.1,
+    "years": 23.64
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.3802,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.3619,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

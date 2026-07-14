@@ -1,0 +1,23 @@
+{
+  "label": "Turn Of Month",
+  "sleeve": "long_term",
+  "type": "Calendar / seasonality",
+  "timeframe": "daily (calendar-timed)",
+  "universe": "US equity (market)",
+  "signal": "Invested only the last 5 and first 5 trading days of each month, else cash.",
+  "in_portfolio": true,
+  "stats": {
+    "sharpe": 0.906,
+    "cagr_pct": 7.87,
+    "maxdd_pct": -16.8,
+    "months": 114
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "gates_passed": "3/3",
+  "description": "Calendar effect: invested only the last N + first N trading days of each month (v2 canonical N=5/5), cash (risk-free) otherwise. Refs: Ariel (1987), Lakonishok & Smidt (1988).",
+  "reference": "Lakonishok & Smidt (1988); Ariel (1987) \u2014 turn-of-month equity effect"
+}

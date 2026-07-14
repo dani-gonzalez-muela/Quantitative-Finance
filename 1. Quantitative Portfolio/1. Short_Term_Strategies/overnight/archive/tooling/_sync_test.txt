@@ -1,0 +1,3 @@
+sync test line 1 EDITED
+sync test line 2 EDITED
+sync test line 3 NEW

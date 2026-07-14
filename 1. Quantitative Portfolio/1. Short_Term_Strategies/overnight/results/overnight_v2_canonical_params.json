@@ -1,0 +1,68 @@
+{
+  "em_regional": {
+    "threshold": -0.005,
+    "binom_p": 0.014018749999999969,
+    "binom_pass": true,
+    "gate_pass": true,
+    "gate_stats": {
+      "t_p": 0.004355361236547911,
+      "boot5_sharpe": 1.5138590839200574,
+      "perm_p": 0.0065
+    },
+    "n_tickers": 4,
+    "k_significant": 2
+  },
+  "_run_info": "v2 multiasset backtest (5-min session-based overnight window, ported from OG_Research + archived v1window prototype) -- 3-gate significance (t-test + bootstrap + sign-permutation), Bonferroni rescue for failed baskets, trade CSVs emitted for sizing",
+  "us_equity_broad": {
+    "threshold": 0.0,
+    "binom_p": 1.04687500002143e-07,
+    "binom_pass": true,
+    "gate_pass": true,
+    "gate_stats": {
+      "t_p": 0.000523222551318186,
+      "boot5_sharpe": 2.405920857662301,
+      "perm_p": 0.0
+    },
+    "n_tickers": 7,
+    "k_significant": 6
+  },
+  "us_factor": {
+    "threshold": 0.0,
+    "binom_p": 4.008203124961085e-07,
+    "binom_pass": true,
+    "gate_pass": true,
+    "gate_stats": {
+      "t_p": 0.00014373224971666766,
+      "boot5_sharpe": 2.991499447258943,
+      "perm_p": 0.0
+    },
+    "n_tickers": 8,
+    "k_significant": 6
+  },
+  "us_sectors": {
+    "threshold": -0.002,
+    "binom_p": 0.1018945911424316,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 0.2840996005542811,
+      "boot5_sharpe": -1.5123263298498766,
+      "perm_p": 0.2935
+    },
+    "n_tickers": 11,
+    "k_significant": 2
+  },
+  "intl_liquid": {
+    "threshold": -0.003,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5_sharpe": -3.674522925297585,
+      "perm_p": 0.7845
+    },
+    "n_tickers": 5,
+    "k_significant": 0
+  }
+}

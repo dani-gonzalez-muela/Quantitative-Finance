@@ -1,0 +1,23 @@
+{
+  "label": "Gtaa",
+  "sleeve": "long_term",
+  "type": "Tactical asset allocation (trend)",
+  "timeframe": "monthly",
+  "universe": "5 asset-class ETFs (SPY/EFA/IEF/DBC/VNQ)",
+  "signal": "Hold each sleeve only when above its 200-day SMA, else move to cash.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.827,
+    "cagr_pct": 9.74,
+    "maxdd_pct": -15.22,
+    "months": 103
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Faber (2007) GTAA: 5 asset-class ETFs (SPY, EFA, IEF, DBC, VNQ) at 20% each, each held only when above its 200-day SMA (else to SHV cash). Winner variant: monthly rebalance (vs weekly). Reference: Faber 2007 + Concretum QuanTips #1 (papers in folder).",
+  "reference": "Faber (2007), 'A Quantitative Approach to Tactical Asset Allocation' (+ Concretum QuanTips #1; papers in folder)"
+}

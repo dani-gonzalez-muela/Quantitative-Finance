@@ -1,0 +1,110 @@
+/* Portfolio Dashboard — clean dark theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #0e1117;
+  --panel: #171c26;
+  --panel2: #1e2530;
+  --border: #2a3240;
+  --text: #e6e9ef;
+  --muted: #8b93a3;
+  --intraday: #22d3ee;
+  --daily: #fbbf24;
+  --longterm: #a78bfa;
+  --combined: #34d399;
+  --red: #f87171;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; margin: 0; }
+
+.header {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 20px 32px 12px 32px; border-bottom: 1px solid var(--border);
+}
+.header h1 { font-size: 20px; font-weight: 700; margin: 0; letter-spacing: -0.3px; }
+.header .sub { color: var(--muted); font-size: 13px; }
+
+.tabs-bar .tab {
+  background: transparent !important; border: none !important;
+  color: var(--muted) !important; font-weight: 600; font-size: 14px;
+  padding: 12px 18px !important;
+}
+.tabs-bar .tab--selected {
+  color: var(--text) !important; border-bottom: 2px solid var(--combined) !important;
+  background: transparent !important;
+}
+.tabs-bar { border-bottom: 1px solid var(--border) !important; padding: 0 24px; }
+
+.page { padding: 24px 32px; max-width: 1400px; margin: 0 auto; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.card {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 20px;
+}
+.card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+.card .value { font-size: 26px; font-weight: 700; margin-top: 6px; }
+.card .detail { color: var(--muted); font-size: 12px; margin-top: 4px; }
+.card.accent-intraday { border-top: 3px solid var(--intraday); }
+.card.accent-daily { border-top: 3px solid var(--daily); }
+.card.accent-longterm { border-top: 3px solid var(--longterm); }
+.card.accent-combined { border-top: 3px solid var(--combined); }
+
+.panel {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px; margin-bottom: 20px;
+}
+.panel h3 { margin: 0 0 4px 0; font-size: 15px; font-weight: 600; }
+.panel .hint { color: var(--muted); font-size: 12px; margin-bottom: 10px; }
+
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 1000px) { .row2 { grid-template-columns: 1fr; } }
+
+.pipeline { display: flex; gap: 10px; flex-wrap: wrap; align-items: stretch; }
+.stage {
+  flex: 1; min-width: 180px; background: var(--panel2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px;
+}
+.stage .num { color: var(--muted); font-size: 11px; font-weight: 700; }
+.stage .name { font-weight: 600; font-size: 13px; margin: 4px 0; }
+.stage .desc { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.arrow { align-self: center; color: var(--muted); font-size: 18px; }
+
+.badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+.badge.pass { background: rgba(52,211,153,.15); color: var(--combined); }
+.badge.fail { background: rgba(248,113,113,.15); color: var(--red); }
+.badge.rescued { background: rgba(251,191,36,.15); color: var(--daily); }
+.badge.na { background: rgba(139,147,163,.15); color: var(--muted); }
+
+.strategy-desc { line-height: 1.7; font-size: 13.5px; }
+.strategy-desc b { color: var(--muted); font-weight: 600; }
+.strategy-desc a { color: var(--intraday); text-decoration: underline; font-weight: 500; }
+.strategy-desc a:hover { color: #67e8f9; }
+
+table.dash-table { width: 100%; }
+
+.footer { color: var(--muted); font-size: 11.5px; padding: 12px 32px 24px; text-align: center; }
+
+/* 2026-07-10 feedback: DataTable rows must never turn white on hover/click */
+.dash-spreadsheet tr:hover td.dash-cell,
+.dash-spreadsheet tr:hover th,
+.dash-spreadsheet td.dash-cell.focused,
+.dash-spreadsheet td.cell--selected,
+.dash-spreadsheet td.dash-cell.cell--active {
+  background-color: #1d2430 !important;
+  color: #e6e9ef !important;
+}
+.dash-spreadsheet td.dash-cell div.dash-cell-value,
+.dash-spreadsheet input.dash-cell-value {
+  background-color: transparent !important;
+  color: #e6e9ef !important;
+}
+
+/* 2026-07-10: bigger, easier-to-click sort icons in table headers */
+.dash-spreadsheet th .column-header--sort {
+  font-size: 16px !important;
+  padding: 4px 10px !important;
+  cursor: pointer;
+}
+.dash-spreadsheet th { padding-top: 6px !important; padding-bottom: 6px !important; }

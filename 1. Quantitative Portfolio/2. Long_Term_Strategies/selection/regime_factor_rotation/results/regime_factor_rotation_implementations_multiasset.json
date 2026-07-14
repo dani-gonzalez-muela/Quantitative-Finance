@@ -1,0 +1,105 @@
+{
+  "strategy": "regime_factor_rotation",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "canonical_params": {
+    "top_pct": 0.5,
+    "n_regimes": 3,
+    "freq": "6ME",
+    "top_n": 4
+  },
+  "allocation": 0.85,
+  "tc_bps_one_way": 5,
+  "sleeves": {
+    "us_factor_quality": {
+      "tickers": [
+        "IWM",
+        "IWD",
+        "QUAL",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY",
+        "IWF"
+      ],
+      "n_top_held": 4,
+      "etf_factor_loads": {
+        "IWM": {
+          "SMB": 1.0,
+          "HML": 0.0,
+          "RMW": 0.0,
+          "CMA": 0.0,
+          "Mom": 0.0
+        },
+        "IWD": {
+          "SMB": 0.0,
+          "HML": 1.0,
+          "RMW": 0.0,
+          "CMA": 0.0,
+          "Mom": 0.0
+        },
+        "QUAL": {
+          "SMB": 0.0,
+          "HML": 0.0,
+          "RMW": 1.0,
+          "CMA": 0.0,
+          "Mom": 0.0
+        },
+        "USMV": {
+          "SMB": 0.0,
+          "HML": 0.0,
+          "RMW": 0.5,
+          "CMA": 0.5,
+          "Mom": 0.0
+        },
+        "MTUM": {
+          "SMB": 0.0,
+          "HML": 0.0,
+          "RMW": 0.0,
+          "CMA": 0.0,
+          "Mom": 1.0
+        },
+        "PKW": {
+          "SMB": 0.0,
+          "HML": 0.0,
+          "RMW": 0.0,
+          "CMA": 1.0,
+          "Mom": 0.0
+        },
+        "DVY": {
+          "SMB": 0.0,
+          "HML": 0.5,
+          "RMW": 0.5,
+          "CMA": 0.0,
+          "Mom": 0.0
+        },
+        "IWF": {
+          "SMB": 0.0,
+          "HML": -1.0,
+          "RMW": 0.0,
+          "CMA": 0.0,
+          "Mom": 0.0
+        }
+      },
+      "metrics_85pct": {
+        "cagr": 10.76,
+        "sharpe": 0.779,
+        "maxdd": -30.34,
+        "start": "2016-02-01",
+        "end": "2025-01-31",
+        "n_days": 2349
+      },
+      "metrics_100pct": {
+        "cagr": 12.65,
+        "sharpe": 0.777,
+        "maxdd": -35.45,
+        "start": "2016-02-01",
+        "end": "2025-01-31",
+        "n_days": 2349
+      },
+      "equity_file_85": "us_factor_quality_simple_85.csv",
+      "equity_file_100": "us_factor_quality_simple_100.csv"
+    }
+  },
+  "significance_gates_passed": 3,
+  "notes": "VLUE and COWZ unavailable (network blocked in sandbox). IWM used as SMB/size proxy; IWD as HML/value; QUAL as RMW/quality; MTUM as Mom; PKW as CMA/conservative-investment proxy. USMV (low-vol) gets half RMW + half CMA loading. DVY (dividend) gets half HML + half RMW loading."
+}

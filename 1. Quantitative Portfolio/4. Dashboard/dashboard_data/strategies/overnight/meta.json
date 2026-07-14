@@ -1,0 +1,23 @@
+{
+  "label": "Overnight Hold",
+  "sleeve": "short_term",
+  "type": "Overnight premium",
+  "timeframe": "close->open",
+  "universe": "8 instruments, 2 baskets",
+  "signal": "Hold overnight session; additive to day-session capital.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 1.655,
+    "cagr_pct": 12.07,
+    "maxdd_pct": -13.91,
+    "months": 125
+  },
+  "gates_passed": "3/3",
+  "description": "Long-only overnight-carry strategy. Enters at the after-market session's close (~19:55 ET) if that day's regular-session (09:30-15:55) return was below a threshold; exits at the *next* day's pre-market session's open (~04:00 ET). No intraday position -- only held overnight.",
+  "reference": "Overnight return premium literature (e.g. Cooper, Cliff & Gulen 2008, 'Return Differences between Trading and Non-Trading Hours'); implementation proprietary"
+}

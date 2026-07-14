@@ -1,0 +1,294 @@
+{
+  "_run_info": "fable Phase C 2026-07-02; strategies-as-instruments basket framework on monthly returns",
+  "timing": {
+    "n_strategies": 19,
+    "members": [
+      "bab_long_short",
+      "bollinger_band",
+      "bond_duration_carry",
+      "credit_carry",
+      "donchian_channel",
+      "insider_buying",
+      "low_volatility",
+      "overnight_premium",
+      "pead_earnings_drift",
+      "qmj_long_short",
+      "reit_dividend_carry",
+      "sentiment_timing",
+      "short_interest_contrarian",
+      "turn_of_month",
+      "us_cross_sectional_momentum",
+      "us_earnings_momentum",
+      "us_return_seasonality",
+      "us_shareholder_yield",
+      "yield_curve_duration"
+    ],
+    "composite": {
+      "gate1_p": 0.0,
+      "gate2_boot5": 0.621,
+      "gate3_p": 0.0,
+      "sharpe_m": 0.846,
+      "n_months": 673,
+      "passes": true
+    },
+    "per_strategy": {
+      "bab_long_short": {
+        "gate1_p": 0.0311,
+        "gate2_boot5": 0.037,
+        "gate3_p": 0.0247,
+        "sharpe_m": 0.343,
+        "n_months": 358,
+        "passes": true
+      },
+      "bollinger_band": {
+        "gate1_p": 0.0006,
+        "gate2_boot5": 0.474,
+        "gate3_p": 0.001,
+        "sharpe_m": 1.083,
+        "n_months": 113,
+        "passes": true
+      },
+      "bond_duration_carry": {
+        "gate1_p": 0.3675,
+        "gate2_boot5": -0.411,
+        "gate3_p": 0.371,
+        "sharpe_m": 0.111,
+        "n_months": 113,
+        "passes": false
+      },
+      "credit_carry": {
+        "gate1_p": 0.0411,
+        "gate2_boot5": 0.062,
+        "gate3_p": 0.0423,
+        "sharpe_m": 0.582,
+        "n_months": 110,
+        "passes": true
+      },
+      "donchian_channel": {
+        "gate1_p": 0.0022,
+        "gate2_boot5": 0.425,
+        "gate3_p": 0.0027,
+        "sharpe_m": 0.945,
+        "n_months": 114,
+        "passes": true
+      },
+      "insider_buying": {
+        "gate1_p": 0.0,
+        "gate2_boot5": 0.431,
+        "gate3_p": 0.0,
+        "sharpe_m": 0.722,
+        "n_months": 433,
+        "passes": true
+      },
+      "low_volatility": {
+        "gate1_p": 0.0,
+        "gate2_boot5": 0.495,
+        "gate3_p": 0.0,
+        "sharpe_m": 0.725,
+        "n_months": 671,
+        "passes": true
+      },
+      "overnight_premium": {
+        "gate1_p": 0.0002,
+        "gate2_boot5": 0.366,
+        "gate3_p": 0.0,
+        "sharpe_m": 0.695,
+        "n_months": 311,
+        "passes": true
+      },
+      "pead_earnings_drift": {
+        "gate1_p": 0.0,
+        "gate2_boot5": 0.458,
+        "gate3_p": 0.0,
+        "sharpe_m": 0.753,
+        "n_months": 424,
+        "passes": true
+      },
+      "qmj_long_short": {
+        "gate1_p": 0.0016,
+        "gate2_boot5": 0.237,
+        "gate3_p": 0.001,
+        "sharpe_m": 0.495,
+        "n_months": 433,
+        "passes": true
+      },
+      "reit_dividend_carry": {
+        "gate1_p": 0.0041,
+        "gate2_boot5": 0.204,
+        "gate3_p": 0.0037,
+        "sharpe_m": 0.61,
+        "n_months": 230,
+        "passes": true
+      },
+      "sentiment_timing": {
+        "gate1_p": 0.0209,
+        "gate2_boot5": 0.151,
+        "gate3_p": 0.019,
+        "sharpe_m": 0.671,
+        "n_months": 114,
+        "passes": true
+      },
+      "short_interest_contrarian": {
+        "gate1_p": 0.0016,
+        "gate2_boot5": 0.28,
+        "gate3_p": 0.0013,
+        "sharpe_m": 0.685,
+        "n_months": 229,
+        "passes": true
+      },
+      "turn_of_month": {
+        "gate1_p": 0.0031,
+        "gate2_boot5": 0.38,
+        "gate3_p": 0.0013,
+        "sharpe_m": 0.91,
+        "n_months": 114,
+        "passes": true
+      },
+      "us_cross_sectional_momentum": {
+        "gate1_p": 0.0,
+        "gate2_boot5": 0.687,
+        "gate3_p": 0.0,
+        "sharpe_m": 0.966,
+        "n_months": 433,
+        "passes": true
+      },
+      "us_earnings_momentum": {
+        "gate1_p": 0.0,
+        "gate2_boot5": 0.754,
+        "gate3_p": 0.0,
+        "sharpe_m": 1.039,
+        "n_months": 433,
+        "passes": true
+      },
+      "us_return_seasonality": {
+        "gate1_p": 0.0003,
+        "gate2_boot5": 0.331,
+        "gate3_p": 0.0003,
+        "sharpe_m": 0.635,
+        "n_months": 361,
+        "passes": true
+      },
+      "us_shareholder_yield": {
+        "gate1_p": 0.0,
+        "gate2_boot5": 0.529,
+        "gate3_p": 0.0,
+        "sharpe_m": 0.819,
+        "n_months": 433,
+        "passes": true
+      },
+      "yield_curve_duration": {
+        "gate1_p": 0.3207,
+        "gate2_boot5": -0.359,
+        "gate3_p": 0.3463,
+        "sharpe_m": 0.154,
+        "n_months": 111,
+        "passes": false
+      }
+    }
+  },
+  "selection": {
+    "n_strategies": 10,
+    "members": [
+      "bond_trend",
+      "commodity_carry",
+      "commodity_trend",
+      "country_cape_rotation",
+      "cross_asset_carry",
+      "em_dm_carry",
+      "gtaa",
+      "industry_trend",
+      "quality_profitability",
+      "sector_momentum"
+    ],
+    "composite": {
+      "gate1_p": 0.0,
+      "gate2_boot5": 0.578,
+      "gate3_p": 0.0,
+      "sharpe_m": 0.79,
+      "n_months": 750,
+      "passes": true
+    },
+    "per_strategy": {
+      "bond_trend": {
+        "gate1_p": 0.176,
+        "gate2_boot5": -0.15,
+        "gate3_p": 0.175,
+        "sharpe_m": 0.187,
+        "n_months": 300,
+        "passes": false
+      },
+      "commodity_carry": {
+        "gate1_p": 0.0046,
+        "gate2_boot5": 0.209,
+        "gate3_p": 0.0037,
+        "sharpe_m": 0.544,
+        "n_months": 280,
+        "passes": true
+      },
+      "commodity_trend": {
+        "gate1_p": 0.0327,
+        "gate2_boot5": 0.028,
+        "gate3_p": 0.0337,
+        "sharpe_m": 0.381,
+        "n_months": 284,
+        "passes": true
+      },
+      "country_cape_rotation": {
+        "gate1_p": 0.0052,
+        "gate2_boot5": 0.163,
+        "gate3_p": 0.0053,
+        "sharpe_m": 0.47,
+        "n_months": 360,
+        "passes": true
+      },
+      "cross_asset_carry": {
+        "gate1_p": 0.2904,
+        "gate2_boot5": -0.341,
+        "gate3_p": 0.2937,
+        "sharpe_m": 0.181,
+        "n_months": 113,
+        "passes": false
+      },
+      "em_dm_carry": {
+        "gate1_p": 0.0,
+        "gate2_boot5": 0.489,
+        "gate3_p": 0.0,
+        "sharpe_m": 0.845,
+        "n_months": 313,
+        "passes": true
+      },
+      "gtaa": {
+        "gate1_p": 0.0086,
+        "gate2_boot5": 0.247,
+        "gate3_p": 0.0067,
+        "sharpe_m": 0.831,
+        "n_months": 103,
+        "passes": true
+      },
+      "industry_trend": {
+        "gate1_p": 0.0145,
+        "gate2_boot5": 0.17,
+        "gate3_p": 0.016,
+        "sharpe_m": 0.727,
+        "n_months": 112,
+        "passes": true
+      },
+      "quality_profitability": {
+        "gate1_p": 0.0,
+        "gate2_boot5": 0.683,
+        "gate3_p": 0.0,
+        "sharpe_m": 0.895,
+        "n_months": 750,
+        "passes": true
+      },
+      "sector_momentum": {
+        "gate1_p": 0.0067,
+        "gate2_boot5": 0.281,
+        "gate3_p": 0.007,
+        "sharpe_m": 0.896,
+        "n_months": 96,
+        "passes": true
+      }
+    }
+  }
+}

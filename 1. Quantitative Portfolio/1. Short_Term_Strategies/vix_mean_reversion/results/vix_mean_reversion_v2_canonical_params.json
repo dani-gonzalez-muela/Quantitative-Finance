@@ -1,0 +1,82 @@
+{
+  "us_equity_broad": {
+    "params": {
+      "vix_low": 15,
+      "vix_high": 25,
+      "hold_days": 1
+    },
+    "instruments": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "MDY"
+    ],
+    "passes": true
+  },
+  "us_factor": {
+    "params": {
+      "vix_low": 15,
+      "vix_high": 25,
+      "hold_days": 1
+    },
+    "instruments": [
+      "IWF",
+      "IWD",
+      "MTUM",
+      "USMV",
+      "DVY",
+      "QUAL"
+    ],
+    "passes": true
+  },
+  "us_sectors": {
+    "params": {
+      "vix_low": 15,
+      "vix_high": 25,
+      "hold_days": 1
+    },
+    "instruments": [
+      "XLK",
+      "XLC",
+      "XLI",
+      "XLV",
+      "XLY",
+      "XLF",
+      "XLE",
+      "XLU",
+      "XLB",
+      "XLP",
+      "XLRE"
+    ],
+    "passes": false
+  },
+  "em_regional": {
+    "params": {
+      "vix_low": 22,
+      "vix_high": 30,
+      "hold_days": 1
+    },
+    "instruments": [
+      "EEM",
+      "EWZ",
+      "INDA",
+      "EWW"
+    ],
+    "passes": false
+  },
+  "intl_liquid": {
+    "params": {
+      "vix_low": 15,
+      "vix_high": 25,
+      "hold_days": 1
+    },
+    "instruments": [
+      "EFA",
+      "EZU",
+      "EWJ",
+      "EWG",
+      "EWU"
+    ],
+    "passes": false
+  }
+}

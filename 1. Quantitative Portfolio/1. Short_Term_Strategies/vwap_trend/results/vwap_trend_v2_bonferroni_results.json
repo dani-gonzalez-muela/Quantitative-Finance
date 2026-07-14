@@ -1,0 +1,597 @@
+{
+  "methodology": "per-ticker 3-gate at alpha=0.05/N per basket; min_hold=10min, slippage=0.0, exit_time=15:55:00",
+  "baskets": {
+    "us_equity_broad": [
+      {
+        "ticker": "SPY",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.3927,
+        "bonferroni_alpha": 0.007143,
+        "gate_stats": {
+          "t_p": 0.0501998821066776,
+          "boot5": -0.13455890954234812,
+          "perm_p": 0.117
+        }
+      },
+      {
+        "ticker": "QQQ",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.6029,
+        "bonferroni_alpha": 0.007143,
+        "gate_stats": {
+          "t_p": 0.007170647436045309,
+          "boot5": 0.1038806576214616,
+          "perm_p": 0.025
+        }
+      },
+      {
+        "ticker": "IWM",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": -0.6283,
+        "bonferroni_alpha": 0.007143,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -1.113584084559417,
+          "perm_p": 0.978
+        }
+      },
+      {
+        "ticker": "DIA",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.235,
+        "bonferroni_alpha": 0.007143,
+        "gate_stats": {
+          "t_p": 0.10505214382341345,
+          "boot5": -0.29590538637629815,
+          "perm_p": 0.246
+        }
+      },
+      {
+        "ticker": "MDY",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.336,
+        "bonferroni_alpha": 0.007143,
+        "gate_stats": {
+          "t_p": 0.11361721291589608,
+          "boot5": -0.14356550344889799,
+          "perm_p": 0.139
+        }
+      },
+      {
+        "ticker": "IVV",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.2745,
+        "bonferroni_alpha": 0.007143,
+        "gate_stats": {
+          "t_p": 0.15296569949998562,
+          "boot5": -0.26314621018553197,
+          "perm_p": 0.204
+        }
+      },
+      {
+        "ticker": "VOO",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.51,
+        "bonferroni_alpha": 0.007143,
+        "gate_stats": {
+          "t_p": 0.019381972125213948,
+          "boot5": -0.026357638996519092,
+          "perm_p": 0.066
+        }
+      }
+    ],
+    "us_factor": [
+      {
+        "ticker": "IWF",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.1454,
+        "bonferroni_alpha": 0.00625,
+        "gate_stats": {
+          "t_p": 0.31599162900497324,
+          "boot5": -0.3736752093646866,
+          "perm_p": 0.331
+        }
+      },
+      {
+        "ticker": "IWD",
+        "pass": false,
+        "vwap_threshold": 0.0,
+        "exit_time": "15:55:00",
+        "sharpe": 0.2884,
+        "bonferroni_alpha": 0.00625,
+        "gate_stats": {
+          "t_p": 0.16817618402025253,
+          "boot5": -0.1996209812685653,
+          "perm_p": 0.176
+        }
+      },
+      {
+        "ticker": "MTUM",
+        "pass": true,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.7979,
+        "bonferroni_alpha": 0.00625,
+        "gate_stats": {
+          "t_p": 0.005777379774057164,
+          "boot5": 0.2821721604257487,
+          "perm_p": 0.006
+        },
+        "trades_file": "vwap_trend_v2_trades_bonferroni_us_factor_MTUM.csv"
+      },
+      {
+        "ticker": "USMV",
+        "pass": false,
+        "vwap_threshold": 0.0,
+        "exit_time": "15:55:00",
+        "sharpe": -0.1514,
+        "bonferroni_alpha": 0.00625,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.6509207274399662,
+          "perm_p": 0.688
+        }
+      },
+      {
+        "ticker": "VTV",
+        "pass": false,
+        "vwap_threshold": 0.0,
+        "exit_time": "15:55:00",
+        "sharpe": 0.2127,
+        "bonferroni_alpha": 0.00625,
+        "gate_stats": {
+          "t_p": 0.23757926204506835,
+          "boot5": -0.31701968637599603,
+          "perm_p": 0.257
+        }
+      },
+      {
+        "ticker": "VUG",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.2113,
+        "bonferroni_alpha": 0.00625,
+        "gate_stats": {
+          "t_p": 0.23151218989052363,
+          "boot5": -0.33301682024237234,
+          "perm_p": 0.235
+        }
+      },
+      {
+        "ticker": "DVY",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.4724,
+        "bonferroni_alpha": 0.00625,
+        "gate_stats": {
+          "t_p": 0.0548405753571503,
+          "boot5": -0.05055886302399955,
+          "perm_p": 0.075
+        }
+      },
+      {
+        "ticker": "QUAL",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.1777,
+        "bonferroni_alpha": 0.00625,
+        "gate_stats": {
+          "t_p": 0.25313702437055896,
+          "boot5": -0.30220228499242074,
+          "perm_p": 0.283
+        }
+      }
+    ],
+    "us_sectors": [
+      {
+        "ticker": "XLK",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.6125,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.026812384443690555,
+          "boot5": 0.125435724942667,
+          "perm_p": 0.022
+        }
+      },
+      {
+        "ticker": "XLC",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.7082,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.0401536256201676,
+          "boot5": 0.05711181008515339,
+          "perm_p": 0.02
+        }
+      },
+      {
+        "ticker": "XLI",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.3526,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.1174504042774274,
+          "boot5": -0.13975632241676378,
+          "perm_p": 0.143
+        }
+      },
+      {
+        "ticker": "XLV",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.1722,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.3010869267918729,
+          "boot5": -0.32485742866112144,
+          "perm_p": 0.28
+        }
+      },
+      {
+        "ticker": "XLY",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.2855,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.1365046127254435,
+          "boot5": -0.19190795450668344,
+          "perm_p": 0.181
+        }
+      },
+      {
+        "ticker": "XLF",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": -0.2814,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.8191055060931473,
+          "perm_p": 0.81
+        }
+      },
+      {
+        "ticker": "XLE",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": -0.4563,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.9354571430198421,
+          "perm_p": 0.93
+        }
+      },
+      {
+        "ticker": "XLU",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": -0.0268,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.5471526407706208,
+          "perm_p": 0.55
+        }
+      },
+      {
+        "ticker": "XLB",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.2711,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.1726262734678961,
+          "boot5": -0.2075035303723564,
+          "perm_p": 0.2
+        }
+      },
+      {
+        "ticker": "XLP",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": -0.1835,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.6719839734254216,
+          "perm_p": 0.738
+        }
+      },
+      {
+        "ticker": "XLRE",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": -0.2776,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.7535587446419124,
+          "perm_p": 0.816
+        }
+      }
+    ],
+    "bonds_us": [
+      {
+        "ticker": "TLT",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": -0.0822,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.6180166179201986,
+          "perm_p": 0.612
+        }
+      },
+      {
+        "ticker": "IEF",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.2753,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.1878350404034217,
+          "boot5": null,
+          "perm_p": 0.193
+        }
+      },
+      {
+        "ticker": "SHY",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": 0.432,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.08181933599626884,
+          "boot5": null,
+          "perm_p": 0.241
+        }
+      },
+      {
+        "ticker": "HYG",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.029,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.4393956842232113,
+          "boot5": -0.4073912844508136,
+          "perm_p": 0.465
+        }
+      },
+      {
+        "ticker": "LQD",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.5537,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.10706258591032122,
+          "boot5": 0.13132260755037428,
+          "perm_p": 0.033
+        }
+      }
+    ],
+    "commodities": [
+      {
+        "ticker": "GLD",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": -0.0911,
+        "bonferroni_alpha": 0.0125,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.6028397576460285,
+          "perm_p": 0.594
+        }
+      },
+      {
+        "ticker": "SLV",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": -0.1729,
+        "bonferroni_alpha": 0.0125,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.7257968804113026,
+          "perm_p": 0.727
+        }
+      },
+      {
+        "ticker": "USO",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": -0.1744,
+        "bonferroni_alpha": 0.0125,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.7188288079414605,
+          "perm_p": 0.719
+        }
+      },
+      {
+        "ticker": "GDX",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.3407,
+        "bonferroni_alpha": 0.0125,
+        "gate_stats": {
+          "t_p": 0.12086153610993584,
+          "boot5": -0.17630661355497976,
+          "perm_p": 0.118
+        }
+      }
+    ],
+    "em_regional": [
+      {
+        "ticker": "EEM",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.6244,
+        "bonferroni_alpha": 0.0125,
+        "gate_stats": {
+          "t_p": 0.06942463998695907,
+          "boot5": 0.1329192181883973,
+          "perm_p": 0.021
+        }
+      },
+      {
+        "ticker": "EWZ",
+        "pass": false,
+        "vwap_threshold": 0.0,
+        "exit_time": "15:55:00",
+        "sharpe": 0.0489,
+        "bonferroni_alpha": 0.0125,
+        "gate_stats": {
+          "t_p": 0.45873415727747463,
+          "boot5": -0.4550279534261888,
+          "perm_p": 0.445
+        }
+      },
+      {
+        "ticker": "INDA",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.1259,
+        "bonferroni_alpha": 0.0125,
+        "gate_stats": {
+          "t_p": 0.2872478348076716,
+          "boot5": -0.4006988501042888,
+          "perm_p": 0.353
+        }
+      },
+      {
+        "ticker": "EWW",
+        "pass": true,
+        "vwap_threshold": 0.0,
+        "exit_time": "15:55:00",
+        "sharpe": 1.077,
+        "bonferroni_alpha": 0.0125,
+        "gate_stats": {
+          "t_p": 7.515972560749998e-05,
+          "boot5": 0.5546540957607962,
+          "perm_p": 0.0
+        },
+        "trades_file": "vwap_trend_v2_trades_bonferroni_em_regional_EWW.csv"
+      }
+    ],
+    "intl_liquid": [
+      {
+        "ticker": "EFA",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.9185,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.04653268998083949,
+          "boot5": 0.5053562164713534,
+          "perm_p": 0.001
+        }
+      },
+      {
+        "ticker": "EZU",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.3906,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.15733877069114613,
+          "boot5": -0.11185830720401327,
+          "perm_p": 0.105
+        }
+      },
+      {
+        "ticker": "EWJ",
+        "pass": false,
+        "vwap_threshold": 0.001,
+        "exit_time": "15:55:00",
+        "sharpe": -0.0173,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5": -0.5035313194617549,
+          "perm_p": 0.528
+        }
+      },
+      {
+        "ticker": "EWG",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.2414,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.17232198769645046,
+          "boot5": -0.2701997399755909,
+          "perm_p": 0.216
+        }
+      },
+      {
+        "ticker": "EWU",
+        "pass": false,
+        "vwap_threshold": 0.002,
+        "exit_time": "15:55:00",
+        "sharpe": 0.6415,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.10020075279260043,
+          "boot5": 0.21196709228363986,
+          "perm_p": 0.015
+        }
+      }
+    ]
+  },
+  "rescued_tickers": [
+    "MTUM",
+    "EWW"
+  ]
+}

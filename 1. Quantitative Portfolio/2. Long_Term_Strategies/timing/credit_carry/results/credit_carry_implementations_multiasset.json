@@ -1,0 +1,50 @@
+{
+  "strategy": "credit_carry",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "mom_window_months": 12,
+    "benchmark": "IEF"
+  },
+  "passing_instruments": [
+    "BIL"
+  ],
+  "sleeves": {
+    "BIL": {
+      "simple_85": {
+        "sharpe": 4.7002,
+        "cagr": 0.9,
+        "max_dd": -0.33,
+        "n_trades": 68,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 4.7001,
+        "cagr": 1.06,
+        "max_dd": -0.38,
+        "n_trades": 68,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 1,
+      "instruments": [
+        "BIL"
+      ],
+      "sharpe": 4.7002,
+      "cagr": 0.9,
+      "max_dd": -0.33
+    },
+    "simple_100": {
+      "n_sleeves": 1,
+      "instruments": [
+        "BIL"
+      ],
+      "sharpe": 4.7001,
+      "cagr": 1.06,
+      "max_dd": -0.38
+    }
+  }
+}

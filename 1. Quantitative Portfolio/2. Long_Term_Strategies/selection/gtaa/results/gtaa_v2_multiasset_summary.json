@@ -1,0 +1,235 @@
+{
+  "strategy": "GTAA v2 (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "n_boot": 500,
+  "n_combos": 100,
+  "canonical_params": {
+    "sma_window": 300,
+    "freq": "6ME",
+    "top_pct": 0.25
+  },
+  "canonical_median_sharpe": 1.1177,
+  "binomial_pvalue": 0.000481,
+  "binomial_significant": true,
+  "verdict": "STRATEGY EXISTS",
+  "baskets": {
+    "us_sectors": {
+      "instruments": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "n_instruments": 11,
+      "canonical_params": {
+        "sma_window": 300,
+        "freq": "6ME",
+        "top_pct": 0.25
+      },
+      "canonical_median_sharpe": 1.1177,
+      "canonical_basket_sharpe": 1.558,
+      "pass_count_at_canon": 3,
+      "n_baskets_tested": 4,
+      "binomial_pvalue": 0.000481,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "basket_details": {
+        "us_sectors": {
+          "t_p": 0.0005,
+          "boot_p5": 0.9319,
+          "perm_p": 0.004,
+          "sharpe": 1.558,
+          "gates": 3
+        },
+        "bonds_us": {
+          "t_p": 0.0185,
+          "boot_p5": 0.2501,
+          "perm_p": 0.018,
+          "sharpe": 0.8057,
+          "gates": 3
+        },
+        "commodities": {
+          "t_p": 0.0686,
+          "boot_p5": -0.0333,
+          "perm_p": 0.072,
+          "sharpe": 0.5741,
+          "gates": 0
+        },
+        "real_assets": {
+          "t_p": 0.001,
+          "boot_p5": 0.6224,
+          "perm_p": 0.002,
+          "sharpe": 1.4296,
+          "gates": 3
+        }
+      }
+    },
+    "bonds_us": {
+      "instruments": [
+        "TLT",
+        "IEF",
+        "SHY",
+        "TIP",
+        "BIL",
+        "LQD",
+        "HYG"
+      ],
+      "n_instruments": 7,
+      "canonical_params": {
+        "sma_window": 300,
+        "freq": "6ME",
+        "top_pct": 0.25
+      },
+      "canonical_median_sharpe": 1.1177,
+      "canonical_basket_sharpe": 0.8057,
+      "pass_count_at_canon": 3,
+      "n_baskets_tested": 4,
+      "binomial_pvalue": 0.000481,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "basket_details": {
+        "us_sectors": {
+          "t_p": 0.0005,
+          "boot_p5": 0.9319,
+          "perm_p": 0.004,
+          "sharpe": 1.558,
+          "gates": 3
+        },
+        "bonds_us": {
+          "t_p": 0.0185,
+          "boot_p5": 0.2501,
+          "perm_p": 0.018,
+          "sharpe": 0.8057,
+          "gates": 3
+        },
+        "commodities": {
+          "t_p": 0.0686,
+          "boot_p5": -0.0333,
+          "perm_p": 0.072,
+          "sharpe": 0.5741,
+          "gates": 0
+        },
+        "real_assets": {
+          "t_p": 0.001,
+          "boot_p5": 0.6224,
+          "perm_p": 0.002,
+          "sharpe": 1.4296,
+          "gates": 3
+        }
+      }
+    },
+    "commodities": {
+      "instruments": [
+        "GLD",
+        "SLV",
+        "DBC",
+        "USO",
+        "UNG",
+        "GDX",
+        "PDBC"
+      ],
+      "n_instruments": 7,
+      "canonical_params": {
+        "sma_window": 300,
+        "freq": "6ME",
+        "top_pct": 0.25
+      },
+      "canonical_median_sharpe": 1.1177,
+      "canonical_basket_sharpe": 0.5741,
+      "pass_count_at_canon": 3,
+      "n_baskets_tested": 4,
+      "binomial_pvalue": 0.000481,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "basket_details": {
+        "us_sectors": {
+          "t_p": 0.0005,
+          "boot_p5": 0.9319,
+          "perm_p": 0.004,
+          "sharpe": 1.558,
+          "gates": 3
+        },
+        "bonds_us": {
+          "t_p": 0.0185,
+          "boot_p5": 0.2501,
+          "perm_p": 0.018,
+          "sharpe": 0.8057,
+          "gates": 3
+        },
+        "commodities": {
+          "t_p": 0.0686,
+          "boot_p5": -0.0333,
+          "perm_p": 0.072,
+          "sharpe": 0.5741,
+          "gates": 0
+        },
+        "real_assets": {
+          "t_p": 0.001,
+          "boot_p5": 0.6224,
+          "perm_p": 0.002,
+          "sharpe": 1.4296,
+          "gates": 3
+        }
+      }
+    },
+    "real_assets": {
+      "instruments": [
+        "VNQ",
+        "VNQI",
+        "AMLP",
+        "XLRE"
+      ],
+      "n_instruments": 4,
+      "canonical_params": {
+        "sma_window": 300,
+        "freq": "6ME",
+        "top_pct": 0.25
+      },
+      "canonical_median_sharpe": 1.1177,
+      "canonical_basket_sharpe": 1.4296,
+      "pass_count_at_canon": 3,
+      "n_baskets_tested": 4,
+      "binomial_pvalue": 0.000481,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "basket_details": {
+        "us_sectors": {
+          "t_p": 0.0005,
+          "boot_p5": 0.9319,
+          "perm_p": 0.004,
+          "sharpe": 1.558,
+          "gates": 3
+        },
+        "bonds_us": {
+          "t_p": 0.0185,
+          "boot_p5": 0.2501,
+          "perm_p": 0.018,
+          "sharpe": 0.8057,
+          "gates": 3
+        },
+        "commodities": {
+          "t_p": 0.0686,
+          "boot_p5": -0.0333,
+          "perm_p": 0.072,
+          "sharpe": 0.5741,
+          "gates": 0
+        },
+        "real_assets": {
+          "t_p": 0.001,
+          "boot_p5": 0.6224,
+          "perm_p": 0.002,
+          "sharpe": 1.4296,
+          "gates": 3
+        }
+      }
+    }
+  }
+}

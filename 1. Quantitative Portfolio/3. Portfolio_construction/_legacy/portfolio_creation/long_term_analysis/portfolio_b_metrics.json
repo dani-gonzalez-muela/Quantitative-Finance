@@ -1,0 +1,315 @@
+{
+  "starting_capital": 100000.0,
+  "common_window": {
+    "start": "2016-06-15",
+    "end": "2026-03-13",
+    "years": 9.74
+  },
+  "leverage_levels": [
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    4.0
+  ],
+  "best_approach": "Equal-Weight (5-sleeve)",
+  "committed_sleeves": [
+    "IBS MR",
+    "Donchian",
+    "VIX MR",
+    "GTAA",
+    "Vol Overlay"
+  ],
+  "selections": {
+    "IBS MR": {
+      "key": "simple_bet_85pct_1x",
+      "label": "Simple bet 85% (1x)"
+    },
+    "Donchian": {
+      "key": "simple_bet_85pct_1x",
+      "label": "Simple bet 85% (1x)"
+    },
+    "VIX MR": {
+      "key": "simple_bet_85pct_1x",
+      "label": "Simple bet 85% (1x)"
+    },
+    "GTAA": {
+      "key": "simple_bet_85pct_1x",
+      "label": "Simple bet 85% (1x)"
+    },
+    "Vol Overlay": {
+      "key": "overlay_1p0x",
+      "label": "Overlay 1.0x"
+    }
+  },
+  "sleeve_metrics": {
+    "IBS MR": {
+      "cagr": 10.760977208808642,
+      "total_ret": 170.63485820222044,
+      "sharpe": 1.3172438223791818,
+      "sortino": 1.5805174360894774,
+      "max_dd": -7.861003656851729,
+      "vol_ann": 8.018019287754438
+    },
+    "Donchian": {
+      "cagr": 9.321668290301744,
+      "total_ret": 138.25836516893304,
+      "sharpe": 0.9225936626398907,
+      "sortino": 1.0487310322228898,
+      "max_dd": -16.075261738973158,
+      "vol_ann": 10.251066123838719
+    },
+    "VIX MR": {
+      "cagr": 18.538746050567845,
+      "total_ret": 424.1959172033551,
+      "sharpe": 1.234255526186495,
+      "sortino": 0.6589662847733586,
+      "max_dd": -19.818279643668568,
+      "vol_ann": 14.67863462114353
+    },
+    "GTAA": {
+      "cagr": 6.176795048902806,
+      "total_ret": 79.29226729105396,
+      "sharpe": 0.9948876988015793,
+      "sortino": 1.2502237868573478,
+      "max_dd": -8.108562310733857,
+      "vol_ann": 6.232313130358304
+    },
+    "Vol Overlay": {
+      "cagr": 11.097696833115055,
+      "total_ret": 178.75677369410536,
+      "sharpe": 0.986466381387798,
+      "sortino": 1.2488206659405228,
+      "max_dd": -17.656384849076513,
+      "vol_ann": 11.344815260098928
+    }
+  },
+  "portfolio_metrics": {
+    "1x": {
+      "cagr": 11.52303577963294,
+      "total_ret": 189.32858109863582,
+      "sharpe": 1.8719467106156247,
+      "sortino": 2.4752248261202676,
+      "max_dd": -8.798828536581349,
+      "vol_ann": 5.932665831180735,
+      "final": 289328.5810986358,
+      "leverage": 1.0
+    },
+    "1p5x": {
+      "cagr": 17.616578489097435,
+      "total_ret": 385.79529843031645,
+      "sharpe": 1.8719467106156247,
+      "sortino": 2.475224826120268,
+      "max_dd": -12.954457360571958,
+      "vol_ann": 8.898998746771102,
+      "final": 485795.29843031644,
+      "leverage": 1.5
+    },
+    "2x": {
+      "cagr": 23.93318289333497,
+      "total_ret": 708.6598774163768,
+      "sharpe": 1.8719467106156247,
+      "sortino": 2.4752248261202676,
+      "max_dd": -16.953850912309232,
+      "vol_ann": 11.86533166236147,
+      "final": 808659.8774163768,
+      "leverage": 2.0
+    },
+    "2p5x": {
+      "cagr": 30.47345714410772,
+      "total_ret": 1234.5443382765475,
+      "sharpe": 1.8719467106156242,
+      "sortino": 2.4752248261202676,
+      "max_dd": -20.801607784953692,
+      "vol_ann": 14.83166457795184,
+      "final": 1334544.3382765476,
+      "leverage": 2.5
+    },
+    "3x": {
+      "cagr": 37.237427224594285,
+      "total_ret": 2083.5232804102825,
+      "sharpe": 1.8719467106156247,
+      "sortino": 2.475224826120268,
+      "max_dd": -24.502233192328994,
+      "vol_ann": 17.797997493542205,
+      "final": 2183523.2804102823,
+      "leverage": 3.0
+    },
+    "4x": {
+      "cagr": 51.43344322479915,
+      "total_ret": 5596.259235348338,
+      "sharpe": 1.8719467106156247,
+      "sortino": 2.4752248261202676,
+      "max_dd": -31.47964763932134,
+      "vol_ann": 23.73066332472294,
+      "final": 5696259.235348338,
+      "leverage": 4.0
+    }
+  },
+  "weights": {
+    "equal_weight": {
+      "IBS MR": 0.2,
+      "Donchian": 0.2,
+      "VIX MR": 0.2,
+      "GTAA": 0.2,
+      "Vol Overlay": 0.2
+    }
+  },
+  "committed": {
+    "cagr": 11.52303577963294,
+    "total_ret": 189.32858109863582,
+    "sharpe": 1.8719467106156247,
+    "sortino": 2.4752248261202676,
+    "max_dd": -8.798828536581349,
+    "vol_ann": 5.932665831180735
+  },
+  "benchmarks": {
+    "spy": {
+      "cagr": 14.841363818393116,
+      "total_ret": 263.1576119082164,
+      "sharpe": 0.8464255243180868,
+      "sortino": 0.9976042332130282,
+      "max_dd": -33.79479880967784,
+      "vol_ann": 17.63369252618972
+    },
+    "qqq": {
+      "cagr": 20.488809351732606,
+      "total_ret": 468.060448729835,
+      "sharpe": 0.9215442353737637,
+      "sortino": 1.1486694792214283,
+      "max_dd": -35.00407913522333,
+      "vol_ann": 22.22182389664848
+    }
+  },
+  "signal_info": {
+    "IBS MR": {
+      "type": "Mean reversion",
+      "timeframe": "Daily swing",
+      "instrument": "SPY, QQQ, IWM",
+      "signal": "IBS = (Close \u2212 Low) / (High \u2212 Low). Buy when IBS < 0.2 (oversold near daily low), sell when IBS > 0.8.",
+      "exit": "IBS > 0.8 or \u22123% stop loss.",
+      "sizing": "Simple bet 85% (1\u00d7 base).",
+      "reference": "Kakushadze (2018) SSRN 3247865 \u00b7 SPY/QQQ/IWM 2006+"
+    },
+    "Donchian": {
+      "type": "Trend following (breakout)",
+      "timeframe": "Daily swing",
+      "instrument": "SPY, QQQ, IWM",
+      "signal": "Buy when price breaks above 20-day Donchian high; sell on 20-day low breach.",
+      "exit": "Opposite channel breach (20-day low) or \u22125% stop loss.",
+      "sizing": "Simple bet 85% (1\u00d7 base).",
+      "reference": "Turtles system (Dennis 1983) \u00b7 AQR 'Century of Trend' (2014) \u00b7 2006+"
+    },
+    "VIX MR": {
+      "type": "Short-vol mean reversion",
+      "timeframe": "Daily",
+      "instrument": "SVXY",
+      "signal": "Buy SVXY when VIX \u2265 18 AND VIX > SMA40 \u00d7 1.10. Dynamic allocation accounting for pre/post-2018 SVXY leverage change.",
+      "exit": "VIX < entry VIX AND EMA-7 declining, or \u221220% hard stop.",
+      "sizing": "Simple bet 85% (1\u00d7 base).",
+      "reference": "Carr & Wu (2009) variance risk premium \u00b7 SVXY 2011+"
+    },
+    "GTAA": {
+      "type": "Trend-following TAA",
+      "timeframe": "Monthly (SMA signal)",
+      "instrument": "SPY, EFA, IEF, DBC, VNQ (+SHV cash)",
+      "signal": "200-day SMA filter per ETF. Long 20% per asset when price > SMA, else cash.",
+      "exit": "Price crosses below SMA at month-end.",
+      "sizing": "Simple bet 85% (1\u00d7 base).",
+      "reference": "Faber (2007), Concretum QuanTips #1 (2025) \u00b7 5 ETFs 2016+"
+    },
+    "Vol Overlay": {
+      "type": "Defensive vol-targeted SPY sleeve",
+      "timeframe": "Daily",
+      "instrument": "SPY",
+      "signal": "HAR-RV predicts 20-day forward realized vol. Binary defensive: 0.85\u00d7 SPY exposure normally, 0.40\u00d7 when predicted vol > rolling 80th percentile.",
+      "exit": "Continuous exposure, adjusted daily.",
+      "sizing": "Overlay 1.0\u00d7 (signal-baked sizing).",
+      "reference": "Corsi (2009) HAR-RV \u00b7 memory-#18 \u00b7 SPY 2018+"
+    }
+  },
+  "correlation_matrix": {
+    "IBS MR": {
+      "IBS MR": 1.0,
+      "Donchian": 0.4589,
+      "VIX MR": 0.2988,
+      "GTAA": 0.4137,
+      "Vol Overlay": -0.0297
+    },
+    "Donchian": {
+      "IBS MR": 0.4589,
+      "Donchian": 1.0,
+      "VIX MR": 0.1381,
+      "GTAA": 0.5569,
+      "Vol Overlay": -0.0066
+    },
+    "VIX MR": {
+      "IBS MR": 0.2988,
+      "Donchian": 0.1381,
+      "VIX MR": 1.0,
+      "GTAA": 0.3294,
+      "Vol Overlay": -0.0649
+    },
+    "GTAA": {
+      "IBS MR": 0.4137,
+      "Donchian": 0.5569,
+      "VIX MR": 0.3294,
+      "GTAA": 1.0,
+      "Vol Overlay": -0.022
+    },
+    "Vol Overlay": {
+      "IBS MR": -0.0297,
+      "Donchian": -0.0066,
+      "VIX MR": -0.0649,
+      "GTAA": -0.022,
+      "Vol Overlay": 1.0
+    }
+  },
+  "research_view": {
+    "all_sleeves": [
+      "IBS MR",
+      "Donchian",
+      "Bollinger",
+      "VIX MR",
+      "VIX ETN",
+      "Sector Mom",
+      "Regime Factor",
+      "Sector Hybrid",
+      "GTAA",
+      "Vol Overlay",
+      "QMom"
+    ],
+    "approaches_all_sleeves": {
+      "equal_weight": {
+        "cagr": 17.717494359727006,
+        "total_ret": 357.51669542643845,
+        "sharpe": 1.024930045455689,
+        "sortino": 1.3230966684538386,
+        "max_dd": -30.765648057739376,
+        "vol_ann": 16.776319608825563
+      },
+      "inverse_vol": {
+        "cagr": 12.926091989969969,
+        "total_ret": 210.57651880341962,
+        "sharpe": 1.2802527337408858,
+        "sortino": 1.6707108441169671,
+        "max_dd": -17.01987329833323,
+        "vol_ann": 9.55432739924261
+      },
+      "legacy_fixed": {
+        "cagr": 19.13238548484184,
+        "total_ret": 411.4217440058288,
+        "sharpe": 0.8489104004715654,
+        "sortino": 1.1708998052130972,
+        "max_dd": -37.794471745451034,
+        "vol_ann": 22.927733817745697
+      }
+    },
+    "note": "These are the all-sleeves research metrics from Sections 10-13. Committed book is 6-sleeve equal-weight above."
+  },
+  "change_log": {
+    "2026-06-16": "Dropped Sector Hybrid (archived). 6-sleeve -> 5-sleeve equal-weight. Sharpe 1.53->1.87, MaxDD -11.3%->-8.8%. Recommended leverage ~1.5x. Original 6-sleeve config replaced in place per user request."
+  },
+  "recommended_leverage": 1.5
+}

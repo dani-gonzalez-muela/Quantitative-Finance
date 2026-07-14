@@ -1,0 +1,23 @@
+{
+  "label": "Quality Profitability",
+  "sleeve": "long_term",
+  "type": "Factor (quality)",
+  "timeframe": "monthly",
+  "universe": "US equities",
+  "signal": "Novy-Marx gross profitability, long top quintile.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 0.895,
+    "cagr_pct": 9.1,
+    "maxdd_pct": -43.47,
+    "months": 750
+  },
+  "gates_passed": "3/3",
+  "description": "Novy-Marx profitability tilt: long Mkt + \u00bdRMW when the 12m cumulative RMW signal is positive, else market only. FF5 RMW (Compustat GP construction was OOM; quality_v2 variant rebuilt it from the Compustat zip via DuckDB \u2014 see below). Monthly, 5bps/side.",
+  "reference": "Novy-Marx (2013), 'The Other Side of Value: The Gross Profitability Premium'"
+}

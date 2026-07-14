@@ -1,0 +1,417 @@
+{
+  "selected_leverage": 2,
+  "starting_capital": 100000,
+  "slice_pct": 0.2,
+  "leverage_levels": [
+    1,
+    2,
+    4,
+    8,
+    12
+  ],
+  "selections": {
+    "EMA": {
+      "key": "intraday_asset_vol_2pct_14d_2x_max",
+      "group": "A1"
+    },
+    "VWAP Trend": {
+      "key": "minhold45_lax_zeroslip",
+      "group": "A1"
+    },
+    "ORB": {
+      "key": "risk-based_1pct_risk_2x_lev",
+      "group": "A2"
+    },
+    "Overnight": {
+      "key": "simple_170pct_bet",
+      "group": "A2"
+    },
+    "Intraday Mom": {
+      "key": "intraday_asset_vol_2pct_14d_2x_max",
+      "group": "A2"
+    }
+  },
+  "portfolio_metrics": {
+    "1x": {
+      "cagr": 23.2993,
+      "total_ret": 742.6946,
+      "sharpe": 2.7639,
+      "sortino": 5.9483,
+      "max_dd": -4.0505,
+      "final": 842694.5696,
+      "leverage": 1
+    },
+    "2x": {
+      "cagr": 47.9325,
+      "total_ret": 5278.5978,
+      "sharpe": 2.9058,
+      "sortino": 6.5503,
+      "max_dd": -6.6293,
+      "final": 5378597.7705,
+      "leverage": 2
+    },
+    "4x": {
+      "cagr": 62.6323,
+      "total_ret": 14004.749,
+      "sharpe": 2.9372,
+      "sortino": 7.2448,
+      "max_dd": -9.7592,
+      "final": 14104749.0365,
+      "leverage": 4
+    },
+    "8x": {
+      "cagr": 66.7781,
+      "total_ret": 18122.9612,
+      "sharpe": 2.5598,
+      "sortino": 7.9256,
+      "max_dd": -10.3851,
+      "final": 18222961.214,
+      "leverage": 8
+    },
+    "12x": {
+      "cagr": 67.5385,
+      "total_ret": 18986.3817,
+      "sharpe": 1.9632,
+      "sortino": 8.086,
+      "max_dd": -17.7972,
+      "final": 19086381.6648,
+      "leverage": 12
+    }
+  },
+  "strategy_metrics": {
+    "EMA": {
+      "1x": {
+        "cagr": 41.05135368584898,
+        "total_ret": 3278.6230916000045,
+        "sharpe": 2.8932952033450685,
+        "sortino": 6.433463392926886,
+        "max_dd": -5.590405937780281,
+        "final": 675724.6183200008,
+        "leverage": 1,
+        "key": "intraday_asset_vol_2pct_14d_1x_max"
+      },
+      "2x": {
+        "cagr": 71.88114993811014,
+        "total_ret": 25447.370308200094,
+        "sharpe": 3.00379258001471,
+        "sortino": 7.418669271406687,
+        "max_dd": -7.908576093027693,
+        "final": 5109474.061640019,
+        "leverage": 2,
+        "key": "intraday_asset_vol_2pct_14d_2x_max"
+      },
+      "4x": {
+        "cagr": 89.22442628811052,
+        "total_ret": 68229.54408210007,
+        "sharpe": 2.969840684227036,
+        "sortino": 7.381265722482867,
+        "max_dd": -13.242055458214677,
+        "final": 13665908.816420015,
+        "leverage": 4,
+        "key": "intraday_asset_vol_2pct_14d_4x_max"
+      },
+      "8x": {
+        "cagr": 93.6420616842063,
+        "total_ret": 86432.58139850014,
+        "sharpe": 2.953465423907412,
+        "sortino": 7.358282643245029,
+        "max_dd": -13.33162894088086,
+        "final": 17306516.27970003,
+        "leverage": 8,
+        "key": "intraday_asset_vol_2pct_14d_8x_max"
+      },
+      "12x": {
+        "cagr": 93.57280951023861,
+        "total_ret": 86116.39334740018,
+        "sharpe": 2.9515766438239397,
+        "sortino": 7.348963594306903,
+        "max_dd": -13.647506447978069,
+        "final": 17243278.669480037,
+        "leverage": 12,
+        "key": "intraday_asset_vol_2pct_14d_12x_max"
+      }
+    },
+    "VWAP Trend": {
+      "1x": {
+        "cagr": 11.4913,
+        "total_ret": 204.5071,
+        "sharpe": 0.7425,
+        "sortino": 1.0781,
+        "max_dd": -23.6281,
+        "final": 304507.0878,
+        "leverage": 1,
+        "key": "minhold45_LAX_zeroslip"
+      },
+      "2x": {
+        "cagr": 16.6488,
+        "total_ret": 383.7742,
+        "sharpe": 0.7425,
+        "sortino": 1.0781,
+        "max_dd": -33.9417,
+        "final": 483774.2047,
+        "leverage": 2,
+        "key": "minhold45_LAX_zeroslip"
+      },
+      "4x": {
+        "cagr": 18.5345,
+        "total_ret": 470.0795,
+        "sharpe": 0.7425,
+        "sortino": 1.0781,
+        "max_dd": -37.7152,
+        "final": 570079.459,
+        "leverage": 4,
+        "key": "minhold45_LAX_zeroslip"
+      },
+      "8x": {
+        "cagr": 18.8102,
+        "total_ret": 483.801,
+        "sharpe": 0.7425,
+        "sortino": 1.0781,
+        "max_dd": -38.2685,
+        "final": 583800.9898,
+        "leverage": 8,
+        "key": "minhold45_LAX_zeroslip"
+      },
+      "12x": {
+        "cagr": 18.8264,
+        "total_ret": 484.6183,
+        "sharpe": 0.7425,
+        "sortino": 1.0781,
+        "max_dd": -38.3011,
+        "final": 584618.2592,
+        "leverage": 12,
+        "key": "minhold45_LAX_zeroslip"
+      }
+    },
+    "ORB": {
+      "1x": {
+        "cagr": 5.058098645431186,
+        "total_ret": 65.22647500450016,
+        "sharpe": 0.8365296561718244,
+        "sortino": 8.407106978968006,
+        "max_dd": -8.817463985270178,
+        "final": 33045.295000900034,
+        "leverage": 1,
+        "key": "risk-based_1pct_risk_1x_lev"
+      },
+      "2x": {
+        "cagr": 9.989521241490218,
+        "total_ret": 163.5211042675199,
+        "sharpe": 0.8365217462018582,
+        "sortino": 8.408137295173622,
+        "max_dd": -16.980004516295132,
+        "final": 52704.220853503975,
+        "leverage": 2,
+        "key": "risk-based_1pct_risk_2x_lev"
+      },
+      "4x": {
+        "cagr": 19.590931969656246,
+        "total_ret": 517.5943928812918,
+        "sharpe": 0.8454762451494197,
+        "sortino": 8.816901421222186,
+        "max_dd": -31.45782642993018,
+        "final": 123518.87857625837,
+        "leverage": 4,
+        "key": "risk-based_1pct_risk_4x_lev"
+      },
+      "8x": {
+        "cagr": 36.55406560809287,
+        "total_ret": 2281.9902543667095,
+        "sharpe": 0.8808099879938851,
+        "sortino": 11.783015409114492,
+        "max_dd": -52.67831745751865,
+        "final": 476398.0508733419,
+        "leverage": 8,
+        "key": "risk-based_1pct_risk_8x_lev"
+      },
+      "12x": {
+        "cagr": 50.13738394266798,
+        "total_ret": 6152.516557456446,
+        "sharpe": 0.9347611956166073,
+        "sortino": 22.74227682498726,
+        "max_dd": -60.82622407131117,
+        "final": 1250503.3114912892,
+        "leverage": 12,
+        "key": "risk-based_1pct_risk_12x_lev"
+      }
+    },
+    "Overnight": {
+      "1x": {
+        "cagr": 3.4311959886923704,
+        "total_ret": 41.20984071838863,
+        "sharpe": 0.7722226107849726,
+        "sortino": 0.6041114048110959,
+        "max_dd": -7.226077483707486,
+        "final": 28241.968143677725,
+        "leverage": 1,
+        "key": "simple_85pct_bet"
+      },
+      "2x": {
+        "cagr": 6.777730787089853,
+        "total_ret": 95.5770343285131,
+        "sharpe": 0.7721325545896925,
+        "sortino": 0.6040224113235285,
+        "max_dd": -14.096133453629802,
+        "final": 39115.40686570262,
+        "leverage": 2,
+        "key": "simple_170pct_bet"
+      },
+      "4x": {
+        "cagr": 13.134933240968971,
+        "total_ret": 253.36214737389966,
+        "sharpe": 0.7722183336772682,
+        "sortino": 0.6040732826426166,
+        "max_dd": -26.81737975947725,
+        "final": 70672.42947477993,
+        "leverage": 4,
+        "key": "simple_340pct_bet"
+      },
+      "8x": {
+        "cagr": 24.029617716466657,
+        "total_ret": 804.9715882182716,
+        "sharpe": 0.772209508695911,
+        "sortino": 0.6040464480768872,
+        "max_dd": -48.34194437450597,
+        "final": 180994.3176436543,
+        "leverage": 8,
+        "key": "simple_680pct_bet"
+      },
+      "12x": {
+        "cagr": 31.585868401941685,
+        "total_ret": 1557.085819162557,
+        "sharpe": 0.7722189470269074,
+        "sortino": 0.604049188642788,
+        "max_dd": -65.14414016623272,
+        "final": 331417.16383251146,
+        "leverage": 12,
+        "key": "simple_1020pct_bet"
+      }
+    },
+    "Intraday Mom": {
+      "1x": {
+        "cagr": 8.240534872976824,
+        "total_ret": 123.90635300000024,
+        "sharpe": 1.3097865913594406,
+        "sortino": 1.8075866673891197,
+        "max_dd": -6.590786553995252,
+        "final": 44781.27060000005,
+        "leverage": 1,
+        "key": "intraday_asset_vol_2pct_14d_1x_max"
+      },
+      "2x": {
+        "cagr": 14.66668609615489,
+        "total_ret": 302.7462010000006,
+        "sharpe": 1.399209108905573,
+        "sortino": 1.9597041191096738,
+        "max_dd": -12.96619268643985,
+        "final": 80549.24020000012,
+        "leverage": 2,
+        "key": "intraday_asset_vol_2pct_14d_2x_max"
+      },
+      "4x": {
+        "cagr": 20.244846246515102,
+        "total_ret": 553.1651010000011,
+        "sharpe": 1.4255504550486422,
+        "sortino": 2.1168284839837765,
+        "max_dd": -16.21931507823463,
+        "final": 130633.02020000022,
+        "leverage": 4,
+        "key": "intraday_asset_vol_2pct_14d_4x_max"
+      },
+      "8x": {
+        "cagr": 21.258984178697915,
+        "total_ret": 611.4618390000014,
+        "sharpe": 1.3841952109667264,
+        "sortino": 2.029715637317384,
+        "max_dd": -17.438247990609216,
+        "final": 142292.3678000003,
+        "leverage": 8,
+        "key": "intraday_asset_vol_2pct_14d_8x_max"
+      },
+      "12x": {
+        "cagr": 21.4225965576766,
+        "total_ret": 621.2943410000033,
+        "sharpe": 1.3882196455134679,
+        "sortino": 2.042959584839637,
+        "max_dd": -17.438901852295142,
+        "final": 144258.86820000067,
+        "leverage": 12,
+        "key": "intraday_asset_vol_2pct_14d_12x_max"
+      }
+    }
+  },
+  "signal_info": {
+    "EMA": {
+      "type": "Trend following",
+      "timeframe": "5-min intraday",
+      "instrument": "QQQ",
+      "signal": "Triple EMA alignment (13/48/200). Long when 13 > 48 > 200 and price clears prior-day high. Short when all three invert.",
+      "exit": "ATR-based stop (5% of ATR-14) or EOD at 15:55 ET.",
+      "sizing": "Intraday asset vol (2%, 14d) \u2014 sizes once per day using realized vol, all trades that day use the same share count.",
+      "reference": "EMA_Backtest.ipynb \u00b7 QQQ 2016\u20132026"
+    },
+    "VWAP Trend": {
+      "type": "Trend following",
+      "timeframe": "5-min intraday",
+      "instrument": "QQQ",
+      "signal": "Always-in-market long/short on 5-min VWAP cross, but with a 45-MINUTE MINIMUM HOLD (debounce) to suppress whipsaws. Rebuilt 2026-06-16.",
+      "exit": "Stop/reverse when candle closes on other side of VWAP. Flat at 15:55 ET.",
+      "sizing": "Vol target (10% ann), 2x cap; ZERO-slippage (lax) basis \u2014 consistent with the other 4 sleeves.",
+      "reference": "VWAP rebuild \u2014 see vwap_trend/STATUS.md. Min-hold 45m. QQQ 2016-2026."
+    },
+    "ORB": {
+      "type": "Breakout",
+      "timeframe": "5-min intraday",
+      "instrument": "QQQ",
+      "signal": "Opening range breakout. Long above OR high, short below OR low. Entry at next bar open after breakout confirmation.",
+      "exit": "ATR-based stop or OR-extreme stop. EOD flat at 15:55 ET.",
+      "sizing": "Risk-based (1% risk per trade) \u2014 uses stop distance to size position so each trade risks exactly 1% of equity.",
+      "reference": "ORB_Backtest.ipynb \u00b7 QQQ 2016\u20132026"
+    },
+    "Overnight": {
+      "type": "Carry / mean reversion",
+      "timeframe": "Close \u2192 Open",
+      "instrument": "SPY",
+      "signal": "If today's session return was negative, go long at close (~15:55 ET). Exploits market-vs-overnight negative correlation (r = \u22120.08, p < 0.0001).",
+      "exit": "Next market open 9:30 ET. No stop loss.",
+      "sizing": "Simple bet (85% of capital per trade) \u2014 fixed fraction, straightforward and defensible.",
+      "reference": "Overnight_Backtest.ipynb \u00b7 SPY 2016\u20132026"
+    },
+    "Intraday Mom": {
+      "type": "Momentum",
+      "timeframe": "30-min checkpoints",
+      "instrument": "SPY",
+      "signal": "Time-varying Noise Area boundaries at 30-min checkpoints (14-day lookback). Long above upper boundary, short below lower. Fast Alpha overlay for better fills.",
+      "exit": "Trailing stop = max(current noise band, VWAP). Flat at EOD.",
+      "sizing": "Intraday asset vol (2%, 14d) \u2014 paper's exact method targeting 2% daily vol.",
+      "reference": "Intraday_Momentum_Backtest.ipynb \u00b7 Zarattini, Aziz & Barbon (2024) \u00b7 SPY 2016\u20132026"
+    }
+  },
+  "construction": {
+    "approach_1_a1a2_split": {
+      "cagr": 61.89586116448722,
+      "total_ret": 13368.111113803181,
+      "sharpe": 2.8209130796158166,
+      "sortino": 6.641087499507423,
+      "max_dd": -7.218837296886374
+    },
+    "approach_2_equal_slices": {
+      "cagr": 48.11021661679575,
+      "total_ret": 5344.700734827675,
+      "sharpe": 2.817004795151806,
+      "sortino": 6.540301047719761,
+      "max_dd": -6.994764391772714
+    },
+    "approach_3_shared_pool": {
+      "cagr": 24.991605617296408,
+      "total_ret": 881.1879100000001,
+      "sharpe": 2.4840421719978876,
+      "sortino": 4.4802470389826885,
+      "max_dd": -5.062699925698616
+    }
+  },
+  "change_log": {
+    "2026-06-16": "Replaced original 1-min-flip VWAP (money-loser net of fees, -0.40) with rebuilt 45-min-minimum-hold VWAP, NET of realistic $0.005 slippage. Other 4 sleeves unchanged (zero-slip curves as before). Selected 2x: Sharpe 2.82->2.87. Original metrics backed up to archive/_cleanup_2026-06-16/portfolio_a_metrics_ORIGINAL_6sleeve_oldVWAP.json. NOTE: 4 non-VWAP sleeves still on zero-slip basis; only VWAP carries realistic cost.",
+    "2026-06-16b": "Switched VWAP-45 to ZERO-slippage (lax) basis per user \u2014 Portfolio A now fully consistent best-case. (Realistic-$0.005 version was prior; see NOTE_curve_vs_significance_fees.md / STATUS.md.) Selected 2x: Sharpe 2.9058, CAGR 47.9%."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "label": "EMA Crossover",
+  "sleeve": "short_term",
+  "type": "Time-Series Momentum",
+  "timeframe": "5-min bars",
+  "universe": "20 validated ETFs",
+  "signal": "Dual EMA crossover with 200-bar trend filter; ATR stop; no overnight.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 5.678,
+    "cagr_pct": 129.0,
+    "maxdd_pct": -4.68,
+    "months": 125
+  },
+  "gates_passed": "3/3",
+  "description": "EMA crossover on 5-minute intraday bars. Enters long when fast EMA > slow EMA > 200-bar trend EMA; enters short when the reverse is true. Uses an ATR-based stop loss. Holds position until stop is hit or end of day \u2014 no overnight carries.",
+  "reference": "Proprietary \u2014 classic dual-EMA crossover with trend filter and ATR stop, adapted to 5-min multi-asset ETFs"
+}

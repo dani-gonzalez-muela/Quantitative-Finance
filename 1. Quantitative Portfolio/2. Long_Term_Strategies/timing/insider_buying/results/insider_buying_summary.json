@@ -1,0 +1,39 @@
+{
+  "strategy": "Insider Buying (VIX Spike Proxy)",
+  "instruments": [
+    "SP500_CRSP",
+    "VIX_proxy"
+  ],
+  "portfolio": "long_term",
+  "period": "1990-01-31 -> 2026-02-28",
+  "params": {
+    "signal": "VIX spike vs 3m avg (insider buy proxy)",
+    "rules": "VIX>3m_avg*1.3\u2192130%, VIX<12m_avg*0.8\u219280%, else 100%",
+    "regime_counts": {
+      "overweight_130pct": 13,
+      "underweight_80pct": 64,
+      "neutral_100pct": 357
+    },
+    "tc_bps": "5 one-way",
+    "data_notes": "EDGAR Form 4 / OpenInsider blocked (no internet). VIX spike used as documented insider-buying proxy (insiders buy after market dislocations)."
+  },
+  "trades": 434,
+  "stats": {
+    "cagr": 10.2,
+    "total_return": 3220.26,
+    "sharpe_daily": 0.5879,
+    "max_dd": -54.57
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.7051,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.6278,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

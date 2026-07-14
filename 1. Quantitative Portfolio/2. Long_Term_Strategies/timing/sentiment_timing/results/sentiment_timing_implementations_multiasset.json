@@ -1,0 +1,72 @@
+{
+  "strategy": "sentiment_timing",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "vix_low": 15.0,
+    "vix_high": 25.0,
+    "exp_low": 0.5,
+    "exp_mid": 1.0,
+    "exp_high": 1.5
+  },
+  "passing_instruments": [
+    "QQQ",
+    "XLK"
+  ],
+  "sleeves": {
+    "QQQ": {
+      "simple_85": {
+        "sharpe": 0.4613,
+        "cagr": 6.46,
+        "max_dd": -32.66,
+        "n_trades": 114,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.4625,
+        "cagr": 7.39,
+        "max_dd": -37.67,
+        "n_trades": 114,
+        "allocation": 1.0
+      }
+    },
+    "XLK": {
+      "simple_85": {
+        "sharpe": 0.4726,
+        "cagr": 7.07,
+        "max_dd": -32.58,
+        "n_trades": 114,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.4745,
+        "cagr": 8.09,
+        "max_dd": -37.62,
+        "n_trades": 114,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 2,
+      "instruments": [
+        "QQQ",
+        "XLK"
+      ],
+      "sharpe": 0.4689,
+      "cagr": 6.77,
+      "max_dd": -32.56
+    },
+    "simple_100": {
+      "n_sleeves": 2,
+      "instruments": [
+        "QQQ",
+        "XLK"
+      ],
+      "sharpe": 0.4703,
+      "cagr": 7.75,
+      "max_dd": -37.58
+    }
+  }
+}

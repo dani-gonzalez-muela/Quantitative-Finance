@@ -1,0 +1,23 @@
+{
+  "strategy": "VWAP Trend",
+  "instrument": "QQQ",
+  "portfolio": "short_term",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "params": {
+    "first_trade": "9:31",
+    "exit_time": "15:55"
+  },
+  "trades": 41289,
+  "significance": {
+    "gross": {
+      "sharpe": 0.3195,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": -0.4036,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    }
+  }
+}

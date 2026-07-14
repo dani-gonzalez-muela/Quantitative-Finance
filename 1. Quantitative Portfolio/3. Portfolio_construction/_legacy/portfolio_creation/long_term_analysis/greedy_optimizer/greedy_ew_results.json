@@ -1,0 +1,170 @@
+{
+  "scheme": "ew",
+  "selection_order": [
+    "ibs_mean_reversion",
+    "quality_profitability",
+    "vix_mean_reversion",
+    "vol_overlay",
+    "donchian_channel",
+    "us_cross_sectional_momentum",
+    "qmj_long_short",
+    "gtaa"
+  ],
+  "sharpe_at_each_step": [
+    1.3192838520804862,
+    1.7153071146156618,
+    1.8836719322299549,
+    1.9044924125719767,
+    1.913470182997531,
+    1.9513387832318376,
+    1.974594428088207,
+    1.9776804054453687
+  ],
+  "weights_at_each_step": [
+    {
+      "ibs_mean_reversion": 1.0
+    },
+    {
+      "ibs_mean_reversion": 0.5,
+      "quality_profitability": 0.5
+    },
+    {
+      "ibs_mean_reversion": 0.3333333333333333,
+      "quality_profitability": 0.3333333333333333,
+      "vix_mean_reversion": 0.3333333333333333
+    },
+    {
+      "ibs_mean_reversion": 0.25,
+      "quality_profitability": 0.25,
+      "vix_mean_reversion": 0.25,
+      "vol_overlay": 0.25
+    },
+    {
+      "ibs_mean_reversion": 0.2,
+      "quality_profitability": 0.2,
+      "vix_mean_reversion": 0.2,
+      "vol_overlay": 0.2,
+      "donchian_channel": 0.2
+    },
+    {
+      "ibs_mean_reversion": 0.16666666666666666,
+      "quality_profitability": 0.16666666666666666,
+      "vix_mean_reversion": 0.16666666666666666,
+      "vol_overlay": 0.16666666666666666,
+      "donchian_channel": 0.16666666666666666,
+      "us_cross_sectional_momentum": 0.16666666666666666
+    },
+    {
+      "ibs_mean_reversion": 0.14285714285714285,
+      "quality_profitability": 0.14285714285714285,
+      "vix_mean_reversion": 0.14285714285714285,
+      "vol_overlay": 0.14285714285714285,
+      "donchian_channel": 0.14285714285714285,
+      "us_cross_sectional_momentum": 0.14285714285714285,
+      "qmj_long_short": 0.14285714285714285
+    },
+    {
+      "ibs_mean_reversion": 0.125,
+      "quality_profitability": 0.125,
+      "vix_mean_reversion": 0.125,
+      "vol_overlay": 0.125,
+      "donchian_channel": 0.125,
+      "us_cross_sectional_momentum": 0.125,
+      "qmj_long_short": 0.125,
+      "gtaa": 0.125
+    }
+  ],
+  "final_weights": {
+    "ibs_mean_reversion": 0.125,
+    "quality_profitability": 0.125,
+    "vix_mean_reversion": 0.125,
+    "vol_overlay": 0.125,
+    "donchian_channel": 0.125,
+    "us_cross_sectional_momentum": 0.125,
+    "qmj_long_short": 0.125,
+    "gtaa": 0.125
+  },
+  "frontier_stats": [
+    {
+      "step": 1,
+      "strategy_added": "ibs_mean_reversion",
+      "sharpe": 1.3193,
+      "cagr": 12.62,
+      "max_dd": -9.19,
+      "n_days": 2667,
+      "window_start": "2016-01-08",
+      "window_end": "2026-03-31"
+    },
+    {
+      "step": 2,
+      "strategy_added": "quality_profitability",
+      "sharpe": 1.7153,
+      "cagr": 12.81,
+      "max_dd": -6.48,
+      "n_days": 2645,
+      "window_start": "2016-01-08",
+      "window_end": "2026-02-27"
+    },
+    {
+      "step": 3,
+      "strategy_added": "vix_mean_reversion",
+      "sharpe": 1.8837,
+      "cagr": 15.85,
+      "max_dd": -9.18,
+      "n_days": 2533,
+      "window_start": "2016-06-14",
+      "window_end": "2026-02-27"
+    },
+    {
+      "step": 4,
+      "strategy_added": "vol_overlay",
+      "sharpe": 1.9045,
+      "cagr": 11.86,
+      "max_dd": -7.03,
+      "n_days": 2533,
+      "window_start": "2016-06-14",
+      "window_end": "2026-02-27"
+    },
+    {
+      "step": 5,
+      "strategy_added": "donchian_channel",
+      "sharpe": 1.9135,
+      "cagr": 11.77,
+      "max_dd": -6.77,
+      "n_days": 2533,
+      "window_start": "2016-06-14",
+      "window_end": "2026-02-27"
+    },
+    {
+      "step": 6,
+      "strategy_added": "us_cross_sectional_momentum",
+      "sharpe": 1.9513,
+      "cagr": 12.56,
+      "max_dd": -6.96,
+      "n_days": 2533,
+      "window_start": "2016-06-14",
+      "window_end": "2026-02-27"
+    },
+    {
+      "step": 7,
+      "strategy_added": "qmj_long_short",
+      "sharpe": 1.9746,
+      "cagr": 11.23,
+      "max_dd": -6.36,
+      "n_days": 2533,
+      "window_start": "2016-06-14",
+      "window_end": "2026-02-27"
+    },
+    {
+      "step": 8,
+      "strategy_added": "gtaa",
+      "sharpe": 1.9777,
+      "cagr": 10.63,
+      "max_dd": -6.27,
+      "n_days": 2533,
+      "window_start": "2016-06-14",
+      "window_end": "2026-02-27"
+    }
+  ],
+  "final_sharpe": 1.9776804054453687
+}

@@ -1,0 +1,32 @@
+{
+  "slip_0.0": {
+    "sharpe": 0.947,
+    "cagr": 15.33,
+    "maxdd": -22.16
+  },
+  "slip_0.005": {
+    "sharpe": 0.536,
+    "cagr": 7.8,
+    "maxdd": -33.82
+  },
+  "slip_0.01": {
+    "sharpe": 0.128,
+    "cagr": 0.75,
+    "maxdd": -57.16
+  },
+  "params": {
+    "min_hold_min": 10,
+    "rule": "suppress VWAP-cross flips until min_hold elapsed since last flip; continuous long/short; EOD close",
+    "exposure": "1x continuous",
+    "flips_per_yr": 1206,
+    "window": [
+      "2016-01-04",
+      "2026-03-31"
+    ]
+  },
+  "original_for_comparison": {
+    "net_sharpe_significance": -0.4,
+    "curve_sharpe_zero_slip": 0.97,
+    "round_trips_per_yr": 4129
+  }
+}

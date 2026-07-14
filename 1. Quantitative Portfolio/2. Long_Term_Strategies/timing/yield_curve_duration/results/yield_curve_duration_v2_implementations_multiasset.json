@@ -1,0 +1,23 @@
+{
+  "strategy": "yield_curve_duration_v2",
+  "n_passing_baskets": 1,
+  "baskets": {
+    "bonds_us": {
+      "canonical_params": {
+        "steep_thresh": 0.75,
+        "flat_thresh": 0.0
+      },
+      "n_instruments": 7,
+      "stats": {
+        "sharpe": 0.1665,
+        "cagr_pct": 0.37,
+        "max_dd_pct": -11.21
+      }
+    }
+  },
+  "combined_stats": {
+    "sharpe": 0.1665,
+    "cagr_pct": 0.37,
+    "max_dd_pct": -11.21
+  }
+}

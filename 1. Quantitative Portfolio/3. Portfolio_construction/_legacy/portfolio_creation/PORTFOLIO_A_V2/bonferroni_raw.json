@@ -1,0 +1,212 @@
+{
+  "bonferroni_threshold": 0.0071428571428571435,
+  "n_basket": 7,
+  "overnight": [
+    {
+      "ticker": "SPY",
+      "available": true,
+      "sharpe": 0.5519,
+      "t_stat": 1.142,
+      "p_value": 0.126728,
+      "n_obs": 1079,
+      "mean_bps": 2.56,
+      "passes": false
+    },
+    {
+      "ticker": "QQQ",
+      "available": true,
+      "sharpe": 0.4896,
+      "t_stat": 1.0127,
+      "p_value": 0.155599,
+      "n_obs": 1078,
+      "mean_bps": 2.821,
+      "passes": false
+    },
+    {
+      "ticker": "IWM",
+      "available": true,
+      "sharpe": 0.7386,
+      "t_stat": 1.5927,
+      "p_value": 0.05561,
+      "n_obs": 1172,
+      "mean_bps": 4.274,
+      "passes": false
+    },
+    {
+      "ticker": "DIA",
+      "available": false,
+      "sharpe": null,
+      "p_value": null,
+      "passes": false
+    },
+    {
+      "ticker": "MDY",
+      "available": true,
+      "sharpe": 0.1554,
+      "t_stat": 0.3289,
+      "p_value": 0.371133,
+      "n_obs": 1129,
+      "mean_bps": 0.835,
+      "passes": false
+    },
+    {
+      "ticker": "IVV",
+      "available": false,
+      "sharpe": null,
+      "p_value": null,
+      "passes": false
+    },
+    {
+      "ticker": "VOO",
+      "available": false,
+      "sharpe": null,
+      "p_value": null,
+      "passes": false
+    }
+  ],
+  "orb": [
+    {
+      "ticker": "SPY",
+      "available": true,
+      "sharpe": 0.02,
+      "t_stat": 0.0647,
+      "p_value": 0.474224,
+      "n_obs": 2449,
+      "mean_bps": 0.049,
+      "passes": false
+    },
+    {
+      "ticker": "QQQ",
+      "available": true,
+      "sharpe": 0.6273,
+      "t_stat": 2.0267,
+      "p_value": 0.021345,
+      "n_obs": 2497,
+      "mean_bps": 2.301,
+      "passes": false
+    },
+    {
+      "ticker": "IWM",
+      "available": true,
+      "sharpe": 0.1526,
+      "t_stat": 0.4932,
+      "p_value": 0.310949,
+      "n_obs": 2526,
+      "mean_bps": 0.533,
+      "passes": false
+    },
+    {
+      "ticker": "DIA",
+      "available": true,
+      "sharpe": -0.193,
+      "t_stat": -0.6236,
+      "p_value": 1.0,
+      "n_obs": 2471,
+      "mean_bps": -0.508,
+      "passes": false
+    },
+    {
+      "ticker": "MDY",
+      "available": true,
+      "sharpe": 0.3888,
+      "t_stat": 1.2566,
+      "p_value": 0.10445,
+      "n_obs": 2501,
+      "mean_bps": 1.185,
+      "passes": false
+    },
+    {
+      "ticker": "IVV",
+      "available": true,
+      "sharpe": 0.2262,
+      "t_stat": 0.731,
+      "p_value": 0.232402,
+      "n_obs": 2448,
+      "mean_bps": 0.58,
+      "passes": false
+    },
+    {
+      "ticker": "VOO",
+      "available": true,
+      "sharpe": -0.1128,
+      "t_stat": -0.3647,
+      "p_value": 1.0,
+      "n_obs": 2433,
+      "mean_bps": -0.276,
+      "passes": false
+    }
+  ],
+  "vwap": [
+    {
+      "ticker": "SPY",
+      "available": true,
+      "sharpe": 0.3118,
+      "t_stat": 1.0076,
+      "p_value": 0.156815,
+      "n_obs": 665,
+      "mean_bps": 4.766,
+      "passes": false
+    },
+    {
+      "ticker": "QQQ",
+      "available": true,
+      "sharpe": 0.5747,
+      "t_stat": 1.8585,
+      "p_value": 0.031552,
+      "n_obs": 1145,
+      "mean_bps": 6.865,
+      "passes": false
+    },
+    {
+      "ticker": "IWM",
+      "available": true,
+      "sharpe": -0.8245,
+      "t_stat": -2.6678,
+      "p_value": 1.0,
+      "n_obs": 1283,
+      "mean_bps": -10.077,
+      "passes": false
+    },
+    {
+      "ticker": "DIA",
+      "available": true,
+      "sharpe": -0.0727,
+      "t_stat": -0.2348,
+      "p_value": 1.0,
+      "n_obs": 536,
+      "mean_bps": -1.211,
+      "passes": false
+    },
+    {
+      "ticker": "MDY",
+      "available": true,
+      "sharpe": 0.2337,
+      "t_stat": 0.7551,
+      "p_value": 0.225085,
+      "n_obs": 697,
+      "mean_bps": 3.429,
+      "passes": false
+    },
+    {
+      "ticker": "IVV",
+      "available": true,
+      "sharpe": 0.2948,
+      "t_stat": 0.9525,
+      "p_value": 0.170421,
+      "n_obs": 446,
+      "mean_bps": 6.119,
+      "passes": false
+    },
+    {
+      "ticker": "VOO",
+      "available": true,
+      "sharpe": 0.4289,
+      "t_stat": 1.3874,
+      "p_value": 0.082666,
+      "n_obs": 423,
+      "mean_bps": 9.258,
+      "passes": false
+    }
+  ],
+  "rescued_tickers": []
+}

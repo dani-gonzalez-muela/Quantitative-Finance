@@ -1,0 +1,23 @@
+{
+  "label": "Us Return Seasonality",
+  "sleeve": "long_term",
+  "type": "Seasonality",
+  "timeframe": "monthly",
+  "universe": "US equity (market)",
+  "signal": "Scale market exposure +/-20% by the rolling 5-year same-month return sign.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.635,
+    "cagr_pct": 9.61,
+    "maxdd_pct": -54.44,
+    "months": 361
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Same-calendar-month seasonality (Heston-Sadka style): market exposure scaled \u00b120% by the rolling 5-year same-month average return's sign. FF Mkt, monthly, 5bps/side.",
+  "reference": "Heston & Sadka (2008), 'Seasonality in the Cross-Section of Stock Returns'"
+}

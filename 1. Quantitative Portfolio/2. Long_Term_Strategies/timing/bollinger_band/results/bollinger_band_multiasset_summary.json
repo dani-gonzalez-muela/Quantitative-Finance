@@ -1,0 +1,295 @@
+{
+  "strategy": "Bollinger Band (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "bb_period": 30,
+    "bb_std": 2.0,
+    "min_hold_days": 30
+  },
+  "baskets_tested": {
+    "us_equity_broad": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "MDY"
+    ],
+    "us_sectors": [
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLI",
+      "XLP",
+      "XLY",
+      "XLU",
+      "XLB",
+      "XLRE",
+      "XLC"
+    ],
+    "us_factor": [
+      "IWF",
+      "IWD",
+      "IWM",
+      "USMV",
+      "MTUM",
+      "PKW",
+      "DVY"
+    ]
+  },
+  "n_instruments": 21,
+  "passing_instruments": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "MDY",
+    "XLK",
+    "XLF",
+    "XLV",
+    "XLI",
+    "XLP",
+    "XLY",
+    "XLU",
+    "XLB",
+    "XLRE",
+    "IWF",
+    "IWD",
+    "USMV",
+    "MTUM",
+    "PKW",
+    "DVY"
+  ],
+  "per_instrument": {
+    "SPY": {
+      "n_trades": 16,
+      "sharpe": 2.36,
+      "t_stat": 4.6966,
+      "t_p": 0.0001,
+      "boot_p5": 1.6302,
+      "perm_p": 0.0,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_equity_broad"
+    },
+    "QQQ": {
+      "n_trades": 15,
+      "sharpe": 2.4889,
+      "t_stat": 5.0185,
+      "t_p": 0.0001,
+      "boot_p5": 1.7472,
+      "perm_p": 0.001,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_equity_broad"
+    },
+    "IWM": {
+      "n_trades": 18,
+      "sharpe": 1.0287,
+      "t_stat": 2.191,
+      "t_p": 0.0213,
+      "boot_p5": 0.1898,
+      "perm_p": 0.018,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_equity_broad"
+    },
+    "MDY": {
+      "n_trades": 18,
+      "sharpe": 1.2405,
+      "t_stat": 2.6713,
+      "t_p": 0.0081,
+      "boot_p5": 0.3553,
+      "perm_p": 0.008,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_equity_broad"
+    },
+    "XLK": {
+      "n_trades": 16,
+      "sharpe": 2.6875,
+      "t_stat": 5.3208,
+      "t_p": 0.0,
+      "boot_p5": 1.9799,
+      "perm_p": 0.0,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLF": {
+      "n_trades": 19,
+      "sharpe": 1.0709,
+      "t_stat": 2.327,
+      "t_p": 0.0159,
+      "boot_p5": 0.2822,
+      "perm_p": 0.016,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLE": {
+      "n_trades": 18,
+      "sharpe": 0.6087,
+      "t_stat": 1.3056,
+      "t_p": 0.1045,
+      "boot_p5": -0.1011,
+      "perm_p": 0.093,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLV": {
+      "n_trades": 20,
+      "sharpe": 2.0883,
+      "t_stat": 4.4082,
+      "t_p": 0.0002,
+      "boot_p5": 1.1249,
+      "perm_p": 0.001,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLI": {
+      "n_trades": 14,
+      "sharpe": 0.9968,
+      "t_stat": 2.0827,
+      "t_p": 0.0288,
+      "boot_p5": 0.13,
+      "perm_p": 0.027,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLP": {
+      "n_trades": 21,
+      "sharpe": 1.8277,
+      "t_stat": 3.9992,
+      "t_p": 0.0004,
+      "boot_p5": 1.0643,
+      "perm_p": 0.0,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLY": {
+      "n_trades": 17,
+      "sharpe": 1.0735,
+      "t_stat": 2.1709,
+      "t_p": 0.0227,
+      "boot_p5": 0.2218,
+      "perm_p": 0.022,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLU": {
+      "n_trades": 24,
+      "sharpe": 2.6468,
+      "t_stat": 5.7667,
+      "t_p": 0.0,
+      "boot_p5": 1.7202,
+      "perm_p": 0.0,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLB": {
+      "n_trades": 16,
+      "sharpe": 1.3176,
+      "t_stat": 2.7354,
+      "t_p": 0.0077,
+      "boot_p5": 0.5261,
+      "perm_p": 0.013,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLRE": {
+      "n_trades": 17,
+      "sharpe": 0.8678,
+      "t_stat": 1.7807,
+      "t_p": 0.047,
+      "boot_p5": 0.1821,
+      "perm_p": 0.044,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLC": {
+      "n_trades": 10,
+      "sharpe": 0.8883,
+      "t_stat": 1.5813,
+      "t_p": 0.0741,
+      "boot_p5": -0.0723,
+      "perm_p": 0.089,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "IWF": {
+      "n_trades": 13,
+      "sharpe": 2.6256,
+      "t_stat": 5.2385,
+      "t_p": 0.0001,
+      "boot_p5": 1.6867,
+      "perm_p": 0.0,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "IWD": {
+      "n_trades": 16,
+      "sharpe": 1.2968,
+      "t_stat": 2.7783,
+      "t_p": 0.007,
+      "boot_p5": 0.3735,
+      "perm_p": 0.008,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "USMV": {
+      "n_trades": 17,
+      "sharpe": 2.2395,
+      "t_stat": 4.397,
+      "t_p": 0.0002,
+      "boot_p5": 1.1896,
+      "perm_p": 0.0,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "MTUM": {
+      "n_trades": 13,
+      "sharpe": 0.9514,
+      "t_stat": 2.0479,
+      "t_p": 0.0316,
+      "boot_p5": 0.1523,
+      "perm_p": 0.027,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "PKW": {
+      "n_trades": 14,
+      "sharpe": 0.9319,
+      "t_stat": 1.9886,
+      "t_p": 0.0341,
+      "boot_p5": 0.1658,
+      "perm_p": 0.039,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "DVY": {
+      "n_trades": 17,
+      "sharpe": 1.0149,
+      "t_stat": 2.1748,
+      "t_p": 0.0225,
+      "boot_p5": 0.1555,
+      "perm_p": 0.015,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    }
+  }
+}

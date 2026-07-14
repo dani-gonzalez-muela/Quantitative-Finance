@@ -1,0 +1,69 @@
+{
+  "strategy": "Commodity Trend (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "universes": {
+    "commodities": {
+      "n_tickers": 7,
+      "tickers": [
+        "GLD",
+        "SLV",
+        "DBC",
+        "USO",
+        "UNG",
+        "GDX",
+        "PDBC"
+      ],
+      "best_sharpe": 0.2041
+    },
+    "real_assets": {
+      "n_tickers": 4,
+      "tickers": [
+        "VNQ",
+        "VNQI",
+        "AMLP",
+        "XLRE"
+      ],
+      "best_sharpe": 1.1084
+    }
+  },
+  "grid_search": {
+    "top_pcts": [
+      0.1,
+      0.15,
+      0.25,
+      0.33,
+      0.5,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "mom_windows": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "combos_per_universe": 120,
+    "total_runs": 240
+  },
+  "best_params": {
+    "top_pct": 0.25,
+    "top_n_primary": 2,
+    "mom_window": 3,
+    "freq": "6ME",
+    "median_sharpe": 0.6562,
+    "min_sharpe": 0.2041,
+    "n_positive": 2,
+    "stability": 0.7067,
+    "per_universe_sharpe": {
+      "commodities": 0.2041,
+      "real_assets": 1.1084
+    }
+  }
+}

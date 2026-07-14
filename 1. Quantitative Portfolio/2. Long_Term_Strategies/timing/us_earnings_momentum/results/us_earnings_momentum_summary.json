@@ -1,0 +1,35 @@
+{
+  "strategy": "US Earnings Momentum",
+  "instruments": [
+    "FF_Mkt",
+    "FF_Mom",
+    "FF_RMW"
+  ],
+  "portfolio": "long_term",
+  "period": "1990-01-31 -> 2026-02-28",
+  "params": {
+    "signal": "avg_rank(ret_1_0, ret_3_1)",
+    "implementation": "Mkt+0.4*Mom+0.2*RMW",
+    "tc_bps": "5 one-way",
+    "data_notes": "FF factors used as proxy for short-term price+earnings momentum composite"
+  },
+  "trades": 434,
+  "stats": {
+    "cagr": 14.34,
+    "total_return": 12489.7,
+    "sharpe_daily": 0.8276,
+    "max_dd": -40.41
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 1.0128,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.9287,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "strategy": "Credit Carry",
+  "instruments": [
+    "bonds_hg_proxy",
+    "tsy_proxy"
+  ],
+  "portfolio": "long_term",
+  "period": "2001-01-01 -> 2025-06-30",
+  "params": {
+    "mom_window_months": 12,
+    "signal": "long bonds_yahoo when its 12m return > treasury_proxy 12m return; else hold treasury_proxy",
+    "data_note": "bonds_yahoo=corporate bond ETF proxy (HYG-like); treasury_proxy=price series from 10yr yields. HYG/LQD/IEF ETF download blocked."
+  },
+  "trades": 39,
+  "stats": {
+    "cagr": -0.09,
+    "total_return": -2.16,
+    "sharpe_daily": 0.036,
+    "max_dd": -37.4,
+    "years": 24.49
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.0352,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    },
+    "net": {
+      "sharpe": 0.0087,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "label": "Bollinger Band",
+  "sleeve": "long_term",
+  "type": "Mean reversion",
+  "timeframe": "daily",
+  "universe": "US equity ETFs",
+  "signal": "Long when price crosses below the lower Bollinger Band (30d, 2 sigma); 30-day minimum hold.",
+  "in_portfolio": true,
+  "stats": {
+    "sharpe": 1.079,
+    "cagr_pct": 8.66,
+    "maxdd_pct": -15.84,
+    "months": 113
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "gates_passed": "3/3",
+  "description": "Mean-reversion band timing on daily bars: long when price crosses below the lower Bollinger Band (30d, 2.0\u03c3), minimum 30-day hold. Long only, 5bps/side.",
+  "reference": "Bollinger (2001), 'Bollinger on Bollinger Bands'; timing variant proprietary"
+}

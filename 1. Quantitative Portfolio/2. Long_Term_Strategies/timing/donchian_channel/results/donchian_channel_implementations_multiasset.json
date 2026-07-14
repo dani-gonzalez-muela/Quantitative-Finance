@@ -1,0 +1,393 @@
+{
+  "strategy": "donchian_channel",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "channel_period": 20,
+    "min_hold_days": 30,
+    "stop_loss": -0.08
+  },
+  "passing_instruments": [
+    "SPY",
+    "QQQ",
+    "MDY",
+    "XLK",
+    "XLE",
+    "XLV",
+    "XLI",
+    "XLP",
+    "XLY",
+    "XLU",
+    "XLB",
+    "XLRE",
+    "XLC",
+    "IWF",
+    "IWD",
+    "USMV",
+    "MTUM",
+    "PKW",
+    "DVY"
+  ],
+  "sleeves": {
+    "SPY": {
+      "simple_85": {
+        "sharpe": 0.9657,
+        "cagr": 10.03,
+        "max_dd": -13.19,
+        "n_trades": 31,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.9659,
+        "cagr": 11.73,
+        "max_dd": -15.37,
+        "n_trades": 31,
+        "allocation": 1.0
+      }
+    },
+    "QQQ": {
+      "simple_85": {
+        "sharpe": 1.0489,
+        "cagr": 14.33,
+        "max_dd": -20.5,
+        "n_trades": 30,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 1.0474,
+        "cagr": 16.73,
+        "max_dd": -23.75,
+        "n_trades": 30,
+        "allocation": 1.0
+      }
+    },
+    "MDY": {
+      "simple_85": {
+        "sharpe": 0.7868,
+        "cagr": 9.44,
+        "max_dd": -23.02,
+        "n_trades": 33,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.7898,
+        "cagr": 11.02,
+        "max_dd": -26.57,
+        "n_trades": 33,
+        "allocation": 1.0
+      }
+    },
+    "XLK": {
+      "simple_85": {
+        "sharpe": 1.1308,
+        "cagr": 16.73,
+        "max_dd": -17.9,
+        "n_trades": 31,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 1.1315,
+        "cagr": 19.57,
+        "max_dd": -20.73,
+        "n_trades": 31,
+        "allocation": 1.0
+      }
+    },
+    "XLE": {
+      "simple_85": {
+        "sharpe": 0.6622,
+        "cagr": 11.11,
+        "max_dd": -24.94,
+        "n_trades": 30,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.6683,
+        "cagr": 12.82,
+        "max_dd": -28.18,
+        "n_trades": 30,
+        "allocation": 1.0
+      }
+    },
+    "XLV": {
+      "simple_85": {
+        "sharpe": 0.7644,
+        "cagr": 7.27,
+        "max_dd": -16.01,
+        "n_trades": 31,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.7656,
+        "cagr": 8.48,
+        "max_dd": -18.59,
+        "n_trades": 31,
+        "allocation": 1.0
+      }
+    },
+    "XLI": {
+      "simple_85": {
+        "sharpe": 0.9235,
+        "cagr": 10.54,
+        "max_dd": -17.53,
+        "n_trades": 34,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.9272,
+        "cagr": 12.36,
+        "max_dd": -20.35,
+        "n_trades": 34,
+        "allocation": 1.0
+      }
+    },
+    "XLP": {
+      "simple_85": {
+        "sharpe": 0.8865,
+        "cagr": 7.11,
+        "max_dd": -10.38,
+        "n_trades": 30,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.8909,
+        "cagr": 8.35,
+        "max_dd": -12.11,
+        "n_trades": 30,
+        "allocation": 1.0
+      }
+    },
+    "XLY": {
+      "simple_85": {
+        "sharpe": 0.7384,
+        "cagr": 8.7,
+        "max_dd": -20.14,
+        "n_trades": 33,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.7404,
+        "cagr": 10.11,
+        "max_dd": -23.36,
+        "n_trades": 33,
+        "allocation": 1.0
+      }
+    },
+    "XLU": {
+      "simple_85": {
+        "sharpe": 0.5806,
+        "cagr": 6.21,
+        "max_dd": -23.34,
+        "n_trades": 34,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.5857,
+        "cagr": 7.25,
+        "max_dd": -26.96,
+        "n_trades": 34,
+        "allocation": 1.0
+      }
+    },
+    "XLB": {
+      "simple_85": {
+        "sharpe": 0.6776,
+        "cagr": 7.95,
+        "max_dd": -20.31,
+        "n_trades": 34,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.6809,
+        "cagr": 9.23,
+        "max_dd": -23.5,
+        "n_trades": 34,
+        "allocation": 1.0
+      }
+    },
+    "XLRE": {
+      "simple_85": {
+        "sharpe": 0.5905,
+        "cagr": 6.39,
+        "max_dd": -19.45,
+        "n_trades": 33,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.5942,
+        "cagr": 7.44,
+        "max_dd": -22.5,
+        "n_trades": 33,
+        "allocation": 1.0
+      }
+    },
+    "XLC": {
+      "simple_85": {
+        "sharpe": 0.8222,
+        "cagr": 10.65,
+        "max_dd": -29.65,
+        "n_trades": 22,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.8233,
+        "cagr": 12.38,
+        "max_dd": -34.0,
+        "n_trades": 22,
+        "allocation": 1.0
+      }
+    },
+    "IWF": {
+      "simple_85": {
+        "sharpe": 1.1489,
+        "cagr": 14.66,
+        "max_dd": -18.41,
+        "n_trades": 30,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 1.1463,
+        "cagr": 17.14,
+        "max_dd": -21.38,
+        "n_trades": 30,
+        "allocation": 1.0
+      }
+    },
+    "IWD": {
+      "simple_85": {
+        "sharpe": 0.7745,
+        "cagr": 7.37,
+        "max_dd": -15.01,
+        "n_trades": 34,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.7769,
+        "cagr": 8.61,
+        "max_dd": -17.52,
+        "n_trades": 34,
+        "allocation": 1.0
+      }
+    },
+    "USMV": {
+      "simple_85": {
+        "sharpe": 0.7995,
+        "cagr": 6.36,
+        "max_dd": -12.59,
+        "n_trades": 34,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.8016,
+        "cagr": 7.44,
+        "max_dd": -14.68,
+        "n_trades": 34,
+        "allocation": 1.0
+      }
+    },
+    "MTUM": {
+      "simple_85": {
+        "sharpe": 1.1103,
+        "cagr": 12.57,
+        "max_dd": -18.58,
+        "n_trades": 31,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 1.1116,
+        "cagr": 14.72,
+        "max_dd": -21.55,
+        "n_trades": 31,
+        "allocation": 1.0
+      }
+    },
+    "PKW": {
+      "simple_85": {
+        "sharpe": 0.8141,
+        "cagr": 8.86,
+        "max_dd": -17.68,
+        "n_trades": 34,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.8156,
+        "cagr": 10.33,
+        "max_dd": -20.51,
+        "n_trades": 34,
+        "allocation": 1.0
+      }
+    },
+    "DVY": {
+      "simple_85": {
+        "sharpe": 0.6092,
+        "cagr": 6.17,
+        "max_dd": -20.11,
+        "n_trades": 37,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.6106,
+        "cagr": 7.17,
+        "max_dd": -23.33,
+        "n_trades": 37,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 19,
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "MDY",
+        "XLK",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC",
+        "IWF",
+        "IWD",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY"
+      ],
+      "sharpe": 1.0343,
+      "cagr": 9.56,
+      "max_dd": -10.81
+    },
+    "simple_100": {
+      "n_sleeves": 19,
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "MDY",
+        "XLK",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC",
+        "IWF",
+        "IWD",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY"
+      ],
+      "sharpe": 1.0326,
+      "cagr": 11.17,
+      "max_dd": -12.62
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "label": "VIX Mean Reversion",
+  "sleeve": "short_term",
+  "type": "Crisis alpha / mean reversion",
+  "timeframe": "daily",
+  "universe": "30 instruments, 5/5 baskets",
+  "signal": "Buy equity ETFs on VIX spikes vs 40d SMA; exit on normalization.",
+  "in_portfolio": false,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "stats": {
+    "sharpe": 1.196,
+    "cagr_pct": 21.4,
+    "maxdd_pct": -23.16,
+    "months": 117
+  },
+  "gates_passed": "3/3",
+  "description": "Long SVXY (economically short volatility) on VIX spikes, harvesting the variance risk premium as volatility mean-reverts. Daily bars. VIX OHLC from WRDS (load_vix \u2192 15_cboe_vix.parquet); SVXY from Alpaca.",
+  "reference": "Proprietary \u2014 SVXY spike-type mean reversion derived in-house (see v1 research notebook)"
+}

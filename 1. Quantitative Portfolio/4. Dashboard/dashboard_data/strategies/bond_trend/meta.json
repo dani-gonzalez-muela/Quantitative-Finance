@@ -1,0 +1,23 @@
+{
+  "label": "Bond Trend",
+  "sleeve": "long_term",
+  "type": "TS momentum (bonds)",
+  "timeframe": "2-monthly",
+  "universe": "bond ETFs",
+  "signal": "Top-25% 3m momentum rotation.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "fail",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 0.186,
+    "cagr_pct": 0.78,
+    "maxdd_pct": -14.14,
+    "months": 300
+  },
+  "gates_passed": "0/3",
+  "description": "Time-series momentum on bond ETFs: v2 canonical = top 25% by 3m momentum, rebalanced every 2 months, across bonds_us (7 tickers) + bonds_intl (EMB, BNDX). v1 proxy version: 12m momentum long/flat.",
+  "reference": "Moskowitz, Ooi & Pedersen (2012), 'Time Series Momentum' \u2014 applied to bond ETFs"
+}

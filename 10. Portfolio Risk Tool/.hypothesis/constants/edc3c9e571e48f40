@@ -1,0 +1,4 @@
+# file: C:\Users\danie\Desktop\portfolio-risk-tool\portfolio_risk\cli.py
+# hypothesis_version: 6.141.1
+
+[0.0, 0.5, '+', ', ', '-', '--config', '--csv', '--json', '--risk-free-rate', '--weights', '=', 'Asset Volatilities', 'Warnings', '__main__', 'asset_names', 'asset_volatilities', 'config', 'correlation_matrix', 'csv', 'error', 'message', 'metrics', 'portfolio_risk', 'portfolio_variance', 'r', 'risk_free_rate', 'status', 'store_true', 'warnings', 'weights']

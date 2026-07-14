@@ -1,0 +1,23 @@
+{
+  "label": "Congress Trade For Trade",
+  "sleeve": "long_term",
+  "type": "Event / alt-data",
+  "timeframe": "medium-term (30d+ holds)",
+  "universe": "cross-section of disclosures",
+  "signal": "Copy each disclosed Congressional purchase at 3% NAV; 30-day minimum hold.",
+  "in_portfolio": true,
+  "stats": {
+    "sharpe": 0.905,
+    "cagr_pct": 9.41,
+    "maxdd_pct": -11.71,
+    "months": 118
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "gates_passed": "3/3",
+  "description": "Mirrors individual US Congressional purchase disclosures trade-for-trade: each disclosed purchase is copied at 3% of total NAV, capped at 180 open positions, minimum 30-day hold. Medium-term equity exposure driven by insider-informed flow.",
+  "reference": "Proprietary \u2014 trade-for-trade replication of QuiverQuant congressional disclosures"
+}

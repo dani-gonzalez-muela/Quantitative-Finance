@@ -1,0 +1,23 @@
+{
+  "label": "Credit Carry",
+  "sleeve": "long_term",
+  "type": "Carry (credit)",
+  "timeframe": "monthly",
+  "universe": "bond ETFs vs IEF",
+  "signal": "Hold credit when momentum beats IEF.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 0.579,
+    "cagr_pct": 1.49,
+    "maxdd_pct": -5.95,
+    "months": 110
+  },
+  "gates_passed": "3/3",
+  "description": "Bond-ETF carry/momentum switch: hold credit ETF when its momentum (v2: 3m window) beats the IEF benchmark; else IEF. Monthly.",
+  "reference": "Proprietary \u2014 credit-ETF momentum/carry switch vs IEF benchmark"
+}

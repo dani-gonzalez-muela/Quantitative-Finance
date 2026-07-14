@@ -1,0 +1,5 @@
+ticker,n_before,n_after,best_sharpe
+SPY,5,5,0.8688
+QQQ,4,5,0.8351
+IWM,5,5,0.5803
+MDY,5,5,0.6654

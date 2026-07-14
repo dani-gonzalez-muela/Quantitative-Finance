@@ -1,0 +1,57 @@
+{
+  "strategy": "Cross-Asset Carry v2 (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "n_boot": 500,
+  "n_combos": 120,
+  "canonical_params": {
+    "top_pct": 0.15,
+    "freq": "6ME",
+    "carry_window": 3
+  },
+  "canonical_median_sharpe": 1.4166,
+  "binomial_pvalue": 0.05,
+  "binomial_significant": false,
+  "verdict": "NO EVIDENCE OF EFFECT",
+  "baskets": {
+    "cross_asset": {
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY",
+        "TLT",
+        "IEF",
+        "SHY",
+        "TIP",
+        "HYG",
+        "GLD",
+        "SLV",
+        "DBC",
+        "GDX"
+      ],
+      "n_instruments": 13,
+      "canonical_params": {
+        "top_pct": 0.15,
+        "freq": "6ME",
+        "carry_window": 3
+      },
+      "canonical_median_sharpe": 1.4166,
+      "canonical_basket_sharpe": 1.4166,
+      "pass_count_at_canon": 1,
+      "n_baskets_tested": 1,
+      "binomial_pvalue": 0.05,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE OF EFFECT",
+      "basket_details": {
+        "cross_asset": {
+          "t_p": 0.0007,
+          "boot_p5": 0.779,
+          "perm_p": 0.0,
+          "sharpe": 1.4166,
+          "gates": 3
+        }
+      }
+    }
+  }
+}

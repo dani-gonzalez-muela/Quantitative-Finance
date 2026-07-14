@@ -1,0 +1,21 @@
+{
+  "label": "Fair Value Gap",
+  "sleeve": "short_term",
+  "in_portfolio": false,
+  "type": "Price action (imbalance zones)",
+  "timeframe": "intraday/daily",
+  "stats": {
+    "sharpe": 0.34,
+    "cagr_pct": 1.56,
+    "maxdd_pct": -11.5,
+    "months": 123
+  },
+  "description": "Price-action strategy on 3-candle imbalance zones ('fair value gaps'); price is hypothesized to return and fill the gap. Research reached a first backtest but never entered the v2 pipeline - no basket validation, no significance gates, no fee-modeled implementation.\nFirst-pass single-instrument backtest (2016-2026, 667 trades, net of modeled fees): Sharpe ~0.34, CAGR ~1.6%, max drawdown ~-11.5% - a thin edge, consistent with the 'never validated' status.",
+  "reference": "Discretionary ICT-style 'fair value gap' concept; no academic source",
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3"
+}

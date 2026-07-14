@@ -1,0 +1,23 @@
+{
+  "label": "VIX ETN Dual",
+  "sleeve": "short_term",
+  "type": "Vol risk premium",
+  "timeframe": "daily",
+  "universe": "VIXSHORT/VIXLONG proxies",
+  "signal": "eVRP + term-structure rotation (Zarattini et al. 2025).",
+  "in_portfolio": false,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "stats": {
+    "sharpe": 0.85,
+    "cagr_pct": 14.87,
+    "maxdd_pct": -33.11,
+    "months": 123
+  },
+  "gates_passed": "3/3",
+  "description": "Rotates between a short-vol proxy (VIXSHORT = 2\u00d7 SVXY \u2212 80bps/yr) and a long-vol proxy (VIXLONG = VXX \u2212 50bps/yr) using two signals: eVRP (VIX \u2212 10d realized SPY vol; positive = vol risk premium sellable) and term structure (contango = VIX < VIX3M). Canonical variant eVRP+BoC+Sizing: short vol at VIX/100 weight in contango, half-weight when eVRP \u2264 0, flip to long vol in backwardation. Rebalance only on >2% weight drift or instrument switch.",
+  "reference": "'The Volatility Edge' (PDF in folder): eVRP + basis-of-carry signals; cf. Simon & Campasano, 'The VIX Futures Basis'"
+}

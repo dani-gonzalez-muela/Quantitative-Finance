@@ -1,0 +1,23 @@
+{
+  "label": "Donchian Channel",
+  "sleeve": "long_term",
+  "type": "Trend (breakout)",
+  "timeframe": "daily",
+  "universe": "multi-asset ETFs",
+  "signal": "Long on a 20-day channel breakout; 30-day minimum hold, -8% stop.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.941,
+    "cagr_pct": 8.47,
+    "maxdd_pct": -16.19,
+    "months": 114
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Breakout trend timing: long on a 20-day channel breakout, minimum 30-day hold, \u22128% stop. Long only, 5bps/side.",
+  "reference": "Donchian channel trend-following (Richard Donchian, classic); multi-asset variant proprietary"
+}

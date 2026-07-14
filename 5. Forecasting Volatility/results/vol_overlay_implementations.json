@@ -1,0 +1,94 @@
+{
+  "overlay_1p0x": {
+    "total_return": 179.4,
+    "cagr": 10.56,
+    "sharpe": 0.94,
+    "max_dd": -17.7,
+    "label": "Overlay 1.0x"
+  },
+  "overlay_1p5x": {
+    "total_return": 344.1,
+    "cagr": 15.69,
+    "sharpe": 0.94,
+    "max_dd": -25.9,
+    "label": "Overlay 1.5x"
+  },
+  "overlay_2p0x": {
+    "total_return": 582.5,
+    "cagr": 20.65,
+    "sharpe": 0.94,
+    "max_dd": -33.7,
+    "label": "Overlay 2.0x"
+  },
+  "overlay_3p0x": {
+    "total_return": 1356.1,
+    "cagr": 29.92,
+    "sharpe": 0.94,
+    "max_dd": -47.7,
+    "label": "Overlay 3.0x"
+  },
+  "spy_b&h_1p0x": {
+    "total_return": 268.0,
+    "cagr": 13.59,
+    "sharpe": 0.81,
+    "max_dd": -33.8,
+    "label": "SPY B&H 1.0x"
+  },
+  "spy_b&h_1p5x": {
+    "total_return": 525.9,
+    "cagr": 19.64,
+    "sharpe": 0.81,
+    "max_dd": -47.2,
+    "label": "SPY B&H 1.5x"
+  },
+  "spy_b&h_2p0x": {
+    "total_return": 881.3,
+    "cagr": 25.02,
+    "sharpe": 0.81,
+    "max_dd": -58.5,
+    "label": "SPY B&H 2.0x"
+  },
+  "spy_b&h_3p0x": {
+    "total_return": 1782.0,
+    "cagr": 33.23,
+    "sharpe": 0.81,
+    "max_dd": -75.6,
+    "label": "SPY B&H 3.0x"
+  },
+  "_matched_dd_edges": {
+    "Overlay 1.0x": {
+      "matched_to": "SPY B&H 1.0x",
+      "overlay_dd": -17.7,
+      "spy_dd": -33.8,
+      "overlay_cagr": 10.56,
+      "spy_cagr": 13.59,
+      "cagr_edge": -3.03
+    },
+    "Overlay 1.5x": {
+      "matched_to": "SPY B&H 1.0x",
+      "overlay_dd": -25.9,
+      "spy_dd": -33.8,
+      "overlay_cagr": 15.69,
+      "spy_cagr": 13.59,
+      "cagr_edge": 2.1
+    },
+    "Overlay 2.0x": {
+      "matched_to": "SPY B&H 1.0x",
+      "overlay_dd": -33.7,
+      "spy_dd": -33.8,
+      "overlay_cagr": 20.65,
+      "spy_cagr": 13.59,
+      "cagr_edge": 7.06
+    },
+    "Overlay 3.0x": {
+      "matched_to": "SPY B&H 1.5x",
+      "overlay_dd": -47.7,
+      "spy_dd": -47.2,
+      "overlay_cagr": 29.92,
+      "spy_cagr": 19.64,
+      "cagr_edge": 10.28
+    }
+  },
+  "_recommended": "Overlay 1.0x",
+  "_best_matched_dd_edge": "Overlay 3.0x"
+}

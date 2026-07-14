@@ -1,0 +1,14 @@
+# ── Data: everything except the documentation README ─────────────────
+# (datasets are GBs; 0. Data/loaders/data.py contains API keys)
+**/0. Data/**
+!**/0. Data/README.md
+
+# ── Python / notebook cruft ──────────────────────────────────────────
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ── OS cruft ─────────────────────────────────────────────────────────
+Thumbs.db
+.DS_Store
+2. Long_Term_Strategies/selection/quantitative_momentum/*.pdf

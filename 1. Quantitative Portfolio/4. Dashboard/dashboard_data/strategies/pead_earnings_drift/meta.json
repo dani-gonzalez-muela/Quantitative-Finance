@@ -1,0 +1,23 @@
+{
+  "label": "Pead Earnings Drift",
+  "sleeve": "long_term",
+  "type": "Event (earnings)",
+  "timeframe": "monthly",
+  "universe": "S&P 500 equities",
+  "signal": "Long the top-quartile SUE after earnings; 1-month hold.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.752,
+    "cagr_pct": 11.84,
+    "maxdd_pct": -47.23,
+    "months": 424
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Long top-quartile SUE (standardized unexpected earnings: (EPS \u2212 EPS_lag4)/8q-rolling-std) after announcements, 1-month hold, S&P 500 universe via CRSP+CCM. 5bps/side.",
+  "reference": "Ball & Brown (1968); Bernard & Thomas (1989) \u2014 post-earnings-announcement drift"
+}

@@ -1,0 +1,23 @@
+{
+  "label": "Industry Trend",
+  "sleeve": "long_term",
+  "type": "Trend (cross-sectional)",
+  "timeframe": "monthly",
+  "universe": "9 US sector ETFs",
+  "signal": "Rank sectors by 6-month momentum, hold the top 3.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.724,
+    "cagr_pct": 10.19,
+    "maxdd_pct": -20.09,
+    "months": 112
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Sector trend selection: rank 9 sector ETFs by 6m momentum, hold top 3, monthly rebalance. Grid-searched (120 combos: top_pct \u00d7 freq \u00d7 window).",
+  "reference": "Moskowitz & Grinblatt (1999); trend variant on industry ETFs"
+}

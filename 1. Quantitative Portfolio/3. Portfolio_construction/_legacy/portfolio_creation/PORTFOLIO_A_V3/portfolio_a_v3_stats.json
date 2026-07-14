@@ -1,0 +1,312 @@
+{
+  "portfolio": "Portfolio A v3",
+  "date_range": {
+    "start": "2016-01-27",
+    "end": "2025-07-02"
+  },
+  "n_common_days": 2370,
+  "stats": {
+    "Portfolio": {
+      "label": "Portfolio A v3",
+      "sharpe": 3.5152,
+      "cagr": 0.165,
+      "max_dd": -0.0296,
+      "calmar": 5.5779,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "Bucket_A": {
+      "label": "Bucket A",
+      "sharpe": 2.7336,
+      "cagr": 0.2136,
+      "max_dd": -0.0409,
+      "calmar": 5.2214,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "intraday_composite": {
+      "label": "Intraday Composite",
+      "sharpe": 2.8211,
+      "cagr": 0.1657,
+      "max_dd": -0.023,
+      "calmar": 7.1937,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "overnight_composite": {
+      "label": "Overnight Composite",
+      "sharpe": 0.6908,
+      "cagr": 0.041,
+      "max_dd": -0.0731,
+      "calmar": 0.5609,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "Bucket_B": {
+      "label": "Bucket B",
+      "sharpe": 2.3721,
+      "cagr": 0.1164,
+      "max_dd": -0.0403,
+      "calmar": 2.8846,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "EMA": {
+      "label": "EMA Crossover",
+      "sharpe": 2.9786,
+      "cagr": 0.4202,
+      "max_dd": -0.0559,
+      "calmar": 7.5159,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "IMOM": {
+      "label": "Intraday Momentum",
+      "sharpe": 1.0713,
+      "cagr": 0.0874,
+      "max_dd": -0.0659,
+      "calmar": 1.3264,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ORB_composite": {
+      "label": "ORB Composite",
+      "sharpe": 1.5061,
+      "cagr": 0.0529,
+      "max_dd": -0.0399,
+      "calmar": 1.3251,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "VWAP_composite": {
+      "label": "VWAP Composite",
+      "sharpe": 1.1539,
+      "cagr": 0.125,
+      "max_dd": -0.1554,
+      "calmar": 0.8042,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ORB_QQQ": {
+      "label": "ORB QQQ",
+      "sharpe": 0.8448,
+      "cagr": 0.0541,
+      "max_dd": -0.0929,
+      "calmar": 0.5826,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ORB_MDY": {
+      "label": "ORB MDY",
+      "sharpe": 0.8393,
+      "cagr": 0.0372,
+      "max_dd": -0.0475,
+      "calmar": 0.7823,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ORB_MTUM": {
+      "label": "ORB MTUM",
+      "sharpe": 1.2034,
+      "cagr": 0.065,
+      "max_dd": -0.0548,
+      "calmar": 1.1855,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "VWAP_MTUM": {
+      "label": "VWAP MTUM",
+      "sharpe": 0.3578,
+      "cagr": 0.0705,
+      "max_dd": -0.1209,
+      "calmar": 0.5826,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "VWAP_EWW": {
+      "label": "VWAP EWW",
+      "sharpe": 0.9435,
+      "cagr": 0.1695,
+      "max_dd": -0.2354,
+      "calmar": 0.7201,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ON_SPY": {
+      "label": "Overnight SPY",
+      "sharpe": 0.232,
+      "cagr": 0.0239,
+      "max_dd": -0.0995,
+      "calmar": 0.2399,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ON_QQQ": {
+      "label": "Overnight QQQ",
+      "sharpe": 0.4469,
+      "cagr": 0.0426,
+      "max_dd": -0.0885,
+      "calmar": 0.4812,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ON_IWM": {
+      "label": "Overnight IWM",
+      "sharpe": 0.4075,
+      "cagr": 0.041,
+      "max_dd": -0.1052,
+      "calmar": 0.3902,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ON_MDY": {
+      "label": "Overnight MDY",
+      "sharpe": 0.1642,
+      "cagr": 0.0323,
+      "max_dd": -0.2598,
+      "calmar": 0.1242,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ON_EEM": {
+      "label": "Overnight EEM",
+      "sharpe": 0.0355,
+      "cagr": 0.0032,
+      "max_dd": -0.2327,
+      "calmar": 0.0139,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ON_EWZ": {
+      "label": "Overnight EWZ",
+      "sharpe": 0.1289,
+      "cagr": 0.0162,
+      "max_dd": -0.1997,
+      "calmar": 0.0813,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ON_INDA": {
+      "label": "Overnight INDA",
+      "sharpe": 0.1929,
+      "cagr": 0.0388,
+      "max_dd": -0.1042,
+      "calmar": 0.3728,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "ON_EWW": {
+      "label": "Overnight EWW",
+      "sharpe": 0.4319,
+      "cagr": 0.1168,
+      "max_dd": -0.1601,
+      "calmar": 0.7296,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "IBS_v2": {
+      "label": "IBS v2",
+      "sharpe": 2.0937,
+      "cagr": 0.1417,
+      "max_dd": -0.0538,
+      "calmar": 2.6331,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "IBS_v1": {
+      "label": "IBS v1",
+      "sharpe": 1.0737,
+      "cagr": 0.1416,
+      "max_dd": -0.0919,
+      "calmar": 1.5399,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "TFT": {
+      "label": "TFT Congress",
+      "sharpe": 0.3388,
+      "cagr": 0.1026,
+      "max_dd": -0.0962,
+      "calmar": 1.0666,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    },
+    "Quiver": {
+      "label": "Quiver Congress",
+      "sharpe": 0.5354,
+      "cagr": 0.0713,
+      "max_dd": -0.1053,
+      "calmar": 0.6771,
+      "n_days": 2370,
+      "start": "2016-01-27",
+      "end": "2025-07-02"
+    }
+  },
+  "bucket_a_correlations": {
+    "EMA": {
+      "EMA": 1.0,
+      "IMOM": 0.492,
+      "ORB_composite": 0.292,
+      "VWAP_composite": 0.166,
+      "overnight_composite": -0.033
+    },
+    "IMOM": {
+      "EMA": 0.492,
+      "IMOM": 1.0,
+      "ORB_composite": 0.187,
+      "VWAP_composite": 0.171,
+      "overnight_composite": -0.05
+    },
+    "ORB_composite": {
+      "EMA": 0.292,
+      "IMOM": 0.187,
+      "ORB_composite": 1.0,
+      "VWAP_composite": 0.067,
+      "overnight_composite": -0.023
+    },
+    "VWAP_composite": {
+      "EMA": 0.166,
+      "IMOM": 0.171,
+      "ORB_composite": 0.067,
+      "VWAP_composite": 1.0,
+      "overnight_composite": -0.011
+    },
+    "overnight_composite": {
+      "EMA": -0.033,
+      "IMOM": -0.05,
+      "ORB_composite": -0.023,
+      "VWAP_composite": -0.011,
+      "overnight_composite": 1.0
+    }
+  },
+  "issues": [
+    "ON_EWW sparse: 1455/2615 session-complete days; gaps filled with 0-return via ffill.",
+    "ON_MDY sparse: 1786/2615 session-complete days; same fix applied.",
+    "Common end truncated to 2025-06-26 by Quiver (ends 2025-08-13) and TFT (ends 2025-07-02)."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "strategy": "Country CAPE Rotation (Multi-Asset, ETF contrarian)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "universes": {
+    "em_country": {
+      "n_tickers": 11,
+      "tickers": [
+        "EEM",
+        "INDA",
+        "EWZ",
+        "EWJ",
+        "EWG",
+        "EWU",
+        "EWA",
+        "EWC",
+        "EWP",
+        "EWI",
+        "EWL"
+      ],
+      "best_sharpe": 0.8934
+    }
+  },
+  "signal_note": "Contrarian (inverse return) used as CAPE proxy. True Shiller CAPE unavailable for ETFs.",
+  "grid_search": {
+    "top_pcts": [
+      0.1,
+      0.15,
+      0.25,
+      0.33,
+      0.5,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "return_windows": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "combos_per_universe": 120,
+    "total_runs": 120
+  },
+  "best_params": {
+    "top_pct": 0.1,
+    "top_n_primary": 1,
+    "return_window": 9,
+    "freq": "ME",
+    "median_sharpe": 0.8934,
+    "min_sharpe": 0.8934,
+    "n_positive": 1,
+    "stability": 0.7156,
+    "per_universe_sharpe": {
+      "em_country": 0.8934
+    }
+  }
+}

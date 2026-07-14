@@ -1,0 +1,6 @@
+basket,n_avail,filter_threshold,median_sharpe_grid,basket_sharpe,cagr_pct,maxdd_pct,binom_k,binom_p,pass_binom,gate1_p,gate2_boot5,gate3_p,passes_3gate,passes_all
+us_equity_broad,4,0,0.3499,0.3661,2.77,-17.1,0,1.0,False,0.1108,-0.0997,0.1127,False,False
+us_factor,6,0,0.0923,0.2298,1.39,-16.91,1,0.2649,False,0.2313,-0.2657,0.2377,False,False
+us_sectors,11,0,0.2442,0.2348,1.51,-14.36,2,0.1019,False,0.2248,-0.3329,0.222,False,False
+em_regional,4,0,0.3967,0.5627,5.83,-27.06,2,0.014,True,0.035,0.0665,0.0323,True,True
+intl_liquid,5,0,-0.0559,-0.0934,-1.52,-30.76,0,1.0,False,1.0,-0.7359,0.6993,False,False

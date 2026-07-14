@@ -1,0 +1,57 @@
+{
+  "strategy": "Quality/Profitability (Multi-Asset, v1 FF-signal)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "universes": {
+    "us_equity_broad": {
+      "n_tickers": 4,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY"
+      ],
+      "best_sharpe": 1.4853
+    }
+  },
+  "signal_notes": {
+    "v1": "FF5 RMW factor signal applied as timing overlay on us_equity_broad ETFs",
+    "v2_SKIPPED": "Requires individual stock profitability data (Compustat). Cannot run on ETFs."
+  },
+  "grid_search": {
+    "top_pcts": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "rmw_windows": [
+      6,
+      9,
+      12,
+      18,
+      24
+    ],
+    "combos_per_universe": 100,
+    "total_runs": 100
+  },
+  "best_params": {
+    "top_pct": 0.5,
+    "top_n_primary": 2,
+    "rmw_window": 18,
+    "freq": "6ME",
+    "median_sharpe": 1.4853,
+    "min_sharpe": 1.4853,
+    "n_positive": 1,
+    "per_universe_sharpe": {
+      "us_equity_broad": 1.4853
+    }
+  }
+}

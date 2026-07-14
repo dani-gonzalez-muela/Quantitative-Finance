@@ -1,0 +1,93 @@
+{
+  "strategy": "Credit Carry (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "mom_window_months": 12,
+    "benchmark": "IEF"
+  },
+  "signal_note": "Hold ETF when its 12m return (skip-1) > IEF 12m return",
+  "baskets_tested": {
+    "bonds_us": [
+      "TLT",
+      "IEF",
+      "SHY",
+      "TIP",
+      "BIL",
+      "LQD",
+      "HYG"
+    ]
+  },
+  "n_instruments": 6,
+  "passing_instruments": [
+    "BIL"
+  ],
+  "per_instrument": {
+    "TLT": {
+      "n_hold_months": 38,
+      "sharpe": -0.3105,
+      "t_stat": -0.5453,
+      "t_p": 0.7056,
+      "boot_p5": -1.3323,
+      "perm_p": 0.714,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "bonds_us"
+    },
+    "SHY": {
+      "n_hold_months": 67,
+      "sharpe": 0.0588,
+      "t_stat": 0.138,
+      "t_p": 0.4453,
+      "boot_p5": -0.6246,
+      "perm_p": 0.446,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "bonds_us"
+    },
+    "TIP": {
+      "n_hold_months": 72,
+      "sharpe": 0.1288,
+      "t_stat": 0.3134,
+      "t_p": 0.3774,
+      "boot_p5": -0.4924,
+      "perm_p": 0.4,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "bonds_us"
+    },
+    "BIL": {
+      "n_hold_months": 68,
+      "sharpe": 1.9178,
+      "t_stat": 4.5315,
+      "t_p": 0.0,
+      "boot_p5": 1.2669,
+      "perm_p": 0.0,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "bonds_us"
+    },
+    "LQD": {
+      "n_hold_months": 73,
+      "sharpe": 0.0053,
+      "t_stat": 0.0131,
+      "t_p": 0.4948,
+      "boot_p5": -0.7299,
+      "perm_p": 0.497,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "bonds_us"
+    },
+    "HYG": {
+      "n_hold_months": 79,
+      "sharpe": 0.1431,
+      "t_stat": 0.3648,
+      "t_p": 0.3581,
+      "boot_p5": -0.4634,
+      "perm_p": 0.371,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "bonds_us"
+    }
+  }
+}

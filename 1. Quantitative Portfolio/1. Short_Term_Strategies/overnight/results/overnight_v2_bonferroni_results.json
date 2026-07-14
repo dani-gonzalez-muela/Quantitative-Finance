@@ -1,0 +1,205 @@
+{
+  "methodology": "per-ticker 3-gate at alpha=0.05/N per basket",
+  "baskets": {
+    "us_sectors": [
+      {
+        "ticker": "XLK",
+        "pass": false,
+        "threshold": 0.0,
+        "sharpe": 0.6818,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.006907001247353528,
+          "boot5_sharpe": 1.2264532217652317,
+          "perm_p": 0.0055
+        }
+      },
+      {
+        "ticker": "XLC",
+        "pass": false,
+        "threshold": 0.0,
+        "sharpe": 0.5965,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.06277663022718176,
+          "boot5_sharpe": -0.06587124788030266,
+          "perm_p": 0.065
+        }
+      },
+      {
+        "ticker": "XLI",
+        "pass": false,
+        "threshold": -0.003,
+        "sharpe": 0.6082,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.0056952195981606205,
+          "boot5_sharpe": 1.4886531700892764,
+          "perm_p": 0.0055
+        }
+      },
+      {
+        "ticker": "XLV",
+        "pass": true,
+        "threshold": -0.001,
+        "sharpe": 0.8701,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.0025861343910428846,
+          "boot5_sharpe": 1.890334831758012,
+          "perm_p": 0.001
+        },
+        "trades_file": "overnight_v2_trades_bonferroni_us_sectors_XLV.csv"
+      },
+      {
+        "ticker": "XLY",
+        "pass": false,
+        "threshold": -0.002,
+        "sharpe": 0.2368,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.22889465471624298,
+          "boot5_sharpe": -1.3853208569651478,
+          "perm_p": 0.2385
+        }
+      },
+      {
+        "ticker": "XLF",
+        "pass": false,
+        "threshold": -0.005,
+        "sharpe": 0.0096,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5_sharpe": -2.276578400933389,
+          "perm_p": 0.4805
+        }
+      },
+      {
+        "ticker": "XLE",
+        "pass": false,
+        "threshold": -0.002,
+        "sharpe": -0.4779,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5_sharpe": -4.635664626367415,
+          "perm_p": 0.9455
+        }
+      },
+      {
+        "ticker": "XLU",
+        "pass": false,
+        "threshold": -0.005,
+        "sharpe": -0.1221,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5_sharpe": -3.289990300538757,
+          "perm_p": 0.63
+        }
+      },
+      {
+        "ticker": "XLB",
+        "pass": false,
+        "threshold": 0.0,
+        "sharpe": -0.1564,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5_sharpe": -3.182760527307842,
+          "perm_p": 0.6765
+        }
+      },
+      {
+        "ticker": "XLP",
+        "pass": false,
+        "threshold": -0.002,
+        "sharpe": 0.3603,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 0.12844479781585386,
+          "boot5_sharpe": -0.6855820459609885,
+          "perm_p": 0.121
+        }
+      },
+      {
+        "ticker": "XLRE",
+        "pass": false,
+        "threshold": -0.003,
+        "sharpe": -0.0137,
+        "bonferroni_alpha": 0.004545,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5_sharpe": -2.5895740087996444,
+          "perm_p": 0.5245
+        }
+      }
+    ],
+    "intl_liquid": [
+      {
+        "ticker": "EFA",
+        "pass": false,
+        "threshold": -0.003,
+        "sharpe": -0.0266,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5_sharpe": -2.574810731657552,
+          "perm_p": 0.521
+        }
+      },
+      {
+        "ticker": "EZU",
+        "pass": false,
+        "threshold": -0.001,
+        "sharpe": 0.0661,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.4293560720332809,
+          "boot5_sharpe": -2.1406756290772413,
+          "perm_p": 0.4395
+        }
+      },
+      {
+        "ticker": "EWJ",
+        "pass": false,
+        "threshold": -0.005,
+        "sharpe": 0.1392,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.34016845356765774,
+          "boot5_sharpe": -1.8544445092108035,
+          "perm_p": 0.3325
+        }
+      },
+      {
+        "ticker": "EWG",
+        "pass": false,
+        "threshold": -0.005,
+        "sharpe": -0.9142,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 1.0,
+          "boot5_sharpe": -6.350795699536037,
+          "perm_p": 0.9985
+        }
+      },
+      {
+        "ticker": "EWU",
+        "pass": false,
+        "threshold": -0.002,
+        "sharpe": 0.4324,
+        "bonferroni_alpha": 0.01,
+        "gate_stats": {
+          "t_p": 0.1218781471674311,
+          "boot5_sharpe": -0.675662171155969,
+          "perm_p": 0.12
+        }
+      }
+    ]
+  },
+  "rescued_tickers": [
+    "XLV"
+  ]
+}

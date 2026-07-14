@@ -1,0 +1,41 @@
+{
+  "strategy": "Yield Curve Duration v2 (Multi-Asset)",
+  "period": "2016-01-01->2026-04-01",
+  "grid": {
+    "steep_thresholds": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "flat_thresholds": [
+      0.0,
+      -0.25,
+      -0.5
+    ],
+    "n_combos": 12
+  },
+  "baskets": {
+    "bonds_us": {
+      "instruments": [
+        "TLT",
+        "IEF",
+        "SHY",
+        "TIP",
+        "BIL",
+        "LQD",
+        "HYG"
+      ],
+      "n_instruments": 7,
+      "pass_count_at_canon": 2,
+      "binomial_pvalue": 0.044381,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "steep_thresh": 0.75,
+        "flat_thresh": 0.0
+      },
+      "canonical_median_sharpe": -0.0807
+    }
+  }
+}

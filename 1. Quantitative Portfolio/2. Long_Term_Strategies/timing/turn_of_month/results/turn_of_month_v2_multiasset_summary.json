@@ -1,0 +1,66 @@
+{
+  "strategy": "Turn of Month v2 (Multi-Asset)",
+  "period": "2016-01-01->2026-04-01",
+  "grid": {
+    "n_before": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "n_after": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "n_combos": 25
+  },
+  "baskets": {
+    "us_equity_broad": {
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY"
+      ],
+      "n_instruments": 4,
+      "pass_count_at_canon": 4,
+      "binomial_pvalue": 6e-06,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "n_before": 5,
+        "n_after": 5
+      },
+      "canonical_median_sharpe": 0.7236
+    },
+    "us_sectors": {
+      "instruments": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "n_instruments": 11,
+      "pass_count_at_canon": 8,
+      "binomial_pvalue": 0.0,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "n_before": 5,
+        "n_after": 5
+      },
+      "canonical_median_sharpe": 0.754
+    }
+  }
+}

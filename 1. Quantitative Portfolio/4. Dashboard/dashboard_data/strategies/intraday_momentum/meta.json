@@ -1,0 +1,23 @@
+{
+  "label": "Intraday Momentum",
+  "sleeve": "short_term",
+  "type": "Momentum",
+  "timeframe": "5-min bars",
+  "universe": "validated ETF baskets",
+  "signal": "Session momentum continuation.",
+  "in_portfolio": false,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "stats": {
+    "sharpe": 1.459,
+    "cagr_pct": 13.72,
+    "maxdd_pct": -11.5,
+    "months": 125
+  },
+  "gates_passed": "3/3",
+  "description": "Intraday momentum based on checkpoint breaks (every 30 minutes from 10:00 to 15:30 ET) against a rolling volatility-scaled noise band around the day's open/prior-close reference range. A break above the upper band signals long, a break below the lower band signals short; positions trail a VWAP/band-based stop and can reverse intraday. Exit at EOD (15:55 ET) if still open.",
+  "reference": "Zarattini, Barbon & Aziz (2024), 'Beat the Market: An Effective Intraday Momentum Strategy' (paper in reference/)"
+}

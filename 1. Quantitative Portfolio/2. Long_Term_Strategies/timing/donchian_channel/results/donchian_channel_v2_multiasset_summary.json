@@ -1,0 +1,93 @@
+{
+  "strategy": "Donchian Channel v2 (Multi-Asset)",
+  "period": "2016-01-01->2026-04-01",
+  "grid": {
+    "channel_periods": [
+      10,
+      20,
+      30,
+      50
+    ],
+    "min_hold_days": [
+      15,
+      30,
+      45,
+      60
+    ],
+    "stop_losses": [
+      -0.05,
+      -0.08,
+      -0.12
+    ],
+    "n_combos": 48
+  },
+  "baskets": {
+    "us_equity_broad": {
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY"
+      ],
+      "n_instruments": 4,
+      "pass_count_at_canon": 3,
+      "binomial_pvalue": 0.000481,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "ch": 20,
+        "mh": 45,
+        "sl": -0.05
+      },
+      "canonical_median_sharpe": 0.8288
+    },
+    "us_sectors": {
+      "instruments": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "n_instruments": 11,
+      "pass_count_at_canon": 7,
+      "binomial_pvalue": 0.0,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "ch": 10,
+        "mh": 60,
+        "sl": -0.12
+      },
+      "canonical_median_sharpe": 0.6012
+    },
+    "us_factor": {
+      "instruments": [
+        "IWF",
+        "IWD",
+        "IWM",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY"
+      ],
+      "n_instruments": 7,
+      "pass_count_at_canon": 6,
+      "binomial_pvalue": 0.0,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "ch": 20,
+        "mh": 45,
+        "sl": -0.08
+      },
+      "canonical_median_sharpe": 0.8344
+    }
+  }
+}

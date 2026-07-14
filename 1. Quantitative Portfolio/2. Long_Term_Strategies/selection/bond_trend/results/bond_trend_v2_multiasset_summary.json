@@ -1,0 +1,93 @@
+{
+  "strategy": "Bond Trend v2 (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "n_boot": 500,
+  "n_combos": 120,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "freq": "2ME",
+    "mom_window": 3
+  },
+  "canonical_median_sharpe": 0.6056,
+  "binomial_pvalue": 0.0975,
+  "binomial_significant": false,
+  "verdict": "NO EVIDENCE OF EFFECT",
+  "baskets": {
+    "bonds_us": {
+      "instruments": [
+        "TLT",
+        "IEF",
+        "SHY",
+        "TIP",
+        "BIL",
+        "LQD",
+        "HYG"
+      ],
+      "n_instruments": 7,
+      "canonical_params": {
+        "top_pct": 0.25,
+        "freq": "2ME",
+        "mom_window": 3
+      },
+      "canonical_median_sharpe": 0.6056,
+      "canonical_basket_sharpe": 0.6598,
+      "pass_count_at_canon": 1,
+      "n_baskets_tested": 2,
+      "binomial_pvalue": 0.0975,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE OF EFFECT",
+      "basket_details": {
+        "bonds_us": {
+          "t_p": 0.0263,
+          "boot_p5": 0.117,
+          "perm_p": 0.024,
+          "sharpe": 0.6598,
+          "gates": 3
+        },
+        "bonds_intl": {
+          "t_p": 0.0517,
+          "boot_p5": 0.0191,
+          "perm_p": 0.052,
+          "sharpe": 0.5513,
+          "gates": 1
+        }
+      }
+    },
+    "bonds_intl": {
+      "instruments": [
+        "EMB",
+        "BNDX"
+      ],
+      "n_instruments": 2,
+      "canonical_params": {
+        "top_pct": 0.25,
+        "freq": "2ME",
+        "mom_window": 3
+      },
+      "canonical_median_sharpe": 0.6056,
+      "canonical_basket_sharpe": 0.5513,
+      "pass_count_at_canon": 1,
+      "n_baskets_tested": 2,
+      "binomial_pvalue": 0.0975,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE OF EFFECT",
+      "basket_details": {
+        "bonds_us": {
+          "t_p": 0.0263,
+          "boot_p5": 0.117,
+          "perm_p": 0.024,
+          "sharpe": 0.6598,
+          "gates": 3
+        },
+        "bonds_intl": {
+          "t_p": 0.0517,
+          "boot_p5": 0.0191,
+          "perm_p": 0.052,
+          "sharpe": 0.5513,
+          "gates": 1
+        }
+      }
+    }
+  }
+}

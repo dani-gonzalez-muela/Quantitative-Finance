@@ -1,0 +1,45 @@
+{
+  "strategy": "Regime Factor Rotation",
+  "instruments": [
+    "SIZE",
+    "VLUE",
+    "QUAL",
+    "COWZ",
+    "MTUM"
+  ],
+  "factor_map": {
+    "SMB": "SIZE",
+    "HML": "VLUE",
+    "RMW": "QUAL",
+    "CMA": "COWZ",
+    "Mom": "MTUM"
+  },
+  "portfolio": "long_term",
+  "trade_period": "2016-01-01 -> 2026-04-01",
+  "macro_training_start": "1984-01-01",
+  "params": {
+    "top_n": 3,
+    "n_regimes": 3
+  },
+  "gmm_params": {
+    "pca": 10,
+    "cov": "full",
+    "refit_every": 24,
+    "init_train_pct": 0.5
+  },
+  "trades": 44,
+  "has_stop": false,
+  "architecture": "basket",
+  "significance": {
+    "gross": {
+      "sharpe": 0.8195,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.8195,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

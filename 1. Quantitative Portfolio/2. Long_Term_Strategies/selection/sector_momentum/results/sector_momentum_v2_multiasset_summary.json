@@ -1,0 +1,102 @@
+{
+  "strategy": "Sector Momentum v2 (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "n_boot": 500,
+  "n_combos": 120,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "freq": "6ME",
+    "mom_window": 3
+  },
+  "canonical_median_sharpe": 1.4472,
+  "binomial_pvalue": 0.0025,
+  "binomial_significant": true,
+  "verdict": "STRATEGY EXISTS",
+  "baskets": {
+    "us_sectors": {
+      "instruments": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "n_instruments": 11,
+      "canonical_params": {
+        "top_pct": 0.25,
+        "freq": "6ME",
+        "mom_window": 3
+      },
+      "canonical_median_sharpe": 1.4472,
+      "canonical_basket_sharpe": 1.7288,
+      "pass_count_at_canon": 2,
+      "n_baskets_tested": 2,
+      "binomial_pvalue": 0.0025,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "basket_details": {
+        "us_sectors": {
+          "t_p": 0.0001,
+          "boot_p5": 1.1308,
+          "perm_p": 0.0,
+          "sharpe": 1.7288,
+          "gates": 3
+        },
+        "us_factor": {
+          "t_p": 0.0031,
+          "boot_p5": 0.6891,
+          "perm_p": 0.0,
+          "sharpe": 1.1656,
+          "gates": 3
+        }
+      }
+    },
+    "us_factor": {
+      "instruments": [
+        "IWF",
+        "IWD",
+        "IWM",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY"
+      ],
+      "n_instruments": 7,
+      "canonical_params": {
+        "top_pct": 0.25,
+        "freq": "6ME",
+        "mom_window": 3
+      },
+      "canonical_median_sharpe": 1.4472,
+      "canonical_basket_sharpe": 1.1656,
+      "pass_count_at_canon": 2,
+      "n_baskets_tested": 2,
+      "binomial_pvalue": 0.0025,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "basket_details": {
+        "us_sectors": {
+          "t_p": 0.0001,
+          "boot_p5": 1.1308,
+          "perm_p": 0.0,
+          "sharpe": 1.7288,
+          "gates": 3
+        },
+        "us_factor": {
+          "t_p": 0.0031,
+          "boot_p5": 0.6891,
+          "perm_p": 0.0,
+          "sharpe": 1.1656,
+          "gates": 3
+        }
+      }
+    }
+  }
+}

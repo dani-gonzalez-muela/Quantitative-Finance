@@ -1,0 +1,107 @@
+{
+  "strategy": "turn_of_month",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "n_days_before": 3,
+    "n_days_after": 3
+  },
+  "passing_instruments": [
+    "QQQ",
+    "XLV",
+    "XLRE",
+    "XLC"
+  ],
+  "sleeves": {
+    "QQQ": {
+      "simple_85": {
+        "sharpe": 0.581,
+        "cagr": 5.62,
+        "max_dd": -14.86,
+        "n_trades": 115,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.5826,
+        "cagr": 6.56,
+        "max_dd": -17.34,
+        "n_trades": 115,
+        "allocation": 1.0
+      }
+    },
+    "XLV": {
+      "simple_85": {
+        "sharpe": 0.5768,
+        "cagr": 4.14,
+        "max_dd": -10.76,
+        "n_trades": 115,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.578,
+        "cagr": 4.85,
+        "max_dd": -12.6,
+        "n_trades": 115,
+        "allocation": 1.0
+      }
+    },
+    "XLRE": {
+      "simple_85": {
+        "sharpe": 0.5383,
+        "cagr": 4.5,
+        "max_dd": -17.44,
+        "n_trades": 115,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.5399,
+        "cagr": 5.25,
+        "max_dd": -20.26,
+        "n_trades": 115,
+        "allocation": 1.0
+      }
+    },
+    "XLC": {
+      "simple_85": {
+        "sharpe": 0.7007,
+        "cagr": 7.44,
+        "max_dd": -11.45,
+        "n_trades": 86,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.7035,
+        "cagr": 8.72,
+        "max_dd": -13.42,
+        "n_trades": 86,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 4,
+      "instruments": [
+        "QQQ",
+        "XLV",
+        "XLRE",
+        "XLC"
+      ],
+      "sharpe": 0.7998,
+      "cagr": 6.57,
+      "max_dd": -7.39
+    },
+    "simple_100": {
+      "n_sleeves": 4,
+      "instruments": [
+        "QQQ",
+        "XLV",
+        "XLRE",
+        "XLC"
+      ],
+      "sharpe": 0.8005,
+      "cagr": 7.71,
+      "max_dd": -8.69
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "starting_capital": 100000,
+  "n_passing_baskets": 3,
+  "n_rescued_tickers": 1,
+  "n_total_instruments": 20,
+  "portfolio": {
+    "simple": {
+      "sharpe": 1.4516,
+      "cagr": 0.0523,
+      "max_dd": -0.065,
+      "n_instruments": 20
+    },
+    "asset_vol": {
+      "sharpe": 1.6555,
+      "cagr": 0.1207,
+      "max_dd": -0.1391,
+      "n_instruments": 20
+    },
+    "vol_target": {
+      "sharpe": 1.275,
+      "cagr": 0.0424,
+      "max_dd": -0.0617,
+      "n_instruments": 20
+    }
+  },
+  "selected_variant": "asset_vol",
+  "selection_criterion": "highest portfolio Sharpe",
+  "instruments": {
+    "baskets": {
+      "em_regional": {
+        "EEM": {
+          "simple": 0.1168,
+          "asset_vol": 0.1209,
+          "vol_target": 0.2423
+        },
+        "EWZ": {
+          "simple": 0.4223,
+          "asset_vol": 0.4532,
+          "vol_target": 0.4737
+        },
+        "INDA": {
+          "simple": 0.6567,
+          "asset_vol": 0.5055,
+          "vol_target": 0.4991
+        },
+        "EWW": {
+          "simple": 1.1041,
+          "asset_vol": 0.9124,
+          "vol_target": 1.1857
+        }
+      },
+      "us_equity_broad": {
+        "SPY": {
+          "simple": 0.8205,
+          "asset_vol": 1.0862,
+          "vol_target": 0.8318
+        },
+        "QQQ": {
+          "simple": 0.8444,
+          "asset_vol": 1.1098,
+          "vol_target": 0.8389
+        },
+        "IWM": {
+          "simple": 0.7083,
+          "asset_vol": 0.8042,
+          "vol_target": 0.6761
+        },
+        "DIA": {
+          "simple": 0.2259,
+          "asset_vol": 0.3687,
+          "vol_target": 0.0636
+        },
+        "MDY": {
+          "simple": 0.5736,
+          "asset_vol": 0.5625,
+          "vol_target": 0.5396
+        },
+        "IVV": {
+          "simple": 1.0795,
+          "asset_vol": 1.2767,
+          "vol_target": 1.1034
+        },
+        "VOO": {
+          "simple": 0.8657,
+          "asset_vol": 1.0478,
+          "vol_target": 0.8775
+        }
+      },
+      "us_factor": {
+        "IWF": {
+          "simple": 0.8502,
+          "asset_vol": 1.1412,
+          "vol_target": 0.6315
+        },
+        "IWD": {
+          "simple": 0.5986,
+          "asset_vol": 0.529,
+          "vol_target": 0.4219
+        },
+        "MTUM": {
+          "simple": 0.6886,
+          "asset_vol": 0.6641,
+          "vol_target": 0.6314
+        },
+        "USMV": {
+          "simple": 0.9102,
+          "asset_vol": 0.8984,
+          "vol_target": 0.8299
+        },
+        "VTV": {
+          "simple": 1.0613,
+          "asset_vol": 0.9506,
+          "vol_target": 1.0579
+        },
+        "VUG": {
+          "simple": 0.3469,
+          "asset_vol": 0.5118,
+          "vol_target": 0.1629
+        },
+        "DVY": {
+          "simple": 0.9734,
+          "asset_vol": 0.5248,
+          "vol_target": 0.8897
+        },
+        "QUAL": {
+          "simple": 0.446,
+          "asset_vol": 0.6606,
+          "vol_target": 0.3107
+        }
+      }
+    },
+    "rescued": {
+      "XLV": {
+        "simple": 0.9962,
+        "asset_vol": 1.0491,
+        "vol_target": 0.9143
+      }
+    }
+  }
+}

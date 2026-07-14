@@ -1,0 +1,23 @@
+{
+  "label": "Us Shareholder Yield",
+  "sleeve": "long_term",
+  "type": "Factor (payout/value)",
+  "timeframe": "monthly",
+  "universe": "US equities",
+  "signal": "High-shareholder-yield tilt (value/payout proxy).",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.818,
+    "cagr_pct": 12.1,
+    "maxdd_pct": -56.57,
+    "months": 433
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "High-shareholder-yield tilt, proxied as FF Mkt+0.5\u00d7HML (high book-to-market \u2248 high-dividend cohort). Monthly, 5bps/side. True div12m_me per-stock construction pending real data (todo proxy log).",
+  "reference": "Boudoukh, Michaely, Richardson & Roberts (2007), 'On the Importance of Measuring Payout Yield'"
+}

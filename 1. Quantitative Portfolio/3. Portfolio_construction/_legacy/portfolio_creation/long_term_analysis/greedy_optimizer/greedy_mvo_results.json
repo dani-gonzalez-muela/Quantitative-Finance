@@ -1,0 +1,272 @@
+{
+  "scheme": "mvo",
+  "selection_order": [
+    "ibs_mean_reversion",
+    "quality_profitability",
+    "vix_mean_reversion",
+    "vol_overlay",
+    "bab_long_short",
+    "us_earnings_momentum",
+    "donchian_channel",
+    "bond_trend",
+    "country_cape_rotation",
+    "commodity_carry",
+    "us_cross_sectional_momentum",
+    "gtaa"
+  ],
+  "sharpe_at_each_step": [
+    1.3192838520804862,
+    1.7153071146156618,
+    1.9397388870980643,
+    2.00509714609923,
+    2.0543652860961785,
+    2.2165795902707686,
+    2.318385904401389,
+    2.3707355489885247,
+    2.407227933201667,
+    2.422112244130777,
+    2.4252203168513398,
+    2.4262824780012218
+  ],
+  "weights_at_each_step": [
+    {
+      "ibs_mean_reversion": 1.0
+    },
+    {
+      "ibs_mean_reversion": 0.5,
+      "quality_profitability": 0.5
+    },
+    {
+      "ibs_mean_reversion": 0.40772902769814373,
+      "quality_profitability": 0.3761178414014123,
+      "vix_mean_reversion": 0.21615313090044405
+    },
+    {
+      "ibs_mean_reversion": 0.20532911380278146,
+      "quality_profitability": 0.18795838962514388,
+      "vix_mean_reversion": 0.10671249657207335,
+      "vol_overlay": 0.5
+    },
+    {
+      "ibs_mean_reversion": 0.15992370243689577,
+      "quality_profitability": 0.1780783201231306,
+      "vix_mean_reversion": 0.14199797744015463,
+      "vol_overlay": 0.4999999999998111,
+      "bab_long_short": 0.020000000000007952
+    },
+    {
+      "ibs_mean_reversion": 0.15348180912379009,
+      "quality_profitability": 0.02,
+      "vix_mean_reversion": 0.13922482292396707,
+      "vol_overlay": 0.5,
+      "bab_long_short": 0.02,
+      "us_earnings_momentum": 0.1672933679461517
+    },
+    {
+      "ibs_mean_reversion": 0.08359856750424097,
+      "quality_profitability": 0.020000000000000046,
+      "vix_mean_reversion": 0.12097073425527491,
+      "vol_overlay": 0.49999999999999967,
+      "bab_long_short": 0.020000000000000056,
+      "us_earnings_momentum": 0.14296073820435184,
+      "donchian_channel": 0.11246996003613254
+    },
+    {
+      "ibs_mean_reversion": 0.061906452985680795,
+      "quality_profitability": 0.020000000000000247,
+      "vix_mean_reversion": 0.08967109074593192,
+      "vol_overlay": 0.5,
+      "bab_long_short": 0.02,
+      "us_earnings_momentum": 0.1005644966232913,
+      "donchian_channel": 0.0870740168087087,
+      "bond_trend": 0.12078394283637102
+    },
+    {
+      "ibs_mean_reversion": 0.0571464242513477,
+      "quality_profitability": 0.02,
+      "vix_mean_reversion": 0.08350961554670501,
+      "vol_overlay": 0.4999999999999345,
+      "bab_long_short": 0.02000000000000372,
+      "us_earnings_momentum": 0.07237214545932166,
+      "donchian_channel": 0.07914797049454686,
+      "bond_trend": 0.11195406269673414,
+      "country_cape_rotation": 0.05586978155140876
+    },
+    {
+      "ibs_mean_reversion": 0.05441004416613894,
+      "quality_profitability": 0.02000000000000324,
+      "vix_mean_reversion": 0.08197282330974184,
+      "vol_overlay": 0.4999999999985214,
+      "bab_long_short": 0.02000000000006034,
+      "us_earnings_momentum": 0.07014668834558802,
+      "donchian_channel": 0.07311641443730621,
+      "bond_trend": 0.10673617181143953,
+      "country_cape_rotation": 0.0536178579311852,
+      "commodity_carry": 0.020000000000015318
+    },
+    {
+      "ibs_mean_reversion": 0.05424693929098926,
+      "quality_profitability": 0.020000000000000347,
+      "vix_mean_reversion": 0.08190054236854234,
+      "vol_overlay": 0.5,
+      "bab_long_short": 0.02,
+      "us_earnings_momentum": 0.032612089683084176,
+      "donchian_channel": 0.07293742037091769,
+      "bond_trend": 0.1037166739918057,
+      "country_cape_rotation": 0.05307261585526717,
+      "commodity_carry": 0.02,
+      "us_cross_sectional_momentum": 0.04151371843937526
+    },
+    {
+      "ibs_mean_reversion": 0.045281871061762596,
+      "quality_profitability": 0.020000000000007533,
+      "vix_mean_reversion": 0.0778198900989743,
+      "vol_overlay": 0.49999999999770783,
+      "bab_long_short": 0.020000000000030216,
+      "us_earnings_momentum": 0.03102159307528647,
+      "donchian_channel": 0.06325607272868045,
+      "bond_trend": 0.09721338215443441,
+      "country_cape_rotation": 0.050714337160794994,
+      "commodity_carry": 0.020000000000005347,
+      "us_cross_sectional_momentum": 0.04032749075703334,
+      "gtaa": 0.03436536296229201
+    }
+  ],
+  "final_weights": {
+    "ibs_mean_reversion": 0.0453,
+    "quality_profitability": 0.02,
+    "vix_mean_reversion": 0.0778,
+    "vol_overlay": 0.5,
+    "bab_long_short": 0.02,
+    "us_earnings_momentum": 0.031,
+    "donchian_channel": 0.0633,
+    "bond_trend": 0.0972,
+    "country_cape_rotation": 0.0507,
+    "commodity_carry": 0.02,
+    "us_cross_sectional_momentum": 0.0403,
+    "gtaa": 0.0344
+  },
+  "frontier_stats": [
+    {
+      "step": 1,
+      "strategy_added": "ibs_mean_reversion",
+      "sharpe": 1.3193,
+      "cagr": 12.62,
+      "max_dd": -9.19,
+      "n_days": 2667,
+      "window_start": "2016-01-08",
+      "window_end": "2026-03-31"
+    },
+    {
+      "step": 2,
+      "strategy_added": "quality_profitability",
+      "sharpe": 1.7153,
+      "cagr": 12.81,
+      "max_dd": -6.48,
+      "n_days": 2645,
+      "window_start": "2016-01-08",
+      "window_end": "2026-02-27"
+    },
+    {
+      "step": 3,
+      "strategy_added": "vix_mean_reversion",
+      "sharpe": 1.9397,
+      "cagr": 14.78,
+      "max_dd": -7.3,
+      "n_days": 2533,
+      "window_start": "2016-06-14",
+      "window_end": "2026-02-27"
+    },
+    {
+      "step": 4,
+      "strategy_added": "vol_overlay",
+      "sharpe": 2.0051,
+      "cagr": 7.44,
+      "max_dd": -3.83,
+      "n_days": 2533,
+      "window_start": "2016-06-14",
+      "window_end": "2026-02-27"
+    },
+    {
+      "step": 5,
+      "strategy_added": "bab_long_short",
+      "sharpe": 2.0544,
+      "cagr": 6.66,
+      "max_dd": -3.07,
+      "n_days": 925,
+      "window_start": "2016-06-14",
+      "window_end": "2019-12-31"
+    },
+    {
+      "step": 6,
+      "strategy_added": "us_earnings_momentum",
+      "sharpe": 2.2166,
+      "cagr": 7.59,
+      "max_dd": -3.01,
+      "n_days": 925,
+      "window_start": "2016-06-14",
+      "window_end": "2019-12-31"
+    },
+    {
+      "step": 7,
+      "strategy_added": "donchian_channel",
+      "sharpe": 2.3184,
+      "cagr": 7.29,
+      "max_dd": -2.68,
+      "n_days": 925,
+      "window_start": "2016-06-14",
+      "window_end": "2019-12-31"
+    },
+    {
+      "step": 8,
+      "strategy_added": "bond_trend",
+      "sharpe": 2.3707,
+      "cagr": 5.63,
+      "max_dd": -1.96,
+      "n_days": 925,
+      "window_start": "2016-06-14",
+      "window_end": "2019-12-31"
+    },
+    {
+      "step": 9,
+      "strategy_added": "country_cape_rotation",
+      "sharpe": 2.4072,
+      "cagr": 5.41,
+      "max_dd": -1.89,
+      "n_days": 925,
+      "window_start": "2016-06-14",
+      "window_end": "2019-12-31"
+    },
+    {
+      "step": 10,
+      "strategy_added": "commodity_carry",
+      "sharpe": 2.4221,
+      "cagr": 5.36,
+      "max_dd": -1.9,
+      "n_days": 925,
+      "window_start": "2016-06-14",
+      "window_end": "2019-12-31"
+    },
+    {
+      "step": 11,
+      "strategy_added": "us_cross_sectional_momentum",
+      "sharpe": 2.4252,
+      "cagr": 5.4,
+      "max_dd": -1.98,
+      "n_days": 925,
+      "window_start": "2016-06-14",
+      "window_end": "2019-12-31"
+    },
+    {
+      "step": 12,
+      "strategy_added": "gtaa",
+      "sharpe": 2.4263,
+      "cagr": 5.28,
+      "max_dd": -1.98,
+      "n_days": 925,
+      "window_start": "2016-06-14",
+      "window_end": "2019-12-31"
+    }
+  ],
+  "final_sharpe": 2.4262824780012218
+}

@@ -1,0 +1,55 @@
+{
+  "strategy": "Country CAPE Rotation v2 (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "n_boot": 500,
+  "n_combos": 120,
+  "canonical_params": {
+    "top_pct": 0.1,
+    "freq": "ME",
+    "return_window": 9
+  },
+  "canonical_median_sharpe": 0.8975,
+  "binomial_pvalue": 0.05,
+  "binomial_significant": false,
+  "verdict": "NO EVIDENCE OF EFFECT",
+  "baskets": {
+    "em_country": {
+      "instruments": [
+        "EEM",
+        "INDA",
+        "EWZ",
+        "EWJ",
+        "EWG",
+        "EWU",
+        "EWA",
+        "EWC",
+        "EWP",
+        "EWI",
+        "EWL"
+      ],
+      "n_instruments": 11,
+      "canonical_params": {
+        "top_pct": 0.1,
+        "freq": "ME",
+        "return_window": 9
+      },
+      "canonical_median_sharpe": 0.8975,
+      "canonical_basket_sharpe": 0.8975,
+      "pass_count_at_canon": 1,
+      "n_baskets_tested": 1,
+      "binomial_pvalue": 0.05,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE OF EFFECT",
+      "basket_details": {
+        "em_country": {
+          "t_p": 0.0037,
+          "boot_p5": 0.3674,
+          "perm_p": 0.006,
+          "sharpe": 0.8975,
+          "gates": 3
+        }
+      }
+    }
+  }
+}

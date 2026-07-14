@@ -1,0 +1,24 @@
+{
+  "members": [
+    "short_term",
+    "long_term"
+  ],
+  "member_stats": [
+    {
+      "strategy": "short_term",
+      "sharpe": 6.163,
+      "cagr_pct": 30.21,
+      "maxdd_pct": -2.05
+    },
+    {
+      "strategy": "long_term",
+      "sharpe": 1.361,
+      "cagr_pct": 5.09,
+      "maxdd_pct": -6.02
+    }
+  ],
+  "sharpe": 5.117,
+  "cagr_pct": 17.03,
+  "maxdd_pct": -1.64,
+  "note": "50/50 blend of the two finished books, daily EW \u2014 book-level reporting view only, NOT a re-pool (book correlation ~0.1)."
+}

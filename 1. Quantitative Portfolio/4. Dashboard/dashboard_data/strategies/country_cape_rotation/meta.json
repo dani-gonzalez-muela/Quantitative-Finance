@@ -1,0 +1,23 @@
+{
+  "label": "Country Cape Rotation",
+  "sleeve": "long_term",
+  "type": "Value rotation",
+  "timeframe": "monthly",
+  "universe": "14 country equity indices",
+  "signal": "Hold the 5 cheapest countries by value proxy, monthly rebalance.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.47,
+    "cagr_pct": 6.5,
+    "maxdd_pct": -48.84,
+    "months": 360
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Faber-style country value rotation: hold the 5 cheapest of 14 countries, monthly rebalance, CRSP world country returns. Cheapness proxy = inverse 12m return (Shiller CAPE download was blocked \u2014 todo proxy log).",
+  "reference": "Shiller CAPE; Faber (2014), 'Global Value' \u2014 country valuation rotation"
+}

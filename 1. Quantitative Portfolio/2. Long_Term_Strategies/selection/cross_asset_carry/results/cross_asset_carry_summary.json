@@ -1,0 +1,38 @@
+{
+  "strategy": "Cross-Asset Carry",
+  "instruments": [
+    "SPY",
+    "TLT",
+    "Gold",
+    "Oil",
+    "CorpBond"
+  ],
+  "portfolio": "long_term",
+  "period": "2016-01-04 -> 2025-06-03",
+  "params": {
+    "top_n": 3,
+    "carry_proxy": "trailing_12m_return / trailing_12m_vol (return-to-risk ratio)",
+    "signal": "rank by carry, long top 3 of 5 assets",
+    "data_note": "SPY+TLT from prices_validated.parquet; gold+oil from commodities_daily.csv; bonds=bonds_yahoo proxy. UUP/EEM/GLD/DBC ETF download blocked. Period: 2016-2025."
+  },
+  "trades": 27,
+  "stats": {
+    "cagr": 1.5,
+    "total_return": 15.01,
+    "sharpe_daily": 0.1706,
+    "max_dd": -38.2,
+    "years": 9.41
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.1805,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    },
+    "net": {
+      "sharpe": 0.1535,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    }
+  }
+}

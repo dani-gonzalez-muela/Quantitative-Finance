@@ -1,0 +1,98 @@
+{
+  "strategy": "Commodity Carry (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "universes": {
+    "commodities": {
+      "n_tickers": 7,
+      "tickers": [
+        "GLD",
+        "SLV",
+        "DBC",
+        "USO",
+        "UNG",
+        "GDX",
+        "PDBC"
+      ],
+      "best_sharpe": 0.6432
+    }
+  },
+  "grid_search": {
+    "top_pcts": [
+      0.1,
+      0.15,
+      0.25,
+      0.33,
+      0.5,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "carry_params": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        3,
+        12
+      ]
+    ],
+    "combos_per_universe": 330,
+    "total_runs": 330
+  },
+  "best_params": {
+    "top_pct": 0.5,
+    "top_n_primary": 4,
+    "short_win": 2,
+    "long_win": 12,
+    "freq": "ME",
+    "median_sharpe": 0.6432,
+    "min_sharpe": 0.6432,
+    "n_positive": 1,
+    "per_universe_sharpe": {
+      "commodities": 0.6432
+    }
+  }
+}

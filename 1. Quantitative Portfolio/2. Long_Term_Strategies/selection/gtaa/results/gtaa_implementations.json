@@ -1,0 +1,66 @@
+{
+  "simple_bet_85pct_1x": {
+    "total_return": 70.0,
+    "cagr": 5.8,
+    "sharpe": 0.91,
+    "max_dd": -8.1,
+    "label": "Simple bet 85% (1x)"
+  },
+  "quarter_kelly_9pct_1x": {
+    "total_return": 6.2,
+    "cagr": 0.64,
+    "sharpe": 0.86,
+    "max_dd": -1.1,
+    "label": "Quarter Kelly 9% (1x)"
+  },
+  "asset_vol_10pct_1x": {
+    "total_return": 85.3,
+    "cagr": 6.77,
+    "sharpe": 0.92,
+    "max_dd": -9.2,
+    "label": "Asset vol 10%, 1x"
+  },
+  "simple_bet_170pct_2x": {
+    "total_return": 169.2,
+    "cagr": 11.1,
+    "sharpe": 0.94,
+    "max_dd": -14.5,
+    "label": "Simple bet 170% (2x)"
+  },
+  "half_kelly_19pct_2x": {
+    "total_return": 13.0,
+    "cagr": 1.31,
+    "sharpe": 0.87,
+    "max_dd": -2.1,
+    "label": "Half Kelly 19% (2x)"
+  },
+  "asset_vol_10pct_2x": {
+    "total_return": 179.1,
+    "cagr": 11.52,
+    "sharpe": 0.9,
+    "max_dd": -16.8,
+    "label": "Asset vol 10%, 2x"
+  },
+  "simple_bet_340pct_4x": {
+    "total_return": 478.3,
+    "cagr": 20.5,
+    "sharpe": 0.96,
+    "max_dd": -29.2,
+    "label": "Simple bet 340% (4x)"
+  },
+  "full_kelly_37pct_4x": {
+    "total_return": 27.4,
+    "cagr": 2.61,
+    "sharpe": 0.88,
+    "max_dd": -4.0,
+    "label": "Full Kelly 37% (4x)"
+  },
+  "asset_vol_10pct_4x": {
+    "total_return": 366.9,
+    "cagr": 17.79,
+    "sharpe": 0.85,
+    "max_dd": -30.4,
+    "label": "Asset vol 10%, 4x"
+  },
+  "_recommended": "Simple bet 340% (4x)"
+}

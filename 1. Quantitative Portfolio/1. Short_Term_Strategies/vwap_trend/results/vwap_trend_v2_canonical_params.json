@@ -1,0 +1,107 @@
+{
+  "us_equity_broad": {
+    "vwap_threshold": 0.001,
+    "exit_time": "15:55:00",
+    "median_sharpe": 0.33596697832863814,
+    "binom_p": 0.04438054218749998,
+    "binom_pass": true,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 0.2222687104619736,
+      "boot5": -0.3122227370754952,
+      "perm_p": 0.282
+    },
+    "n_tickers": 7,
+    "k_significant": 2
+  },
+  "us_factor": {
+    "vwap_threshold": 0.001,
+    "exit_time": "15:55:00",
+    "median_sharpe": 0.16156145296909377,
+    "binom_p": 0.3365795687109375,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 0.08493571324221483,
+      "boot5": -0.1603981594487641,
+      "perm_p": 0.127
+    },
+    "n_tickers": 8,
+    "k_significant": 1
+  },
+  "us_sectors": {
+    "vwap_threshold": 0.001,
+    "exit_time": "15:55:00",
+    "median_sharpe": -0.050196216620427954,
+    "binom_p": 0.1018945911424316,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -0.6713823380938071,
+      "perm_p": 0.7
+    },
+    "n_tickers": 11,
+    "k_significant": 2
+  },
+  "bonds_us": {
+    "vwap_threshold": 0.002,
+    "exit_time": "15:55:00",
+    "median_sharpe": 0.27532166470455394,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 0.3427792705830107,
+      "boot5": -0.35994763345668435,
+      "perm_p": 0.337
+    },
+    "n_tickers": 5,
+    "k_significant": 0
+  },
+  "commodities": {
+    "vwap_threshold": 0.002,
+    "exit_time": "15:55:00",
+    "median_sharpe": -0.13200806439799415,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -0.5795482831913501,
+      "perm_p": 0.536
+    },
+    "n_tickers": 4,
+    "k_significant": 0
+  },
+  "em_regional": {
+    "vwap_threshold": 0.002,
+    "exit_time": "15:55:00",
+    "median_sharpe": 0.27966131191592064,
+    "binom_p": 0.18549375,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 0.26886762123661334,
+      "boot5": -0.3728543263540633,
+      "perm_p": 0.306
+    },
+    "n_tickers": 4,
+    "k_significant": 1
+  },
+  "intl_liquid": {
+    "vwap_threshold": 0.002,
+    "exit_time": "15:55:00",
+    "median_sharpe": 0.3906261880670297,
+    "binom_p": 0.2262190625,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 0.08106795660778597,
+      "boot5": 0.16629882248765926,
+      "perm_p": 0.019
+    },
+    "n_tickers": 5,
+    "k_significant": 1
+  }
+}

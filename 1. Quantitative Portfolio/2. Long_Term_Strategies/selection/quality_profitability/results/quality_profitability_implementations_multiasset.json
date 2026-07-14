@@ -1,0 +1,48 @@
+{
+  "strategy": "quality_profitability",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.5,
+    "rmw_window": 18,
+    "freq": "6ME"
+  },
+  "sleeves": {
+    "us_equity_broad": {
+      "simple_85": {
+        "sharpe": 0.8243,
+        "cagr": 13.2,
+        "max_dd": -26.37,
+        "n_trades": 36,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.8268,
+        "cagr": 15.55,
+        "max_dd": -30.79,
+        "n_trades": 36,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 1,
+      "sleeves": [
+        "us_equity_broad"
+      ],
+      "sharpe": 0.8243,
+      "cagr": 13.2,
+      "max_dd": -26.37
+    },
+    "simple_100": {
+      "n_sleeves": 1,
+      "sleeves": [
+        "us_equity_broad"
+      ],
+      "sharpe": 0.8268,
+      "cagr": 15.55,
+      "max_dd": -30.79
+    }
+  }
+}

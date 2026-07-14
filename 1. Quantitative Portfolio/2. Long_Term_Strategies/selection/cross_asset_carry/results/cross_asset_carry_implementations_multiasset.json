@@ -1,0 +1,48 @@
+{
+  "strategy": "cross_asset_carry",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "carry_window": 9,
+    "freq": "2ME"
+  },
+  "sleeves": {
+    "cross_asset": {
+      "simple_85": {
+        "sharpe": 0.9746,
+        "cagr": 11.24,
+        "max_dd": -17.44,
+        "n_trades": 156,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.9755,
+        "cagr": 13.2,
+        "max_dd": -20.34,
+        "n_trades": 156,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 1,
+      "sleeves": [
+        "cross_asset"
+      ],
+      "sharpe": 0.9746,
+      "cagr": 11.24,
+      "max_dd": -17.44
+    },
+    "simple_100": {
+      "n_sleeves": 1,
+      "sleeves": [
+        "cross_asset"
+      ],
+      "sharpe": 0.9755,
+      "cagr": 13.2,
+      "max_dd": -20.34
+    }
+  }
+}

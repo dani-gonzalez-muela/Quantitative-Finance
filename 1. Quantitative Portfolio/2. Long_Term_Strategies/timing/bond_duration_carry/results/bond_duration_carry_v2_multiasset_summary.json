@@ -1,0 +1,46 @@
+{
+  "strategy": "Bond Duration Carry v2 (Multi-Asset)",
+  "period": "2016-01-01->2026-04-01",
+  "grid": {
+    "ry_long_thresholds": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "ry_short_thresholds": [
+      -0.25,
+      -0.5,
+      -0.75
+    ],
+    "slope_thresholds": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "n_combos": 27
+  },
+  "baskets": {
+    "bonds_us": {
+      "instruments": [
+        "TLT",
+        "IEF",
+        "SHY",
+        "TIP",
+        "BIL",
+        "LQD",
+        "HYG"
+      ],
+      "n_instruments": 6,
+      "pass_count_at_canon": 0,
+      "binomial_pvalue": 1.0,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE",
+      "canonical_params": {
+        "ry_long": 1.0,
+        "ry_short": -0.25,
+        "slope_thresh": 0.25
+      },
+      "canonical_median_sharpe": 0.1405
+    }
+  }
+}

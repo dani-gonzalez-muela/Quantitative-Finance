@@ -1,0 +1,36 @@
+{
+  "strategy": "Bond Trend",
+  "instruments": [
+    "TLT_proxy",
+    "IEF_proxy",
+    "SHY_proxy"
+  ],
+  "portfolio": "long_term",
+  "period": "2001-01-01 -> 2026-01-01",
+  "params": {
+    "mom_window_months": 12,
+    "signal": "12m_return > 0 long; else flat",
+    "sizing": "equal_weight",
+    "data_note": "bonds_yahoo=long-bond ETF proxy (TLT-like 2000-2015) spliced with TLT (2016-2025); IEF_proxy=10yr-yield-based price; SHY_proxy=risk-free compounded. ETF download blocked in sandbox."
+  },
+  "trades": 38,
+  "stats": {
+    "cagr": 0.77,
+    "total_return": 21.24,
+    "sharpe_daily": 0.214,
+    "max_dd": -15.96,
+    "years": 25.0
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.1864,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    },
+    "net": {
+      "sharpe": 0.1357,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    }
+  }
+}

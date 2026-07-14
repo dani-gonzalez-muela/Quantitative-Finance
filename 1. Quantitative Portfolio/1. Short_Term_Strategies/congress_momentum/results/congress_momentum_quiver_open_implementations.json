@@ -1,0 +1,21 @@
+{
+  "conservative_5pct": {
+    "fraction": 0.05,
+    "sharpe": 0.866,
+    "cagr_pct": 3.65,
+    "maxdd_pct": -5.4
+  },
+  "base_10pct": {
+    "fraction": 0.1,
+    "sharpe": 0.874,
+    "cagr_pct": 7.38,
+    "maxdd_pct": -10.53
+  },
+  "aggressive_20pct": {
+    "fraction": 0.2,
+    "sharpe": 0.889,
+    "cagr_pct": 15.09,
+    "maxdd_pct": -19.98
+  },
+  "selected_variant": "aggressive_20pct"
+}

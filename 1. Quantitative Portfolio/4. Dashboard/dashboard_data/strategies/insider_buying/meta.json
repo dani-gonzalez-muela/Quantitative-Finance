@@ -1,0 +1,23 @@
+{
+  "label": "Insider Buying",
+  "sleeve": "long_term",
+  "type": "Exposure timing",
+  "timeframe": "monthly",
+  "universe": "US equity (SPY)",
+  "signal": "Scale SPY exposure on a VIX-based insider-buying proxy.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.722,
+    "cagr_pct": 10.45,
+    "maxdd_pct": -54.57,
+    "months": 433
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Exposure timing on an insider-buying proxy: insiders buy after dislocations, so VIX>1.3\u00d73m-avg \u2192 130% SPY, VIX<0.8\u00d712m-avg \u2192 80%, else 100%. Monthly, 5bps/side. Proxy note: true EDGAR Form-4/OpenInsider feed was network-blocked; VIX spike is the documented stand-in (see todo proxy log).",
+  "reference": "Seyhun (1986) and the insider-trading anomaly literature"
+}

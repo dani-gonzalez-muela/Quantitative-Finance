@@ -1,0 +1,48 @@
+{
+  "strategy": "Quality/Profitability v2 (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "n_boot": 500,
+  "n_combos": 100,
+  "canonical_params": {
+    "rmw_window": 18,
+    "freq": "6ME",
+    "top_pct": 0.5
+  },
+  "canonical_median_sharpe": 1.5284,
+  "binomial_pvalue": 0.05,
+  "binomial_significant": false,
+  "verdict": "NO EVIDENCE OF EFFECT",
+  "baskets": {
+    "us_equity_broad": {
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY"
+      ],
+      "n_instruments": 4,
+      "canonical_params": {
+        "rmw_window": 18,
+        "freq": "6ME",
+        "top_pct": 0.5
+      },
+      "canonical_median_sharpe": 1.5284,
+      "canonical_basket_sharpe": 1.5284,
+      "pass_count_at_canon": 1,
+      "n_baskets_tested": 1,
+      "binomial_pvalue": 0.05,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE OF EFFECT",
+      "basket_details": {
+        "us_equity_broad": {
+          "t_p": 0.0002,
+          "boot_p5": 0.8225,
+          "perm_p": 0.002,
+          "sharpe": 1.5284,
+          "gates": 3
+        }
+      }
+    }
+  }
+}

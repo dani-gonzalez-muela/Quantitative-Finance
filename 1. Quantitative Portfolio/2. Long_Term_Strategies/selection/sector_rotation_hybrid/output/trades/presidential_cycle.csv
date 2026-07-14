@@ -1,0 +1,5 @@
+entry_time,exit_time,direction,instrument,entry_price,exit_price,pct_return_gross,exit_reason,stop_price
+2018-01-01,2018-12-31,long,TLT,100.18,98.56,-0.016170892393691405,calendar,
+2019-01-01,2019-12-31,long,SPY,224.28,294.11,0.31135188157660076,calendar,
+2022-01-03,2022-12-30,long,TLT,123.45,87.18,-0.29380315917375455,calendar,
+2023-01-02,2023-12-29,long,SPY,366.6,462.56,0.2617566830332787,calendar,

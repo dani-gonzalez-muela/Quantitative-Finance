@@ -1,0 +1,45 @@
+{
+  "strategy": "Industry Trend Following v2 (CRSP Sectors)",
+  "instruments": [
+    "Technology",
+    "Telecom",
+    "HealthCare",
+    "Financials",
+    "RealEstate",
+    "ConsDisc",
+    "ConsStaples",
+    "Industrials",
+    "BasicMats",
+    "Energy",
+    "Utilities"
+  ],
+  "portfolio": "long_term",
+  "period": "2011-04-01 -> 2025-12-31",
+  "params": {
+    "top_n": 5,
+    "mom_window_months": 12,
+    "skip_last_month": true,
+    "signal": "12-1m momentum, long top 5 of 11 CRSP sector indices",
+    "data_note": "CRSP US Sector Indices from 10_crsp_market_portfolios.parquet (indno 1001630-1001640). 11 sectors: Technology, Telecom, Health Care, Financials, Real Estate, Consumer Discretionary, Consumer Staples, Industrials, Basic Materials, Energy, Utilities. Period: 2011-2025."
+  },
+  "trades": 120,
+  "stats": {
+    "cagr": 11.86,
+    "total_return": 422.53,
+    "sharpe_daily": 0.7682,
+    "max_dd": -37.94,
+    "years": 14.75
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.8992,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.8552,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

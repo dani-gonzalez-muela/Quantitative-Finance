@@ -1,0 +1,28 @@
+{
+  "strategy": "Bollinger Band",
+  "instruments": [
+    "SPY",
+    "QQQ",
+    "IWM"
+  ],
+  "portfolio": "long_term",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "params": {
+    "bb_period": 30,
+    "bb_std": 2.0,
+    "min_hold_days": 30
+  },
+  "trades": 57,
+  "significance": {
+    "gross": {
+      "sharpe": 0.7287,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.7287,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

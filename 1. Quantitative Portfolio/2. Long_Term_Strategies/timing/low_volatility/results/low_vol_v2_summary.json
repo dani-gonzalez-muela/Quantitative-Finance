@@ -1,0 +1,34 @@
+{
+  "strategy": "Low Volatility / BAB v2 (CRSP Beta Decile 1)",
+  "instruments": [
+    "CRSP_BetaDecile1_NYSE_NYSEMKT"
+  ],
+  "portfolio": "long_term",
+  "period": "1970-01-02 -> 2025-12-31",
+  "params": {
+    "strategy": "long_low_beta_decile",
+    "data": "CRSP NYSE/NYSEMKT Beta Decile 1 (lowest beta stocks)",
+    "signal": "always long beta decile 1; buy-and-hold low-beta portfolio",
+    "note": "CRSP NYSE/NYSEMKT Beta Decile 1 from 10_crsp_market_portfolios.parquet (indno=1000102). True BAB signal: long 20% lowest-beta stocks on NYSE/NYSEMKT. Monthly rebalance built into the CRSP portfolio construction. Better Market Betas zip covers 1986-2019 (individual stock betas); CRSP beta deciles cover 1925-2025 and are the standard academic benchmark. Period: 1970-2025."
+  },
+  "trades": 1,
+  "stats": {
+    "cagr": 16.05,
+    "total_return": 417330.81,
+    "sharpe_daily": 0.6753,
+    "max_dd": -74.38,
+    "years": 55.99
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.6174,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.6101,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "strategy": "Sector Momentum",
+  "instruments": [
+    "XLK",
+    "XLF",
+    "XLE",
+    "XLV",
+    "XLI",
+    "XLY",
+    "XLP",
+    "XLU",
+    "XLB",
+    "XLRE"
+  ],
+  "portfolio": "long_term",
+  "period": "2014-01-01 -> 2026-04-01",
+  "params": {
+    "formation_period": 126,
+    "top_n": 5
+  },
+  "trades": 127,
+  "has_stop": false,
+  "architecture": "basket",
+  "significance": {
+    "gross": {
+      "sharpe": 0.6546,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.6546,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

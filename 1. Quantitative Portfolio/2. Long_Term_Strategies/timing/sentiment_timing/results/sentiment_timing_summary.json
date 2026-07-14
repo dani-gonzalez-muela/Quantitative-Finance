@@ -1,0 +1,40 @@
+{
+  "strategy": "Sentiment Timing (VIX)",
+  "instruments": [
+    "SP500_CRSP",
+    "CBOE_VIX"
+  ],
+  "portfolio": "long_term",
+  "period": "1990-01-31 -> 2026-02-28",
+  "params": {
+    "signal": "VIX end-of-month level",
+    "rules": "VIX>25\u2192150% SPY, VIX<15\u219250% SPY, else 100%",
+    "rebalance": "monthly",
+    "tc_bps": "5 one-way",
+    "regime_counts": {
+      "overweight_150pct": 79,
+      "underweight_50pct": 135,
+      "neutral_100pct": 219
+    },
+    "data_notes": "Baker-Wurgler sentiment index download blocked (no internet); VIX used as well-documented sentiment proxy (Da et al 2015)"
+  },
+  "trades": 434,
+  "stats": {
+    "cagr": 10.87,
+    "total_return": 4032.77,
+    "sharpe_daily": 0.5548,
+    "max_dd": -61.14
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.6655,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.5988,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "strategy": "Commodity Carry",
+  "instruments": [
+    "gold",
+    "oil",
+    "corn",
+    "wheat",
+    "soybeans"
+  ],
+  "portfolio": "long_term",
+  "period": "2002-01-01 -> 2025-05-12",
+  "params": {
+    "top_n": 3,
+    "carry_proxy": "1m_return - 3m_return/3 (roll yield differential proxy)",
+    "signal": "rank by carry, long top 3 commodities",
+    "data_note": "Futures price proxies from commodities_daily.csv. True carry = spot/futures spread unavailable for ETFs. USO/CORN/WEAT/SOYB/DBA download blocked. Period: 2001-2025."
+  },
+  "trades": 363,
+  "stats": {
+    "cagr": 9.0,
+    "total_return": 648.6,
+    "sharpe_daily": 0.5114,
+    "max_dd": -58.44,
+    "years": 23.36
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.5427,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.5118,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "methodology": "per-ticker 3-gate at Bonferroni alpha=0.05/N",
+  "baskets": {
+    "us_sectors": [
+      {"ticker": "XLK", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "XLF", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "XLE", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "XLU", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "XLB", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "XLP", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "XLRE", "pass": false, "reason": "basket_clearly_failing"},
+      {
+        "ticker": "XLC", "pass": true,
+        "fast_ema": 21, "slow_ema": 34, "stop_val": 0.03,
+        "sharpe": 0.9285, "bonferroni_alpha": 0.004545,
+        "gate_stats": {"t_p": 0.0038, "boot5_sharpe": 1.896, "perm_p": 0.0},
+        "trades_file": "ema_crossover_v2_trades_bonferroni_us_sectors_XLC.csv"
+      },
+      {
+        "ticker": "XLI", "pass": true,
+        "fast_ema": 21, "slow_ema": 48, "stop_val": 0.03,
+        "sharpe": 1.1416, "bonferroni_alpha": 0.004545,
+        "gate_stats": {"t_p": 0.0038, "boot5_sharpe": 2.0629, "perm_p": 0.0},
+        "trades_file": "ema_crossover_v2_trades_bonferroni_us_sectors_XLI.csv"
+      },
+      {
+        "ticker": "XLV", "pass": true,
+        "fast_ema": 13, "slow_ema": 34, "stop_val": 0.03,
+        "sharpe": 1.3523, "bonferroni_alpha": 0.004545,
+        "gate_stats": {"t_p": 0.0, "boot5_sharpe": 3.5398, "perm_p": 0.0},
+        "trades_file": "ema_crossover_v2_trades_bonferroni_us_sectors_XLV.csv"
+      },
+      {
+        "ticker": "XLY", "pass": false,
+        "fast_ema": 21, "slow_ema": 48, "stop_val": 0.03,
+        "sharpe": 0.6928, "bonferroni_alpha": 0.004545,
+        "gate_stats": {"t_p": 0.0331, "boot5_sharpe": 0.4564, "perm_p": 0.038}
+      }
+    ],
+    "bonds_us": [
+      {"ticker": "TLT", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "IEF", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "SHY", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "HYG", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "LQD", "pass": false, "reason": "basket_clearly_failing"}
+    ],
+    "commodities": [
+      {
+        "ticker": "GLD", "pass": true,
+        "fast_ema": 21, "slow_ema": 55, "stop_val": 0.03,
+        "sharpe": 1.1374, "bonferroni_alpha": 0.0125,
+        "gate_stats": {"t_p": 0.0002, "boot5_sharpe": 3.083, "perm_p": 0.0},
+        "trades_file": "ema_crossover_v2_trades_bonferroni_commodities_GLD.csv"
+      },
+      {
+        "ticker": "SLV", "pass": false,
+        "fast_ema": 21, "slow_ema": 34, "stop_val": 0.03,
+        "sharpe": -5.2016, "bonferroni_alpha": 0.0125,
+        "gate_stats": {"t_p": 1.0, "boot5_sharpe": -19.5073, "perm_p": 1.0}
+      },
+      {
+        "ticker": "USO", "pass": true,
+        "fast_ema": 21, "slow_ema": 34, "stop_val": 0.03,
+        "sharpe": 1.3552, "bonferroni_alpha": 0.0125,
+        "gate_stats": {"t_p": 0.0, "boot5_sharpe": 3.7403, "perm_p": 0.0},
+        "trades_file": "ema_crossover_v2_trades_bonferroni_commodities_USO.csv"
+      },
+      {
+        "ticker": "GDX", "pass": false,
+        "fast_ema": 21, "slow_ema": 55, "stop_val": 0.03,
+        "sharpe": -0.0485, "bonferroni_alpha": 0.0125,
+        "gate_stats": {"t_p": 0.4708, "boot5_sharpe": -2.8685, "perm_p": 0.44}
+      }
+    ],
+    "em_regional": [
+      {"ticker": "EEM", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "EWZ", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "INDA", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "EWW", "pass": false, "reason": "basket_clearly_failing"}
+    ],
+    "intl_liquid": [
+      {"ticker": "EFA", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "EZU", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "EWJ", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "EWG", "pass": false, "reason": "basket_clearly_failing"},
+      {"ticker": "EWU", "pass": false, "reason": "basket_clearly_failing"}
+    ]
+  },
+  "rescued_tickers": ["XLC", "XLI", "XLV", "GLD", "USO"]
+}

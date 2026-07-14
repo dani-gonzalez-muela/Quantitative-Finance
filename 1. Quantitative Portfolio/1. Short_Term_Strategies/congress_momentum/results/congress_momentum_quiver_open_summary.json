@@ -1,0 +1,22 @@
+{
+  "strategy": "Congress Momentum + QUIVER_OPEN",
+  "portfolio": "Daily",
+  "period": "2016-01-27 -> 2025-08-13",
+  "params": {
+    "momentum_threshold": 1.5,
+    "max_quiver_delay": 3,
+    "max_pct_per_trade": 0.1
+  },
+  "n_trades": 3481,
+  "stats": {
+    "ann_return_pct": 7.37,
+    "sharpe": 0.875,
+    "maxdd_pct": -10.53,
+    "positive_years": "10/10"
+  },
+  "significance": {
+    "verdict": "SIGNIFICANT (strong)",
+    "tests_passed": "3/3"
+  },
+  "note": "Live execution requires intraday Quiver API polling; trades uploaded after close not executable same-day."
+}

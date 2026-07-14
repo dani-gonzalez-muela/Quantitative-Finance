@@ -1,0 +1,34 @@
+{
+  "strategy": "QMJ - Quality Minus Junk",
+  "instruments": [
+    "FF_RMW",
+    "FF_CMA"
+  ],
+  "portfolio": "long_term",
+  "period": "1990-01-31 -> 2026-02-28",
+  "params": {
+    "signal": "FF RMW + 0.5*CMA (quality proxy = profitability + conservative investment)",
+    "implementation": "long/short market-neutral: RMW+0.5*CMA factor return",
+    "tc_bps": "5 one-way",
+    "data_notes": "Compustat GP approach OOM (5.4GB zip). FF RMW is the standard academic QMJ proxy (same long profitable, short unprofitable construction)."
+  },
+  "trades": 434,
+  "stats": {
+    "cagr": 4.74,
+    "total_return": 431.6,
+    "sharpe_daily": 0.4069,
+    "max_dd": -45.32
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.4923,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.3782,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "strategy": "bollinger_band_v2",
+  "period": "2016-01-01 -> 2026-04-01",
+  "tc_bps_one_way": 5,
+  "starting_capital": 100000,
+  "allocation": 0.85,
+  "n_passing_baskets": 3,
+  "sleeve_capital": 33333.333333333336,
+  "baskets": {
+    "us_equity_broad": {
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY"
+      ],
+      "n_trades": 150,
+      "canonical_params": {
+        "bb_period": 10,
+        "bb_std": 2.0,
+        "hold_days": 30
+      },
+      "sleeve_capital": 33333.333333333336,
+      "allocation": 0.85,
+      "stats": {
+        "total_return_pct": 118.64,
+        "cagr_pct": 8.82,
+        "sharpe": 0.775,
+        "max_dd_pct": -27.49
+      }
+    },
+    "us_sectors": {
+      "instruments": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "n_trades": 106,
+      "canonical_params": {
+        "bb_period": 20,
+        "bb_std": 2.5,
+        "hold_days": 0
+      },
+      "sleeve_capital": 33333.333333333336,
+      "allocation": 0.85,
+      "stats": {
+        "total_return_pct": 131.65,
+        "cagr_pct": 9.35,
+        "sharpe": 0.8147,
+        "max_dd_pct": -26.05
+      }
+    },
+    "us_factor": {
+      "instruments": [
+        "IWF",
+        "IWD",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY"
+      ],
+      "n_trades": 81,
+      "canonical_params": {
+        "bb_period": 50,
+        "bb_std": 2.0,
+        "hold_days": 0
+      },
+      "sleeve_capital": 33333.333333333336,
+      "allocation": 0.85,
+      "stats": {
+        "total_return_pct": 107.42,
+        "cagr_pct": 8.43,
+        "sharpe": 0.7445,
+        "max_dd_pct": -26.18
+      }
+    }
+  },
+  "combined_stats": {
+    "total_return_pct": 119.23,
+    "cagr_pct": 8.71,
+    "sharpe": 0.8097,
+    "max_dd_pct": -26.29
+  }
+}

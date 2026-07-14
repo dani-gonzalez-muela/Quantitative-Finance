@@ -1,0 +1,9 @@
+{
+  "total_nav_3pct_d180_min30d_1x": {
+    "total_return": 163.7,
+    "cagr": 10.36,
+    "sharpe": 1.12,
+    "max_dd": -12.1,
+    "label": "3% total NAV, D180 cap, min 30d hold (1x)"
+  }
+}

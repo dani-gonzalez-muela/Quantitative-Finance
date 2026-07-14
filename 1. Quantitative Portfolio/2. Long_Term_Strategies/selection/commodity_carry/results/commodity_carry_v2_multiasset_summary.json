@@ -1,0 +1,53 @@
+{
+  "strategy": "Commodity Carry v2 (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "n_boot": 500,
+  "n_combos": 330,
+  "canonical_params": {
+    "top_pct": 0.5,
+    "freq": "ME",
+    "short_win": 2,
+    "long_win": 12
+  },
+  "canonical_median_sharpe": 0.6462,
+  "binomial_pvalue": 0.05,
+  "binomial_significant": false,
+  "verdict": "NO EVIDENCE OF EFFECT",
+  "baskets": {
+    "commodities": {
+      "instruments": [
+        "GLD",
+        "SLV",
+        "DBC",
+        "USO",
+        "UNG",
+        "GDX",
+        "PDBC"
+      ],
+      "n_instruments": 7,
+      "canonical_params": {
+        "top_pct": 0.5,
+        "freq": "ME",
+        "short_win": 2,
+        "long_win": 12
+      },
+      "canonical_median_sharpe": 0.6462,
+      "canonical_basket_sharpe": 0.6462,
+      "pass_count_at_canon": 1,
+      "n_baskets_tested": 1,
+      "binomial_pvalue": 0.05,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE OF EFFECT",
+      "basket_details": {
+        "commodities": {
+          "t_p": 0.0265,
+          "boot_p5": 0.1242,
+          "perm_p": 0.032,
+          "sharpe": 0.6462,
+          "gates": 3
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,796 @@
+{
+  "Config0_5sleeve": {
+    "sleeves": [
+      "ibs_mean_reversion",
+      "donchian_channel",
+      "vix_mean_reversion",
+      "gtaa",
+      "vol_overlay"
+    ],
+    "window_start": "2016-06-14",
+    "window_end": "2026-03-13",
+    "n_days": 2543,
+    "weighting_schemes": {
+      "equal_weight": {
+        "weights": {
+          "ibs_mean_reversion": 0.2,
+          "donchian_channel": 0.2,
+          "vix_mean_reversion": 0.2,
+          "gtaa": 0.2,
+          "vol_overlay": 0.2
+        },
+        "metrics": {
+          "cagr": 0.1018,
+          "sharpe": 1.5685,
+          "sortino": 1.9766,
+          "maxdd": -0.069756,
+          "calmar": 1.4594,
+          "vol": 0.063086,
+          "n_days": 2543
+        },
+        "top5_drawdowns": [
+          {
+            "start": "2020-02-20",
+            "trough": "2020-03-05",
+            "end": "2020-04-29",
+            "depth_pct": -6.98,
+            "duration_days": 69
+          },
+          {
+            "start": "2021-11-09",
+            "trough": "2022-01-27",
+            "end": "2022-03-24",
+            "depth_pct": -5.18,
+            "duration_days": 135
+          },
+          {
+            "start": "2025-02-20",
+            "trough": "2025-03-13",
+            "end": "2025-05-12",
+            "depth_pct": -4.42,
+            "duration_days": 81
+          },
+          {
+            "start": "2023-02-03",
+            "trough": "2023-03-13",
+            "end": "2023-05-18",
+            "depth_pct": -3.83,
+            "duration_days": 104
+          },
+          {
+            "start": "2018-01-29",
+            "trough": "2018-02-08",
+            "end": "2018-02-23",
+            "depth_pct": -3.69,
+            "duration_days": 25
+          }
+        ],
+        "avg_drawdown_duration_days": 10.6,
+        "rolling": {
+          "rolling_sharpe_min": 0.0621,
+          "rolling_sharpe_max": 3.3506,
+          "rolling_sharpe_mean": 1.5559,
+          "rolling_cagr_min": 0.0019,
+          "rolling_cagr_max": 0.2628,
+          "rolling_cagr_mean": 0.0999
+        }
+      },
+      "inverse_vol": {
+        "weights": {
+          "ibs_mean_reversion": 0.0691,
+          "donchian_channel": 0.0491,
+          "vix_mean_reversion": 0.0345,
+          "gtaa": 0.0723,
+          "vol_overlay": 0.7751
+        },
+        "metrics": {
+          "cagr": 0.028706,
+          "sharpe": 1.7166,
+          "sortino": 2.2482,
+          "maxdd": -0.020247,
+          "calmar": 1.4177,
+          "vol": 0.016568,
+          "n_days": 2543
+        },
+        "top5_drawdowns": [
+          {
+            "start": "2020-02-20",
+            "trough": "2020-03-11",
+            "end": "2020-04-27",
+            "depth_pct": -2.02,
+            "duration_days": 67
+          },
+          {
+            "start": "2021-11-17",
+            "trough": "2022-01-26",
+            "end": "2022-03-25",
+            "depth_pct": -1.4,
+            "duration_days": 128
+          },
+          {
+            "start": "2018-01-29",
+            "trough": "2018-02-08",
+            "end": "2018-06-01",
+            "depth_pct": -1.35,
+            "duration_days": 123
+          },
+          {
+            "start": "2025-02-19",
+            "trough": "2025-04-08",
+            "end": "2025-05-12",
+            "depth_pct": -1.34,
+            "duration_days": 82
+          },
+          {
+            "start": "2023-02-03",
+            "trough": "2023-03-10",
+            "end": "2023-05-17",
+            "depth_pct": -1.26,
+            "duration_days": 103
+          }
+        ],
+        "avg_drawdown_duration_days": 12.1,
+        "rolling": {
+          "rolling_sharpe_min": -0.1532,
+          "rolling_sharpe_max": 3.6099,
+          "rolling_sharpe_mean": 1.7153,
+          "rolling_cagr_min": -0.0031,
+          "rolling_cagr_max": 0.0733,
+          "rolling_cagr_mean": 0.0284
+        }
+      },
+      "mvo": {
+        "weights": {
+          "ibs_mean_reversion": 0.1783,
+          "donchian_channel": 0.05,
+          "vix_mean_reversion": 0.0994,
+          "gtaa": 0.0723,
+          "vol_overlay": 0.6
+        },
+        "metrics": {
+          "cagr": 0.054889,
+          "sharpe": 1.6821,
+          "sortino": 2.1639,
+          "maxdd": -0.034864,
+          "calmar": 1.5744,
+          "vol": 0.032076,
+          "n_days": 2543
+        },
+        "top5_drawdowns": [
+          {
+            "start": "2020-02-20",
+            "trough": "2020-03-11",
+            "end": "2020-04-06",
+            "depth_pct": -3.49,
+            "duration_days": 46
+          },
+          {
+            "start": "2022-01-04",
+            "trough": "2022-01-26",
+            "end": "2022-02-16",
+            "depth_pct": -2.22,
+            "duration_days": 43
+          },
+          {
+            "start": "2018-12-13",
+            "trough": "2018-12-24",
+            "end": "2019-02-15",
+            "depth_pct": -2.2,
+            "duration_days": 64
+          },
+          {
+            "start": "2025-02-19",
+            "trough": "2025-04-08",
+            "end": "2025-04-09",
+            "depth_pct": -2.11,
+            "duration_days": 49
+          },
+          {
+            "start": "2018-01-29",
+            "trough": "2018-02-08",
+            "end": "2018-02-23",
+            "depth_pct": -1.92,
+            "duration_days": 25
+          }
+        ],
+        "avg_drawdown_duration_days": 9.4,
+        "rolling": {
+          "rolling_sharpe_min": 0.446,
+          "rolling_sharpe_max": 3.7399,
+          "rolling_sharpe_mean": 1.6833,
+          "rolling_cagr_min": 0.0161,
+          "rolling_cagr_max": 0.1302,
+          "rolling_cagr_mean": 0.0539
+        }
+      }
+    },
+    "spy_comparison": {
+      "cagr": 0.200454,
+      "sharpe": 1.135,
+      "sortino": 1.3236,
+      "maxdd": -0.337948,
+      "calmar": 0.5931,
+      "vol": 0.174466,
+      "n_days": 2509
+    }
+  },
+  "Config1_7sleeve": {
+    "sleeves": [
+      "ibs_mean_reversion",
+      "donchian_channel",
+      "vix_mean_reversion",
+      "gtaa",
+      "vol_overlay",
+      "quality_profitability",
+      "us_cross_sectional_momentum"
+    ],
+    "window_start": "2016-06-14",
+    "window_end": "2026-02-27",
+    "n_days": 2533,
+    "weighting_schemes": {
+      "equal_weight": {
+        "weights": {
+          "ibs_mean_reversion": 0.1429,
+          "donchian_channel": 0.1429,
+          "vix_mean_reversion": 0.1429,
+          "gtaa": 0.1429,
+          "vol_overlay": 0.1429,
+          "quality_profitability": 0.1429,
+          "us_cross_sectional_momentum": 0.1429
+        },
+        "metrics": {
+          "cagr": 0.11697,
+          "sharpe": 1.966,
+          "sortino": 2.5724,
+          "maxdd": -0.067607,
+          "calmar": 1.7302,
+          "vol": 0.057105,
+          "n_days": 2533
+        },
+        "top5_drawdowns": [
+          {
+            "start": "2020-02-20",
+            "trough": "2020-03-05",
+            "end": "2020-05-26",
+            "depth_pct": -6.76,
+            "duration_days": 96
+          },
+          {
+            "start": "2022-01-04",
+            "trough": "2022-10-11",
+            "end": "2022-11-30",
+            "depth_pct": -5.68,
+            "duration_days": 330
+          },
+          {
+            "start": "2018-10-02",
+            "trough": "2018-12-31",
+            "end": "2019-03-21",
+            "depth_pct": -4.83,
+            "duration_days": 170
+          },
+          {
+            "start": "2025-02-20",
+            "trough": "2025-04-08",
+            "end": "2025-06-02",
+            "depth_pct": -4.63,
+            "duration_days": 102
+          },
+          {
+            "start": "2023-08-01",
+            "trough": "2023-10-20",
+            "end": "2023-12-01",
+            "depth_pct": -3.13,
+            "duration_days": 122
+          }
+        ],
+        "avg_drawdown_duration_days": 10.0,
+        "rolling": {
+          "rolling_sharpe_min": -0.5528,
+          "rolling_sharpe_max": 3.9956,
+          "rolling_sharpe_mean": 1.9744,
+          "rolling_cagr_min": -0.0361,
+          "rolling_cagr_max": 0.312,
+          "rolling_cagr_mean": 0.114
+        }
+      },
+      "inverse_vol": {
+        "weights": {
+          "ibs_mean_reversion": 0.0489,
+          "donchian_channel": 0.0332,
+          "vix_mean_reversion": 0.0305,
+          "gtaa": 0.0499,
+          "vol_overlay": 0.6593,
+          "quality_profitability": 0.134,
+          "us_cross_sectional_momentum": 0.0443
+        },
+        "metrics": {
+          "cagr": 0.046416,
+          "sharpe": 1.9033,
+          "sortino": 2.4798,
+          "maxdd": -0.034124,
+          "calmar": 1.3602,
+          "vol": 0.023991,
+          "n_days": 2533
+        },
+        "top5_drawdowns": [
+          {
+            "start": "2022-01-04",
+            "trough": "2022-10-11",
+            "end": "2023-02-01",
+            "depth_pct": -3.41,
+            "duration_days": 393
+          },
+          {
+            "start": "2020-02-20",
+            "trough": "2020-04-01",
+            "end": "2020-05-08",
+            "depth_pct": -3.09,
+            "duration_days": 78
+          },
+          {
+            "start": "2018-10-02",
+            "trough": "2018-12-31",
+            "end": "2019-04-01",
+            "depth_pct": -2.79,
+            "duration_days": 181
+          },
+          {
+            "start": "2025-02-19",
+            "trough": "2025-04-08",
+            "end": "2025-06-02",
+            "depth_pct": -1.76,
+            "duration_days": 103
+          },
+          {
+            "start": "2023-08-01",
+            "trough": "2023-10-26",
+            "end": "2023-11-30",
+            "depth_pct": -1.21,
+            "duration_days": 121
+          }
+        ],
+        "avg_drawdown_duration_days": 11.2,
+        "rolling": {
+          "rolling_sharpe_min": -0.7882,
+          "rolling_sharpe_max": 4.0257,
+          "rolling_sharpe_mean": 1.9972,
+          "rolling_cagr_min": -0.0201,
+          "rolling_cagr_max": 0.1289,
+          "rolling_cagr_mean": 0.0454
+        }
+      },
+      "mvo": {
+        "weights": {
+          "ibs_mean_reversion": 0.1005,
+          "donchian_channel": 0.05,
+          "vix_mean_reversion": 0.0722,
+          "gtaa": 0.05,
+          "vol_overlay": 0.6,
+          "quality_profitability": 0.0774,
+          "us_cross_sectional_momentum": 0.05
+        },
+        "metrics": {
+          "cagr": 0.057103,
+          "sharpe": 2.09,
+          "sortino": 2.7566,
+          "maxdd": -0.033929,
+          "calmar": 1.683,
+          "vol": 0.026744,
+          "n_days": 2533
+        },
+        "top5_drawdowns": [
+          {
+            "start": "2020-02-20",
+            "trough": "2020-03-11",
+            "end": "2020-04-30",
+            "depth_pct": -3.39,
+            "duration_days": 70
+          },
+          {
+            "start": "2022-08-16",
+            "trough": "2022-10-11",
+            "end": "2022-11-10",
+            "depth_pct": -2.47,
+            "duration_days": 86
+          },
+          {
+            "start": "2018-10-02",
+            "trough": "2018-12-31",
+            "end": "2019-02-28",
+            "depth_pct": -2.21,
+            "duration_days": 149
+          },
+          {
+            "start": "2025-02-19",
+            "trough": "2025-04-08",
+            "end": "2025-05-15",
+            "depth_pct": -2.17,
+            "duration_days": 85
+          },
+          {
+            "start": "2022-04-05",
+            "trough": "2022-07-13",
+            "end": "2022-08-12",
+            "depth_pct": -1.91,
+            "duration_days": 129
+          }
+        ],
+        "avg_drawdown_duration_days": 9.7,
+        "rolling": {
+          "rolling_sharpe_min": -0.2722,
+          "rolling_sharpe_max": 4.2967,
+          "rolling_sharpe_mean": 2.1098,
+          "rolling_cagr_min": -0.0087,
+          "rolling_cagr_max": 0.1388,
+          "rolling_cagr_mean": 0.0553
+        }
+      }
+    },
+    "spy_comparison": {
+      "cagr": 0.193032,
+      "sharpe": 1.0982,
+      "sortino": 1.2824,
+      "maxdd": -0.337948,
+      "calmar": 0.5712,
+      "vol": 0.174706,
+      "n_days": 2499
+    },
+    "sleeve_analysis": {
+      "ibs_mean_reversion": {
+        "standalone_sharpe": 1.302,
+        "corr_to_rest": 0.3679,
+        "marginal_sharpe_contribution": 0.0989
+      },
+      "donchian_channel": {
+        "standalone_sharpe": 0.9345,
+        "corr_to_rest": 0.3069,
+        "marginal_sharpe_contribution": 0.0218
+      },
+      "vix_mean_reversion": {
+        "standalone_sharpe": 1.2368,
+        "corr_to_rest": 0.1686,
+        "marginal_sharpe_contribution": 0.2421
+      },
+      "gtaa": {
+        "standalone_sharpe": 0.9623,
+        "corr_to_rest": 0.4221,
+        "marginal_sharpe_contribution": -0.0003
+      },
+      "vol_overlay": {
+        "standalone_sharpe": 0.9915,
+        "corr_to_rest": -0.0294,
+        "marginal_sharpe_contribution": 0.0119
+      },
+      "quality_profitability": {
+        "standalone_sharpe": 1.1308,
+        "corr_to_rest": 0.3576,
+        "marginal_sharpe_contribution": 0.0595
+      },
+      "us_cross_sectional_momentum": {
+        "standalone_sharpe": 1.0497,
+        "corr_to_rest": 0.2585,
+        "marginal_sharpe_contribution": 0.0835
+      }
+    }
+  },
+  "Config2_8sleeve": {
+    "sleeves": [
+      "ibs_mean_reversion",
+      "donchian_channel",
+      "vix_mean_reversion",
+      "gtaa",
+      "vol_overlay",
+      "quality_profitability",
+      "us_cross_sectional_momentum",
+      "bond_trend"
+    ],
+    "window_start": "2016-06-14",
+    "window_end": "2026-01-01",
+    "n_days": 2492,
+    "weighting_schemes": {
+      "equal_weight": {
+        "weights": {
+          "ibs_mean_reversion": 0.125,
+          "donchian_channel": 0.125,
+          "vix_mean_reversion": 0.125,
+          "gtaa": 0.125,
+          "vol_overlay": 0.125,
+          "quality_profitability": 0.125,
+          "us_cross_sectional_momentum": 0.125,
+          "bond_trend": 0.125
+        },
+        "metrics": {
+          "cagr": 0.100844,
+          "sharpe": 1.949,
+          "sortino": 2.5378,
+          "maxdd": -0.057362,
+          "calmar": 1.758,
+          "vol": 0.049943,
+          "n_days": 2492
+        },
+        "top5_drawdowns": [
+          {
+            "start": "2020-02-20",
+            "trough": "2020-03-18",
+            "end": "2020-04-30",
+            "depth_pct": -5.74,
+            "duration_days": 70
+          },
+          {
+            "start": "2022-01-04",
+            "trough": "2022-10-11",
+            "end": "2022-11-30",
+            "depth_pct": -4.92,
+            "duration_days": 330
+          },
+          {
+            "start": "2018-10-02",
+            "trough": "2018-12-31",
+            "end": "2019-03-21",
+            "depth_pct": -4.21,
+            "duration_days": 170
+          },
+          {
+            "start": "2025-02-20",
+            "trough": "2025-04-08",
+            "end": "2025-06-02",
+            "depth_pct": -4.21,
+            "duration_days": 102
+          },
+          {
+            "start": "2023-08-01",
+            "trough": "2023-10-20",
+            "end": "2023-12-01",
+            "depth_pct": -2.73,
+            "duration_days": 122
+          }
+        ],
+        "avg_drawdown_duration_days": 10.5,
+        "rolling": {
+          "rolling_sharpe_min": -0.5419,
+          "rolling_sharpe_max": 3.8293,
+          "rolling_sharpe_mean": 1.9851,
+          "rolling_cagr_min": -0.0309,
+          "rolling_cagr_max": 0.2537,
+          "rolling_cagr_mean": 0.099
+        }
+      },
+      "inverse_vol": {
+        "weights": {
+          "ibs_mean_reversion": 0.0032,
+          "donchian_channel": 0.0021,
+          "vix_mean_reversion": 0.0015,
+          "gtaa": 0.0039,
+          "vol_overlay": 0.0695,
+          "quality_profitability": 0.0063,
+          "us_cross_sectional_momentum": 0.0052,
+          "bond_trend": 0.9082
+        },
+        "metrics": {
+          "cagr": 0.003869,
+          "sharpe": 0.1333,
+          "sortino": 0.1293,
+          "maxdd": -0.134235,
+          "calmar": 0.0288,
+          "vol": 0.033077,
+          "n_days": 2492
+        },
+        "top5_drawdowns": [
+          {
+            "start": "2020-08-05",
+            "trough": "2025-04-21",
+            "end": "ongoing",
+            "depth_pct": -13.42,
+            "duration_days": 1975
+          },
+          {
+            "start": "2016-07-11",
+            "trough": "2016-12-14",
+            "end": "2019-06-28",
+            "depth_pct": -7.48,
+            "duration_days": 1082
+          },
+          {
+            "start": "2020-03-10",
+            "trough": "2020-03-18",
+            "end": "2020-03-31",
+            "depth_pct": -4.89,
+            "duration_days": 21
+          },
+          {
+            "start": "2019-09-05",
+            "trough": "2019-12-31",
+            "end": "2020-01-31",
+            "depth_pct": -2.98,
+            "duration_days": 148
+          },
+          {
+            "start": "2020-04-22",
+            "trough": "2020-06-05",
+            "end": "2020-07-22",
+            "depth_pct": -2.24,
+            "duration_days": 91
+          }
+        ],
+        "avg_drawdown_duration_days": 148.3,
+        "rolling": {
+          "rolling_sharpe_min": -2.5534,
+          "rolling_sharpe_max": 5.3639,
+          "rolling_sharpe_mean": 0.7049,
+          "rolling_cagr_min": -0.0758,
+          "rolling_cagr_max": 0.1617,
+          "rolling_cagr_mean": 0.0067
+        }
+      },
+      "mvo": {
+        "weights": {
+          "ibs_mean_reversion": 0.0841,
+          "donchian_channel": 0.05,
+          "vix_mean_reversion": 0.0589,
+          "gtaa": 0.05,
+          "vol_overlay": 0.6,
+          "quality_profitability": 0.057,
+          "us_cross_sectional_momentum": 0.05,
+          "bond_trend": 0.05
+        },
+        "metrics": {
+          "cagr": 0.049248,
+          "sharpe": 2.0791,
+          "sortino": 2.7431,
+          "maxdd": -0.028533,
+          "calmar": 1.726,
+          "vol": 0.023255,
+          "n_days": 2492
+        },
+        "top5_drawdowns": [
+          {
+            "start": "2020-02-20",
+            "trough": "2020-03-18",
+            "end": "2020-04-30",
+            "depth_pct": -2.85,
+            "duration_days": 70
+          },
+          {
+            "start": "2022-01-04",
+            "trough": "2022-10-11",
+            "end": "2022-11-10",
+            "depth_pct": -2.24,
+            "duration_days": 310
+          },
+          {
+            "start": "2025-02-19",
+            "trough": "2025-04-08",
+            "end": "2025-05-27",
+            "depth_pct": -2.04,
+            "duration_days": 97
+          },
+          {
+            "start": "2018-10-02",
+            "trough": "2018-12-31",
+            "end": "2019-03-18",
+            "depth_pct": -1.98,
+            "duration_days": 167
+          },
+          {
+            "start": "2023-08-01",
+            "trough": "2023-10-20",
+            "end": "2023-12-01",
+            "depth_pct": -1.44,
+            "duration_days": 122
+          }
+        ],
+        "avg_drawdown_duration_days": 10.4,
+        "rolling": {
+          "rolling_sharpe_min": -0.385,
+          "rolling_sharpe_max": 4.1417,
+          "rolling_sharpe_mean": 2.1177,
+          "rolling_cagr_min": -0.0104,
+          "rolling_cagr_max": 0.1157,
+          "rolling_cagr_mean": 0.0481
+        }
+      }
+    },
+    "spy_comparison": {
+      "cagr": 0.162467,
+      "sharpe": 0.9452,
+      "sortino": 1.11,
+      "maxdd": -0.337948,
+      "calmar": 0.4807,
+      "vol": 0.1757,
+      "n_days": 2458
+    },
+    "sleeve_analysis": {
+      "ibs_mean_reversion": {
+        "standalone_sharpe": 1.3213,
+        "corr_to_rest": 0.3582,
+        "marginal_sharpe_contribution": 0.1105
+      },
+      "donchian_channel": {
+        "standalone_sharpe": 0.9361,
+        "corr_to_rest": 0.2898,
+        "marginal_sharpe_contribution": 0.0349
+      },
+      "vix_mean_reversion": {
+        "standalone_sharpe": 1.2033,
+        "corr_to_rest": 0.1651,
+        "marginal_sharpe_contribution": 0.2316
+      },
+      "gtaa": {
+        "standalone_sharpe": 0.8825,
+        "corr_to_rest": 0.4261,
+        "marginal_sharpe_contribution": -0.0143
+      },
+      "vol_overlay": {
+        "standalone_sharpe": 1.003,
+        "corr_to_rest": -0.0216,
+        "marginal_sharpe_contribution": 0.0119
+      },
+      "quality_profitability": {
+        "standalone_sharpe": 1.1287,
+        "corr_to_rest": 0.3538,
+        "marginal_sharpe_contribution": 0.0635
+      },
+      "us_cross_sectional_momentum": {
+        "standalone_sharpe": 1.0359,
+        "corr_to_rest": 0.2595,
+        "marginal_sharpe_contribution": 0.0796
+      },
+      "bond_trend": {
+        "standalone_sharpe": 0.04,
+        "corr_to_rest": -0.0735,
+        "marginal_sharpe_contribution": 0.0086
+      }
+    }
+  },
+  "_meta": {
+    "best_config": "Config1_7sleeve_mvo",
+    "leverage_table": {
+      "1x": {
+        "cagr": 0.057103,
+        "sharpe": 2.09,
+        "sortino": 2.7566,
+        "maxdd": -0.033929,
+        "calmar": 1.683,
+        "vol": 0.026744,
+        "n_days": 2533
+      },
+      "1.5x": {
+        "cagr": 0.08657,
+        "sharpe": 2.09,
+        "sortino": 2.7566,
+        "maxdd": -0.050547,
+        "calmar": 1.7127,
+        "vol": 0.040115,
+        "n_days": 2533
+      },
+      "2x": {
+        "cagr": 0.116657,
+        "sharpe": 2.09,
+        "sortino": 2.7566,
+        "maxdd": -0.066939,
+        "calmar": 1.7427,
+        "vol": 0.053487,
+        "n_days": 2533
+      },
+      "2.5x": {
+        "cagr": 0.14737,
+        "sharpe": 2.09,
+        "sortino": 2.7566,
+        "maxdd": -0.083106,
+        "calmar": 1.7733,
+        "vol": 0.066859,
+        "n_days": 2533
+      },
+      "3x": {
+        "cagr": 0.178716,
+        "sharpe": 2.09,
+        "sortino": 2.7566,
+        "maxdd": -0.09905,
+        "calmar": 1.8043,
+        "vol": 0.080231,
+        "n_days": 2533
+      }
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "analysis": "overnight_bonferroni_v1window_em_regional",
+  "basket": "em_regional",
+  "tickers": [
+    "EEM",
+    "EWZ",
+    "INDA",
+    "EWW"
+  ],
+  "entry_logic": "after_market session close (~19:55)",
+  "exit_logic": "pre_market session open (~04:00) next trading day",
+  "signal_logic": "intraday_ret = (market_close_1555 - market_open_0930) / market_open_0930",
+  "bonferroni_alpha": 0.0125,
+  "date_range": {
+    "start": "2016-01-01",
+    "end": "2026-04-01"
+  },
+  "param_grid": [
+    0,
+    -0.001,
+    -0.002,
+    -0.003,
+    -0.005
+  ],
+  "n_bootstrap": 2000,
+  "n_permutation": 2000,
+  "fee_mode": "shared/fees.py (per-trade, price-dependent)",
+  "passing_tickers_bonferroni": [
+    "EWW"
+  ],
+  "passing_tickers_alpha05": [
+    "INDA",
+    "EWW"
+  ],
+  "failing_tickers": [
+    "EEM",
+    "EWZ",
+    "INDA"
+  ],
+  "ticker_results": {
+    "EEM": {
+      "ticker": "EEM",
+      "optimal_threshold": -0.005,
+      "net_sharpe": -0.161428,
+      "n_trades": 482,
+      "cagr": -0.007237,
+      "max_drawdown": -0.232711,
+      "avg_fee_rt_bps": 5.677,
+      "gate1_ttest_p": 1.0,
+      "gate1_pass_bonferroni": false,
+      "gate1_pass_alpha05": false,
+      "gate2_boot_p5_sharpe": -1.387641,
+      "gate2_pass": false,
+      "gate3_permutation_p": 0.5925,
+      "gate3_pass_bonferroni": false,
+      "gate3_pass_alpha05": false,
+      "all_gates_pass_bonferroni": false,
+      "all_gates_pass_alpha05": false,
+      "bonferroni_alpha": 0.0125,
+      "grid": [
+        {
+          "filter_threshold": 0,
+          "sharpe": -0.3022,
+          "n_trades": 1172,
+          "mean_ret_bps": -1.684,
+          "hit_rate": 0.4889
+        },
+        {
+          "filter_threshold": -0.001,
+          "sharpe": -0.2801,
+          "n_trades": 1032,
+          "mean_ret_bps": -1.603,
+          "hit_rate": 0.4913
+        },
+        {
+          "filter_threshold": -0.002,
+          "sharpe": -0.3337,
+          "n_trades": 861,
+          "mean_ret_bps": -1.999,
+          "hit_rate": 0.4797
+        },
+        {
+          "filter_threshold": -0.003,
+          "sharpe": -0.2919,
+          "n_trades": 736,
+          "mean_ret_bps": -1.81,
+          "hit_rate": 0.4837
+        },
+        {
+          "filter_threshold": -0.005,
+          "sharpe": -0.1614,
+          "n_trades": 482,
+          "mean_ret_bps": -1.029,
+          "hit_rate": 0.4751
+        }
+      ]
+    },
+    "EWZ": {
+      "ticker": "EWZ",
+      "optimal_threshold": -0.003,
+      "net_sharpe": 0.395476,
+      "n_trades": 1000,
+      "cagr": 0.020235,
+      "max_drawdown": -0.199742,
+      "avg_fee_rt_bps": 8.934,
+      "gate1_ttest_p": 0.21549802,
+      "gate1_pass_bonferroni": false,
+      "gate1_pass_alpha05": false,
+      "gate2_boot_p5_sharpe": -0.439203,
+      "gate2_pass": false,
+      "gate3_permutation_p": 0.204,
+      "gate3_pass_bonferroni": false,
+      "gate3_pass_alpha05": false,
+      "all_gates_pass_bonferroni": false,
+      "all_gates_pass_alpha05": false,
+      "bonferroni_alpha": 0.0125,
+      "grid": [
+        {
+          "filter_threshold": 0,
+          "sharpe": 0.3462,
+          "n_trades": 1220,
+          "mean_ret_bps": 2.169,
+          "hit_rate": 0.4967
+        },
+        {
+          "filter_threshold": -0.001,
+          "sharpe": 0.3364,
+          "n_trades": 1156,
+          "mean_ret_bps": 2.146,
+          "hit_rate": 0.4948
+        },
+        {
+          "filter_threshold": -0.002,
+          "sharpe": 0.312,
+          "n_trades": 1083,
+          "mean_ret_bps": 2.015,
+          "hit_rate": 0.4931
+        },
+        {
+          "filter_threshold": -0.003,
+          "sharpe": 0.3955,
+          "n_trades": 1000,
+          "mean_ret_bps": 2.587,
+          "hit_rate": 0.495
+        },
+        {
+          "filter_threshold": -0.005,
+          "sharpe": 0.1561,
+          "n_trades": 846,
+          "mean_ret_bps": 1.054,
+          "hit_rate": 0.4846
+        }
+      ]
+    },
+    "INDA": {
+      "ticker": "INDA",
+      "optimal_threshold": -0.005,
+      "net_sharpe": 1.555916,
+      "n_trades": 302,
+      "cagr": 0.036451,
+      "max_drawdown": -0.104163,
+      "avg_fee_rt_bps": 5.729,
+      "gate1_ttest_p": 0.04477269,
+      "gate1_pass_bonferroni": false,
+      "gate1_pass_alpha05": true,
+      "gate2_boot_p5_sharpe": 0.058119,
+      "gate2_pass": true,
+      "gate3_permutation_p": 0.039,
+      "gate3_pass_bonferroni": false,
+      "gate3_pass_alpha05": true,
+      "all_gates_pass_bonferroni": false,
+      "all_gates_pass_alpha05": true,
+      "bonferroni_alpha": 0.0125,
+      "grid": [
+        {
+          "filter_threshold": 0,
+          "sharpe": 0.2139,
+          "n_trades": 1012,
+          "mean_ret_bps": 1.482,
+          "hit_rate": 0.4625
+        },
+        {
+          "filter_threshold": -0.001,
+          "sharpe": 0.271,
+          "n_trades": 844,
+          "mean_ret_bps": 1.966,
+          "hit_rate": 0.4621
+        },
+        {
+          "filter_threshold": -0.002,
+          "sharpe": 0.1923,
+          "n_trades": 647,
+          "mean_ret_bps": 1.494,
+          "hit_rate": 0.4575
+        },
+        {
+          "filter_threshold": -0.003,
+          "sharpe": -0.0223,
+          "n_trades": 502,
+          "mean_ret_bps": -0.187,
+          "hit_rate": 0.4482
+        },
+        {
+          "filter_threshold": -0.005,
+          "sharpe": 1.5559,
+          "n_trades": 302,
+          "mean_ret_bps": 13.014,
+          "hit_rate": 0.4934
+        }
+      ]
+    },
+    "EWW": {
+      "ticker": "EWW",
+      "optimal_threshold": -0.005,
+      "net_sharpe": 2.473867,
+      "n_trades": 441,
+      "cagr": 0.11158,
+      "max_drawdown": -0.167464,
+      "avg_fee_rt_bps": 5.149,
+      "gate1_ttest_p": 0.00057476,
+      "gate1_pass_bonferroni": true,
+      "gate1_pass_alpha05": true,
+      "gate2_boot_p5_sharpe": 1.305079,
+      "gate2_pass": true,
+      "gate3_permutation_p": 0.0005,
+      "gate3_pass_bonferroni": true,
+      "gate3_pass_alpha05": true,
+      "all_gates_pass_bonferroni": true,
+      "all_gates_pass_alpha05": true,
+      "bonferroni_alpha": 0.0125,
+      "grid": [
+        {
+          "filter_threshold": 0,
+          "sharpe": 1.5423,
+          "n_trades": 702,
+          "mean_ret_bps": 15.671,
+          "hit_rate": 0.5157
+        },
+        {
+          "filter_threshold": -0.001,
+          "sharpe": 1.5282,
+          "n_trades": 656,
+          "mean_ret_bps": 15.797,
+          "hit_rate": 0.5198
+        },
+        {
+          "filter_threshold": -0.002,
+          "sharpe": 1.7266,
+          "n_trades": 602,
+          "mean_ret_bps": 18.021,
+          "hit_rate": 0.5266
+        },
+        {
+          "filter_threshold": -0.003,
+          "sharpe": 1.8999,
+          "n_trades": 551,
+          "mean_ret_bps": 19.886,
+          "hit_rate": 0.5227
+        },
+        {
+          "filter_threshold": -0.005,
+          "sharpe": 2.4739,
+          "n_trades": 441,
+          "mean_ret_bps": 25.945,
+          "hit_rate": 0.5283
+        }
+      ]
+    }
+  }
+}

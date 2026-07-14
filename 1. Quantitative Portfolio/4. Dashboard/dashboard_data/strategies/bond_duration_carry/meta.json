@@ -1,0 +1,23 @@
+{
+  "label": "Bond Duration Carry",
+  "sleeve": "long_term",
+  "type": "Carry / duration timing",
+  "timeframe": "monthly",
+  "universe": "US Treasuries (2/10/20yr)",
+  "signal": "Choose Treasury duration from the real-yield level and curve slope.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.111,
+    "cagr_pct": 0.53,
+    "maxdd_pct": -21.76,
+    "months": 113
+  },
+  "validation": {
+    "basket": "fail",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "0/3",
+  "description": "Duration selection on real-yield carry: DFII10 (synthetic) + slope \u2014 real yield >1% & steep \u2192 20yr, >0 \u2192 10yr, <\u22120.5% \u2192 2yr. Duration-model returns, monthly, 5bps/side.",
+  "reference": "Bond carry literature; cf. Koijen, Moskowitz, Pedersen & Vrugt (2018), 'Carry'"
+}

@@ -1,0 +1,21 @@
+{
+  "label": "Sector Rotation Hybrid",
+  "sleeve": "long_term",
+  "in_portfolio": false,
+  "type": "Cross-sectional selection (prototype)",
+  "timeframe": "monthly",
+  "stats": {
+    "sharpe": 0.75,
+    "cagr_pct": 10.5,
+    "maxdd_pct": -38.0,
+    "months": 328
+  },
+  "description": "Early prototype combining momentum-ranked sector rotation with a second composite signal over the 11 sector ETFs. SUPERSEDED: the validated sector_momentum covers the momentum-rotation space with the full v2 pipeline; the hybrid's extra signal was never validated.\nFirst-pass basket run (9 sector ETFs, 1998-2026, 108 monthly trades) scored Sharpe ~0.75 (3/3 significance tests, gross and net). CAGR (~10.5%) and max-drawdown (~-38%) are rough estimates (the prototype summary saved only Sharpe), pending the strategy's own equity curve.",
+  "reference": "Superseded by sector_momentum (Moskowitz & Grinblatt 1999 lineage); hybrid blend proprietary",
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3"
+}

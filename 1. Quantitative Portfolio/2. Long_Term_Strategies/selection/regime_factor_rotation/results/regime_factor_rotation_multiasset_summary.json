@@ -1,0 +1,171 @@
+{
+  "strategy": "Regime Factor Rotation (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "universes": {
+    "us_factor_quality": {
+      "n_tickers": 8,
+      "tickers": [
+        "IWM",
+        "IWD",
+        "QUAL",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY",
+        "IWF"
+      ],
+      "best_sharpe": 1.2701
+    }
+  },
+  "etf_factor_loads": {
+    "IWM": {
+      "SMB": 1.0,
+      "HML": 0.0,
+      "RMW": 0.0,
+      "CMA": 0.0,
+      "Mom": 0.0
+    },
+    "IWD": {
+      "SMB": 0.0,
+      "HML": 1.0,
+      "RMW": 0.0,
+      "CMA": 0.0,
+      "Mom": 0.0
+    },
+    "QUAL": {
+      "SMB": 0.0,
+      "HML": 0.0,
+      "RMW": 1.0,
+      "CMA": 0.0,
+      "Mom": 0.0
+    },
+    "USMV": {
+      "SMB": 0.0,
+      "HML": 0.0,
+      "RMW": 0.5,
+      "CMA": 0.5,
+      "Mom": 0.0
+    },
+    "MTUM": {
+      "SMB": 0.0,
+      "HML": 0.0,
+      "RMW": 0.0,
+      "CMA": 0.0,
+      "Mom": 1.0
+    },
+    "PKW": {
+      "SMB": 0.0,
+      "HML": 0.0,
+      "RMW": 0.0,
+      "CMA": 1.0,
+      "Mom": 0.0
+    },
+    "DVY": {
+      "SMB": 0.0,
+      "HML": 0.5,
+      "RMW": 0.5,
+      "CMA": 0.0,
+      "Mom": 0.0
+    },
+    "IWF": {
+      "SMB": 0.0,
+      "HML": -1.0,
+      "RMW": 0.0,
+      "CMA": 0.0,
+      "Mom": 0.0
+    }
+  },
+  "grid_search": {
+    "top_pcts": [
+      0.1,
+      0.15,
+      0.25,
+      0.33,
+      0.5,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "n_regimes": [
+      2,
+      3
+    ],
+    "total_runs": 60
+  },
+  "best_params": {
+    "top_pct": 0.5,
+    "top_n": 4,
+    "freq": "6ME",
+    "n_regimes": 3,
+    "median_sharpe": 1.2701,
+    "min_sharpe": 1.2701,
+    "per_universe_sharpe": {
+      "us_factor_quality": 1.2701
+    }
+  },
+  "significance": {
+    "(0.5, '6ME', 3)": {
+      "us_factor_quality": {
+        "sharpe": 1.3069,
+        "t_stat": 3.8051,
+        "t_p": 0.000707,
+        "boot5_sharpe": 0.7267,
+        "perm_p": 0.002,
+        "gates_passed": 3
+      }
+    },
+    "(0.33, '6ME', 3)": {
+      "us_factor_quality": {
+        "sharpe": 1.2077,
+        "t_stat": 3.5161,
+        "t_p": 0.001325,
+        "boot5_sharpe": 0.5594,
+        "perm_p": 0.004,
+        "gates_passed": 3
+      }
+    },
+    "(0.1, '6ME', 3)": {
+      "us_factor_quality": {
+        "sharpe": 1.1784,
+        "t_stat": 3.4309,
+        "t_p": 0.001594,
+        "boot5_sharpe": 0.5449,
+        "perm_p": 0.003,
+        "gates_passed": 3
+      }
+    }
+  },
+  "passing_baskets": {
+    "(0.5, '6ME', 3)": {
+      "us_factor_quality": 1.3069
+    },
+    "(0.33, '6ME', 3)": {
+      "us_factor_quality": 1.2077
+    },
+    "(0.1, '6ME', 3)": {
+      "us_factor_quality": 1.1784
+    }
+  },
+  "download_report": {
+    "available_etfs": [
+      "IWM",
+      "IWD",
+      "QUAL",
+      "USMV",
+      "MTUM",
+      "PKW",
+      "DVY",
+      "IWF"
+    ],
+    "missing_etfs_vlue": "VLUE \u2014 not in local store; network blocked in sandbox",
+    "missing_etfs_cowz": "COWZ \u2014 not in local store; network blocked in sandbox",
+    "size_proxy": "IWM used as small-cap/SMB proxy",
+    "note": "QUAL already present; IWF, IWD, USMV, MTUM, PKW, DVY, IWM all present"
+  }
+}

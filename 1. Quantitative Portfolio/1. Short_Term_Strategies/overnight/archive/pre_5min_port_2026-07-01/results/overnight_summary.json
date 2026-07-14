@@ -1,0 +1,23 @@
+{
+  "strategy": "Overnight",
+  "instrument": "SPY",
+  "portfolio": "short_term",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "params": {
+    "signal": "market_return < 0",
+    "direction": "long_only"
+  },
+  "trades": 1177,
+  "significance": {
+    "gross": {
+      "sharpe": 1.4681,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 1.1646,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

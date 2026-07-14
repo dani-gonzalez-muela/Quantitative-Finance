@@ -1,0 +1,64 @@
+{
+  "strategy": "Sentiment Timing v2 (Multi-Asset)",
+  "period": "2016-01-01->2026-04-01",
+  "grid": {
+    "vix_lows": [
+      12,
+      15,
+      18,
+      20
+    ],
+    "vix_highs": [
+      22,
+      25,
+      28,
+      32
+    ],
+    "n_combos": 16
+  },
+  "baskets": {
+    "us_equity_broad": {
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY"
+      ],
+      "n_instruments": 4,
+      "pass_count_at_canon": 2,
+      "binomial_pvalue": 0.014019,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "vix_low": 12,
+        "vix_high": 32
+      },
+      "canonical_median_sharpe": 0.6281
+    },
+    "us_sectors": {
+      "instruments": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "n_instruments": 11,
+      "pass_count_at_canon": 5,
+      "binomial_pvalue": 0.000112,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "vix_low": 12,
+        "vix_high": 32
+      },
+      "canonical_median_sharpe": 0.5575
+    }
+  }
+}

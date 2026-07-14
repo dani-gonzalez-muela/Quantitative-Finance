@@ -1,0 +1,79 @@
+{
+  "strategy": "Industry Trend",
+  "instruments": [
+    "XLB",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLU",
+    "XLV",
+    "XLY"
+  ],
+  "portfolio": "long_term",
+  "type": "selection",
+  "period": "2016-08-31 -> 2025-04-30",
+  "default_params": {
+    "top_pct": 0.33,
+    "top_n": 3,
+    "mom_window_months": 6,
+    "rebalance_freq": "ME"
+  },
+  "tc_bps_one_way": 5,
+  "trades": 312,
+  "cohorts": 104,
+  "stats": {
+    "sharpe": 0.8816,
+    "cagr": 13.12,
+    "max_dd": -17.06,
+    "n_trades": 312,
+    "yoy_hit_rate": 80.0
+  },
+  "significance": {
+    "ttest": {
+      "t_stat": 2.62,
+      "p_value": 0.005061,
+      "mean_return": 1.1163,
+      "n": 104,
+      "significant": true
+    },
+    "bootstrap": {
+      "observed_sharpe": 0.8943,
+      "ci_lower": 0.2295,
+      "ci_upper": 1.7073,
+      "significant": true
+    },
+    "permutation": {
+      "observed_sharpe": 0.8943,
+      "p_value": 0.01,
+      "significant": true
+    },
+    "tests_passed": "3/3",
+    "verdict": "SIGNIFICANT (strong)"
+  },
+  "grid_search": {
+    "combinations_tested": 120,
+    "top_pcts": [
+      0.1,
+      0.15,
+      0.25,
+      0.33,
+      0.5,
+      1.0
+    ],
+    "freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "mom_windows": [
+      3,
+      6,
+      9,
+      12
+    ]
+  }
+}

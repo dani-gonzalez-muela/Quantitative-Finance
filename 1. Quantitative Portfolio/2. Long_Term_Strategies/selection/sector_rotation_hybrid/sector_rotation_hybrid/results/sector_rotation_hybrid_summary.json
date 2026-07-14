@@ -1,0 +1,37 @@
+{
+  "strategy": "Sector Rotation Hybrid",
+  "instruments": [
+    "XLK",
+    "XLF",
+    "XLE",
+    "XLV",
+    "XLI",
+    "XLY",
+    "XLP",
+    "XLU",
+    "XLB"
+  ],
+  "portfolio": "long_term",
+  "trade_period": "1998-12-23 -> 2026-04-01",
+  "regime_scores_source": "../../sector_rotation/data/regime_scores.csv",
+  "params": {
+    "top_n": 2,
+    "quantile": 0.15,
+    "blend": 0.3
+  },
+  "trades": 108,
+  "has_stop": false,
+  "architecture": "basket",
+  "significance": {
+    "gross": {
+      "sharpe": 0.7502,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.7502,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

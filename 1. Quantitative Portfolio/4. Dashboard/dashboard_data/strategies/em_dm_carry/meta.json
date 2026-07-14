@@ -1,0 +1,23 @@
+{
+  "label": "Em Dm Carry",
+  "sleeve": "long_term",
+  "type": "Carry",
+  "timeframe": "semi-annual",
+  "universe": "EM vs DM equity ETFs",
+  "signal": "Rotate to the higher-carry of the EM and DM equity baskets (top 25% by 9m carry).",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.843,
+    "cagr_pct": 11.64,
+    "maxdd_pct": -54.61,
+    "months": 313
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Rotates between EM and DM equity baskets on relative carry/momentum: v2 canonical = top 25% by 9m carry, 5% threshold, semi-annual rebalance (grid of 240 combos). ETF proxy universe (EEM/INDA/EWZ/... vs SPY/QQQ/IWM/MDY); true country-level carry needs WRDS country returns (todo log).",
+  "reference": "Proprietary \u2014 EM vs DM equity carry within the Koijen et al. (2018) carry framework"
+}

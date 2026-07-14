@@ -1,0 +1,47 @@
+{
+  "strategy": "Country CAPE Rotation",
+  "instruments": [
+    "GBR",
+    "AUS",
+    "SWE",
+    "SGP",
+    "CHE",
+    "NOR",
+    "DNK",
+    "MEX",
+    "NZL",
+    "IND",
+    "KOR",
+    "MYS",
+    "POL",
+    "PHL"
+  ],
+  "portfolio": "long_term",
+  "period": "1996-02-29 -> 2026-02-28",
+  "params": {
+    "signal": "inverse_12m_return (value proxy, cheapest 5 of 14 countries)",
+    "top_n": 5,
+    "rebalance": "monthly",
+    "tc_bps": "5 one-way",
+    "data_notes": "CRSP world country returns. Shiller CAPE blocked (no internet); 12m trailing return used as Faber-style value proxy."
+  },
+  "trades": 361,
+  "stats": {
+    "cagr": 6.67,
+    "total_return": 593.14,
+    "sharpe_daily": 0.3873,
+    "max_dd": -48.84
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.4793,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.4053,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

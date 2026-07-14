@@ -1,0 +1,48 @@
+{
+  "strategy": "em_dm_carry",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "carry_window": 9,
+    "threshold": 0.05,
+    "freq": "6ME"
+  },
+  "em_tickers": [
+    "EEM",
+    "INDA",
+    "EWZ",
+    "EWJ",
+    "EWG",
+    "EWU",
+    "EWA",
+    "EWC",
+    "EWP",
+    "EWI",
+    "EWL"
+  ],
+  "dm_tickers": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "MDY"
+  ],
+  "sleeves": {
+    "em_dm_combined": {
+      "simple_85": {
+        "sharpe": 0.8008,
+        "cagr": 14.71,
+        "max_dd": -30.46,
+        "n_trades": 17,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.8018,
+        "cagr": 17.23,
+        "max_dd": -35.0,
+        "n_trades": 17,
+        "allocation": 1.0
+      }
+    }
+  }
+}

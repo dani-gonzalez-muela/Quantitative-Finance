@@ -1,0 +1,57 @@
+{
+  "strategy": "Quantitative Momentum",
+  "universe": "S&P 500 constituents (point-in-time, CRSP)",
+  "portfolio": "long_term",
+  "period": "2006-11-30 \u2192 2025-11-28",
+  "params": {
+    "top_decile_pct": 0.1,
+    "fip_keep_frac": 0.5,
+    "rebalance_months": [
+      2,
+      5,
+      8,
+      11
+    ],
+    "lookback_days": 252,
+    "skip_days": 21
+  },
+  "param_source": "Gray & Vogel (2016) Quantitative Momentum",
+  "winner": "vw",
+  "n_trades": 1813,
+  "n_rebalances": 80,
+  "avg_names_per_rebalance": 23.855263157894736,
+  "variants": {
+    "equal_weight": {
+      "stats": {
+        "total_return": 288.0,
+        "cagr": 7.4,
+        "sharpe": 0.42,
+        "max_dd": -58.2
+      },
+      "significance": {
+        "sharpe": 0.4223,
+        "verdict": "SIGNIFICANT (moderate)",
+        "tests_passed": "2/3"
+      }
+    },
+    "value_weight": {
+      "stats": {
+        "total_return": 876.1,
+        "cagr": 12.74,
+        "sharpe": 0.61,
+        "max_dd": -50.1
+      },
+      "significance": {
+        "sharpe": 0.6096,
+        "verdict": "SIGNIFICANT (strong)",
+        "tests_passed": "3/3"
+      }
+    }
+  },
+  "spy_benchmark": {
+    "total_return": 555.3,
+    "cagr": 10.4,
+    "sharpe": 0.56,
+    "max_dd": -59.0
+  }
+}

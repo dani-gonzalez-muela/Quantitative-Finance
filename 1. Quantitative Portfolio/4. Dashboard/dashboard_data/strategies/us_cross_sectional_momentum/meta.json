@@ -1,0 +1,23 @@
+{
+  "label": "Us Cross Sectional Momentum",
+  "sleeve": "long_term",
+  "type": "Factor (momentum)",
+  "timeframe": "monthly",
+  "universe": "US equities (top-decile proxy)",
+  "signal": "Classic 12-1 momentum, long-only top decile.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.965,
+    "cagr_pct": 14.2,
+    "maxdd_pct": -44.78,
+    "months": 433
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Classic 12-1 momentum (Jegadeesh & Titman 1993), long-only top-decile proxy: FF Mkt+0.5\u00d7Mom. Monthly, 5bps/side. (Jensen/Kelly per-stock dataset is 68GB \u2014 factor proxy per todo log.)",
+  "reference": "Jegadeesh & Titman (1993), 'Returns to Buying Winners and Selling Losers'"
+}

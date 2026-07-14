@@ -1,0 +1,44 @@
+{
+  "strategy": "Commodity Combined (Carry + Trend Real-Assets 50/50)",
+  "sleeves": {
+    "commodity_carry": {
+      "file": "commodity_carry_multiasset_daily_equity/commodities_simple_100.csv",
+      "weight": 0.5,
+      "metrics_common_period": {
+        "cagr": 9.86,
+        "total_return": 110.73,
+        "sharpe_daily": 0.5286,
+        "max_dd": -37.26,
+        "years": 7.92
+      }
+    },
+    "commodity_trend_real_assets": {
+      "file": "commodity_trend_multiasset_daily_equity/real_assets_simple_100.csv",
+      "weight": 0.5,
+      "metrics_common_period": {
+        "cagr": 13.21,
+        "total_return": 167.29,
+        "sharpe_daily": 0.6729,
+        "max_dd": -38.79,
+        "years": 7.92
+      }
+    }
+  },
+  "combined": {
+    "period": "2017-02-28 -> 2025-01-31",
+    "starting_capital": 100000,
+    "metrics": {
+      "cagr": 12.34,
+      "total_return": 151.4,
+      "sharpe_daily": 0.7301,
+      "max_dd": -32.95,
+      "years": 7.92
+    },
+    "significance": {
+      "sharpe": 0.8245,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  },
+  "note": "Carry uses futures-price proxies for 5 commodities (gold, oil, corn, wheat, soybeans). Trend real_assets uses VNQ/VNQI/AMLP/XLRE (REITs + MLPs). Different instruments => 50/50 split is a genuine diversification. Commodity trend *commodities* sleeve (Sharpe ~0.21) is excluded; only the higher-quality real_assets sleeve is used."
+}

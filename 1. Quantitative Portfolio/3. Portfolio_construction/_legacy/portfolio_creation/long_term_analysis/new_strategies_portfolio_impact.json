@@ -1,0 +1,116 @@
+{
+  "baseline_5_sleeve": {
+    "window": "2016-06-14 \u2192 2026-03-13",
+    "sharpe": 1.7814,
+    "cagr": 11.86,
+    "max_dd": -9.8,
+    "sortino": 2.2305
+  },
+  "new_strategy_tests": {
+    "Industry Trend v2": {
+      "window": "2016-06-14 \u2192 2025-12-31",
+      "window_years": 9.55,
+      "n_sleeves": 6,
+      "sharpe": 1.5667,
+      "cagr": 12.24,
+      "max_dd": -13.55,
+      "sortino": 1.9616,
+      "corr_with_portfolio": 0.589,
+      "vs_baseline": {
+        "delta_sharpe": -0.2147,
+        "delta_maxdd": -3.75,
+        "verdict": "\u2717 HURTS | MaxDD OK"
+      },
+      "significant": true
+    },
+    "Quality v2": {
+      "window": "2016-06-14 \u2192 2025-12-31",
+      "window_years": 9.55,
+      "n_sleeves": 6,
+      "sharpe": 1.9593,
+      "cagr": 12.31,
+      "max_dd": -9.2,
+      "sortino": 2.4497,
+      "corr_with_portfolio": 0.006,
+      "vs_baseline": {
+        "delta_sharpe": 0.1779,
+        "delta_maxdd": 0.6,
+        "verdict": "\u2713 IMPROVES | MaxDD OK"
+      },
+      "significant": true
+    },
+    "Low Vol v2": {
+      "window": "2016-06-14 \u2192 2025-12-31",
+      "window_years": 9.55,
+      "n_sleeves": 6,
+      "sharpe": 1.3205,
+      "cagr": 11.86,
+      "max_dd": -14.59,
+      "sortino": 1.8289,
+      "corr_with_portfolio": 0.551,
+      "vs_baseline": {
+        "delta_sharpe": -0.4609,
+        "delta_maxdd": -4.79,
+        "verdict": "\u2717 HURTS | MaxDD OK"
+      },
+      "significant": true
+    },
+    "Commodity Carry": {
+      "window": "2016-06-14 \u2192 2025-05-12",
+      "window_years": 8.91,
+      "n_sleeves": 6,
+      "sharpe": 1.6318,
+      "cagr": 10.74,
+      "max_dd": -9.72,
+      "sortino": 2.1723,
+      "corr_with_portfolio": 0.097,
+      "vs_baseline": {
+        "delta_sharpe": -0.1496,
+        "delta_maxdd": 0.08,
+        "verdict": "\u2717 HURTS | MaxDD OK"
+      },
+      "significant": true
+    },
+    "Commodity Trend": {
+      "window": "2016-06-14 \u2192 2025-05-12",
+      "window_years": 8.91,
+      "n_sleeves": 6,
+      "sharpe": 1.5368,
+      "cagr": 10.38,
+      "max_dd": -12.91,
+      "sortino": 1.9453,
+      "corr_with_portfolio": 0.077,
+      "vs_baseline": {
+        "delta_sharpe": -0.2446,
+        "delta_maxdd": -3.11,
+        "verdict": "\u2717 HURTS | MaxDD OK"
+      },
+      "significant": false
+    },
+    "ALL_SIGNIFICANT_BATCH": {
+      "sleeves": [
+        "IBS MR",
+        "Donchian",
+        "VIX MR",
+        "GTAA",
+        "Vol Overlay",
+        "Industry Trend v2",
+        "Quality v2",
+        "Low Vol v2",
+        "Commodity Carry"
+      ],
+      "n_sleeves": 9,
+      "window": "2016-06-14 \u2192 2025-05-12",
+      "window_years": 8.91,
+      "sharpe": 1.2838,
+      "cagr": 11.01,
+      "max_dd": -15.31,
+      "sortino": 1.727,
+      "vs_baseline": {
+        "delta_sharpe": -0.4976,
+        "delta_maxdd": -5.51,
+        "verdict": "\u2717 HURTS | MaxDD WARNING"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "label": "Reit Dividend Carry",
+  "sleeve": "long_term",
+  "type": "Carry / exposure timing",
+  "timeframe": "monthly",
+  "universe": "US REITs",
+  "signal": "Scale REIT exposure by dividend yield vs its 24-month average.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.609,
+    "cagr_pct": 5.46,
+    "maxdd_pct": -33.08,
+    "months": 230
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "REIT exposure timed by dividend-yield carry: annualized CRSP income return vs its 24m average \u2014 yield>avg \u2192 100%, yield<0.7\u00d7avg \u2192 50%, else 75%. REIT return proxy = FF Mkt+0.5\u00d7HML. Monthly, 5bps/side. Proxies: VNQ/XLRE downloads were blocked; both the yield source and the REIT leg are proxies (todo log).",
+  "reference": "Proprietary \u2014 REIT dividend-carry tilt"
+}

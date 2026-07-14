@@ -1,0 +1,23 @@
+{
+  "label": "Yield Curve Duration",
+  "sleeve": "long_term",
+  "type": "Duration timing",
+  "timeframe": "monthly",
+  "universe": "US Treasuries (2/10/20yr)",
+  "signal": "Set Treasury duration from the 10y-2y curve slope.",
+  "in_portfolio": true,
+  "stats": {
+    "sharpe": 0.154,
+    "cagr_pct": 0.37,
+    "maxdd_pct": -9.88,
+    "months": 111
+  },
+  "validation": {
+    "basket": "fail",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "gates_passed": "0/3",
+  "description": "Duration timing on the curve slope: T10Y2Y>0.5% \u2192 long duration (20yr), <0% \u2192 short duration (2yr), else 10yr. Synthetic FRED yields, duration-model price returns, monthly, 5bps/side.",
+  "reference": "Duration timing on yield-curve signals; cf. Koijen, Moskowitz, Pedersen & Vrugt (2018), 'Carry'"
+}

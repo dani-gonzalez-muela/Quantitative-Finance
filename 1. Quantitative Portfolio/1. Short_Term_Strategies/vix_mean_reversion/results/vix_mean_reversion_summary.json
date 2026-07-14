@@ -1,0 +1,27 @@
+{
+  "strategy": "VIX Mean Reversion",
+  "instrument": "SVXY",
+  "portfolio": "long_term",
+  "period": "2011-10-01 -> 2026-04-01",
+  "params": {
+    "stop_loss": -0.2,
+    "vix_spike_min": 18,
+    "sma_spike": 40,
+    "spike_sma_mult": 1.1
+  },
+  "param_source": "Hand-tuned to VIX dynamics. VRP literature: Carr & Wu (2009).",
+  "trades": 72,
+  "has_stop": true,
+  "significance": {
+    "gross": {
+      "sharpe": 1.2043,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 1.2043,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

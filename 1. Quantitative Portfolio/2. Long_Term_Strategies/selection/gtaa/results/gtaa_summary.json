@@ -1,0 +1,57 @@
+{
+  "strategy": "GTAA",
+  "instruments": [
+    "SPY",
+    "EFA",
+    "IEF",
+    "DBC",
+    "VNQ",
+    "SHV"
+  ],
+  "portfolio": "long_term",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "params": {
+    "sma_window": 200,
+    "etf_weight": 0.2,
+    "signal_lag": 1,
+    "cash_etf": "SHV"
+  },
+  "param_source": "Faber 2007 + Concretum Research QuanTips #1 (Apr 2025)",
+  "winner": "monthly",
+  "variants": {
+    "weekly_wed": {
+      "stats": {
+        "total_return": 72.8,
+        "cagr": 5.49,
+        "sharpe": 0.84,
+        "max_dd": -11.1
+      },
+      "trades": 90,
+      "significance": {
+        "sharpe": 0.8355,
+        "verdict": "SIGNIFICANT (strong)",
+        "tests_passed": "3/3"
+      }
+    },
+    "monthly": {
+      "stats": {
+        "total_return": 82.4,
+        "cagr": 6.05,
+        "sharpe": 0.92,
+        "max_dd": -8.7
+      },
+      "trades": 45,
+      "significance": {
+        "sharpe": 0.9252,
+        "verdict": "SIGNIFICANT (strong)",
+        "tests_passed": "3/3"
+      }
+    }
+  },
+  "spy_benchmark": {
+    "total_return": 279.4,
+    "cagr": 13.91,
+    "sharpe": 0.83,
+    "max_dd": -33.8
+  }
+}

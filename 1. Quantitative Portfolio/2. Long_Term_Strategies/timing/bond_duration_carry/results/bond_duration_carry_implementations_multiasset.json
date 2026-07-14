@@ -1,0 +1,47 @@
+{
+  "strategy": "bond_duration_carry",
+  "period": "2016-01-01 -> 2026-04-01",
+  "tc_bps_one_way": 5,
+  "signal": "DFII10 lagged 1m; hold HYG when DFII10 > 0% (regime: long or mid)",
+  "passing_instruments": [
+    "HYG"
+  ],
+  "sleeves": {
+    "HYG": {
+      "simple_85": {
+        "sharpe": 0.5972,
+        "cagr": 2.82,
+        "max_dd": -11.97,
+        "n_trades": 88,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.5968,
+        "cagr": 3.3,
+        "max_dd": -13.99,
+        "n_trades": 88,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 1,
+      "instruments": [
+        "HYG"
+      ],
+      "sharpe": 0.5972,
+      "cagr": 2.82,
+      "max_dd": -11.97
+    },
+    "simple_100": {
+      "n_sleeves": 1,
+      "instruments": [
+        "HYG"
+      ],
+      "sharpe": 0.5968,
+      "cagr": 3.3,
+      "max_dd": -13.99
+    }
+  }
+}

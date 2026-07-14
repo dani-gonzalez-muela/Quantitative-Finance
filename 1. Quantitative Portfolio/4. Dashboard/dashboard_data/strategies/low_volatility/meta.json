@@ -1,0 +1,23 @@
+{
+  "label": "Low Volatility",
+  "sleeve": "long_term",
+  "type": "Factor (low volatility)",
+  "timeframe": "monthly",
+  "universe": "US equities (beta deciles)",
+  "signal": "Buy-and-hold the lowest-beta decile.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.725,
+    "cagr_pct": 10.02,
+    "maxdd_pct": -50.72,
+    "months": 671
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Buy-and-hold the lowest-beta decile: CRSP NYSE/NYSEMKT Beta Decile 1 portfolio (indno 1000102), monthly rebalance built into CRSP construction. The academic low-vol anomaly in its cleanest benchmark form (v2 replaced the v1 Better-Market-Betas version \u2014 that dataset ends 2019; CRSP deciles cover 1925\u20132025).",
+  "reference": "Blitz & van Vliet (2007); Baker, Bradley & Wurgler (2011) \u2014 low-volatility anomaly"
+}

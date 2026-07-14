@@ -1,0 +1,214 @@
+{
+  "strategy": "Overnight Premium (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "overnight_frac_reference": 0.65
+  },
+  "signal_note": "Each ETF daily close\u2192next open is one trade; test mean > 0",
+  "baskets_tested": {
+    "us_equity_broad": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "MDY"
+    ],
+    "us_sectors": [
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLI",
+      "XLP",
+      "XLY",
+      "XLU",
+      "XLB",
+      "XLRE",
+      "XLC"
+    ]
+  },
+  "n_instruments": 15,
+  "passing_instruments": [],
+  "per_instrument": {
+    "SPY": {
+      "n_trades": 2388,
+      "mean_ret_bps": -6.59,
+      "sharpe": -1.4168,
+      "t_stat": -4.3605,
+      "t_p": 1.0,
+      "boot_p5": -1.887,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_equity_broad"
+    },
+    "QQQ": {
+      "n_trades": 2388,
+      "mean_ret_bps": -5.48,
+      "sharpe": -1.007,
+      "t_stat": -3.0991,
+      "t_p": 0.999,
+      "boot_p5": -1.4984,
+      "perm_p": 0.999,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_equity_broad"
+    },
+    "IWM": {
+      "n_trades": 2388,
+      "mean_ret_bps": -4.17,
+      "sharpe": -0.7245,
+      "t_stat": -2.2298,
+      "t_p": 0.9871,
+      "boot_p5": -1.237,
+      "perm_p": 0.988,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_equity_broad"
+    },
+    "MDY": {
+      "n_trades": 2388,
+      "mean_ret_bps": -7.01,
+      "sharpe": -1.3469,
+      "t_stat": -4.1453,
+      "t_p": 1.0,
+      "boot_p5": -1.8427,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_equity_broad"
+    },
+    "XLK": {
+      "n_trades": 2388,
+      "mean_ret_bps": -6.12,
+      "sharpe": -1.0017,
+      "t_stat": -3.0829,
+      "t_p": 0.999,
+      "boot_p5": -1.4781,
+      "perm_p": 0.999,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLF": {
+      "n_trades": 2388,
+      "mean_ret_bps": -7.15,
+      "sharpe": -1.0883,
+      "t_stat": -3.3496,
+      "t_p": 0.9996,
+      "boot_p5": -1.5949,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLE": {
+      "n_trades": 2388,
+      "mean_ret_bps": -3.62,
+      "sharpe": -0.474,
+      "t_stat": -1.4588,
+      "t_p": 0.9276,
+      "boot_p5": -0.9932,
+      "perm_p": 0.932,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLV": {
+      "n_trades": 2388,
+      "mean_ret_bps": -8.37,
+      "sharpe": -2.1649,
+      "t_stat": -6.6629,
+      "t_p": 1.0,
+      "boot_p5": -2.7044,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLI": {
+      "n_trades": 2388,
+      "mean_ret_bps": -6.46,
+      "sharpe": -1.2556,
+      "t_stat": -3.8643,
+      "t_p": 0.9999,
+      "boot_p5": -1.7487,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLP": {
+      "n_trades": 2388,
+      "mean_ret_bps": -8.89,
+      "sharpe": -2.7053,
+      "t_stat": -8.326,
+      "t_p": 1.0,
+      "boot_p5": -3.2323,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLY": {
+      "n_trades": 2388,
+      "mean_ret_bps": -6.17,
+      "sharpe": -1.0847,
+      "t_stat": -3.3385,
+      "t_p": 0.9996,
+      "boot_p5": -1.6054,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLU": {
+      "n_trades": 2388,
+      "mean_ret_bps": -8.38,
+      "sharpe": -2.3565,
+      "t_stat": -7.2526,
+      "t_p": 1.0,
+      "boot_p5": -2.8526,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLB": {
+      "n_trades": 2388,
+      "mean_ret_bps": -7.17,
+      "sharpe": -1.3456,
+      "t_stat": -4.1413,
+      "t_p": 1.0,
+      "boot_p5": -1.8398,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLRE": {
+      "n_trades": 2388,
+      "mean_ret_bps": -5.74,
+      "sharpe": -1.2602,
+      "t_stat": -3.8786,
+      "t_p": 0.9999,
+      "boot_p5": -1.7601,
+      "perm_p": 1.0,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLC": {
+      "n_trades": 1769,
+      "mean_ret_bps": -6.42,
+      "sharpe": -1.1004,
+      "t_stat": -2.9147,
+      "t_p": 0.9982,
+      "boot_p5": -1.7019,
+      "perm_p": 0.999,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    }
+  }
+}

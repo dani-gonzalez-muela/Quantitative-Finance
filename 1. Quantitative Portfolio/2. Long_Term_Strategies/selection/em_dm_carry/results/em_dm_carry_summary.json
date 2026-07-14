@@ -1,0 +1,78 @@
+{
+  "strategy": "EM/DM Carry",
+  "instruments": [
+    "BRA",
+    "MEX",
+    "IND",
+    "CHN",
+    "KOR",
+    "THA",
+    "MYS",
+    "IDN",
+    "PHL",
+    "POL",
+    "GBR",
+    "AUS",
+    "SWE",
+    "SGP",
+    "CHE",
+    "NOR",
+    "DNK",
+    "NZL",
+    "JPN",
+    "HKG",
+    "TWN"
+  ],
+  "portfolio": "long_term",
+  "period": "2000-01-31 -> 2026-02-28",
+  "params": {
+    "signal": "EM_12m_return - DM_12m_return > 1% \u2192 long EM basket; else DM",
+    "rebalance": "monthly",
+    "em_countries": [
+      "BRA",
+      "MEX",
+      "IND",
+      "CHN",
+      "KOR",
+      "THA",
+      "MYS",
+      "IDN",
+      "PHL",
+      "POL"
+    ],
+    "dm_countries": [
+      "GBR",
+      "AUS",
+      "SWE",
+      "SGP",
+      "CHE",
+      "NOR",
+      "DNK",
+      "NZL",
+      "JPN",
+      "HKG",
+      "TWN"
+    ],
+    "tc_bps": "5 one-way",
+    "em_pct_months": 51.6
+  },
+  "trades": 314,
+  "stats": {
+    "cagr": 11.51,
+    "total_return": 1614.09,
+    "sharpe_daily": 0.6822,
+    "max_dd": -54.61
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.8357,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.7518,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

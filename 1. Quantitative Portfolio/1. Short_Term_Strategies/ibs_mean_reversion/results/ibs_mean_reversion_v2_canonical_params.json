@@ -1,0 +1,189 @@
+{
+  "_run_info": "fable standardization run 2026-07-02; readers must isinstance-guard non-dict keys",
+  "us_equity_broad": {
+    "params": {
+      "ibs_buy": 0.15,
+      "ibs_sell": 0.85,
+      "stop_loss": -0.02
+    },
+    "instruments": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "MDY"
+    ],
+    "passes": true,
+    "median_sharpe_grid": 1.2333,
+    "stats": {
+      "basket_sharpe": 1.5217,
+      "cagr_pct": 13.83,
+      "maxdd_pct": -8.42,
+      "binom_k": 4,
+      "binom_p": 0.0,
+      "gate1_p": 0.0,
+      "gate2_boot5": 1.1906,
+      "gate3_p": 0.0
+    }
+  },
+  "us_factor": {
+    "params": {
+      "ibs_buy": 0.1,
+      "ibs_sell": 0.85,
+      "stop_loss": -0.02
+    },
+    "instruments": [
+      "IWF",
+      "IWD",
+      "MTUM",
+      "USMV",
+      "DVY",
+      "QUAL"
+    ],
+    "passes": true,
+    "median_sharpe_grid": 1.0452,
+    "stats": {
+      "basket_sharpe": 1.284,
+      "cagr_pct": 9.27,
+      "maxdd_pct": -6.39,
+      "binom_k": 6,
+      "binom_p": 0.0,
+      "gate1_p": 0.0,
+      "gate2_boot5": 0.9398,
+      "gate3_p": 0.0
+    }
+  },
+  "us_sectors": {
+    "params": {
+      "ibs_buy": 0.25,
+      "ibs_sell": 0.8,
+      "stop_loss": -0.02
+    },
+    "instruments": [
+      "XLK",
+      "XLC",
+      "XLI",
+      "XLV",
+      "XLY",
+      "XLF",
+      "XLE",
+      "XLU",
+      "XLB",
+      "XLP",
+      "XLRE"
+    ],
+    "passes": true,
+    "median_sharpe_grid": 1.2442,
+    "stats": {
+      "basket_sharpe": 1.8657,
+      "cagr_pct": 16.57,
+      "maxdd_pct": -6.68,
+      "binom_k": 10,
+      "binom_p": 0.0,
+      "gate1_p": 0.0,
+      "gate2_boot5": 1.4334,
+      "gate3_p": 0.0
+    }
+  },
+  "bonds_us": {
+    "params": {
+      "ibs_buy": 0.15,
+      "ibs_sell": 0.8,
+      "stop_loss": null
+    },
+    "instruments": [
+      "TLT",
+      "IEF",
+      "SHY",
+      "HYG",
+      "LQD"
+    ],
+    "passes": false,
+    "median_sharpe_grid": 0.2459,
+    "stats": {
+      "basket_sharpe": 0.0892,
+      "cagr_pct": 0.25,
+      "maxdd_pct": -11.24,
+      "binom_k": 0,
+      "binom_p": 1.0,
+      "gate1_p": 0.4004,
+      "gate2_boot5": -0.4425,
+      "gate3_p": 0.4077
+    }
+  },
+  "commodities": {
+    "params": {
+      "ibs_buy": 0.25,
+      "ibs_sell": 0.85,
+      "stop_loss": -0.02
+    },
+    "instruments": [
+      "GLD",
+      "SLV",
+      "USO",
+      "GDX"
+    ],
+    "passes": true,
+    "median_sharpe_grid": 1.2033,
+    "stats": {
+      "basket_sharpe": 1.8318,
+      "cagr_pct": 22.07,
+      "maxdd_pct": -8.09,
+      "binom_k": 4,
+      "binom_p": 0.0,
+      "gate1_p": 0.0,
+      "gate2_boot5": 1.4361,
+      "gate3_p": 0.0
+    }
+  },
+  "em_regional": {
+    "params": {
+      "ibs_buy": 0.25,
+      "ibs_sell": 0.75,
+      "stop_loss": -0.02
+    },
+    "instruments": [
+      "EEM",
+      "EWZ",
+      "INDA",
+      "EWW"
+    ],
+    "passes": true,
+    "median_sharpe_grid": 0.9247,
+    "stats": {
+      "basket_sharpe": 1.424,
+      "cagr_pct": 12.93,
+      "maxdd_pct": -13.2,
+      "binom_k": 4,
+      "binom_p": 0.0,
+      "gate1_p": 0.0,
+      "gate2_boot5": 0.9668,
+      "gate3_p": 0.0
+    }
+  },
+  "intl_liquid": {
+    "params": {
+      "ibs_buy": 0.15,
+      "ibs_sell": 0.85,
+      "stop_loss": -0.02
+    },
+    "instruments": [
+      "EFA",
+      "EZU",
+      "EWJ",
+      "EWG",
+      "EWU"
+    ],
+    "passes": true,
+    "median_sharpe_grid": 1.1182,
+    "stats": {
+      "basket_sharpe": 1.3601,
+      "cagr_pct": 10.85,
+      "maxdd_pct": -8.5,
+      "binom_k": 5,
+      "binom_p": 0.0,
+      "gate1_p": 0.0,
+      "gate2_boot5": 0.879,
+      "gate3_p": 0.0
+    }
+  }
+}

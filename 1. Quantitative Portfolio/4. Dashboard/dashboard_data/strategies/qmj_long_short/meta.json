@@ -1,0 +1,23 @@
+{
+  "label": "QMJ Long/Short",
+  "sleeve": "long_term",
+  "type": "Market-neutral quality",
+  "timeframe": "monthly",
+  "universe": "FF RMW+0.5CMA",
+  "signal": "Quality-minus-junk factor proxy.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 0.494,
+    "cagr_pct": 4.76,
+    "maxdd_pct": -45.32,
+    "months": 433
+  },
+  "gates_passed": "3/3",
+  "description": "Market-neutral quality long/short via FF factor proxy: RMW + 0.5\u00d7CMA (long profitable/conservative, short unprofitable/aggressive). Monthly. True Compustat GP construction was OOM (5.4GB zip) \u2014 proxy documented in todo log.",
+  "reference": "Asness, Frazzini & Pedersen (2019), 'Quality Minus Junk'"
+}

@@ -1,0 +1,5 @@
+ticker,bb_period,bb_std,hold_days,best_sharpe
+SPY,10,2.0,30,1.1828
+QQQ,10,2.0,30,1.2485
+IWM,50,2.0,0,0.6343
+MDY,50,2.0,0,0.7255

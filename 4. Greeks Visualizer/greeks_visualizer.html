@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Options Greeks Visualizer</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080c14;
+  --surface: #0e1524;
+  --surface2: #131d30;
+  --border: #1c2a42;
+  --border2: #243350;
+  --text: #dde6f5;
+  --text-dim: #4a6080;
+  --text-mid: #7a98ba;
+  --accent: #3b9eff;
+  --green: #2dd4a0;
+  --red: #ff5f6d;
+  --orange: #ff9f43;
+  --purple: #9d7ff4;
+  --yellow: #f5c842;
+  --delta-c: #3b9eff;
+  --gamma-c: #2dd4a0;
+  --theta-c: #ff5f6d;
+  --vega-c: #9d7ff4;
+  --rho-c: #ff9f43;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── HEADER ── */
+.header {
+  padding: 28px 40px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, #0b1220 0%, var(--bg) 100%);
+}
+
+.header-title h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--text);
+}
+
+.header-title p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toggle-group {
+  display: flex;
+  gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 3px;
+}
+
+.toggle-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 18px;
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.15s;
+  letter-spacing: 0.3px;
+}
+
+.toggle-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── SLIDERS PANEL ── */
+.sliders-panel {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-wrap: wrap;
+}
+
+.slider-group {
+  flex: 1;
+  min-width: 160px;
+  padding: 18px 24px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slider-group:last-child { border-right: none; }
+
+.slider-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.slider-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+.slider-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  min-width: 52px;
+  text-align: right;
+}
+
+.slider-value.accent { color: var(--accent); }
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--border2);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 4px rgba(59,158,255,0.2);
+}
+
+input[type=range].sigma-slider::-webkit-slider-thumb { background: var(--purple); }
+input[type=range].sigma-slider { background: linear-gradient(to right, var(--border2), var(--border2)); }
+input[type=range].r-slider::-webkit-slider-thumb { background: var(--green); }
+input[type=range].t-slider::-webkit-slider-thumb { background: var(--orange); }
+
+/* ── LIVE METRICS BAR ── */
+.metrics-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.metric-item {
+  flex: 1;
+  min-width: 100px;
+  padding: 14px 20px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.metric-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+
+.metric-item.m-delta::before { background: var(--delta-c); }
+.metric-item.m-gamma::before { background: var(--gamma-c); }
+.metric-item.m-theta::before { background: var(--theta-c); }
+.metric-item.m-vega::before { background: var(--vega-c); }
+.metric-item.m-rho::before { background: var(--rho-c); }
+.metric-item.m-price::before { background: var(--yellow); }
+.metric-item:last-child { border-right: none; }
+
+.metric-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+.metric-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 17px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.metric-val.delta-v { color: var(--delta-c); }
+.metric-val.gamma-v { color: var(--gamma-c); }
+.metric-val.theta-v { color: var(--theta-c); }
+.metric-val.vega-v  { color: var(--vega-c); }
+.metric-val.rho-v   { color: var(--rho-c); }
+.metric-val.price-v { color: var(--yellow); }
+
+.metric-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+/* ── TABS & MAIN ── */
+.main { padding: 24px 40px 48px; }
+
+.tab-bar {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.15s;
+  letter-spacing: 0.3px;
+}
+
+.tab:hover { border-color: var(--accent); color: var(--text); }
+.tab.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+
+/* ── CHART GRID ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1100px) { .grid { grid-template-columns: 1fr; } }
+
+.chart-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+
+.chart-card.delta::before { background: var(--delta-c); }
+.chart-card.gamma::before { background: var(--gamma-c); }
+.chart-card.theta::before { background: var(--theta-c); }
+.chart-card.vega::before  { background: var(--vega-c); }
+.chart-card.rho::before   { background: var(--rho-c); }
+.chart-card.payoff::before { background: var(--yellow); }
+.chart-card.pnl::before   { background: var(--green); }
+.chart-card.wide::before  { background: var(--accent); }
+
+.chart-card.wide {
+  grid-column: 1 / -1;
+}
+
+.chart-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  letter-spacing: 0.2px;
+}
+
+.chart-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 240px !important;
+}
+
+.note-box {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: 6px;
+  border-left: 2px solid var(--border2);
+  font-size: 11.5px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.note-box strong { color: var(--text-mid); }
+.note-box .hi { color: var(--accent); }
+
+.legend-strip {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* ── FORMULA STRIP ── */
+.formula-strip {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.formula-pill {
+  padding: 8px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-mid);
+  white-space: nowrap;
+}
+
+.formula-pill span { color: var(--accent); font-weight: 600; }
+/* ── GBM BANNER ── */
+.gbm-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 40px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.gbm-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-dim);
+  white-space: nowrap;
+  padding: 4px 10px;
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+}
+
+.gbm-eq {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  color: var(--text);
+  letter-spacing: 0.3px;
+}
+
+.gbm-frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  margin: 0 2px;
+}
+
+.gbm-num {
+  font-size: 13px;
+  border-bottom: 1px solid var(--text-mid);
+  padding-bottom: 1px;
+  line-height: 1.3;
+}
+
+.gbm-den {
+  font-size: 13px;
+  padding-top: 1px;
+  line-height: 1.3;
+}
+
+.gbm-op {
+  color: var(--text-mid);
+  font-size: 14px;
+  margin: 0 1px;
+}
+
+.gbm-term {
+  font-size: 15px;
+}
+
+.gbm-sig {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+.gbm-sep {
+  color: var(--text-dim);
+  margin-right: 8px;
+}
+
+.gbm-dim {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.gbm-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  border-left: 1px solid var(--border2);
+  padding-left: 16px;
+  line-height: 1.6;
+  flex: 1;
+  min-width: 200px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-title">
+    <h1>Options Greeks Visualizer</h1>
+    <p>Black–Scholes · GBM · δ Γ Θ ν ρ</p>
+  </div>
+  <div class="header-controls">
+    <div class="toggle-group">
+      <button class="toggle-btn active" data-type="call" onclick="setType('call')">Call</button>
+      <button class="toggle-btn" data-type="put" onclick="setType('put')">Put</button>
+    </div>
+  </div>
+</div>
+
+<!-- GBM ASSUMPTION BANNER -->
+<div class="gbm-banner">
+  <span class="gbm-label">Model assumption</span>
+  <span class="gbm-eq">
+    <span class="gbm-frac"><span class="gbm-num">dS</span><span class="gbm-den">S</span></span>
+    <span class="gbm-op"> = </span>
+    <span class="gbm-term">μ dt</span>
+    <span class="gbm-op"> + </span>
+    <span class="gbm-term gbm-sig">σ</span>
+    <span class="gbm-term"> dW</span>
+    <span class="gbm-sep">,</span>
+    <span class="gbm-term gbm-dim"> dW </span>
+    <span class="gbm-op gbm-dim">~</span>
+    <span class="gbm-term gbm-dim"> 𝒩(0, dt)</span>
+  </span>
+  <span class="gbm-note">Greeks are Black–Scholes closed-form under constant σ — log-normal prices, continuous hedging.</span>
+</div>
+
+<!-- SLIDERS -->
+<div class="sliders-panel">
+  <div class="slider-group">
+    <div class="slider-label-row">
+      <span class="slider-label">Spot (S)</span>
+      <span class="slider-value accent" id="lbl-S">100</span>
+    </div>
+    <input type="range" id="sl-S" min="50" max="150" step="1" value="100"
+           oninput="update()" style="accent-color: var(--accent)">
+  </div>
+  <div class="slider-group">
+    <div class="slider-label-row">
+      <span class="slider-label">Strike (K)</span>
+      <span class="slider-value" id="lbl-K">100</span>
+    </div>
+    <input type="range" id="sl-K" min="50" max="150" step="1" value="100"
+           oninput="update()">
+  </div>
+  <div class="slider-group">
+    <div class="slider-label-row">
+      <span class="slider-label">Impl. Vol (σ)</span>
+      <span class="slider-value" id="lbl-sig">25%</span>
+    </div>
+    <input type="range" class="sigma-slider" id="sl-sig" min="5" max="100" step="1" value="25"
+           oninput="update()">
+  </div>
+  <div class="slider-group">
+    <div class="slider-label-row">
+      <span class="slider-label">Rate (r)</span>
+      <span class="slider-value" id="lbl-r">5%</span>
+    </div>
+    <input type="range" class="r-slider" id="sl-r" min="0" max="15" step="0.25" value="5"
+           oninput="update()">
+  </div>
+  <div class="slider-group">
+    <div class="slider-label-row">
+      <span class="slider-label">Time (T)</span>
+      <span class="slider-value" id="lbl-T">90d</span>
+    </div>
+    <input type="range" class="t-slider" id="sl-T" min="1" max="365" step="1" value="90"
+           oninput="update()">
+  </div>
+</div>
+
+<!-- LIVE METRICS -->
+<div class="metrics-bar">
+  <div class="metric-item m-price">
+    <span class="metric-name">Price</span>
+    <span class="metric-val price-v" id="mv-price">—</span>
+    <span class="metric-sub">option value</span>
+  </div>
+  <div class="metric-item m-delta">
+    <span class="metric-name">Δ Delta</span>
+    <span class="metric-val delta-v" id="mv-delta">—</span>
+    <span class="metric-sub">∂V/∂S</span>
+  </div>
+  <div class="metric-item m-gamma">
+    <span class="metric-name">Γ Gamma</span>
+    <span class="metric-val gamma-v" id="mv-gamma">—</span>
+    <span class="metric-sub">∂²V/∂S²</span>
+  </div>
+  <div class="metric-item m-theta">
+    <span class="metric-name">Θ Theta</span>
+    <span class="metric-val theta-v" id="mv-theta">—</span>
+    <span class="metric-sub">∂V/∂t (per day)</span>
+  </div>
+  <div class="metric-item m-vega">
+    <span class="metric-name">ν Vega</span>
+    <span class="metric-val vega-v" id="mv-vega">—</span>
+    <span class="metric-sub">per 1% σ move</span>
+  </div>
+  <div class="metric-item m-rho">
+    <span class="metric-name">ρ Rho</span>
+    <span class="metric-val rho-v" id="mv-rho">—</span>
+    <span class="metric-sub">per 1% r move</span>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="tab-bar">
+    <button class="tab active" data-tab="vs-spot" onclick="setTab('vs-spot')">Greeks vs Spot</button>
+    <button class="tab" data-tab="vs-time"  onclick="setTab('vs-time')">Greeks vs Time</button>
+    <button class="tab" data-tab="surfaces"  onclick="setTab('surfaces')">Multi-T Overlay</button>
+    <button class="tab" data-tab="payoff"    onclick="setTab('payoff')">Payoff & P&amp;L</button>
+  </div>
+  <div class="grid" id="tab-vs-spot"  style="display:grid"></div>
+  <div class="grid" id="tab-vs-time"  style="display:none"></div>
+  <div class="grid" id="tab-surfaces" style="display:none"></div>
+  <div class="grid" id="tab-payoff"   style="display:none"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+/* ── MATHS ─────────────────────────────────────────────────────────────── */
+function normCDF(x){
+  const a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;
+  const sign=x<0?-1:1; x=Math.abs(x)/Math.SQRT2;
+  const t=1/(1+p*x);
+  const y=1-(((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x);
+  return 0.5*(1+sign*y);
+}
+function normPDF(x){ return Math.exp(-0.5*x*x)/Math.sqrt(2*Math.PI); }
+
+function d1d2(S,K,T,r,sig){
+  T=Math.max(T,1e-8); sig=Math.max(sig,1e-8);
+  const d1=(Math.log(S/K)+(r+0.5*sig*sig)*T)/(sig*Math.sqrt(T));
+  return {d1,d2:d1-sig*Math.sqrt(T)};
+}
+
+function greeks(S,K,T,r,sig,type){
+  const {d1,d2}=d1d2(S,K,T,r,sig);
+  const sqT=Math.sqrt(Math.max(T,1e-8));
+  const gamma=normPDF(d1)/(S*sig*sqT);
+  const vega=S*normPDF(d1)*sqT/100;
+  let delta,theta,rho,price;
+  if(type==='call'){
+    delta=normCDF(d1);
+    theta=(-(S*normPDF(d1)*sig)/(2*sqT)-r*K*Math.exp(-r*T)*normCDF(d2))/365;
+    rho=K*T*Math.exp(-r*T)*normCDF(d2)/100;
+    price=S*normCDF(d1)-K*Math.exp(-r*T)*normCDF(d2);
+  } else {
+    delta=normCDF(d1)-1;
+    theta=(-(S*normPDF(d1)*sig)/(2*sqT)+r*K*Math.exp(-r*T)*normCDF(-d2))/365;
+    rho=-K*T*Math.exp(-r*T)*normCDF(-d2)/100;
+    price=K*Math.exp(-r*T)*normCDF(-d2)-S*normCDF(-d1);
+  }
+  return {delta,gamma,theta,vega,rho,price};
+}
+
+/* ── STATE ──────────────────────────────────────────────────────────────── */
+let optType='call', activeTab='vs-spot';
+let charts={};
+// Track whether the HTML scaffold for each tab has been built yet
+let tabBuilt={};
+
+const COLORS={delta:'#3b9eff',gamma:'#2dd4a0',theta:'#ff5f6d',vega:'#9d7ff4',rho:'#ff9f43'};
+const T_COLORS=['#3b9eff','#2dd4a0','#f5c842','#ff9f43','#ff5f6d'];
+const T_VALUES=[0.02,0.083,0.25,0.5,1.0];
+const T_LABELS=['1w','1m','3m','6m','1y'];
+const MN_COLORS=['#ff5f6d','#f5c842','#2dd4a0'];
+const SPOTS=[]; for(let s=50;s<=150;s++) SPOTS.push(s);
+const TIMES=[]; for(let t=0.003;t<=1.0;t+=0.005) TIMES.push(+t.toFixed(4));
+
+/* ── HELPERS ────────────────────────────────────────────────────────────── */
+function getParams(){
+  return{
+    S:+document.getElementById('sl-S').value,
+    K:+document.getElementById('sl-K').value,
+    sig:+document.getElementById('sl-sig').value/100,
+    r:+document.getElementById('sl-r').value/100,
+    T:+document.getElementById('sl-T').value/365
+  };
+}
+
+function ds(label,data,color,dashed,fill){
+  return{
+    label,data,borderColor:color,
+    backgroundColor:fill?color+'28':color+'10',
+    borderWidth:dashed?1.5:2,
+    borderDash:dashed?[4,3]:[],
+    pointRadius:0,tension:0.3,
+    fill:fill?'origin':false
+  };
+}
+
+function makeChart(id,labels,datasets,yLabel,xLabel){
+  if(charts[id]) charts[id].destroy();
+  const ctx=document.getElementById(id).getContext('2d');
+  charts[id]=new Chart(ctx,{
+    type:'line',
+    data:{labels,datasets},
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      animation:{duration:0},  // disabled — smoothness comes from continuous slider drags
+      interaction:{mode:'index',intersect:false},
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:'#131d30',borderColor:'#1c2a42',borderWidth:1,
+          titleFont:{family:'JetBrains Mono',size:10},
+          bodyFont:{family:'JetBrains Mono',size:10},
+          padding:10,
+          callbacks:{label:c=>`${c.dataset.label}: ${c.parsed.y.toFixed(4)}`}
+        }
+      },
+      scales:{
+        x:{title:{display:true,text:xLabel,color:'#4a6080',font:{family:'JetBrains Mono',size:9}},
+           ticks:{color:'#4a6080',font:{family:'JetBrains Mono',size:9},maxTicksLimit:12},
+           grid:{color:'#1c2a4233'}},
+        y:{title:{display:true,text:yLabel,color:'#4a6080',font:{family:'JetBrains Mono',size:9}},
+           ticks:{color:'#4a6080',font:{family:'JetBrains Mono',size:9}},
+           grid:{color:'#1c2a4233'}}
+      }
+    }
+  });
+}
+
+// Push new data into an existing chart without destroying it
+function patchChart(id, newDatasets){
+  const c=charts[id]; if(!c) return;
+  newDatasets.forEach((nd,i)=>{
+    if(c.data.datasets[i]) c.data.datasets[i].data=nd.data;
+  });
+  c.update('none'); // 'none' = skip animation → instant
+}
+
+/* ── METRICS BAR ────────────────────────────────────────────────────────── */
+function updateMetrics(){
+  const {S,K,sig,r,T}=getParams();
+  const g=greeks(S,K,T,r,sig,optType);
+  document.getElementById('mv-price').textContent=g.price.toFixed(4);
+  document.getElementById('mv-delta').textContent=g.delta.toFixed(4);
+  document.getElementById('mv-gamma').textContent=g.gamma.toFixed(4);
+  document.getElementById('mv-theta').textContent=g.theta.toFixed(4);
+  document.getElementById('mv-vega').textContent=g.vega.toFixed(4);
+  document.getElementById('mv-rho').textContent=g.rho.toFixed(4);
+}
+
+/* ── SLIDER LABELS ──────────────────────────────────────────────────────── */
+function updateLabels(){
+  const S=+document.getElementById('sl-S').value;
+  const K=+document.getElementById('sl-K').value;
+  const sig=+document.getElementById('sl-sig').value;
+  const r=+document.getElementById('sl-r').value;
+  const Td=+document.getElementById('sl-T').value;
+  document.getElementById('lbl-S').textContent=S;
+  document.getElementById('lbl-K').textContent=K;
+  document.getElementById('lbl-sig').textContent=sig+'%';
+  document.getElementById('lbl-r').textContent=r+'%';
+  document.getElementById('lbl-T').textContent=Td>30?(Td/30).toFixed(1)+'m':Td+'d';
+}
+
+/* ── MAIN UPDATE (called on every slider move) ──────────────────────────── */
+function update(){
+  updateLabels();
+  updateMetrics();
+  // If the current tab is already built, just patch the data in-place
+  if(tabBuilt[activeTab]){
+    patchCurrentTab();
+  } else {
+    buildCurrentTab();
+  }
+}
+
+function setType(t){
+  optType=t;
+  document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.toggle('active',b.dataset.type===t));
+  // Type change: destroy everything and rebuild from scratch
+  tabBuilt={};
+  Object.values(charts).forEach(c=>c.destroy());
+  charts={};
+  ['vs-spot','vs-time','surfaces','payoff'].forEach(id=>{
+    document.getElementById('tab-'+id).innerHTML='';
+  });
+  buildCurrentTab();
+  updateMetrics();
+}
+
+function setTab(t){
+  activeTab=t;
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===t));
+  // Show the right container, hide others
+  ['vs-spot','vs-time','surfaces','payoff'].forEach(id=>{
+    document.getElementById('tab-'+id).style.display = id===t ? 'grid' : 'none';
+  });
+  if(tabBuilt[t]){
+    patchCurrentTab();
+  } else {
+    buildCurrentTab();
+  }
+}
+
+/* ══ BUILD — creates HTML scaffold + initial charts (runs once per tab) ═══ */
+
+function buildCurrentTab(){
+  if(activeTab==='vs-spot')    buildVsSpot();
+  else if(activeTab==='vs-time')    buildVsTime();
+  else if(activeTab==='surfaces')   buildSurfaces();
+  else                              buildPayoff();
+  tabBuilt[activeTab]=true;
+}
+
+/* ══ PATCH — updates data only, no DOM touching (runs on every slider) ════ */
+
+function patchCurrentTab(){
+  if(activeTab==='vs-spot')    patchVsSpot();
+  else if(activeTab==='vs-time')    patchVsTime();
+  else if(activeTab==='surfaces')   patchSurfaces();
+  else                              patchPayoff();
+}
+
+/* ── VS SPOT ────────────────────────────────────────────────────────────── */
+function calcVsSpot(){
+  const {K,sig,r,T}=getParams();
+  const d={delta:[],gamma:[],theta:[],vega:[],rho:[]};
+  SPOTS.forEach(S=>{
+    const g=greeks(S,K,T,r,sig,optType);
+    d.delta.push(g.delta); d.gamma.push(g.gamma);
+    d.theta.push(g.theta); d.vega.push(g.vega); d.rho.push(g.rho);
+  });
+  return d;
+}
+
+function buildVsSpot(){
+  const {sig,T}=getParams();
+  const tl=optType==='call'?'Call':'Put';
+  const Tdays=Math.round(T*365);
+  const xl=SPOTS.map(String);
+  const d=calcVsSpot();
+
+  document.getElementById('tab-vs-spot').innerHTML=`
+    <div class="chart-card delta">
+      <div class="chart-title">Δ Delta — ${tl}</div>
+      <div class="chart-subtitle" id="sub-delta">∂V/∂S · T = ${Tdays}d · σ = ${Math.round(sig*100)}%</div>
+      <canvas id="c_delta" height="240"></canvas>
+      <div class="note-box">${optType==='call'
+        ?'<strong>Call delta ∈ [0,1].</strong> ATM ≈ 0.5. The S-curve shape is the normal CDF — steepness governed by <span class="hi">σ√T</span>. Higher vol or more time widens the curve, making delta less sensitive to spot.'
+        :'<strong>Put delta ∈ [−1,0].</strong> |Δ_put| = 1 − Δ_call by put-call parity. As S → 0, put delta → −1 (certain to expire ITM). Both calls and puts converge to 0/±1 as T → 0.'}</div>
+    </div>
+    <div class="chart-card gamma">
+      <div class="chart-title">Γ Gamma</div>
+      <div class="chart-subtitle">∂Δ/∂S = ∂²V/∂S² · identical for calls and puts</div>
+      <canvas id="c_gamma" height="240"></canvas>
+      <div class="note-box"><strong>Peaks ATM</strong> — φ(d₁)/(Sσ√T). Scales as 1/σ√T at-the-money: lower vol or shorter time → taller, narrower spike. <strong>Long gamma = profits from large realized moves.</strong></div>
+    </div>
+    <div class="chart-card theta">
+      <div class="chart-title">Θ Theta — ${tl}</div>
+      <div class="chart-subtitle">Time decay per calendar day</div>
+      <canvas id="c_theta" height="240"></canvas>
+      <div class="note-box"><strong>Mirrors gamma</strong> — BS PDE: <span class="hi">Θ ≈ −½σ²S²Γ</span> when r ≈ 0. Most negative ATM. Long gamma always costs theta; short gamma always earns it.</div>
+    </div>
+    <div class="chart-card vega">
+      <div class="chart-title">ν Vega</div>
+      <div class="chart-subtitle">P&L per +1% move in implied vol · same for calls and puts</div>
+      <canvas id="c_vega" height="240"></canvas>
+      <div class="note-box"><strong>ν = Sφ(d₁)√T</strong> — scales with √T (opposite to gamma). Short-dated ATM = <strong>gamma play</strong>. Long-dated ATM = <strong>vega play</strong>. Drag σ or T to see the shape change.</div>
+    </div>
+    <div class="chart-card rho">
+      <div class="chart-title">ρ Rho — ${tl}</div>
+      <div class="chart-subtitle">P&L per +1% move in risk-free rate</div>
+      <canvas id="c_rho" height="240"></canvas>
+      <div class="note-box">${optType==='call'
+        ?'<strong>Call ρ > 0</strong>: higher rates raise the forward, benefiting calls. Effect scales with T — negligible for short-dated options, meaningful for LEAPS.'
+        :'<strong>Put ρ < 0</strong>: higher rates lower put value. Small effect for short-dated positions.'}</div>
+    </div>`;
+
+  makeChart('c_delta',xl,[ds('Delta',d.delta,COLORS.delta)],'Delta','Spot (S)');
+  makeChart('c_gamma',xl,[ds('Gamma',d.gamma,COLORS.gamma)],'Gamma','Spot (S)');
+  makeChart('c_theta',xl,[ds('Theta',d.theta,COLORS.theta)],'Theta ($/day)','Spot (S)');
+  makeChart('c_vega', xl,[ds('Vega', d.vega, COLORS.vega)], 'Vega (per 1% σ)','Spot (S)');
+  makeChart('c_rho',  xl,[ds('Rho',  d.rho,  COLORS.rho)],  'Rho (per 1% r)','Spot (S)');
+}
+
+function patchVsSpot(){
+  const {sig,T}=getParams();
+  const Tdays=Math.round(T*365);
+  const el=document.getElementById('sub-delta');
+  if(el) el.textContent=`∂V/∂S · T = ${Tdays}d · σ = ${Math.round(sig*100)}%`;
+  const d=calcVsSpot();
+  patchChart('c_delta',[{data:d.delta}]);
+  patchChart('c_gamma',[{data:d.gamma}]);
+  patchChart('c_theta',[{data:d.theta}]);
+  patchChart('c_vega', [{data:d.vega}]);
+  patchChart('c_rho',  [{data:d.rho}]);
+}
+
+/* ── VS TIME ────────────────────────────────────────────────────────────── */
+function calcVsTime(){
+  const {K,sig,r}=getParams();
+  const mnS=[K*0.85,K,K*1.15].map(v=>Math.round(v));
+  const d={};
+  ['delta','gamma','theta','vega'].forEach(g=>{
+    d[g]=mnS.map(Sv=>TIMES.map(T=>greeks(Sv,K,T,r,sig,optType)[g]));
+  });
+  return d;
+}
+
+function buildVsTime(){
+  const {K}=getParams();
+  const mnS=[K*0.85,K,K*1.15].map(v=>Math.round(v));
+  const mnLabels_c=['OTM (85%)','ATM','ITM (115%)'];
+  const mnLabels_p=['ITM (85%)','ATM','OTM (115%)'];
+  const mLabels=optType==='call'?mnLabels_c:mnLabels_p;
+  const legHTML=mLabels.map((l,i)=>`<span class="legend-item"><span class="legend-swatch" style="background:${MN_COLORS[i]}"></span>${l}</span>`).join('');
+  const xl=TIMES.map(t=>t<0.1?(t*365).toFixed(0)+'d':(t*12).toFixed(1)+'m');
+  const d=calcVsTime();
+
+  document.getElementById('tab-vs-time').innerHTML=`
+    <div class="chart-card delta">
+      <div class="chart-title">Δ Delta vs Time to Expiry</div>
+      <div class="chart-subtitle">Convergence to 0 or ±1 as T → 0</div>
+      <div class="legend-strip">${legHTML}</div>
+      <canvas id="c_delta_t" height="240"></canvas>
+      <div class="note-box">As T→0, σ√T→0: ITM delta → ±1, OTM delta → 0, ATM stays ≈ 0.5. <strong>More time = more uncertainty = delta pulled toward 0.5.</strong></div>
+    </div>
+    <div class="chart-card gamma">
+      <div class="chart-title">Γ Gamma vs Time to Expiry</div>
+      <div class="chart-subtitle">ATM gamma explosion near expiry</div>
+      <div class="legend-strip">${legHTML}</div>
+      <canvas id="c_gamma_t" height="240"></canvas>
+      <div class="note-box">ATM gamma ∝ <span class="hi">1/√T</span> → explodes near expiry. <strong>Pin risk</strong>: tiny spot moves cause huge delta swings near expiration. OTM/ITM gamma → 0 as delta is already settled.</div>
+    </div>
+    <div class="chart-card theta">
+      <div class="chart-title">Θ Theta vs Time to Expiry</div>
+      <div class="chart-subtitle">Accelerating time decay</div>
+      <div class="legend-strip">${legHTML}</div>
+      <canvas id="c_theta_t" height="240"></canvas>
+      <div class="note-box">ATM theta ∝ <span class="hi">−1/√T</span> — mirrors gamma. Short-dated ATM options lose value fastest. The gamma–theta tradeoff is constant: you cannot have one without the other.</div>
+    </div>
+    <div class="chart-card vega">
+      <div class="chart-title">ν Vega vs Time to Expiry</div>
+      <div class="chart-subtitle">Vol sensitivity grows with time</div>
+      <div class="legend-strip">${legHTML}</div>
+      <canvas id="c_vega_t" height="240"></canvas>
+      <div class="note-box">Vega ∝ <span class="hi">√T</span> — opposite to gamma. More time = more vol sensitivity. A straddle's character flips: <strong>short-dated = gamma bet, long-dated = vol bet.</strong></div>
+    </div>`;
+
+  ['delta','gamma','theta','vega'].forEach(g=>{
+    const dsets=mnS.map((_,i)=>ds(mLabels[i],d[g][i],MN_COLORS[i]));
+    const yl=g==='theta'?'Theta ($/day)':g==='vega'?'Vega (per 1% σ)':g.charAt(0).toUpperCase()+g.slice(1);
+    makeChart(`c_${g}_t`,xl,dsets,yl,'Time to Expiry');
+  });
+}
+
+function patchVsTime(){
+  const d=calcVsTime();
+  ['delta','gamma','theta','vega'].forEach(g=>{
+    patchChart(`c_${g}_t`,d[g].map((arr,i)=>({data:arr})));
+  });
+}
+
+/* ── MULTI-T SURFACES ───────────────────────────────────────────────────── */
+function calcSurfaces(){
+  const {K,sig,r}=getParams();
+  const d={};
+  ['delta','gamma','theta','vega'].forEach(g=>{
+    d[g]=T_VALUES.map(T=>SPOTS.map(S=>greeks(S,K,T,r,sig,optType)[g]));
+  });
+  return d;
+}
+
+function buildSurfaces(){
+  const tl=optType==='call'?'Call':'Put';
+  const legHTML=T_LABELS.map((l,i)=>`<span class="legend-item"><span class="legend-swatch" style="background:${T_COLORS[i]}"></span>${l}</span>`).join('');
+  const xl=SPOTS.map(String);
+  const d=calcSurfaces();
+
+  document.getElementById('tab-surfaces').innerHTML=`
+    <div class="chart-card delta">
+      <div class="chart-title">Δ Delta vs Spot — Multi-T (${tl})</div>
+      <div class="chart-subtitle">S-curve sharpens into a step function as T → 0</div>
+      <div class="legend-strip">${legHTML}</div>
+      <canvas id="c_delta_s" height="240"></canvas>
+      <div class="note-box">The slope of the delta curve at any point <em>is</em> gamma. Watch short-dated lines become nearly vertical at strike. Drag σ to see how vol widens or narrows the transition.</div>
+    </div>
+    <div class="chart-card gamma">
+      <div class="chart-title">Γ Gamma vs Spot — Multi-T</div>
+      <div class="chart-subtitle">From broad hump to narrow spike</div>
+      <div class="legend-strip">${legHTML}</div>
+      <canvas id="c_gamma_s" height="240"></canvas>
+      <div class="note-box"><strong>Most important chart.</strong> Short T = tall narrow spike (hard to hedge). Long T = low wide hump (manageable). The area under each curve relates to total delta change.</div>
+    </div>
+    <div class="chart-card theta">
+      <div class="chart-title">Θ Theta vs Spot — Multi-T (${tl})</div>
+      <div class="chart-subtitle">Mirror image of gamma — BS PDE enforces this</div>
+      <div class="legend-strip">${legHTML}</div>
+      <canvas id="c_theta_s" height="240"></canvas>
+      <div class="note-box">Θ ≈ −½σ²S²Γ: theta is structurally identical to gamma, inverted. Short-dated ATM has maximum time decay AND maximum convexity.</div>
+    </div>
+    <div class="chart-card vega">
+      <div class="chart-title">ν Vega vs Spot — Multi-T</div>
+      <div class="chart-subtitle">Vega grows with time — opposite to gamma</div>
+      <div class="legend-strip">${legHTML}</div>
+      <canvas id="c_vega_s" height="240"></canvas>
+      <div class="note-box">Unlike gamma, vega is tallest for <strong>long T</strong> (ν = Sφ(d₁)√T). Long-dated straddles are vol positions. Short-dated straddles are gamma positions.</div>
+    </div>`;
+
+  ['delta','gamma','theta','vega'].forEach(g=>{
+    const dsets=T_VALUES.map((T,i)=>ds(`T=${T_LABELS[i]}`,d[g][i],T_COLORS[i],i<2));
+    const yl=g==='theta'?'Theta ($/day)':g==='vega'?'Vega (per 1% σ)':g.charAt(0).toUpperCase()+g.slice(1);
+    makeChart(`c_${g}_s`,xl,dsets,yl,'Spot Price (S)');
+  });
+}
+
+function patchSurfaces(){
+  const d=calcSurfaces();
+  ['delta','gamma','theta','vega'].forEach(g=>{
+    patchChart(`c_${g}_s`,d[g].map(arr=>({data:arr})));
+  });
+}
+
+/* ── PAYOFF & P&L ───────────────────────────────────────────────────────── */
+function calcPayoff(){
+  const {S:spotNow,K,sig,r,T}=getParams();
+  const spots=[]; for(let s=Math.max(10,K-60);s<=K+60;s++) spots.push(s);
+  const premium=greeks(spotNow,K,T,r,sig,optType).price;
+  const halfT=Math.max(T/2,1/365);
+  const expiryPayoff=spots.map(S=>optType==='call'?Math.max(S-K,0):Math.max(K-S,0));
+  const expiryPnl=expiryPayoff.map(p=>p-premium);
+  const fairValue=spots.map(S=>greeks(S,K,T,r,sig,optType).price);
+  const fairPnl=fairValue.map(v=>v-premium);
+  const halfValue=spots.map(S=>greeks(S,K,halfT,r,sig,optType).price);
+  const halfPnl=halfValue.map(v=>v-premium);
+  const multiValues=T_VALUES.map(T=>spots.map(S=>greeks(S,K,T,r,sig,optType).price));
+  const intrinsic=spots.map(S=>optType==='call'?Math.max(S-K,0):Math.max(K-S,0));
+  const zero=spots.map(()=>0);
+  return{spots,premium,halfT,expiryPayoff,expiryPnl,fairPnl,halfPnl,multiValues,intrinsic,zero,spotNow,T};
+}
+
+function buildPayoff(){
+  const {S:spotNow,K,sig,r,T}=getParams();
+  const c=calcPayoff();
+  const xl=c.spots.map(String);
+  const tl=optType==='call'?'Call':'Put';
+  const Tdays=Math.round(c.T*365);
+  const halfTdays=Math.round(c.halfT*365);
+  const be=optType==='call'?(K+c.premium).toFixed(2):(K-c.premium).toFixed(2);
+
+  document.getElementById('tab-payoff').innerHTML=`
+    <div class="chart-card payoff">
+      <div class="chart-title">Payoff at Expiry — Long ${tl}</div>
+      <div class="chart-subtitle" id="sub-payoff">Gross payoff vs net P&L after ${c.premium.toFixed(2)} premium</div>
+      <canvas id="c_payoff" height="240"></canvas>
+      <div class="note-box" id="note-payoff"><strong>Breakeven at expiry: ${be}.</strong> Net P&L = payoff − ${c.premium.toFixed(2)}. Maximum loss is the premium. ${optType==='call'?'Unlimited upside.':'Capped upside at K.'}</div>
+    </div>
+    <div class="chart-card pnl">
+      <div class="chart-title">P&L vs Spot — Time Slices</div>
+      <div class="chart-subtitle" id="sub-pnl">Purchased at spot = ${spotNow}, premium = ${c.premium.toFixed(2)}</div>
+      <canvas id="c_pnl" height="240"></canvas>
+      <div class="note-box" id="note-pnl">
+        <strong style="color:#3b9eff">Blue:</strong> now (T = ${Tdays}d) &nbsp;|&nbsp;
+        <strong style="color:#f5c842">Yellow:</strong> half-life (T = ${halfTdays}d) &nbsp;|&nbsp;
+        <strong style="color:#ff5f6d">Red:</strong> at expiry. <strong>Time decay erodes the curve toward the kinked expiry line.</strong>
+      </div>
+    </div>
+    <div class="chart-card wide">
+      <div class="chart-title">Option Price vs Spot — Multiple Expiries</div>
+      <div class="chart-subtitle">Fair value converges to intrinsic hockey-stick as T → 0</div>
+      <canvas id="c_value_t" height="200"></canvas>
+      <div class="note-box">Intrinsic value is the kinked floor; time value is the smooth excess above it. Drag σ to see how vol inflates or deflates time value uniformly across all expiries.</div>
+    </div>`;
+
+  makeChart('c_payoff',xl,[
+    ds('Payoff',c.expiryPayoff,'#3b9eff',false,false),
+    ds('Net P&L',c.expiryPnl,'#ff5f6d',false,true),
+    ds('Zero',c.zero,'#1c2a42',true)
+  ],'Value ($)','Spot at Expiry (S)');
+
+  makeChart('c_pnl',xl,[
+    ds(`Now (T=${Tdays}d)`,c.fairPnl,'#3b9eff',false,false),
+    ds(`Half-life (T=${halfTdays}d)`,c.halfPnl,'#f5c842',false,false),
+    ds('Expiry',c.expiryPnl,'#ff5f6d',false,false),
+    ds('Zero',c.zero,'#1c2a42',true)
+  ],'P&L ($)','Spot Price (S)');
+
+  const legData=[...T_VALUES.map((T,i)=>ds(`T=${T_LABELS[i]}`,c.multiValues[i],T_COLORS[i],i<2))];
+  legData.push(ds('Intrinsic',c.intrinsic,'#ffffff',true));
+  makeChart('c_value_t',xl,legData,'Option Price ($)','Spot Price (S)');
+}
+
+function patchPayoff(){
+  const {K}=getParams();
+  const c=calcPayoff();
+  const xl=c.spots.map(String);
+  const Tdays=Math.round(c.T*365);
+  const halfTdays=Math.round(c.halfT*365);
+  const be=optType==='call'?(K+c.premium).toFixed(2):(K-c.premium).toFixed(2);
+
+  // Update dynamic subtitles/notes
+  const sub1=document.getElementById('sub-payoff');
+  if(sub1) sub1.textContent=`Gross payoff vs net P&L after ${c.premium.toFixed(2)} premium`;
+  const note1=document.getElementById('note-payoff');
+  if(note1) note1.innerHTML=`<strong>Breakeven at expiry: ${be}.</strong> Net P&L = payoff − ${c.premium.toFixed(2)}. Maximum loss is the premium. ${optType==='call'?'Unlimited upside.':'Capped upside at K.'}`;
+  const sub2=document.getElementById('sub-pnl');
+  if(sub2) sub2.textContent=`Purchased at spot = ${c.spotNow}, premium = ${c.premium.toFixed(2)}`;
+  const note2=document.getElementById('note-pnl');
+  if(note2) note2.innerHTML=`<strong style="color:#3b9eff">Blue:</strong> now (T = ${Tdays}d) &nbsp;|&nbsp; <strong style="color:#f5c842">Yellow:</strong> half-life (T = ${halfTdays}d) &nbsp;|&nbsp; <strong style="color:#ff5f6d">Red:</strong> at expiry. <strong>Time decay erodes the curve toward the kinked expiry line.</strong>`;
+
+  // Update x-axis labels if K changed (spots range shifts)
+  ['c_payoff','c_pnl','c_value_t'].forEach(id=>{
+    if(charts[id]) charts[id].data.labels=xl;
+  });
+
+  patchChart('c_payoff',[{data:c.expiryPayoff},{data:c.expiryPnl},{data:c.zero}]);
+  patchChart('c_pnl',[{data:c.fairPnl},{data:c.halfPnl},{data:c.expiryPnl},{data:c.zero}]);
+  const legData=[...c.multiValues.map(arr=>({data:arr})),{data:c.intrinsic}];
+  patchChart('c_value_t',legData);
+}
+
+/* ── BOOT ───────────────────────────────────────────────────────────────── */
+updateLabels();
+updateMetrics();
+buildCurrentTab();
+</script>
+</body>
+</html>

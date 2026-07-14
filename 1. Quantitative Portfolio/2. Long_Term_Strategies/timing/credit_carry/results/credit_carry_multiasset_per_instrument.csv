@@ -1,0 +1,7 @@
+ticker,n_hold_months,sharpe,t_stat,t_p,boot_p5,perm_p,gates_pass,verdict,basket
+TLT,38,-0.3105,-0.5453,0.7056,-1.3323,0.714,0,FAIL,bonds_us
+SHY,67,0.0588,0.138,0.4453,-0.6246,0.446,0,FAIL,bonds_us
+TIP,72,0.1288,0.3134,0.3774,-0.4924,0.4,0,FAIL,bonds_us
+BIL,68,1.9178,4.5315,0.0,1.2669,0.0,3,PASS,bonds_us
+LQD,73,0.0053,0.0131,0.4948,-0.7299,0.497,0,FAIL,bonds_us
+HYG,79,0.1431,0.3648,0.3581,-0.4634,0.371,0,FAIL,bonds_us

@@ -1,0 +1,40 @@
+{
+  "strategy": "REIT Dividend Carry",
+  "instruments": [
+    "CRSP_SP500_incomeReturn",
+    "DGS10_FRED"
+  ],
+  "portfolio": "long_term",
+  "period": "2005-12-31 -> 2025-02-28",
+  "params": {
+    "signal": "annualized CRSP income return vs 24m avg (REIT carry proxy)",
+    "rules": "yield>avg\u2192100%, yield<avg*0.70\u219250%, else 75%",
+    "reit_proxy": "Mkt+0.5*HML (high B/M = REIT characteristic)",
+    "tc_bps": "5 one-way",
+    "regime_counts": {
+      "full_100pct": 2,
+      "underweight_50pct": 221,
+      "neutral_75pct": 8
+    },
+    "data_notes": "VNQ/XLRE blocked (no internet). CRSP SP500 income return used as dividend yield proxy. FF Mkt+HML as REIT sector proxy."
+  },
+  "trades": 231,
+  "stats": {
+    "cagr": 5.44,
+    "total_return": 176.0,
+    "sharpe_daily": 0.4996,
+    "max_dd": -33.08
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.6084,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.4811,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "strategy": "gtaa",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "sma_window": 300,
+    "freq": "6ME"
+  },
+  "sleeves": {
+    "us_sectors": {
+      "simple_85": {
+        "sharpe": 0.8446,
+        "cagr": 13.62,
+        "max_dd": -27.39,
+        "n_trades": 48,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.8459,
+        "cagr": 16.05,
+        "max_dd": -31.99,
+        "n_trades": 48,
+        "allocation": 1.0
+      }
+    },
+    "bonds_us": {
+      "simple_85": {
+        "sharpe": 0.5362,
+        "cagr": 3.29,
+        "max_dd": -15.8,
+        "n_trades": 33,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.5354,
+        "cagr": 3.84,
+        "max_dd": -18.52,
+        "n_trades": 33,
+        "allocation": 1.0
+      }
+    },
+    "commodities": {
+      "simple_85": {
+        "sharpe": 0.4826,
+        "cagr": 9.54,
+        "max_dd": -48.09,
+        "n_trades": 32,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.4843,
+        "cagr": 10.68,
+        "max_dd": -54.38,
+        "n_trades": 32,
+        "allocation": 1.0
+      }
+    },
+    "real_assets": {
+      "simple_85": {
+        "sharpe": 0.7519,
+        "cagr": 12.76,
+        "max_dd": -36.37,
+        "n_trades": 16,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.7536,
+        "cagr": 14.98,
+        "max_dd": -42.43,
+        "n_trades": 16,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 4,
+      "sleeves": [
+        "us_sectors",
+        "bonds_us",
+        "commodities",
+        "real_assets"
+      ],
+      "sharpe": 0.8097,
+      "cagr": 9.69,
+      "max_dd": -20.81
+    },
+    "simple_100": {
+      "n_sleeves": 4,
+      "sleeves": [
+        "us_sectors",
+        "bonds_us",
+        "commodities",
+        "real_assets"
+      ],
+      "sharpe": 0.8054,
+      "cagr": 11.35,
+      "max_dd": -24.39
+    }
+  }
+}

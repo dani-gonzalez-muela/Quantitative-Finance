@@ -1,0 +1,44 @@
+{
+  "strategy": "Credit Carry v2 (Multi-Asset)",
+  "period": "2016-01-01->2026-04-01",
+  "benchmark": "IEF",
+  "grid": {
+    "mom_windows": [
+      3,
+      6,
+      9,
+      12,
+      18,
+      24
+    ],
+    "min_spreads": [
+      -0.02,
+      0.0,
+      0.02
+    ],
+    "n_combos": 18
+  },
+  "baskets": {
+    "bonds_us": {
+      "instruments": [
+        "TLT",
+        "SHY",
+        "TIP",
+        "BIL",
+        "LQD",
+        "HYG"
+      ],
+      "n_instruments": 6,
+      "pass_count_at_canon": 2,
+      "binomial_pvalue": 0.032774,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "mom_window": 3,
+        "min_spread": 0.0,
+        "benchmark": "IEF"
+      },
+      "canonical_median_sharpe": 0.2565
+    }
+  }
+}

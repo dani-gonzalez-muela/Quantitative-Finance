@@ -1,0 +1,107 @@
+{
+  "us_equity_broad": {
+    "window_size": 5,
+    "atr_percent": 10.0,
+    "threshold": 0.01,
+    "binom_p": 0.30166270390624994,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 0.1815208014817699,
+      "boot5": -1.0496682633692125,
+      "perm_p": 0.169
+    },
+    "n_tickers": 7,
+    "k_significant": 1
+  },
+  "us_factor": {
+    "window_size": 5,
+    "atr_percent": 10.0,
+    "threshold": 0.0,
+    "binom_p": 0.3365795687109375,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -3.3355818946350473,
+      "perm_p": 0.66
+    },
+    "n_tickers": 8,
+    "k_significant": 1
+  },
+  "us_sectors": {
+    "window_size": 5,
+    "atr_percent": 10.0,
+    "threshold": 0.02,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -16.89718223624271,
+      "perm_p": 1.0
+    },
+    "n_tickers": 11,
+    "k_significant": 0
+  },
+  "bonds_us": {
+    "window_size": 15,
+    "atr_percent": 10.0,
+    "threshold": 0.02,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -14.435524864792479,
+      "perm_p": 1.0
+    },
+    "n_tickers": 5,
+    "k_significant": 0
+  },
+  "commodities": {
+    "window_size": 15,
+    "atr_percent": 10.0,
+    "threshold": 0.0,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -10.753376687012194,
+      "perm_p": 1.0
+    },
+    "n_tickers": 4,
+    "k_significant": 0
+  },
+  "em_regional": {
+    "window_size": 5,
+    "atr_percent": 10.0,
+    "threshold": 0.0,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -14.150487128627628,
+      "perm_p": 1.0
+    },
+    "n_tickers": 4,
+    "k_significant": 0
+  },
+  "intl_liquid": {
+    "window_size": 15,
+    "atr_percent": 10.0,
+    "threshold": 0.0,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -14.78179493150272,
+      "perm_p": 1.0
+    },
+    "n_tickers": 5,
+    "k_significant": 0
+  }
+}

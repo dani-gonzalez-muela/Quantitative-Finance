@@ -1,0 +1,33 @@
+{
+  "strategy": "Overnight Premium",
+  "instruments": [
+    "SP500_CRSP"
+  ],
+  "portfolio": "long_term",
+  "period": "2000-01-03 -> 2025-12-31",
+  "params": {
+    "overnight_fraction": 0.65,
+    "signal": "always long overnight; cash intraday",
+    "tc_bps": "5 one-way per day",
+    "data_notes": "CRSP SP500 daily returns. Open/close unavailable; overnight fraction ~65% from Cooper et al (2008) literature."
+  },
+  "trades": 311,
+  "stats": {
+    "cagr": 6.35,
+    "total_return": 394.87,
+    "sharpe_daily": 0.5555,
+    "max_dd": -38.29
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.6939,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.5715,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

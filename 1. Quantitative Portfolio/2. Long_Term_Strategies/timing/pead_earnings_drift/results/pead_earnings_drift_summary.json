@@ -1,0 +1,36 @@
+{
+  "strategy": "PEAD - Post-Earnings Announcement Drift",
+  "instruments": [
+    "SP500_CRSP",
+    "Compustat_Q"
+  ],
+  "portfolio": "long_term",
+  "period": "1990-02-28 -> 2025-06-30",
+  "params": {
+    "signal": "SUE = (epspxq - epspxq_lag4) / rolling_std_8q",
+    "portfolio": "long top-quartile SUE after earnings announcement",
+    "hold": "1 month",
+    "tc_bps": "5 one-way",
+    "universe": "S&P 500 via CRSP + CCM bridge",
+    "data_notes": "Compustat quarterly 1.3M rows (~50% coverage due to ZIP streaming limit). Full file is 5.4GB uncompressed."
+  },
+  "trades": 425,
+  "stats": {
+    "cagr": 11.87,
+    "total_return": 5159.66,
+    "sharpe_daily": 0.6119,
+    "max_dd": -47.23
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.7549,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.6833,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

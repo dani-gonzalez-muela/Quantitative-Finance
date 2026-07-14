@@ -1,0 +1,165 @@
+{
+  "us_equity_broad": {
+    "lookback": 21,
+    "vol_mult": 1.5,
+    "median_sharpe": 0.33774504913327186,
+    "binom_p": 0.0001935781249999824,
+    "binom_pass": true,
+    "gate_pass": true,
+    "gate_stats": {
+      "t_p": 0.009105319663525591,
+      "boot5": 1.0381528854073856,
+      "perm_p": 0.015
+    },
+    "n_tickers": 7,
+    "k_significant": 4,
+    "ticker_sharpes": {
+      "SPY": 0.7605743188837634,
+      "QQQ": 1.3493364014053293,
+      "IWM": -0.028989587838608118,
+      "DIA": 0.21042819490965575,
+      "MDY": 0.02668801045095249,
+      "IVV": 0.8280949166991642,
+      "VOO": 0.8209322422266723
+    }
+  },
+  "us_factor": {
+    "lookback": 8,
+    "vol_mult": 2.0,
+    "median_sharpe": -0.6700329605751096,
+    "binom_p": 0.3365795687109375,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 0.4733925518449524,
+      "boot5": -2.129047911989229,
+      "perm_p": 0.458
+    },
+    "n_tickers": 8,
+    "k_significant": 1,
+    "ticker_sharpes": {
+      "IWF": 0.24838952079947704,
+      "IWD": -0.12297542130469831,
+      "MTUM": 0.5338293247855125,
+      "USMV": -0.17235016183491392,
+      "VTV": -0.13906293204753833,
+      "VUG": -0.25320224435353983,
+      "DVY": -0.07897789991359062,
+      "QUAL": -0.007523407125570396
+    }
+  },
+  "us_sectors": {
+    "lookback": 21,
+    "vol_mult": 2.0,
+    "median_sharpe": -0.9501179416269001,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -9.056047174544949,
+      "perm_p": 1.0
+    },
+    "n_tickers": 11,
+    "k_significant": 0,
+    "ticker_sharpes": {
+      "XLK": 0.23905972974276496,
+      "XLC": -0.013110418042892584,
+      "XLI": -0.5248513088166177,
+      "XLV": -0.13000133056900068,
+      "XLY": -0.132342275668045,
+      "XLF": -1.2292341336761854,
+      "XLE": -1.1870884306202627,
+      "XLU": -1.0018813358738765,
+      "XLB": -0.8181733115684606,
+      "XLP": -0.4314918338413462,
+      "XLRE": -0.8459926983699758
+    }
+  },
+  "bonds_us": {
+    "lookback": 21,
+    "vol_mult": 2.0,
+    "median_sharpe": -1.2033679386579061,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -10.063253838005195,
+      "perm_p": 1.0
+    },
+    "n_tickers": 5,
+    "k_significant": 0,
+    "ticker_sharpes": {
+      "TLT": -0.4644132812036054,
+      "IEF": -0.6350648506202335,
+      "SHY": -4.574668908811601,
+      "HYG": -1.3062457766373647,
+      "LQD": -0.40143345100086125
+    }
+  },
+  "commodities": {
+    "lookback": 21,
+    "vol_mult": 2.0,
+    "median_sharpe": -0.30017980246415593,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -3.0695092408499756,
+      "perm_p": 0.705
+    },
+    "n_tickers": 4,
+    "k_significant": 0,
+    "ticker_sharpes": {
+      "GLD": -0.018094298764511234,
+      "SLV": -0.7409050645959419,
+      "USO": -0.010275145467927039,
+      "GDX": 0.3610384558121567
+    }
+  },
+  "em_regional": {
+    "lookback": 14,
+    "vol_mult": 2.0,
+    "median_sharpe": -1.154940754588691,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -5.777094666629427,
+      "perm_p": 0.99
+    },
+    "n_tickers": 4,
+    "k_significant": 0,
+    "ticker_sharpes": {
+      "EEM": -0.8698834957120989,
+      "EWZ": -0.38426766866723927,
+      "INDA": -0.7276829282858346,
+      "EWW": -0.20666751353220722
+    }
+  },
+  "intl_liquid": {
+    "lookback": 14,
+    "vol_mult": 2.0,
+    "median_sharpe": -0.7253768625168301,
+    "binom_p": 1.0,
+    "binom_pass": false,
+    "gate_pass": false,
+    "gate_stats": {
+      "t_p": 1.0,
+      "boot5": -5.214689512069085,
+      "perm_p": 0.958
+    },
+    "n_tickers": 5,
+    "k_significant": 0,
+    "ticker_sharpes": {
+      "EFA": 0.08676774829229572,
+      "EZU": -0.2179590020656366,
+      "EWJ": -0.054837015589402995,
+      "EWG": -0.6297869907170383,
+      "EWU": -1.2364918709149857
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "strategy": "industry_trend",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "mom_window": 12,
+    "freq": "6ME"
+  },
+  "sleeves": {
+    "us_sectors": {
+      "simple_85": {
+        "sharpe": 0.7423,
+        "cagr": 11.88,
+        "max_dd": -29.94,
+        "n_trades": 45,
+        "n_tickers": 11,
+        "top_n": 3,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.7453,
+        "cagr": 13.98,
+        "max_dd": -34.95,
+        "n_trades": 45,
+        "n_tickers": 11,
+        "top_n": 3,
+        "allocation": 1.0
+      }
+    },
+    "us_factor": {
+      "simple_85": {
+        "sharpe": 0.6849,
+        "cagr": 10.9,
+        "max_dd": -27.62,
+        "n_trades": 30,
+        "n_tickers": 7,
+        "top_n": 2,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.6896,
+        "cagr": 12.81,
+        "max_dd": -32.24,
+        "n_trades": 30,
+        "n_tickers": 7,
+        "top_n": 2,
+        "allocation": 1.0
+      }
+    },
+    "em_country": {
+      "simple_85": {
+        "sharpe": 0.3188,
+        "cagr": 4.13,
+        "max_dd": -40.26,
+        "n_trades": 50,
+        "n_tickers": 11,
+        "top_n": 3,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.3244,
+        "cagr": 4.74,
+        "max_dd": -46.7,
+        "n_trades": 50,
+        "n_tickers": 11,
+        "top_n": 3,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 3,
+      "sleeves": [
+        "us_sectors",
+        "us_factor",
+        "em_country"
+      ],
+      "sharpe": 0.5961,
+      "cagr": 8.29,
+      "max_dd": -30.5
+    },
+    "simple_100": {
+      "n_sleeves": 3,
+      "sleeves": [
+        "us_sectors",
+        "us_factor",
+        "em_country"
+      ],
+      "sharpe": 0.5999,
+      "cagr": 9.75,
+      "max_dd": -35.58
+    }
+  }
+}

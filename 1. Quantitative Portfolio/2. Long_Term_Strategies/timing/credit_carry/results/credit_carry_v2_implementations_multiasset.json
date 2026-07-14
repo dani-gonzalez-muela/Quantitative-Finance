@@ -1,0 +1,24 @@
+{
+  "strategy": "credit_carry_v2",
+  "n_passing_baskets": 1,
+  "baskets": {
+    "bonds_us": {
+      "canonical_params": {
+        "mom_window": 3,
+        "min_spread": 0.0,
+        "benchmark": "IEF"
+      },
+      "n_instruments": 6,
+      "stats": {
+        "sharpe": 0.5634,
+        "cagr_pct": 1.5,
+        "max_dd_pct": -6.43
+      }
+    }
+  },
+  "combined_stats": {
+    "sharpe": 0.5634,
+    "cagr_pct": 1.5,
+    "max_dd_pct": -6.43
+  }
+}

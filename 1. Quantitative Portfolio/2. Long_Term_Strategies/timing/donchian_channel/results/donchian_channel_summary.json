@@ -1,0 +1,29 @@
+{
+  "strategy": "Donchian Channel",
+  "instruments": [
+    "SPY",
+    "QQQ",
+    "IWM"
+  ],
+  "portfolio": "long_term",
+  "period": "2006-01-01 -> 2026-04-01",
+  "params": {
+    "channel_period": 20,
+    "min_hold_days": 30,
+    "stop_loss": -0.08
+  },
+  "trades": 80,
+  "has_stop": true,
+  "significance": {
+    "gross": {
+      "sharpe": 0.9197,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.9197,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

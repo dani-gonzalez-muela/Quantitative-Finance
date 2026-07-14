@@ -1,0 +1,71 @@
+{
+  "strategy": "REIT Dividend Carry (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "yield_window": 12,
+    "avg_window": 24,
+    "low_threshold": 0.7
+  },
+  "data_note": "Carry proxy = ETF total-return trailing returns (CRSP income return unavailable). FRED 10yr yield also unavailable in current session.",
+  "baskets_tested": {
+    "real_assets": [
+      "VNQ",
+      "VNQI",
+      "AMLP",
+      "XLRE"
+    ]
+  },
+  "n_instruments": 4,
+  "passing_instruments": [],
+  "per_instrument": {
+    "VNQ": {
+      "n_months": 90,
+      "sharpe_carry": 0.3762,
+      "sharpe_raw": 0.322,
+      "t_stat": 1.0245,
+      "t_p": 0.1542,
+      "boot_p5": -0.2287,
+      "perm_p": 0.162,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "real_assets"
+    },
+    "VNQI": {
+      "n_months": 90,
+      "sharpe_carry": -0.0115,
+      "sharpe_raw": -0.0034,
+      "t_stat": -0.0312,
+      "t_p": 0.5124,
+      "boot_p5": -0.6116,
+      "perm_p": 0.511,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "real_assets"
+    },
+    "AMLP": {
+      "n_months": 90,
+      "sharpe_carry": 0.4037,
+      "sharpe_raw": 0.3535,
+      "t_stat": 1.0995,
+      "t_p": 0.1373,
+      "boot_p5": -0.2118,
+      "perm_p": 0.163,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "real_assets"
+    },
+    "XLRE": {
+      "n_months": 90,
+      "sharpe_carry": 0.4281,
+      "sharpe_raw": 0.3964,
+      "t_stat": 1.1658,
+      "t_p": 0.1234,
+      "boot_p5": -0.1867,
+      "perm_p": 0.131,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "real_assets"
+    }
+  }
+}

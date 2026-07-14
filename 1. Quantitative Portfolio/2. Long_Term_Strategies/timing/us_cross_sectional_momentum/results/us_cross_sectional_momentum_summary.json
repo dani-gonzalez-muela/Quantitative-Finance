@@ -1,0 +1,35 @@
+{
+  "strategy": "US Cross-Sectional Momentum",
+  "instruments": [
+    "FF_Mkt",
+    "FF_Mom"
+  ],
+  "portfolio": "long_term",
+  "period": "1990-01-31 -> 2026-02-28",
+  "params": {
+    "signal": "ret_12_1 (12-1 month momentum)",
+    "implementation": "Mkt+0.5*Mom (FF factor long-only proxy for top-decile momentum)",
+    "universe": "US stocks (FF universe)",
+    "tc_bps": "5 one-way",
+    "data_notes": "Jensen/Kelly 68GB dataset exceeds RAM; FF Mom factor used as standard proxy per Jegadeesh & Titman (1993)"
+  },
+  "trades": 434,
+  "stats": {
+    "cagr": 13.88,
+    "total_return": 10783.4,
+    "sharpe_daily": 0.7737,
+    "max_dd": -44.78
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.9417,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.862,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

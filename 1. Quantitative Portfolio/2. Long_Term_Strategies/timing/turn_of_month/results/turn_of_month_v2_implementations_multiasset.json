@@ -1,0 +1,35 @@
+{
+  "strategy": "turn_of_month_v2",
+  "n_passing_baskets": 2,
+  "baskets": {
+    "us_equity_broad": {
+      "canonical_params": {
+        "n_before": 5,
+        "n_after": 5
+      },
+      "n_instruments": 4,
+      "stats": {
+        "sharpe": 0.7464,
+        "cagr_pct": 7.84,
+        "max_dd_pct": -19.7
+      }
+    },
+    "us_sectors": {
+      "canonical_params": {
+        "n_before": 5,
+        "n_after": 5
+      },
+      "n_instruments": 11,
+      "stats": {
+        "sharpe": 0.8543,
+        "cagr_pct": 7.53,
+        "max_dd_pct": -15.19
+      }
+    }
+  },
+  "combined_stats": {
+    "sharpe": 0.8034,
+    "cagr_pct": 7.68,
+    "max_dd_pct": -17.51
+  }
+}

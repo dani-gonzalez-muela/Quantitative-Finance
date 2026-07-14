@@ -1,0 +1,41 @@
+{
+  "strategy": "Bond Duration Carry",
+  "instruments": [
+    "20yr_bond_proxy",
+    "10yr_bond_proxy",
+    "2yr_bond_proxy"
+  ],
+  "portfolio": "long_term",
+  "period": "2016-02-29 -> 2025-07-31",
+  "params": {
+    "signal": "DFII10 (synthetic) + T10Y2Y slope",
+    "rules": "ry>1%+steep->long20yr, ry>0->10yr, ry<-0.5%->2yr",
+    "duration_model": "-dur*dY/100 + carry",
+    "tc_bps": "5 one-way",
+    "regime_counts": {
+      "mid": 85,
+      "short": 26,
+      "long": 3,
+      "unknown": 1
+    }
+  },
+  "trades": 114,
+  "stats": {
+    "cagr": 0.69,
+    "total_return": 6.73,
+    "sharpe_daily": 0.0922,
+    "max_dd": -21.76
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.1342,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    },
+    "net": {
+      "sharpe": -0.0407,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    }
+  }
+}

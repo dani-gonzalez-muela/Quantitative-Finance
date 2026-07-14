@@ -1,0 +1,7 @@
+ticker,bb_period,bb_std,hold_days,best_sharpe
+IWF,10,2.0,30,1.3354
+IWD,50,2.0,0,0.8074
+USMV,20,2.5,0,0.9921
+MTUM,20,2.5,0,1.0529
+PKW,20,2.0,30,0.8108
+DVY,20,2.0,0,0.756

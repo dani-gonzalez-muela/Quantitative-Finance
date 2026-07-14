@@ -1,0 +1,71 @@
+{
+  "evrp_boc_sizing_1p0x": {
+    "total_return": 311.4,
+    "cagr": 14.87,
+    "sharpe": 0.85,
+    "max_dd": -33.1,
+    "label": "eVRP+BoC+Sizing 1.0x"
+  },
+  "evrp_boc_sizing_1p5x": {
+    "total_return": 637.0,
+    "cagr": 21.63,
+    "sharpe": 0.85,
+    "max_dd": -46.3,
+    "label": "eVRP+BoC+Sizing 1.5x"
+  },
+  "evrp_boc_sizing_2p0x": {
+    "total_return": 1116.4,
+    "cagr": 27.75,
+    "sharpe": 0.85,
+    "max_dd": -57.5,
+    "label": "eVRP+BoC+Sizing 2.0x"
+  },
+  "spy_1p0x": {
+    "total_return": 308.7,
+    "cagr": 14.8,
+    "sharpe": 0.87,
+    "max_dd": -33.8,
+    "label": "SPY 1.0x"
+  },
+  "spy_1p5x": {
+    "total_return": 632.7,
+    "cagr": 21.56,
+    "sharpe": 0.87,
+    "max_dd": -47.2,
+    "label": "SPY 1.5x"
+  },
+  "spy_2p0x": {
+    "total_return": 1111.7,
+    "cagr": 27.7,
+    "sharpe": 0.87,
+    "max_dd": -58.5,
+    "label": "SPY 2.0x"
+  },
+  "_matched_dd_edges": {
+    "eVRP+BoC+Sizing 1.0x": {
+      "matched_to": "SPY 1.0x",
+      "vix_dd": -33.1,
+      "spy_dd": -33.8,
+      "vix_cagr": 14.87,
+      "spy_cagr": 14.8,
+      "cagr_edge": 0.07
+    },
+    "eVRP+BoC+Sizing 1.5x": {
+      "matched_to": "SPY 1.5x",
+      "vix_dd": -46.3,
+      "spy_dd": -47.2,
+      "vix_cagr": 21.63,
+      "spy_cagr": 21.56,
+      "cagr_edge": 0.07
+    },
+    "eVRP+BoC+Sizing 2.0x": {
+      "matched_to": "SPY 2.0x",
+      "vix_dd": -57.5,
+      "spy_dd": -58.5,
+      "vix_cagr": 27.75,
+      "spy_cagr": 27.7,
+      "cagr_edge": 0.05
+    }
+  },
+  "_recommended": "eVRP+BoC+Sizing 1.0x"
+}

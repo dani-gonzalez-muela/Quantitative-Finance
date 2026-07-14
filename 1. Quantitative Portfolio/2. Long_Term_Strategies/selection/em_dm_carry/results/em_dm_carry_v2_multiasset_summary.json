@@ -1,0 +1,80 @@
+{
+  "strategy": "EM/DM Carry v2 (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "n_boot": 500,
+  "n_combos": 240,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "freq": "6ME",
+    "carry_window": 9,
+    "threshold": 0.05
+  },
+  "canonical_median_sharpe": 1.1874,
+  "binomial_pvalue": 0.05,
+  "binomial_significant": false,
+  "verdict": "NO EVIDENCE OF EFFECT",
+  "baskets": {
+    "em_dm": {
+      "instruments": [
+        "EEM",
+        "INDA",
+        "EWZ",
+        "EWJ",
+        "EWG",
+        "EWU",
+        "EWA",
+        "EWC",
+        "EWP",
+        "EWI",
+        "EWL",
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY"
+      ],
+      "n_instruments": 15,
+      "em_tickers": [
+        "EEM",
+        "INDA",
+        "EWZ",
+        "EWJ",
+        "EWG",
+        "EWU",
+        "EWA",
+        "EWC",
+        "EWP",
+        "EWI",
+        "EWL"
+      ],
+      "dm_tickers": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY"
+      ],
+      "canonical_params": {
+        "top_pct": 0.25,
+        "freq": "6ME",
+        "carry_window": 9,
+        "threshold": 0.05
+      },
+      "canonical_median_sharpe": 1.1874,
+      "canonical_basket_sharpe": 1.1874,
+      "pass_count_at_canon": 1,
+      "n_baskets_tested": 1,
+      "binomial_pvalue": 0.05,
+      "binomial_significant": false,
+      "verdict": "NO EVIDENCE OF EFFECT",
+      "basket_details": {
+        "em_dm": {
+          "t_p": 0.0027,
+          "boot_p5": 0.6809,
+          "perm_p": 0.006,
+          "sharpe": 1.1874,
+          "gates": 3
+        }
+      }
+    }
+  }
+}

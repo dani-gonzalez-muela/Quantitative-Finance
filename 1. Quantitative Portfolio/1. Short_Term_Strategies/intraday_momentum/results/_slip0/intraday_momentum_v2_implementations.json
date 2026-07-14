@@ -1,0 +1,76 @@
+{
+  "starting_capital": 100000,
+  "n_passing_baskets": 1,
+  "n_rescued_tickers": 1,
+  "n_total_instruments": 8,
+  "portfolio": {
+    "simple": {
+      "sharpe": 1.2125,
+      "cagr": 0.0515,
+      "max_dd": -0.0686,
+      "n_instruments": 8
+    },
+    "asset_vol": {
+      "sharpe": 1.6927,
+      "cagr": 0.1629,
+      "max_dd": -0.1124,
+      "n_instruments": 8
+    },
+    "vol_target": {
+      "sharpe": 1.3716,
+      "cagr": 0.08,
+      "max_dd": -0.062,
+      "n_instruments": 8
+    }
+  },
+  "selected_variant": "asset_vol",
+  "selection_criterion": "highest portfolio Sharpe",
+  "instruments": {
+    "baskets": {
+      "us_equity_broad": {
+        "SPY": {
+          "simple": 0.9058,
+          "asset_vol": 1.3155,
+          "vol_target": 1.0652
+        },
+        "QQQ": {
+          "simple": 1.5317,
+          "asset_vol": 1.6996,
+          "vol_target": 1.5812
+        },
+        "IWM": {
+          "simple": 0.2543,
+          "asset_vol": 0.7043,
+          "vol_target": 0.4109
+        },
+        "DIA": {
+          "simple": 0.416,
+          "asset_vol": 0.6249,
+          "vol_target": 0.5454
+        },
+        "MDY": {
+          "simple": 0.1824,
+          "asset_vol": 0.4166,
+          "vol_target": 0.2947
+        },
+        "IVV": {
+          "simple": 0.9822,
+          "asset_vol": 1.3849,
+          "vol_target": 1.1357
+        },
+        "VOO": {
+          "simple": 0.9795,
+          "asset_vol": 1.3767,
+          "vol_target": 1.1298
+        }
+      }
+    },
+    "rescued": {
+      "MTUM": {
+        "simple": 1.731,
+        "asset_vol": 2.0076,
+        "vol_target": 1.7889
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "label": "Bab Long Short",
+  "sleeve": "long_term",
+  "type": "Factor (long/short)",
+  "timeframe": "monthly",
+  "universe": "US equities (beta deciles)",
+  "signal": "Long the low-beta quintile, short the high-beta quintile, scaled beta-neutral.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.342,
+    "cagr_pct": 5.6,
+    "maxdd_pct": -78.19,
+    "months": 358
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Frazzini-Pedersen BAB: long bottom-quintile beta, short top-quintile beta, beta-neutral scaling (capped 3\u00d7). Betas = Vasicek-shrunk (bswa32, Better Market Betas dataset). Monthly, 5bps/side per leg.",
+  "reference": "Frazzini & Pedersen (2014), 'Betting Against Beta'"
+}

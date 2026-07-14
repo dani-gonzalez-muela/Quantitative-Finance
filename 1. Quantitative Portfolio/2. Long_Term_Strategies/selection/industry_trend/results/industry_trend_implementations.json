@@ -1,0 +1,30 @@
+{
+  "strategy": "industry_trend",
+  "canonical_params": {
+    "top_pct": 0.33,
+    "top_n": 3,
+    "mom_window_months": 6,
+    "rebalance_freq": "ME"
+  },
+  "variants": {
+    "simple_85": {
+      "sharpe": 0.75,
+      "cagr": 11.63,
+      "max_dd": -27.91,
+      "allocation": 0.85
+    },
+    "simple_100": {
+      "sharpe": 0.76,
+      "cagr": 13.62,
+      "max_dd": -32.43,
+      "allocation": 1.0
+    },
+    "vol_targeted_10pct": {
+      "sharpe": 0.52,
+      "cagr": 7.98,
+      "max_dd": -43.74,
+      "target_vol": 0.1,
+      "avg_allocation": 0.8078
+    }
+  }
+}

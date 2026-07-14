@@ -1,0 +1,23 @@
+{
+  "label": "Sector Momentum",
+  "sleeve": "long_term",
+  "type": "Trend (cross-sectional)",
+  "timeframe": "monthly",
+  "universe": "10 US sector ETFs",
+  "signal": "Rank sectors by 126-day momentum, hold the top 5.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.891,
+    "cagr_pct": 11.76,
+    "maxdd_pct": -14.84,
+    "months": 96
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Rank 10 sector ETFs by 126-day momentum, hold top 5, periodic rebalance. Basket architecture.",
+  "reference": "Moskowitz & Grinblatt (1999), 'Do Industries Explain Momentum?'"
+}

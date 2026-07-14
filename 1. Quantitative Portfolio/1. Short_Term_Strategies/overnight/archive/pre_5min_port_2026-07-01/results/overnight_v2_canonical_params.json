@@ -1,0 +1,72 @@
+{
+  "us_equity_broad": {
+    "params": {
+      "filter_threshold": 0
+    },
+    "instruments": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "MDY"
+    ],
+    "passes": false
+  },
+  "us_factor": {
+    "params": {
+      "filter_threshold": 0
+    },
+    "instruments": [
+      "IWF",
+      "IWD",
+      "MTUM",
+      "USMV",
+      "DVY",
+      "QUAL"
+    ],
+    "passes": false
+  },
+  "us_sectors": {
+    "params": {
+      "filter_threshold": 0
+    },
+    "instruments": [
+      "XLK",
+      "XLC",
+      "XLI",
+      "XLV",
+      "XLY",
+      "XLF",
+      "XLE",
+      "XLU",
+      "XLB",
+      "XLP",
+      "XLRE"
+    ],
+    "passes": false
+  },
+  "em_regional": {
+    "params": {
+      "filter_threshold": 0
+    },
+    "instruments": [
+      "EEM",
+      "EWZ",
+      "INDA",
+      "EWW"
+    ],
+    "passes": true
+  },
+  "intl_liquid": {
+    "params": {
+      "filter_threshold": 0
+    },
+    "instruments": [
+      "EFA",
+      "EZU",
+      "EWJ",
+      "EWG",
+      "EWU"
+    ],
+    "passes": false
+  }
+}

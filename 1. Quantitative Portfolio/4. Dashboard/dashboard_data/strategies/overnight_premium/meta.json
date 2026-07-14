@@ -1,0 +1,23 @@
+{
+  "label": "Overnight Premium",
+  "sleeve": "long_term",
+  "type": "Overnight anomaly",
+  "timeframe": "daily (overnight hold)",
+  "universe": "US equity ETFs",
+  "signal": "Hold close-to-open every night, flat during the day.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.694,
+    "cagr_pct": 6.51,
+    "maxdd_pct": -34.67,
+    "months": 311
+  },
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3",
+  "description": "Hold close\u2192open every night on daily-bar ETFs (no hyperparameters). Tests the \"overnight premium\" anomaly at DAILY data granularity with 5bps/side.",
+  "reference": "Cooper, Cliff & Gulen (2008), 'Return Differences between Trading and Non-Trading Hours'"
+}

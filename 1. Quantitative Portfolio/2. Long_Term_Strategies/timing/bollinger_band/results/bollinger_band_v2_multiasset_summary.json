@@ -1,0 +1,160 @@
+{
+  "strategy": "Bollinger Band v2 (Multi-Asset)",
+  "period": "2016-01-01 -> 2026-04-01",
+  "tc_bps_one_way": 5,
+  "grid": {
+    "bb_periods": [
+      10,
+      20,
+      30,
+      50
+    ],
+    "bb_stds": [
+      1.5,
+      2.0,
+      2.5
+    ],
+    "hold_days": [
+      0,
+      15,
+      30,
+      45
+    ],
+    "n_combos": 48
+  },
+  "baskets": {
+    "us_equity_broad": {
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY"
+      ],
+      "n_instruments": 4,
+      "expected_false_pos": 0.2,
+      "pass_count_at_canon": 2,
+      "binomial_pvalue": 0.014019,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "bb_period": 10,
+        "bb_std": 2.0,
+        "hold_days": 30
+      },
+      "canonical_median_sharpe": 0.8423,
+      "canonical_mean_sharpe": 0.8079,
+      "canonical_stability": 0.4961,
+      "canonical_consistency": 0.5134,
+      "universality_rate": 0.5,
+      "universality_within": 2,
+      "universality_total": 4,
+      "param_frequency": {
+        "bb_period": {
+          "10": 2,
+          "50": 2
+        },
+        "bb_std": {
+          "2.0": 4
+        },
+        "hold_days": {
+          "0": 2,
+          "30": 2
+        }
+      }
+    },
+    "us_sectors": {
+      "instruments": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "n_instruments": 11,
+      "expected_false_pos": 0.55,
+      "pass_count_at_canon": 8,
+      "binomial_pvalue": 0.0,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "bb_period": 20,
+        "bb_std": 2.5,
+        "hold_days": 0
+      },
+      "canonical_median_sharpe": 0.7994,
+      "canonical_mean_sharpe": 0.7333,
+      "canonical_stability": 0.6608,
+      "canonical_consistency": 0.3771,
+      "universality_rate": 0.1818,
+      "universality_within": 2,
+      "universality_total": 11,
+      "param_frequency": {
+        "bb_period": {
+          "10": 3,
+          "20": 2,
+          "30": 2,
+          "50": 4
+        },
+        "bb_std": {
+          "1.5": 2,
+          "2.0": 6,
+          "2.5": 3
+        },
+        "hold_days": {
+          "0": 6,
+          "30": 3,
+          "45": 2
+        }
+      }
+    },
+    "us_factor": {
+      "instruments": [
+        "IWF",
+        "IWD",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY"
+      ],
+      "n_instruments": 6,
+      "expected_false_pos": 0.3,
+      "pass_count_at_canon": 5,
+      "binomial_pvalue": 2e-06,
+      "binomial_significant": true,
+      "verdict": "STRATEGY EXISTS",
+      "canonical_params": {
+        "bb_period": 50,
+        "bb_std": 2.0,
+        "hold_days": 0
+      },
+      "canonical_median_sharpe": 0.8342,
+      "canonical_mean_sharpe": 0.7817,
+      "canonical_stability": 0.7442,
+      "canonical_consistency": 0.2074,
+      "universality_rate": 0.1667,
+      "universality_within": 1,
+      "universality_total": 6,
+      "param_frequency": {
+        "bb_period": {
+          "10": 1,
+          "20": 4,
+          "50": 1
+        },
+        "bb_std": {
+          "2.0": 4,
+          "2.5": 2
+        },
+        "hold_days": {
+          "0": 4,
+          "30": 2
+        }
+      }
+    }
+  }
+}

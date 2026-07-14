@@ -1,0 +1,1 @@
+# Leftover artifact from Claude session tooling check (mv/rm permission test). Harmless, can be deleted manually.

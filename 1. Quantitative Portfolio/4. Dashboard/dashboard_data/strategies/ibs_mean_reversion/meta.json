@@ -1,0 +1,23 @@
+{
+  "label": "IBS Mean Reversion",
+  "sleeve": "short_term",
+  "type": "Mean Reversion",
+  "timeframe": "daily bars",
+  "universe": "34 instruments, 6/7 baskets",
+  "signal": "Buy IBS<thresh at next open; exit IBS>thresh or stop.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 2.256,
+    "cagr_pct": 13.35,
+    "maxdd_pct": -3.93,
+    "months": 124
+  },
+  "gates_passed": "3/3",
+  "description": "Internal Bar Strength (IBS) mean reversion on daily bars. IBS = (close \u2212 low) / (high \u2212 low). Enters long at next open when IBS < ibs_buy (close near the day's low \u2192 oversold); exits at close when IBS > ibs_sell, or at a fixed stop. Long only, multi-day holds allowed.",
+  "reference": "Pagonidis, 'The IBS Effect: Mean Reversion in Equity ETFs'; multi-asset extension proprietary"
+}

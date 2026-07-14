@@ -1,0 +1,23 @@
+{
+  "label": "US Earnings Momentum",
+  "sleeve": "long_term",
+  "type": "Factor proxy",
+  "timeframe": "monthly",
+  "universe": "FF factors",
+  "signal": "Mkt + 0.4 Mom + 0.2 RMW composite.",
+  "in_portfolio": false,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "stats": {
+    "sharpe": 1.038,
+    "cagr_pct": 14.66,
+    "maxdd_pct": -40.41,
+    "months": 433
+  },
+  "gates_passed": "3/3",
+  "description": "Short-term price+earnings momentum composite, implemented as a Fama-French factor proxy: Mkt + 0.4\u00d7Mom + 0.2\u00d7RMW, monthly rebalance. Signal: avg_rank(ret_1_0, ret_3_1). True per-stock earnings data replacement is listed in the todo proxy-data log.",
+  "reference": "Chan, Jegadeesh & Lakonishok (1996), 'Momentum Strategies'"
+}

@@ -1,0 +1,38 @@
+{
+  "strategy": "VWAP Trend",
+  "instrument": "QQQ",
+  "params": {
+    "vwap_threshold": 0.0,
+    "exit_time": "15:55",
+    "entry_time": "9:30",
+    "min_hold_min": 10,
+    "slippage": 0.0
+  },
+  "period": {
+    "start": "2016-01-04",
+    "end": "2026-06-23"
+  },
+  "n_days": 2632,
+  "performance": {
+    "sharpe": 0.5514,
+    "cagr_pct": 8.11,
+    "max_drawdown_pct": -17.25
+  },
+  "significance": {
+    "gate1_ttest_p": 0.037443,
+    "gate1_pass": true,
+    "gate2_bootstrap5th_sharpe": 0.0437,
+    "gate2_pass": true,
+    "gate3_signperm_p": 0.037,
+    "gate3_pass": true,
+    "gates_passed": 3,
+    "all_gates_passed": true,
+    "verdict": "INCLUDE"
+  },
+  "validation": {
+    "target_sharpe": 0.947,
+    "sharpe_delta": 0.3956,
+    "validation_ok": true,
+    "note": "no-minhold + zero-fees rebuild Sharpe=0.947 matches v1 reference; net Sharpe 0.5514 with minhold=10min + SEC+TAF fees"
+  }
+}

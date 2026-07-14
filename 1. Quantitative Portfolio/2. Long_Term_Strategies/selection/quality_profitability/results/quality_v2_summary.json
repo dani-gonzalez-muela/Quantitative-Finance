@@ -1,0 +1,36 @@
+{
+  "strategy": "Quality / Profitability v2 (Novy-Marx, Compustat)",
+  "instruments": [
+    "SP500_top_GP_quintile"
+  ],
+  "portfolio": "long_term",
+  "period": "1980-07-31 -> 2025-12-31",
+  "params": {
+    "signal": "Novy-Marx gross profitability = (revtq-cogsq)/atq, long top quintile",
+    "universe": "S&P 500 constituents (CRSP 05_sp500_crsp.parquet)",
+    "lag_days": 90,
+    "rebalance": "monthly (uses latest quarterly signal available)",
+    "weighting": "equal-weight top GP quintile (~100 stocks)",
+    "note": "Compustat quarterly fundamentals from WRDS snapshot (da9ne81mhdngabgp_csv.zip, 5.4GB uncompressed, queried via DuckDB). CCM master gvkey\u2192permno bridge. Point-in-time 90-day lag. S&P500 constituent daily returns from CRSP 05_sp500_crsp.parquet. Period: 1980-2025."
+  },
+  "trades": 552,
+  "stats": {
+    "cagr": 15.74,
+    "total_return": 76217.17,
+    "sharpe_daily": 0.7774,
+    "max_dd": -44.39,
+    "years": 45.42
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.9804,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.9069,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

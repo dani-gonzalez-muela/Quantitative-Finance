@@ -1,0 +1,33 @@
+{
+  "strategy": "Turn of Month",
+  "instruments": [
+    "SP500_CRSP"
+  ],
+  "portfolio": "long_term",
+  "period": "2000-01-03 -> 2025-12-31",
+  "params": {
+    "signal": "calendar: last 3 + first 3 trading days/month",
+    "invested_pct_days": 28.6,
+    "cash_return": "FF risk-free rate",
+    "tc_bps": "5 one-way"
+  },
+  "trades": 312,
+  "stats": {
+    "cagr": 5.91,
+    "total_return": 345.31,
+    "sharpe_daily": 0.6326,
+    "max_dd": -21.2
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.7273,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.6881,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

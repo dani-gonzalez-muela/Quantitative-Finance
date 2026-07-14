@@ -1,0 +1,60 @@
+{
+  "strategy": "EM/DM Carry (Multi-Asset, ETF proxy)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "em_tickers": [
+    "EEM",
+    "INDA",
+    "EWZ",
+    "EWJ",
+    "EWG",
+    "EWU",
+    "EWA",
+    "EWC",
+    "EWP",
+    "EWI",
+    "EWL"
+  ],
+  "dm_tickers": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "MDY"
+  ],
+  "signal_note": "ETF proxy for EM vs DM carry. True carry needs WRDS country returns.",
+  "grid_search": {
+    "top_pcts": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "carry_windows": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "thresholds": [
+      0.0,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "total_runs": 240
+  },
+  "best_params": {
+    "top_pct": 0.25,
+    "carry_window": 9,
+    "threshold": 0.05,
+    "freq": "6ME",
+    "median_sharpe": 1.1497,
+    "n_positive": 1
+  }
+}

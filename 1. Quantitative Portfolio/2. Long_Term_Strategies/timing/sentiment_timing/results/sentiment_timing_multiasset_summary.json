@@ -1,0 +1,220 @@
+{
+  "strategy": "Sentiment Timing VIX (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "vix_low": 15.0,
+    "vix_high": 25.0,
+    "exp_low": 0.5,
+    "exp_mid": 1.0,
+    "exp_high": 1.5
+  },
+  "baskets_tested": {
+    "us_equity_broad": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "MDY"
+    ],
+    "us_sectors": [
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLI",
+      "XLP",
+      "XLY",
+      "XLU",
+      "XLB",
+      "XLRE",
+      "XLC"
+    ]
+  },
+  "n_instruments": 15,
+  "passing_instruments": [
+    "QQQ",
+    "XLK"
+  ],
+  "per_instrument": {
+    "SPY": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.5049,
+      "sharpe_raw": 0.9231,
+      "t_stat": 1.5424,
+      "t_p": 0.0629,
+      "boot_p5": -0.0273,
+      "perm_p": 0.067,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_equity_broad"
+    },
+    "QQQ": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.633,
+      "sharpe_raw": 1.0482,
+      "t_stat": 1.9339,
+      "t_p": 0.0278,
+      "boot_p5": 0.0869,
+      "perm_p": 0.032,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_equity_broad"
+    },
+    "IWM": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.2275,
+      "sharpe_raw": 0.5058,
+      "t_stat": 0.695,
+      "t_p": 0.2443,
+      "boot_p5": -0.3021,
+      "perm_p": 0.261,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_equity_broad"
+    },
+    "MDY": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.3013,
+      "sharpe_raw": 0.5958,
+      "t_stat": 0.9205,
+      "t_p": 0.1797,
+      "boot_p5": -0.2574,
+      "perm_p": 0.179,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_equity_broad"
+    },
+    "XLK": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.6851,
+      "sharpe_raw": 1.1081,
+      "t_stat": 2.093,
+      "t_p": 0.0193,
+      "boot_p5": 0.1408,
+      "perm_p": 0.023,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLF": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.3293,
+      "sharpe_raw": 0.6118,
+      "t_stat": 1.006,
+      "t_p": 0.1583,
+      "boot_p5": -0.1944,
+      "perm_p": 0.17,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLE": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.2482,
+      "sharpe_raw": 0.4,
+      "t_stat": 0.7584,
+      "t_p": 0.2249,
+      "boot_p5": -0.2835,
+      "perm_p": 0.235,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLV": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.4006,
+      "sharpe_raw": 0.643,
+      "t_stat": 1.224,
+      "t_p": 0.1118,
+      "boot_p5": -0.1755,
+      "perm_p": 0.116,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLI": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.4106,
+      "sharpe_raw": 0.7224,
+      "t_stat": 1.2543,
+      "t_p": 0.1062,
+      "boot_p5": -0.1312,
+      "perm_p": 0.106,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLP": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.3177,
+      "sharpe_raw": 0.5791,
+      "t_stat": 0.9706,
+      "t_p": 0.1669,
+      "boot_p5": -0.2217,
+      "perm_p": 0.167,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLY": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.3528,
+      "sharpe_raw": 0.662,
+      "t_stat": 1.0778,
+      "t_p": 0.1417,
+      "boot_p5": -0.2069,
+      "perm_p": 0.152,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLU": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.4226,
+      "sharpe_raw": 0.6025,
+      "t_stat": 1.291,
+      "t_p": 0.0997,
+      "boot_p5": -0.1165,
+      "perm_p": 0.106,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLB": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.3383,
+      "sharpe_raw": 0.5855,
+      "t_stat": 1.0336,
+      "t_p": 0.1518,
+      "boot_p5": -0.1988,
+      "perm_p": 0.148,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLRE": {
+      "n_months": 113,
+      "sharpe_vix_sized": 0.154,
+      "sharpe_raw": 0.4299,
+      "t_stat": 0.4706,
+      "t_p": 0.3194,
+      "boot_p5": -0.3793,
+      "perm_p": 0.328,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLC": {
+      "n_months": 84,
+      "sharpe_vix_sized": 0.3285,
+      "sharpe_raw": 0.6735,
+      "t_stat": 0.864,
+      "t_p": 0.195,
+      "boot_p5": -0.2596,
+      "perm_p": 0.193,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "strategy": "Yield Curve Duration (Multi-Asset)",
+  "period": "2016-01-01 -> 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "signal": "T10Y2Y",
+    "lag_months": 1,
+    "rebal": "month-end",
+    "regimes": {
+      "long": ">0.5%",
+      "flat": "0-0.5%",
+      "short": "<0%"
+    }
+  },
+  "regime_counts": {
+    "long": 57,
+    "short": 45,
+    "flat": 12,
+    "unknown": 1
+  },
+  "data_note": "FRED synthetic: IEF/BIL/TLT price-derived yields (2016+)",
+  "baskets_tested": {
+    "bonds_us": [
+      "TLT",
+      "IEF",
+      "SHY",
+      "TIP",
+      "BIL",
+      "LQD",
+      "HYG"
+    ]
+  },
+  "passing_instruments": [
+    "SHY",
+    "BIL"
+  ],
+  "strong_instruments": [
+    "SHY",
+    "BIL"
+  ],
+  "n_instruments": 7,
+  "per_instrument": {
+    "TLT": {
+      "fav_regime": "long",
+      "n_hold_months": 57,
+      "sharpe": -0.5963,
+      "t_stat": -1.2996,
+      "t_p": 0.9005,
+      "boot_p5": -1.517,
+      "perm_p": 0.9019,
+      "mean_ret_pct": -0.6152,
+      "gates_pass": 0,
+      "verdict": "FAIL"
+    },
+    "IEF": {
+      "fav_regime": "long",
+      "n_hold_months": 57,
+      "sharpe": -0.7054,
+      "t_stat": -1.5374,
+      "t_p": 0.9351,
+      "boot_p5": -1.6027,
+      "perm_p": 0.9382,
+      "mean_ret_pct": -0.3667,
+      "gates_pass": 0,
+      "verdict": "FAIL"
+    },
+    "SHY": {
+      "fav_regime": "short",
+      "n_hold_months": 45,
+      "sharpe": 1.5815,
+      "t_stat": 3.0625,
+      "t_p": 0.0019,
+      "boot_p5": 0.5918,
+      "perm_p": 0.0021,
+      "mean_ret_pct": 0.2404,
+      "gates_pass": 3,
+      "verdict": "PASS"
+    },
+    "TIP": {
+      "fav_regime": "long",
+      "n_hold_months": 57,
+      "sharpe": -0.2789,
+      "t_stat": -0.6078,
+      "t_p": 0.7271,
+      "boot_p5": -1.1128,
+      "perm_p": 0.7234,
+      "mean_ret_pct": -0.1296,
+      "gates_pass": 0,
+      "verdict": "FAIL"
+    },
+    "BIL": {
+      "fav_regime": "short",
+      "n_hold_months": 45,
+      "sharpe": 4.8165,
+      "t_stat": 9.3272,
+      "t_p": 0.0,
+      "boot_p5": 3.5307,
+      "perm_p": 0.0,
+      "mean_ret_pct": 0.2019,
+      "gates_pass": 3,
+      "verdict": "PASS"
+    },
+    "LQD": {
+      "fav_regime": "long",
+      "n_hold_months": 57,
+      "sharpe": -0.3671,
+      "t_stat": -0.8001,
+      "t_p": 0.7865,
+      "boot_p5": -1.3067,
+      "perm_p": 0.789,
+      "mean_ret_pct": -0.2425,
+      "gates_pass": 0,
+      "verdict": "FAIL"
+    },
+    "HYG": {
+      "fav_regime": "long",
+      "n_hold_months": 57,
+      "sharpe": 0.215,
+      "t_stat": 0.4685,
+      "t_p": 0.3206,
+      "boot_p5": -0.6748,
+      "perm_p": 0.33,
+      "mean_ret_pct": 0.1281,
+      "gates_pass": 0,
+      "verdict": "FAIL"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "strategy": "BAB - Betting Against Beta",
+  "instruments": [
+    "SP500_CRSP_LongShort"
+  ],
+  "portfolio": "long_term",
+  "period": "1990-02-28 -> 2019-12-31",
+  "params": {
+    "signal": "bswa32 (Better Market Betas Vasicek-shrunk beta)",
+    "long": "bottom quintile beta",
+    "short": "top quintile beta",
+    "neutral": "beta-scaled (scale=beta_H/beta_L, capped 3x)",
+    "tc_bps": "5 one-way each leg"
+  },
+  "trades": 357,
+  "stats": {
+    "cagr": 5.53,
+    "total_return": 398.92,
+    "sharpe_daily": 0.2834,
+    "max_dd": -78.19
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.3412,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.2569,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    }
+  }
+}

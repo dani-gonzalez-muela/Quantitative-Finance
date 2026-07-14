@@ -1,0 +1,2 @@
+entry_time,exit_time,position,instrument,entry_price,exit_price,exit_reason,risk,shares,gross_pnl,fees,net_pnl,equity_before,equity
+1970-03-02,2025-12-31,long,low_beta,96.7213,380947.2484,end_of_data,4.8361,103,39227604.3,1.99,39227602.3,100000.0,39327602.3

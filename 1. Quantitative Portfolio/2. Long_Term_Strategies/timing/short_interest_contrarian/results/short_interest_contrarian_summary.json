@@ -1,0 +1,34 @@
+{
+  "strategy": "Short Interest Contrarian",
+  "instruments": [
+    "Compustat_LowSI_Universe"
+  ],
+  "portfolio": "long_term",
+  "period": "2006-07-31 -> 2025-08-31",
+  "params": {
+    "signal": "log(short_interest) cross-sectional rank; long bottom quintile (least shorted)",
+    "avg_stocks_in_quintile": 1808,
+    "return_proxy": "Mkt+0.3*SMB (FF factors, least-shorted tilts small-cap)",
+    "tc_bps": "5 one-way",
+    "data_notes": "Compustat short interest has absolute shares short (no denominator for ratio). Log-rank used. FF Mkt+SMB as return proxy for least-shorted quintile."
+  },
+  "trades": 230,
+  "stats": {
+    "cagr": 10.61,
+    "total_return": 584.72,
+    "sharpe_daily": 0.5586,
+    "max_dd": -50.54
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.6774,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.607,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

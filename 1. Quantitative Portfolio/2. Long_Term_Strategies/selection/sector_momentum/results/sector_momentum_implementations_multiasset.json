@@ -1,0 +1,66 @@
+{
+  "strategy": "sector_momentum",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "mom_window": 3,
+    "freq": "6ME"
+  },
+  "sleeves": {
+    "us_sectors": {
+      "simple_85": {
+        "sharpe": 0.8639,
+        "cagr": 13.2,
+        "max_dd": -25.35,
+        "n_trades": 48,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.8658,
+        "cagr": 15.56,
+        "max_dd": -29.62,
+        "n_trades": 48,
+        "allocation": 1.0
+      }
+    },
+    "us_factor": {
+      "simple_85": {
+        "sharpe": 0.6531,
+        "cagr": 9.94,
+        "max_dd": -28.67,
+        "n_trades": 32,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.6583,
+        "cagr": 11.69,
+        "max_dd": -33.54,
+        "n_trades": 32,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 2,
+      "sleeves": [
+        "us_sectors",
+        "us_factor"
+      ],
+      "sharpe": 0.7769,
+      "cagr": 11.66,
+      "max_dd": -26.92
+    },
+    "simple_100": {
+      "n_sleeves": 2,
+      "sleeves": [
+        "us_sectors",
+        "us_factor"
+      ],
+      "sharpe": 0.7806,
+      "cagr": 13.74,
+      "max_dd": -31.45
+    }
+  }
+}

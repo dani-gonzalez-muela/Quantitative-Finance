@@ -1,0 +1,33 @@
+{
+  "strategy": "Low Volatility / BAB Proxy",
+  "instruments": [
+    "CRSP_NYSE_CapDecile10"
+  ],
+  "portfolio": "long_term",
+  "period": "1970-01-31 -> 2025-12-31",
+  "params": {
+    "data": "CRSP NYSE cap decile 10 (largest stocks, lowest historical beta ~0.85)",
+    "signal": "always long low-beta proxy (large cap decile 10)",
+    "note": "True BAB factor requires individual stock betas. CRSP 10_crsp_market_portfolios.parquet has size deciles, not beta deciles. Decile 10 (largest cap) historically has beta ~0.85 vs market and lower volatility. Period: 1970-2025."
+  },
+  "trades": 672,
+  "stats": {
+    "cagr": 9.84,
+    "total_return": 18894.82,
+    "sharpe_daily": 0.59,
+    "max_dd": -50.72,
+    "years": 55.92
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.7119,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.6875,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}

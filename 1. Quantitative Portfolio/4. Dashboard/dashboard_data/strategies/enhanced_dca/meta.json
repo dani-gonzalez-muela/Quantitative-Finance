@@ -1,0 +1,21 @@
+{
+  "label": "Enhanced DCA",
+  "sleeve": "long_term",
+  "in_portfolio": false,
+  "type": "Timing / contribution sizing",
+  "timeframe": "monthly",
+  "stats": {
+    "sharpe": 0.45,
+    "cagr_pct": 6.86,
+    "maxdd_pct": -43.0,
+    "months": 125
+  },
+  "description": "Dollar-cost-averaging enhancement: condition the timing/size of periodic buys on a dip or valuation signal instead of fixed-calendar buys. One research notebook; never implemented or validated. DCA variants usually reduce to market beta plus cash-drag timing.\nFirst-pass study (S&P 500, in-sample): the best enhanced-DCA variant returned ~6.86% annualized vs 7.86% for lump-sum investing - i.e. it underperformed simply investing immediately. Sharpe (~0.45) and max-drawdown (~-43%, near the basic-DCA benchmark) are rough estimates.",
+  "reference": "Proprietary sketch; no academic source",
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "3/3"
+}

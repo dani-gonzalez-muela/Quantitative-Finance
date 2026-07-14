@@ -1,0 +1,40 @@
+{
+  "strategy": "Yield Curve Duration",
+  "instruments": [
+    "TLT_proxy",
+    "IEF_proxy",
+    "SHY_proxy"
+  ],
+  "portfolio": "long_term",
+  "period": "2016-02-29 -> 2025-07-31",
+  "params": {
+    "signal": "T10Y2Y spread (synthetic FRED)",
+    "rules": "T10Y2Y>0.5%->long(20yr), <0%->short(2yr), else->mid(10yr)",
+    "duration_model": "price_return = -dur * dYield/100 + carry",
+    "tc_bps": "5 one-way",
+    "regime_counts": {
+      "long": 57,
+      "short": 45,
+      "mid": 12
+    }
+  },
+  "trades": 114,
+  "stats": {
+    "cagr": -1.29,
+    "total_return": -11.53,
+    "sharpe_daily": -0.1149,
+    "max_dd": -36.86
+  },
+  "significance": {
+    "gross": {
+      "sharpe": -0.0992,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    },
+    "net": {
+      "sharpe": -0.2335,
+      "verdict": "NOT SIGNIFICANT",
+      "tests_passed": "0/3"
+    }
+  }
+}

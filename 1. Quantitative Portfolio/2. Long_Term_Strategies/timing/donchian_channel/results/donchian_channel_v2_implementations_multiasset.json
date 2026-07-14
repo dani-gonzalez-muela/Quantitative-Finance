@@ -1,0 +1,50 @@
+{
+  "strategy": "donchian_channel_v2",
+  "n_passing_baskets": 3,
+  "baskets": {
+    "us_equity_broad": {
+      "canonical_params": {
+        "ch": 20,
+        "mh": 45,
+        "sl": -0.05
+      },
+      "n_instruments": 4,
+      "stats": {
+        "sharpe": 0.8718,
+        "cagr_pct": 9.01,
+        "max_dd_pct": -18.5
+      }
+    },
+    "us_sectors": {
+      "canonical_params": {
+        "ch": 10,
+        "mh": 60,
+        "sl": -0.12
+      },
+      "n_instruments": 11,
+      "stats": {
+        "sharpe": 0.7808,
+        "cagr_pct": 7.62,
+        "max_dd_pct": -19.15
+      }
+    },
+    "us_factor": {
+      "canonical_params": {
+        "ch": 20,
+        "mh": 45,
+        "sl": -0.08
+      },
+      "n_instruments": 7,
+      "stats": {
+        "sharpe": 0.9657,
+        "cagr_pct": 8.9,
+        "max_dd_pct": -18.6
+      }
+    }
+  },
+  "combined_stats": {
+    "sharpe": 0.9108,
+    "cagr_pct": 8.48,
+    "max_dd_pct": -17.25
+  }
+}

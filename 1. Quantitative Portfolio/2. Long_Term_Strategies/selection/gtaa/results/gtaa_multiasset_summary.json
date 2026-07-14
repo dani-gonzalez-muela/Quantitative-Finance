@@ -1,0 +1,100 @@
+{
+  "strategy": "GTAA (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "universes": {
+    "us_sectors": {
+      "n_tickers": 11,
+      "tickers": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "best_sharpe": 1.5052
+    },
+    "bonds_us": {
+      "n_tickers": 7,
+      "tickers": [
+        "TLT",
+        "IEF",
+        "SHY",
+        "TIP",
+        "BIL",
+        "LQD",
+        "HYG"
+      ],
+      "best_sharpe": 0.7816
+    },
+    "commodities": {
+      "n_tickers": 7,
+      "tickers": [
+        "GLD",
+        "SLV",
+        "DBC",
+        "USO",
+        "UNG",
+        "GDX",
+        "PDBC"
+      ],
+      "best_sharpe": 0.5559
+    },
+    "real_assets": {
+      "n_tickers": 4,
+      "tickers": [
+        "VNQ",
+        "VNQI",
+        "AMLP",
+        "XLRE"
+      ],
+      "best_sharpe": 1.3811
+    }
+  },
+  "grid_search": {
+    "top_pcts": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "sma_windows": [
+      100,
+      150,
+      200,
+      250,
+      300
+    ],
+    "combos_per_universe": 100,
+    "total_runs": 400
+  },
+  "best_params": {
+    "top_pct": 0.25,
+    "top_n_primary": 3,
+    "sma_window": 300,
+    "freq": "6ME",
+    "median_sharpe": 1.0814,
+    "min_sharpe": 0.5559,
+    "n_positive": 4,
+    "stability": 0.7091,
+    "per_universe_sharpe": {
+      "us_sectors": 1.5052,
+      "bonds_us": 0.7816,
+      "commodities": 0.5559,
+      "real_assets": 1.3811
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "qmom_vw_1p0x": {
+    "total_return": 876.1,
+    "cagr": 12.74,
+    "sharpe": 0.61,
+    "max_dd": -50.1,
+    "label": "QMom VW 1.0x"
+  },
+  "qmom_vw_1p5x": {
+    "total_return": 1866.3,
+    "cagr": 16.98,
+    "sharpe": 0.61,
+    "max_dd": -67.4,
+    "label": "QMom VW 1.5x"
+  },
+  "qmom_vw_2p0x": {
+    "total_return": 2845.5,
+    "cagr": 19.49,
+    "sharpe": 0.61,
+    "max_dd": -79.8,
+    "label": "QMom VW 2.0x"
+  },
+  "sandp_avg_1p0x": {
+    "total_return": 553.6,
+    "cagr": 10.39,
+    "sharpe": 0.56,
+    "max_dd": -59.0,
+    "label": "S&P avg 1.0x"
+  },
+  "sandp_avg_1p5x": {
+    "total_return": 1088.3,
+    "cagr": 13.92,
+    "sharpe": 0.56,
+    "max_dd": -76.4,
+    "label": "S&P avg 1.5x"
+  },
+  "sandp_avg_2p0x": {
+    "total_return": 1615.5,
+    "cagr": 16.14,
+    "sharpe": 0.56,
+    "max_dd": -87.3,
+    "label": "S&P avg 2.0x"
+  },
+  "_matched_dd_edges": {
+    "QMom VW 1.0x": {
+      "matched_to": "S&P avg 1.0x",
+      "qm_dd": -50.1,
+      "spy_dd": -59.0,
+      "qm_cagr": 12.74,
+      "spy_cagr": 10.39,
+      "cagr_edge": 2.35
+    },
+    "QMom VW 1.5x": {
+      "matched_to": "S&P avg 1.0x",
+      "qm_dd": -67.4,
+      "spy_dd": -59.0,
+      "qm_cagr": 16.98,
+      "spy_cagr": 10.39,
+      "cagr_edge": 6.59
+    },
+    "QMom VW 2.0x": {
+      "matched_to": "S&P avg 1.5x",
+      "qm_dd": -79.8,
+      "spy_dd": -76.4,
+      "qm_cagr": 19.49,
+      "spy_cagr": 13.92,
+      "cagr_edge": 5.57
+    }
+  },
+  "_recommended": "QMom VW 1.0x",
+  "_best_matched_dd_edge": "QMom VW 1.5x"
+}

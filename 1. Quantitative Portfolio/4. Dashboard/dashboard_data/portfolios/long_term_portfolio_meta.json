@@ -1,0 +1,243 @@
+{
+  "members": [
+    "quality_profitability",
+    "congress_trade_for_trade",
+    "turn_of_month",
+    "qmj_long_short",
+    "bond_trend",
+    "commodity_carry",
+    "bollinger_band",
+    "credit_carry",
+    "yield_curve_duration"
+  ],
+  "member_stats": [
+    {
+      "strategy": "quality_profitability",
+      "sharpe": 0.895,
+      "cagr_pct": 9.1,
+      "maxdd_pct": -43.47
+    },
+    {
+      "strategy": "congress_trade_for_trade",
+      "sharpe": 0.905,
+      "cagr_pct": 9.41,
+      "maxdd_pct": -11.71
+    },
+    {
+      "strategy": "turn_of_month",
+      "sharpe": 0.906,
+      "cagr_pct": 7.87,
+      "maxdd_pct": -16.8
+    },
+    {
+      "strategy": "qmj_long_short",
+      "sharpe": 0.494,
+      "cagr_pct": 4.76,
+      "maxdd_pct": -45.32
+    },
+    {
+      "strategy": "bond_trend",
+      "sharpe": 0.186,
+      "cagr_pct": 0.78,
+      "maxdd_pct": -14.14
+    },
+    {
+      "strategy": "commodity_carry",
+      "sharpe": 0.543,
+      "cagr_pct": 9.04,
+      "maxdd_pct": -56.63
+    },
+    {
+      "strategy": "bollinger_band",
+      "sharpe": 1.079,
+      "cagr_pct": 8.66,
+      "maxdd_pct": -15.84
+    },
+    {
+      "strategy": "credit_carry",
+      "sharpe": 0.579,
+      "cagr_pct": 1.49,
+      "maxdd_pct": -5.95
+    },
+    {
+      "strategy": "yield_curve_duration",
+      "sharpe": 0.154,
+      "cagr_pct": 0.37,
+      "maxdd_pct": -9.88
+    }
+  ],
+  "sharpe": 1.361,
+  "cagr_pct": 5.09,
+  "maxdd_pct": -6.02,
+  "selection_path": [
+    {
+      "step": 1,
+      "added": "quality_profitability",
+      "sharpe": 1.118,
+      "selected": true
+    },
+    {
+      "step": 2,
+      "added": "congress_trade_for_trade",
+      "sharpe": 1.418,
+      "selected": true
+    },
+    {
+      "step": 3,
+      "added": "turn_of_month",
+      "sharpe": 1.574,
+      "selected": true
+    },
+    {
+      "step": 4,
+      "added": "qmj_long_short",
+      "sharpe": 1.639,
+      "selected": true
+    },
+    {
+      "step": 5,
+      "added": "bond_trend",
+      "sharpe": 1.707,
+      "selected": true
+    },
+    {
+      "step": 6,
+      "added": "commodity_carry",
+      "sharpe": 1.722,
+      "selected": true
+    },
+    {
+      "step": 7,
+      "added": "bollinger_band",
+      "sharpe": 1.724,
+      "selected": true
+    },
+    {
+      "step": 8,
+      "added": "credit_carry",
+      "sharpe": 1.719,
+      "selected": true
+    },
+    {
+      "step": 9,
+      "added": "yield_curve_duration",
+      "sharpe": 1.684,
+      "selected": true
+    },
+    {
+      "step": 10,
+      "added": "us_cross_sectional_momentum",
+      "sharpe": 1.62,
+      "selected": false
+    },
+    {
+      "step": 11,
+      "added": "gtaa",
+      "sharpe": 1.532,
+      "selected": false
+    },
+    {
+      "step": 12,
+      "added": "donchian_channel",
+      "sharpe": 1.469,
+      "selected": false
+    },
+    {
+      "step": 13,
+      "added": "us_earnings_momentum",
+      "sharpe": 1.416,
+      "selected": false
+    },
+    {
+      "step": 14,
+      "added": "bond_duration_carry",
+      "sharpe": 1.375,
+      "selected": false
+    },
+    {
+      "step": 15,
+      "added": "overnight_premium",
+      "sharpe": 1.34,
+      "selected": false
+    },
+    {
+      "step": 16,
+      "added": "sector_momentum",
+      "sharpe": 1.289,
+      "selected": false
+    },
+    {
+      "step": 17,
+      "added": "em_dm_carry",
+      "sharpe": 1.243,
+      "selected": false
+    },
+    {
+      "step": 18,
+      "added": "industry_trend",
+      "sharpe": 1.203,
+      "selected": false
+    },
+    {
+      "step": 19,
+      "added": "reit_dividend_carry",
+      "sharpe": 1.169,
+      "selected": false
+    },
+    {
+      "step": 20,
+      "added": "us_return_seasonality",
+      "sharpe": 1.132,
+      "selected": false
+    },
+    {
+      "step": 21,
+      "added": "insider_buying",
+      "sharpe": 1.102,
+      "selected": false
+    },
+    {
+      "step": 22,
+      "added": "short_interest_contrarian",
+      "sharpe": 1.074,
+      "selected": false
+    },
+    {
+      "step": 23,
+      "added": "low_volatility",
+      "sharpe": 1.049,
+      "selected": false
+    },
+    {
+      "step": 24,
+      "added": "us_shareholder_yield",
+      "sharpe": 1.027,
+      "selected": false
+    },
+    {
+      "step": 25,
+      "added": "country_cape_rotation",
+      "sharpe": 1.006,
+      "selected": false
+    },
+    {
+      "step": 26,
+      "added": "pead_earnings_drift",
+      "sharpe": 0.979,
+      "selected": false
+    },
+    {
+      "step": 27,
+      "added": "cross_asset_carry",
+      "sharpe": 0.954,
+      "selected": false
+    },
+    {
+      "step": 28,
+      "added": "commodity_trend",
+      "sharpe": 0.925,
+      "selected": false
+    }
+  ],
+  "note": "Top-9 along the greedy path over the LT pool incl. the 4 ex-daily timing names (and bond_trend + yield_curve_duration as 0/3-gate diversifiers). STEPPED-daily: LT backtests mark equity monthly, so the curve is flat within each month."
+}

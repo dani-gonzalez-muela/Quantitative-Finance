@@ -1,0 +1,67 @@
+{
+  "strategy": "VIX ETN Dual",
+  "paper": "Zarattini, Mele & Aziz (2025) SFI Research Paper N.25-91",
+  "instruments": [
+    "SPY",
+    "SVXY",
+    "VIXY"
+  ],
+  "portfolio": "Daily",
+  "period": "2016-01-19 -> 2026-04-02",
+  "params": {
+    "realized_vol_window": 10,
+    "rebalance_threshold": 0.02,
+    "annual_fee_short": 0.008,
+    "annual_fee_long": 0.005
+  },
+  "canonical_strategy": "eVRP+BoC+Sizing",
+  "variants": {
+    "Passive": {
+      "stats": {
+        "total_return": 88.4,
+        "cagr": 6.41,
+        "sharpe": 0.31,
+        "max_dd": -57.2
+      },
+      "n_trades": 78
+    },
+    "eVRP": {
+      "stats": {
+        "total_return": 78.5,
+        "cagr": 5.85,
+        "sharpe": 0.31,
+        "max_dd": -52.7
+      },
+      "n_trades": 81
+    },
+    "eVRP+BoC": {
+      "stats": {
+        "total_return": 226.0,
+        "cagr": 12.3,
+        "sharpe": 0.81,
+        "max_dd": -19.9
+      },
+      "n_trades": 117
+    },
+    "eVRP+BoC+Sizing": {
+      "stats": {
+        "total_return": 311.4,
+        "cagr": 14.89,
+        "sharpe": 0.82,
+        "max_dd": -33.1
+      },
+      "n_trades": 158
+    }
+  },
+  "spy_benchmark": {
+    "total_return": 309.2,
+    "cagr": 14.83,
+    "sharpe": 0.84,
+    "max_dd": -33.8
+  },
+  "significance_canonical": {
+    "sharpe": 0.8506,
+    "verdict": "SIGNIFICANT (strong)",
+    "tests_passed": "3/3"
+  }
+}

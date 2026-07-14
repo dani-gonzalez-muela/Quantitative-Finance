@@ -1,0 +1,66 @@
+{
+  "strategy": "commodity_trend",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.25,
+    "mom_window": 3,
+    "freq": "6ME"
+  },
+  "sleeves": {
+    "commodities": {
+      "simple_85": {
+        "sharpe": 0.2136,
+        "cagr": 2.17,
+        "max_dd": -52.17,
+        "n_trades": 33,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.2222,
+        "cagr": 2.03,
+        "max_dd": -58.58,
+        "n_trades": 33,
+        "allocation": 1.0
+      }
+    },
+    "real_assets": {
+      "simple_85": {
+        "sharpe": 0.6671,
+        "cagr": 11.14,
+        "max_dd": -33.29,
+        "n_trades": 16,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.6725,
+        "cagr": 13.08,
+        "max_dd": -38.79,
+        "n_trades": 16,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 2,
+      "sleeves": [
+        "commodities",
+        "real_assets"
+      ],
+      "sharpe": 0.4473,
+      "cagr": 6.55,
+      "max_dd": -30.85
+    },
+    "simple_100": {
+      "n_sleeves": 2,
+      "sleeves": [
+        "commodities",
+        "real_assets"
+      ],
+      "sharpe": 0.458,
+      "cagr": 7.61,
+      "max_dd": -34.97
+    }
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "strategy": "Donchian Channel (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "channel_period": 20,
+    "min_hold_days": 30,
+    "stop_loss": -0.08
+  },
+  "baskets_tested": {
+    "us_equity_broad": [
+      "SPY",
+      "QQQ",
+      "IWM",
+      "MDY"
+    ],
+    "us_sectors": [
+      "XLK",
+      "XLF",
+      "XLE",
+      "XLV",
+      "XLI",
+      "XLP",
+      "XLY",
+      "XLU",
+      "XLB",
+      "XLRE",
+      "XLC"
+    ],
+    "us_factor": [
+      "IWF",
+      "IWD",
+      "IWM",
+      "USMV",
+      "MTUM",
+      "PKW",
+      "DVY"
+    ]
+  },
+  "n_instruments": 21,
+  "passing_instruments": [
+    "SPY",
+    "QQQ",
+    "MDY",
+    "XLK",
+    "XLE",
+    "XLV",
+    "XLI",
+    "XLP",
+    "XLY",
+    "XLU",
+    "XLB",
+    "XLRE",
+    "XLC",
+    "IWF",
+    "IWD",
+    "USMV",
+    "MTUM",
+    "PKW",
+    "DVY"
+  ],
+  "per_instrument": {
+    "SPY": {
+      "n_trades": 31,
+      "sharpe": 0.9698,
+      "t_stat": 2.5525,
+      "t_p": 0.008,
+      "boot_p5": 0.3841,
+      "perm_p": 0.009,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_equity_broad"
+    },
+    "QQQ": {
+      "n_trades": 30,
+      "sharpe": 1.0396,
+      "t_stat": 2.6959,
+      "t_p": 0.0058,
+      "boot_p5": 0.44,
+      "perm_p": 0.004,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_equity_broad"
+    },
+    "IWM": {
+      "n_trades": 34,
+      "sharpe": 0.5846,
+      "t_stat": 1.4378,
+      "t_p": 0.08,
+      "boot_p5": 0.0141,
+      "perm_p": 0.072,
+      "gates_pass": 1,
+      "verdict": "FAIL",
+      "basket": "us_equity_broad"
+    },
+    "MDY": {
+      "n_trades": 33,
+      "sharpe": 0.9018,
+      "t_stat": 2.2575,
+      "t_p": 0.0155,
+      "boot_p5": 0.3067,
+      "perm_p": 0.01,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_equity_broad"
+    },
+    "XLK": {
+      "n_trades": 31,
+      "sharpe": 1.1593,
+      "t_stat": 3.0007,
+      "t_p": 0.0027,
+      "boot_p5": 0.6282,
+      "perm_p": 0.001,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLF": {
+      "n_trades": 36,
+      "sharpe": 0.6453,
+      "t_stat": 1.625,
+      "t_p": 0.0566,
+      "boot_p5": -0.0097,
+      "perm_p": 0.058,
+      "gates_pass": 0,
+      "verdict": "FAIL",
+      "basket": "us_sectors"
+    },
+    "XLE": {
+      "n_trades": 30,
+      "sharpe": 0.7676,
+      "t_stat": 1.8498,
+      "t_p": 0.0373,
+      "boot_p5": 0.2101,
+      "perm_p": 0.035,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLV": {
+      "n_trades": 31,
+      "sharpe": 0.9345,
+      "t_stat": 2.2855,
+      "t_p": 0.0148,
+      "boot_p5": 0.3036,
+      "perm_p": 0.015,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLI": {
+      "n_trades": 34,
+      "sharpe": 1.2166,
+      "t_stat": 2.9724,
+      "t_p": 0.0027,
+      "boot_p5": 0.6072,
+      "perm_p": 0.003,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLP": {
+      "n_trades": 30,
+      "sharpe": 1.2856,
+      "t_stat": 3.1481,
+      "t_p": 0.0019,
+      "boot_p5": 0.6392,
+      "perm_p": 0.001,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLY": {
+      "n_trades": 33,
+      "sharpe": 0.8649,
+      "t_stat": 2.1537,
+      "t_p": 0.0194,
+      "boot_p5": 0.1741,
+      "perm_p": 0.017,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLU": {
+      "n_trades": 34,
+      "sharpe": 0.895,
+      "t_stat": 2.2445,
+      "t_p": 0.0158,
+      "boot_p5": 0.2406,
+      "perm_p": 0.016,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLB": {
+      "n_trades": 34,
+      "sharpe": 0.7858,
+      "t_stat": 1.948,
+      "t_p": 0.03,
+      "boot_p5": 0.2509,
+      "perm_p": 0.025,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLRE": {
+      "n_trades": 33,
+      "sharpe": 0.7811,
+      "t_stat": 1.8841,
+      "t_p": 0.0343,
+      "boot_p5": 0.1813,
+      "perm_p": 0.036,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "XLC": {
+      "n_trades": 22,
+      "sharpe": 0.9308,
+      "t_stat": 1.9614,
+      "t_p": 0.0316,
+      "boot_p5": 0.2507,
+      "perm_p": 0.024,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_sectors"
+    },
+    "IWF": {
+      "n_trades": 30,
+      "sharpe": 1.0849,
+      "t_stat": 2.8398,
+      "t_p": 0.0041,
+      "boot_p5": 0.5153,
+      "perm_p": 0.002,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "IWD": {
+      "n_trades": 34,
+      "sharpe": 0.9172,
+      "t_stat": 2.3244,
+      "t_p": 0.0132,
+      "boot_p5": 0.2935,
+      "perm_p": 0.016,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "USMV": {
+      "n_trades": 34,
+      "sharpe": 0.9559,
+      "t_stat": 2.4661,
+      "t_p": 0.0095,
+      "boot_p5": 0.3348,
+      "perm_p": 0.018,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "MTUM": {
+      "n_trades": 31,
+      "sharpe": 1.1285,
+      "t_stat": 2.8313,
+      "t_p": 0.0041,
+      "boot_p5": 0.5912,
+      "perm_p": 0.001,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "PKW": {
+      "n_trades": 34,
+      "sharpe": 0.912,
+      "t_stat": 2.2614,
+      "t_p": 0.0152,
+      "boot_p5": 0.3473,
+      "perm_p": 0.015,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    },
+    "DVY": {
+      "n_trades": 37,
+      "sharpe": 0.6747,
+      "t_stat": 1.7414,
+      "t_p": 0.0451,
+      "boot_p5": 0.0754,
+      "perm_p": 0.043,
+      "gates_pass": 3,
+      "verdict": "PASS",
+      "basket": "us_factor"
+    }
+  }
+}

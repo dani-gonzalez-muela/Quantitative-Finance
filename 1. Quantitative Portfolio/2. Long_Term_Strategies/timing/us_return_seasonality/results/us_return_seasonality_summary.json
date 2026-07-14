@@ -1,0 +1,33 @@
+{
+  "strategy": "US Return Seasonality",
+  "instruments": [
+    "FF_Mkt"
+  ],
+  "portfolio": "long_term",
+  "period": "1996-01-31 -> 2026-02-28",
+  "params": {
+    "signal": "seas_1_1an (same-calendar-month avg return, 5yr lookback)",
+    "implementation": "Market * (1 +/- 0.2) based on seasonal direction",
+    "tc_bps": "5 one-way",
+    "data_notes": "FF Mkt returns used; calendar-month seasonality computed from rolling 5yr same-month average"
+  },
+  "trades": 362,
+  "stats": {
+    "cagr": 9.7,
+    "total_return": 1519.73,
+    "sharpe_daily": 0.5194,
+    "max_dd": -54.44
+  },
+  "significance": {
+    "gross": {
+      "sharpe": 0.6398,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    },
+    "net": {
+      "sharpe": 0.568,
+      "verdict": "SIGNIFICANT (moderate)",
+      "tests_passed": "2/3"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+entry_time,exit_time,direction,instrument,entry_price,exit_price,pct_return_gross,exit_reason,stop_price
+2016-03-31,2019-04-29,long,SPY,175.38,264.63,0.5088949709202875,calendar,
+2019-10-31,2020-04-29,long,SPY,275.83,269.46,-0.02309393466990539,calendar,
+2020-11-30,2022-05-30,long,SPY,335.74,392.93,0.17034014415917076,calendar,
+2023-10-31,2025-04-29,long,SPY,405.34,548.01,0.3519761188138353,calendar,

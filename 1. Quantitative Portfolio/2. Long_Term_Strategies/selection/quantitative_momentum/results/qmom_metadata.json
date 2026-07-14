@@ -1,0 +1,19 @@
+{
+  "strategy": "Quantitative Momentum (QMom)",
+  "paper": "Gray & Vogel (2016) \u2014 Quantitative Momentum",
+  "universe": "NYSE/AMEX/NASDAQ, market cap > NYSE 40th percentile",
+  "filters": "Ordinary common equity, excl. financials & utilities",
+  "signal": "12-1 month momentum + FIP quality filter",
+  "weighting": "Value-weighted at formation date",
+  "rebalance": "Quarterly \u2014 end of Feb, May, Aug, Nov",
+  "fees": "1.80% annual",
+  "period": "1963-01 to 2013-12",
+  "n_trades": 200,
+  "cagr": 0.1793,
+  "sharpe": 0.55,
+  "max_dd": -0.7195999999999999,
+  "total_return": 3774.6545,
+  "ann_vol": 0.2623,
+  "sortino": 0.63,
+  "win_rate": 0.64
+}

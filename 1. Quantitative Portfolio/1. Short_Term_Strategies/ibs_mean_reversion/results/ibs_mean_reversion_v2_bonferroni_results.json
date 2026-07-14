@@ -1,0 +1,69 @@
+{
+  "bonds_us": {
+    "TLT": {
+      "params": {
+        "ibs_buy": 0.15,
+        "ibs_sell": 0.85,
+        "stop_loss": -0.02
+      },
+      "sharpe": 0.5625,
+      "rescued": false,
+      "gate1_p": 0.038,
+      "gate2_boot5": 0.066,
+      "gate3_p": 0.0423,
+      "alpha": 0.01
+    },
+    "IEF": {
+      "params": {
+        "ibs_buy": 0.1,
+        "ibs_sell": 0.8,
+        "stop_loss": -0.02
+      },
+      "sharpe": 0.3952,
+      "rescued": false,
+      "gate1_p": 0.1235,
+      "gate2_boot5": -0.1261,
+      "gate3_p": 0.135,
+      "alpha": 0.01
+    },
+    "SHY": {
+      "params": {
+        "ibs_buy": 0.1,
+        "ibs_sell": 0.85,
+        "stop_loss": -0.02
+      },
+      "sharpe": -1.5368,
+      "rescued": false,
+      "gate1_p": 1.0,
+      "gate2_boot5": -2.1294,
+      "gate3_p": 1.0,
+      "alpha": 0.01
+    },
+    "HYG": {
+      "params": {
+        "ibs_buy": 0.1,
+        "ibs_sell": 0.85,
+        "stop_loss": -0.05
+      },
+      "sharpe": 0.4537,
+      "rescued": false,
+      "gate1_p": 0.0405,
+      "gate2_boot5": 0.0701,
+      "gate3_p": 0.0367,
+      "alpha": 0.01
+    },
+    "LQD": {
+      "params": {
+        "ibs_buy": 0.1,
+        "ibs_sell": 0.85,
+        "stop_loss": -0.02
+      },
+      "sharpe": 0.0341,
+      "rescued": false,
+      "gate1_p": 0.4375,
+      "gate2_boot5": -0.4782,
+      "gate3_p": 0.4437,
+      "alpha": 0.01
+    }
+  }
+}

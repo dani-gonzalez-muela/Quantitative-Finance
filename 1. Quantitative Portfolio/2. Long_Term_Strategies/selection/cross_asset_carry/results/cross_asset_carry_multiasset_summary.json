@@ -1,0 +1,64 @@
+{
+  "strategy": "Cross-Asset Carry (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "universes": {
+    "cross_asset": {
+      "n_tickers": 13,
+      "tickers": [
+        "SPY",
+        "QQQ",
+        "IWM",
+        "MDY",
+        "TLT",
+        "IEF",
+        "SHY",
+        "TIP",
+        "HYG",
+        "GLD",
+        "SLV",
+        "DBC",
+        "GDX"
+      ],
+      "best_sharpe": 0.991
+    }
+  },
+  "grid_search": {
+    "top_pcts": [
+      0.1,
+      0.15,
+      0.25,
+      0.33,
+      0.5,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "carry_windows": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "combos_per_universe": 120,
+    "total_runs": 120
+  },
+  "best_params": {
+    "top_pct": 0.25,
+    "top_n_primary": 3,
+    "carry_window": 9,
+    "freq": "2ME",
+    "median_sharpe": 0.991,
+    "min_sharpe": 0.991,
+    "n_positive": 1,
+    "stability": 0.8325,
+    "per_universe_sharpe": {
+      "cross_asset": 0.991
+    }
+  }
+}

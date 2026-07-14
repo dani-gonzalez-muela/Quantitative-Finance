@@ -1,0 +1,23 @@
+{
+  "label": "Congress Momentum (Quiver)",
+  "sleeve": "short_term",
+  "type": "Event / alt-data",
+  "timeframe": "same-day",
+  "universe": "cross-section of disclosures",
+  "signal": "Buy at open on Quiver upload day of momentum-filtered Congressional purchases; sell at close.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 0.874,
+    "cagr_pct": 7.37,
+    "maxdd_pct": -10.53,
+    "months": 115
+  },
+  "gates_passed": "3/3",
+  "description": "Event strategy on US Congressional Purchase disclosures (QuiverQuant). Filters for stocks already moving before publication (Annualized_Traded_To_File > 1.5) with fast Quiver publication (\u22643 days from SEC filing). Buys at open on the Quiver upload day, sells at close same day. \u26a0\ufe0f Live execution requires intraday Quiver API polling \u2014 disclosures uploaded after market close are not executable same-day.",
+  "reference": "Proprietary \u2014 momentum on QuiverQuant congressional-trading disclosures"
+}

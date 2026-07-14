@@ -1,0 +1,23 @@
+{
+  "label": "Cross Asset Carry",
+  "sleeve": "long_term",
+  "type": "Carry",
+  "timeframe": "monthly",
+  "universe": "multi-asset ETFs (equity/bond/commodity)",
+  "signal": "Rank 5 asset-class sleeves by carry proxy, long the top 3.",
+  "in_portfolio": false,
+  "stats": {
+    "sharpe": 0.181,
+    "cagr_pct": 1.51,
+    "maxdd_pct": -30.33,
+    "months": 113
+  },
+  "validation": {
+    "basket": "fail",
+    "bonferroni": "na",
+    "selection": "fail"
+  },
+  "gates_passed": "0/3",
+  "description": "Rank 5 asset-class sleeves (SPY, TLT, gold, oil, corp bonds) by carry proxy (12m return / 12m vol), long top 3. Monthly.",
+  "reference": "Koijen, Moskowitz, Pedersen & Vrugt (2018), 'Carry'"
+}

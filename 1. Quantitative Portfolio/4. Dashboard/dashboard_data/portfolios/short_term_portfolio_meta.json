@@ -1,0 +1,101 @@
+{
+  "members": [
+    "ema_crossover",
+    "overnight",
+    "ibs_mean_reversion",
+    "orb",
+    "congress_momentum"
+  ],
+  "member_stats": [
+    {
+      "strategy": "ema_crossover",
+      "sharpe": 5.678,
+      "cagr_pct": 129.0,
+      "maxdd_pct": -4.68
+    },
+    {
+      "strategy": "overnight",
+      "sharpe": 1.655,
+      "cagr_pct": 12.07,
+      "maxdd_pct": -13.91
+    },
+    {
+      "strategy": "ibs_mean_reversion",
+      "sharpe": 2.256,
+      "cagr_pct": 13.35,
+      "maxdd_pct": -3.93
+    },
+    {
+      "strategy": "orb",
+      "sharpe": 2.196,
+      "cagr_pct": 16.29,
+      "maxdd_pct": -4.68
+    },
+    {
+      "strategy": "congress_momentum",
+      "sharpe": 0.874,
+      "cagr_pct": 7.37,
+      "maxdd_pct": -10.53
+    }
+  ],
+  "sharpe": 6.163,
+  "cagr_pct": 30.21,
+  "maxdd_pct": -2.05,
+  "selection_path": [
+    {
+      "step": 1,
+      "added": "ema_crossover",
+      "sharpe": 5.143,
+      "selected": true
+    },
+    {
+      "step": 2,
+      "added": "overnight",
+      "sharpe": 6.06,
+      "selected": true
+    },
+    {
+      "step": 3,
+      "added": "ibs_mean_reversion",
+      "sharpe": 6.329,
+      "selected": true
+    },
+    {
+      "step": 4,
+      "added": "orb",
+      "sharpe": 6.444,
+      "selected": true
+    },
+    {
+      "step": 5,
+      "added": "congress_momentum",
+      "sharpe": 6.208,
+      "selected": true
+    },
+    {
+      "step": 6,
+      "added": "intraday_momentum",
+      "sharpe": 5.917,
+      "selected": false
+    },
+    {
+      "step": 7,
+      "added": "vwap_trend",
+      "sharpe": 5.649,
+      "selected": false
+    },
+    {
+      "step": 8,
+      "added": "vix_mean_reversion",
+      "sharpe": 5.389,
+      "selected": false
+    },
+    {
+      "step": 9,
+      "added": "vix_etn_dual",
+      "sharpe": 5.214,
+      "selected": false
+    }
+  ],
+  "note": "ONE merged pool of all 9 short-term strategies (5 intraday session + overnight + 3 daily); overnight is a normal blended member. Top-5 on the greedy path (strict peak = 4; Congress kept as 5th diversifier). Intraday legs at $0.005/share slippage (2026-07-10 rerun). True daily mark-to-market PnL."
+}

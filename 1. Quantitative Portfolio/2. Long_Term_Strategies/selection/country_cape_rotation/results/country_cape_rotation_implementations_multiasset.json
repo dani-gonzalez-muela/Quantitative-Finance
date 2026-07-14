@@ -1,0 +1,48 @@
+{
+  "strategy": "country_cape_rotation",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "canonical_params": {
+    "top_pct": 0.1,
+    "return_window": 9,
+    "freq": "ME"
+  },
+  "sleeves": {
+    "em_country": {
+      "simple_85": {
+        "sharpe": 0.8591,
+        "cagr": 17.69,
+        "max_dd": -34.53,
+        "n_trades": 110,
+        "allocation": 0.85
+      },
+      "simple_100": {
+        "sharpe": 0.8575,
+        "cagr": 20.58,
+        "max_dd": -40.04,
+        "n_trades": 110,
+        "allocation": 1.0
+      }
+    }
+  },
+  "combined": {
+    "simple_85": {
+      "n_sleeves": 1,
+      "sleeves": [
+        "em_country"
+      ],
+      "sharpe": 0.8591,
+      "cagr": 17.69,
+      "max_dd": -34.53
+    },
+    "simple_100": {
+      "n_sleeves": 1,
+      "sleeves": [
+        "em_country"
+      ],
+      "sharpe": 0.8575,
+      "cagr": 20.58,
+      "max_dd": -40.04
+    }
+  }
+}

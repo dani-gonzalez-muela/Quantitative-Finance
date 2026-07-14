@@ -1,0 +1,4 @@
+# file: C:\Users\danie\Desktop\portfolio-risk-tool\portfolio_risk\validators.py
+# hypothesis_version: 6.141.1
+
+[0.0, 1e-06, 0.05, 1.0, ', ', 'date']

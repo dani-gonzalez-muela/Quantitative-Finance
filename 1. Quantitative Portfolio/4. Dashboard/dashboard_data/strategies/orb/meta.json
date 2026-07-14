@@ -1,0 +1,23 @@
+{
+  "label": "Opening Range Breakout",
+  "sleeve": "short_term",
+  "type": "Breakout",
+  "timeframe": "first 30min range",
+  "universe": "QQQ, MDY, MTUM (rescued)",
+  "signal": "Breakout of opening range; stop + EOD flat.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "rescued",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 2.196,
+    "cagr_pct": 16.29,
+    "maxdd_pct": -4.68,
+    "months": 125
+  },
+  "gates_passed": "3/3",
+  "description": "Intraday momentum breakout on 5-minute bars. Compares the close vs. open of the opening range (OR) window; enters long if OR_close > OR_open, short if OR_close < OR_open, provided the range exceeds a minimum threshold. Entry at the first bar after the OR window, at the OR boundary price. Stop loss at an ATR-based distance. Exit at EOD if the stop isn't hit.",
+  "reference": "Zarattini & Aziz (2023), 'Can Day Trading Really Be Profitable?' \u2014 Opening Range Breakout (papers in reference/)"
+}

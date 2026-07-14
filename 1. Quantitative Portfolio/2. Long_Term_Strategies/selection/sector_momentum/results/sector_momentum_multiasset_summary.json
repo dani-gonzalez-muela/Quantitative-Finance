@@ -1,0 +1,76 @@
+{
+  "strategy": "Sector Momentum (Multi-Asset)",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "tc_bps_one_way": 5,
+  "universes": {
+    "us_sectors": {
+      "n_tickers": 11,
+      "tickers": [
+        "XLK",
+        "XLF",
+        "XLE",
+        "XLV",
+        "XLI",
+        "XLP",
+        "XLY",
+        "XLU",
+        "XLB",
+        "XLRE",
+        "XLC"
+      ],
+      "best_sharpe": 1.6739
+    },
+    "us_factor": {
+      "n_tickers": 7,
+      "tickers": [
+        "IWF",
+        "IWD",
+        "IWM",
+        "USMV",
+        "MTUM",
+        "PKW",
+        "DVY"
+      ],
+      "best_sharpe": 1.1286
+    }
+  },
+  "grid_search": {
+    "top_pcts": [
+      0.1,
+      0.15,
+      0.25,
+      0.33,
+      0.5,
+      1.0
+    ],
+    "rebal_freqs": [
+      "ME",
+      "2ME",
+      "QE",
+      "6ME",
+      "12ME"
+    ],
+    "mom_windows": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "combos_per_universe": 120,
+    "total_runs": 240
+  },
+  "best_params": {
+    "top_pct": 0.25,
+    "top_n_primary": 3,
+    "mom_window": 3,
+    "freq": "6ME",
+    "median_sharpe": 1.4013,
+    "min_sharpe": 1.1286,
+    "n_positive": 2,
+    "stability": 0.74,
+    "per_universe_sharpe": {
+      "us_sectors": 1.6739,
+      "us_factor": 1.1286
+    }
+  }
+}

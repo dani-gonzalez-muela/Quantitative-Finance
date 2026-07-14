@@ -1,0 +1,23 @@
+{
+  "label": "Commodity Carry",
+  "sleeve": "long_term",
+  "type": "Carry",
+  "timeframe": "monthly",
+  "universe": "commodity ETFs",
+  "signal": "Carry-ranked commodity sleeve.",
+  "in_portfolio": true,
+  "validation": {
+    "basket": "pass",
+    "bonferroni": "na",
+    "selection": "pass"
+  },
+  "stats": {
+    "sharpe": 0.543,
+    "cagr_pct": 9.04,
+    "maxdd_pct": -56.63,
+    "months": 280
+  },
+  "gates_passed": "3/3",
+  "description": "Rank 5 commodities (gold, oil, corn, wheat, soybeans) by carry proxy (1m return \u2212 3m return/3 \u2248 roll-yield differential), long top 3, monthly. Futures-price proxies from commodities_daily.csv (ETF downloads blocked; true spot/futures spread pending).",
+  "reference": "Koijen, Moskowitz, Pedersen & Vrugt (2018), 'Carry' \u2014 commodity leg"
+}

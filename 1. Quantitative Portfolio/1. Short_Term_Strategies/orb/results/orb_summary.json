@@ -1,0 +1,27 @@
+{
+  "strategy": "ORB",
+  "instrument": "QQQ",
+  "portfolio": "short_term",
+  "period": "2016-01-01 \u2192 2026-04-01",
+  "params": {
+    "window_size": 5,
+    "profit_target_multiplier": null,
+    "stop_loss_strategy": "atr",
+    "atr_percent": 5,
+    "threshold": 0.02,
+    "entry_mode": "basic"
+  },
+  "trades": 2333,
+  "significance": {
+    "gross": {
+      "sharpe": 1.3616,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    },
+    "net": {
+      "sharpe": 0.8899,
+      "verdict": "SIGNIFICANT (strong)",
+      "tests_passed": "3/3"
+    }
+  }
+}
